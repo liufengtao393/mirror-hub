@@ -285,3 +285,7 @@ appdev/siyuan-unlock | apkdv/siyuan-unlock | siyuan-unlock | 10
 # 优雅全网热榜聚合 - 实时聚合微博、知乎、B站、GitHub 等全网热点新闻的极简阅读器
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
 newsnext/newsnow | ghcr.io/newsnext/newsnow | newsnow | 10
+
+# 软路由固件 - 基于 OpenWrt 官方稳定分支优化、支持在线插件库与云端定制的纯净版软路由系统
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+kiddin9/Kwrt | none | kwrt | 10
