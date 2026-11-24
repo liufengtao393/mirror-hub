@@ -1,0 +1,172 @@
+# 格式：源GitHub仓库 | 完整源Docker镜像地址 | 我的目标仓库名 | 同步最新几个镜像标签
+
+# --- 1. 核心工具与绝版归档 ---
+gdy666/lucky | gdy666/lucky | lucky | 10
+n8n-io/n8n | n8nio/n8n | n8n | 15
+containrrr/watchtower | containrrr/watchtower | watchtower | 5
+minio/minio | ghcr.io/coollabsio/minio | minio-last-full-ui | 2
+
+# --- 2. 飞牛应用中心重点项目 ---
+OpenListTeam/OpenList | openlistteam/openlist | openlist | 10
+
+# --- 3. 个人笔记、密码库与知识库 ---
+usememos/memos | neosmemo/memos | memos | 10
+siyuan-note/siyuan | b3log/siyuan | siyuan | 10
+dani-garcia/vaultwarden | vaultwarden/server | vaultwarden | 10
+outline/outline | outlinewiki/outline | outline | 5
+pocket-id/pocket-id | ghcr.io/pocket-id/pocket-id | pocket-id | 5
+
+# --- 4. 影音娱乐、下载与 IPTV ---
+jxxghp/MoviePilot | jxxghp/moviepilot-v3 | moviepilot-v3 | 10
+linuxserver/docker-qbittorrent | lscr.io/linuxserver/qbittorrent | qbittorrent | 5
+none | ghcr.io/szemeng76/lunatv | lunatv | 5
+none | guovern/iptv-api | iptv-api | 5
+none | hurryos/iptvs-app | iptvs-app | 5
+
+# --- 5. AI 工作流、存储与数据库基础组件 ---
+langgenius/dify | langgenius/dify-api | dify-api | 3
+none | langgenius/dify-web | dify-web | 3
+none | langgenius/dify-sandbox | dify-sandbox | 3
+rustfs/rustfs | rustfs/rustfs | rustfs | 5
+apache/kvrocks | apache/kvrocks | kvrocks | 5
+pgvector/pgvector | pgvector/pgvector | pgvector | 5
+postgres/postgres | library/postgres | postgres | 5
+redis/redis | library/redis | redis | 5
+nginx/nginx | library/nginx | nginx | 5
+
+# --- 6. 其他实用工具 ---
+FlareSolverr/FlareSolverr | ghcr.io/flaresolverr/flaresolverr | flaresolverr | 5
+none | swr.cn-north-4.myhuaweicloud.com/firfe/convertx-zh | convertx-zh | 3
+none | livse/zirconlegend | zirconlegend | 3
+none | dbonline/db_online | db_online | 3
+none | ghcr.io/mudkipme/mortis | mortis | 3
+
+# --- 7. 代理客户端、面板与配置脚本 ---
+hafrey1/LunaTV-config | none | LunaTV-config | 1
+MetaCubeX/ClashMetaForAndroid | none | ClashMetaForAndroid | 1
+jerry048/Dedicated-Seedbox | none | Dedicated-Seedbox | 1
+clash-verge-rev/clash-verge-rev | none | clash-verge-rev | 1
+MHSanaei/3x-ui | ghcr.io/mhsanaei/3x-ui | 3x-ui | 5
+
+# 协同办公引擎 - 开源在线表格、文档与幻灯片 Office SDK 核心库
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+dream-num/univer | none | univer | 10
+
+# 音视频处理引擎 - 跨平台音视频录制、转换、流媒体及编解码核心工具库
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+FFmpeg/FFmpeg | jrottenberg/ffmpeg | ffmpeg | 10
+
+# AI 视频剪辑技能 - 面向 Claude Code/Cursor 的本地 FFmpeg 自动化剪辑工具集与 MCP 服务
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+kajisho5/ffmpeg-skill | none | ffmpeg-skill | 10
+
+# AI 代码审查门禁 - 专为 AI 生成代码打造的开源自动化代码审查与质量检测工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+alibaba/open-code-review | none | open-code-review | 10
+
+# 个人财务管理 - 支持自托管与多端同步的开源记账、资产追踪及财务规划应用
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+we-promise/sure | ghcr.io/we-promise/sure | sure | 10
+
+# 前端开发规范库 - Google Chrome 官方维护的现代 Web 最佳实践与 AI 编程指南
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+GoogleChrome/modern-web-guidance-src | none | modern-web-guidance-src | 10
+
+# 免费大模型聚合网关 - 支持多平台免费 LLM API 智能路由、故障转移与 OpenAI 兼容接口
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+tashfeenahmed/freellmapi | none | freellmapi | 10
+
+# AI 联网搜索工具 - 赋予 AI Agent 零成本读取 B站/小红书/YouTube/Twitter 等全网数据的 CLI 工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+Panniantong/Agent-Reach | none | agent-reach | 10
+
+# 软件逆向工程框架 - 美国国家安全局 (NSA) 开源的二进制反编译与安全分析套件
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+NationalSecurityAgency/ghidra | none | ghidra | 10
+
+# 中华古诗词数据库 - 收录全唐诗、全宋词、四书五经等最全中华古典文学开源数据集
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+chinese-poetry/chinese-poetry | none | chinese-poetry | 10
+
+# 全球行政区划数据库 - 包含全球国家、省州、城市及经纬度邮编的多格式开源地理数据集
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+dr5hn/countries-states-cities-database | none | countries-states-cities-database | 10
+
+# 开源媒体服务器 - 跨平台影视剧刮削、硬解转码与家庭影院服务端
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+jellyfin/jellyfin | jellyfin/jellyfin | jellyfin | 10
+
+# 轻量 BT/PT 下载器 - 经典低内存占用与高稳定性种子下载服务端
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+transmission/transmission | lscr.io/linuxserver/transmission | transmission | 10
+
+# PT 自动辅种神器 - 支持多站点自动辅种、转移与下载器集群管理
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+ledccn/IYUUPlus | iyuucn/iyuuplus | iyuuplus | 10
+
+# 迅雷远程下载服务 - 提取自群晖套件的 Linux/Docker 迅雷远程下载面板
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+cnk3x/xunlei | cnk3x/xunlei | xunlei | 10
+
+# 种子索引聚合器 - 为 Sonarr/Radarr 提供多 BT/PT 站点搜索 API 支持
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+Jackett/Jackett | lscr.io/linuxserver/jackett | jackett | 10
+
+# 小雅 TvBox 代理服务 - 聚合小雅资源库并提供 TvBox 订阅与播放搜索接口
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+power721/alist-tvbox | haroldli/xiaoya-tvbox | xiaoya-tvbox | 10
+
+# 爱盼网盘搜索 - 支持多网盘资源聚合搜索、资源投稿与后台审核的开源站
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+unilei/aipan-netdisk-search | wbsu2003/aipan-netdisk-search | aipan-netdisk-search | 10
+
+# PT 刷流综合面板 - 集自动刷流、RSS 追剧与站点数据统计于一体的管理工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+vertex-app/vertex | lswl/vertex | vertex | 10
+
+# 个人音乐流媒体 - 兼容 Subsonic 协议的轻量级自托管无损音乐服务器
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+navidrome/navidrome | deluan/navidrome | navidrome | 10
+
+# 网页版音乐标签编辑器 - 批量刮削修改歌曲封面、歌词与 ID3 元数据神器
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+xhongc/music-tag-web | xhongc/music_tag_web | music-tag-web | 10
+
+# 开源网络文学阅读器 - 支持多书源管理、本地 TXT/EPUB 导入与多端同步的阅读服务端
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+hectorqin/reader | hectorqin/reader | reader | 10
+
+# 漫画与电子书服务器 - 支持 CBZ/CBR/PDF/EPUB 管理与阅读进度同步的媒体库
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+gotson/komga | gotson/komga | komga | 10
+
+# 网页版 WPS 办公套件 - 基于容器虚拟化在浏览器中直接运行完整版 WPS Office
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+linuxserver/docker-wps-office | lscr.io/linuxserver/wps-office | wps-office | 10
+
+# 微力同步文件传输 - 类似 Resilio Sync 的多端 P2P 高速私有文件同步工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+Jonnyan404/verysync | jonnyan404/verysync | verysync | 10
+
+# 本地全能 PDF 工具箱 (Stirling-PDF) - 支持 PDF 合并、拆分、OCR 识别与格式转换
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+Stirling-Tools/Stirling-PDF | stirlingtools/stirling-pdf | s-pdf | 10
+
+# 在线文档预览服务 - 支持 Office、PDF、CAD、压缩包等数十种格式零依赖网页预览
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+kekingcn/kkFileView | keking/kkfileview | kkfileview | 10
+
+# 思源笔记免登录同步版 - 解除账号登录限制、支持本地 S3/WebDAV 自由同步的社区版
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+appdev/siyuan-unlock | apkdv/siyuan-unlock | siyuan-unlock | 10
+
+# 优雅全网热榜聚合 - 实时聚合微博、知乎、B站、GitHub 等全网热点新闻的极简阅读器
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+newsnext/newsnow | ghcr.io/newsnext/newsnow | newsnow | 10
+
+
+
+
+
+
+
