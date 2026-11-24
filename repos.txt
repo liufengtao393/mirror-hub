@@ -1,1 +1,50 @@
+# 格式：源GitHub仓库 | 完整源Docker镜像地址 | 我的目标仓库名 | 同步最新几个镜像标签
+
+# --- 1. 核心工具与绝版归档 ---
+gdy666/lucky | gdy666/lucky | lucky | 10
+n8n-io/n8n | n8nio/n8n | n8n | 15
+containrrr/watchtower | containrrr/watchtower | watchtower | 5
+minio/minio | ghcr.io/coollabsio/minio | minio-last-full-ui | 2
+
+# --- 2. 飞牛应用中心重点项目 ---
+OpenListTeam/OpenList | openlistteam/openlist | openlist | 10
+
+# --- 3. 个人笔记、密码库与知识库 ---
+usememos/memos | neosmemo/memos | memos | 10
+siyuan-note/siyuan | b3log/siyuan | siyuan | 10
+dani-garcia/vaultwarden | vaultwarden/server | vaultwarden | 10
+outline/outline | outlinewiki/outline | outline | 5
+pocket-id/pocket-id | ghcr.io/pocket-id/pocket-id | pocket-id | 5
+
+# --- 4. 影音娱乐、下载与 IPTV ---
+jxxghp/MoviePilot | jxxghp/moviepilot-v3 | moviepilot-v3 | 10
+linuxserver/docker-qbittorrent | lscr.io/linuxserver/qbittorrent | qbittorrent | 5
+none | ghcr.io/szemeng76/lunatv | lunatv | 5
+none | guovern/iptv-api | iptv-api | 5
+none | hurryos/iptvs-app | iptvs-app | 5
+
+# --- 5. AI 工作流、存储与数据库基础组件 ---
+langgenius/dify | langgenius/dify-api | dify-api | 3
+none | langgenius/dify-web | dify-web | 3
+none | langgenius/dify-sandbox | dify-sandbox | 3
+rustfs/rustfs | rustfs/rustfs | rustfs | 5
+apache/kvrocks | apache/kvrocks | kvrocks | 5
+pgvector/pgvector | pgvector/pgvector | pgvector | 5
+postgres/postgres | library/postgres | postgres | 5
+redis/redis | library/redis | redis | 5
+nginx/nginx | library/nginx | nginx | 5
+
+# --- 6. 其他实用工具 ---
+FlareSolverr/FlareSolverr | ghcr.io/flaresolverr/flaresolverr | flaresolverr | 5
+none | swr.cn-north-4.myhuaweicloud.com/firfe/convertx-zh | convertx-zh | 3
+none | livse/zirconlegend | zirconlegend | 3
+none | dbonline/db_online | db_online | 3
+none | ghcr.io/mudkipme/mortis | mortis | 3
+
+# --- 7. 代理客户端、面板与配置脚本 ---
+hafrey1/LunaTV-config | none | LunaTV-config | 1
+MetaCubeX/ClashMetaForAndroid | none | ClashMetaForAndroid | 1
+jerry048/Dedicated-Seedbox | none | Dedicated-Seedbox | 1
+clash-verge-rev/clash-verge-rev | none | clash-verge-rev | 1
+MHSanaei/3x-ui | ghcr.io/mhsanaei/3x-ui | 3x-ui | 5
 
