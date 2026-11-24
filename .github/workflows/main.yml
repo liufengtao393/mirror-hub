@@ -1,0 +1,47 @@
+name: 补齐 Dify 0.15.3 与 1.20.0 全套镜像及发布说明
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  sync-dify-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 登录 GitHub 镜像仓库 (GHCR)
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.MIRROR_TOKEN }}
+
+      - name: 设置多架构构建工具
+        uses: docker/setup-buildx-action@v3
+
+      - name: 补齐 0.15.3 经典版全套镜像 (API + Web + Sandbox)
+        env:
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          docker buildx imagetools create -t ghcr.io/${OWNER}/dify-api:0.15.3 langgenius/dify-api:0.15.3
+          docker buildx imagetools create -t ghcr.io/${OWNER}/dify-web:0.15.3 langgenius/dify-web:0.15.3
+          docker buildx imagetools create -t ghcr.io/${OWNER}/dify-sandbox:0.2.10 langgenius/dify-sandbox:0.2.10
+
+      - name: 补齐 1.20.0 最新版全套镜像 (Web + Sandbox + latest)
+        env:
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          docker buildx imagetools create -t ghcr.io/${OWNER}/dify-web:1.20.0 -t ghcr.io/${OWNER}/dify-web:latest langgenius/dify-web:1.20.0
+          docker buildx imagetools create -t ghcr.io/${OWNER}/dify-sandbox:latest langgenius/dify-sandbox:latest
+
+      - name: 顺手把 0.15.3 官方 Release 更新日志也补进 dify-api 仓库
+        env:
+          GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          if ! gh release view "0.15.3" --repo "${OWNER}/dify-api" >/dev/null 2>&1; then
+            BODY=$(gh release view "0.15.3" --repo "langgenius/dify" --json body -q '.body' 2>/dev/null || echo "Dify 0.15.3")
+            gh release create "0.15.3" --repo "${OWNER}/dify-api" --title "0.15.3" --notes "$BODY"
+          fi
