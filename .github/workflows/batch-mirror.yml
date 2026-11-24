@@ -35,7 +35,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
           OWNER: ${{ github.repository_owner }}
-          BATCH_SIZE: ${{ github.event.inputs.batch_size || '5' }}
+          BATCH_SIZE: ${{ github.event.inputs.batch_size || '15' }}
         run: |
           grep -v '^#' repos.txt | grep -v '^[[:space:]]*$' | while IFS='|' read -r RAW_GH RAW_DOCKER RAW_TARGET RAW_COUNT; do
             GH_SRC=$(echo "$RAW_GH" | xargs)
@@ -47,7 +47,7 @@ jobs:
             echo "=================================================="
             echo "🚀 开始同步项目: $TARGET"
 
-            # 1. 创建公开仓库（自动开启 Wiki）
+            # 1. 创建公开仓库（开启 Wiki，并关闭子仓库自身 Actions 总开关杜绝原作者脚本乱跑报错）
             if [ "$GH_SRC" != "none" ] && [ -n "$GH_SRC" ] && [[ "$GH_SRC" != postgres/* ]] && [[ "$GH_SRC" != redis/* ]] && [[ "$GH_SRC" != nginx/* ]]; then
               if ! gh repo view "$OWNER/$TARGET" >/dev/null 2>&1; then
                 echo "📦 创建公开仓库: $OWNER/$TARGET"
@@ -56,6 +56,9 @@ jobs:
               else
                 gh repo edit "$OWNER/$TARGET" --enable-wiki || true
               fi
+
+              # 关闭子仓库自身的 Actions 总开关
+              gh api -X PUT "repos/${OWNER}/${TARGET}/actions/permissions" -F enabled=false >/dev/null 2>&1 || true
 
               # 2. 完整同步全部源码、全部分支、全部 Tags（含 README 部署与变量说明）
               echo "⚡ 全量同步源码与部署文档: $GH_SRC -> $OWNER/$TARGET"
@@ -77,7 +80,7 @@ jobs:
                 rm -rf temp_wiki.git
               fi
 
-              # 4. 智能对比：获取官方所有 Releases，跳过已搬运的，每次按序补齐 BATCH_SIZE（默认5）个！
+              # 4. 智能对比：获取官方所有 Releases，跳过已搬运的，每次按序补齐 BATCH_SIZE 个
               echo "🔍 检查未同步的 Releases（本轮最多补齐 $BATCH_SIZE 个）..."
               ALL_SRC_TAGS=$(gh release list --repo "$GH_SRC" --limit 200 --json tagName -q '.[].tagName' 2>/dev/null || true)
               EXISTING_TAGS=$(gh release list --repo "$OWNER/$TARGET" --limit 200 --json tagName -q '.[].tagName' 2>/dev/null || true)
@@ -88,7 +91,6 @@ jobs:
                   break
                 fi
 
-                # 检查该版本是否已存在于你的仓库中
                 if echo "$EXISTING_TAGS" | grep -Fxq "$TAG"; then
                   continue
                 fi
@@ -104,7 +106,7 @@ jobs:
                   gh release create "$TAG" --repo "$OWNER/$TARGET" --title "$TAG" --notes "$BODY" >/dev/null 2>&1 || true
                 fi
 
-                # 如果同时配置了 Docker 镜像，顺手把这个历史版本的镜像也一并补齐！
+                # 顺手把这个历史版本对应的 Docker 镜像也一并补齐
                 if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
                   TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
                   CLEAN_VER="${TAG#v}"
