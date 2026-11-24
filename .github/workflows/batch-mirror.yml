@@ -1,0 +1,85 @@
+name: 一键极速批量搬运（源码 + Releases + 镜像）
+
+on:
+  # 每天北京时间凌晨 03:00 自动把清单里所有项目更新到最新
+  schedule:
+    - cron: '0 19 * * *'
+  # 修改 repos.txt 清单后自动触发，也支持随时手动点击运行
+  push:
+    paths:
+      - 'repos.txt'
+  workflow_dispatch:
+
+jobs:
+  batch-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 读取搬运清单
+        uses: actions/checkout@v4
+
+      - name: 登录 GitHub 镜像仓库与 CLI
+        env:
+          GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
+        run: |
+          echo "${{ secrets.MIRROR_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+
+      - name: 设置多架构并发构建工具
+        uses: docker/setup-buildx-action@v3
+
+      - name: 极速批量搬运清单中的所有项目
+        env:
+          GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          # 逐行读取 repos.txt（自动忽略注释和空行）
+          grep -v '^#' repos.txt | grep -v '^[[:space:]]*$' | while IFS='|' read -r RAW_GH RAW_DOCKER RAW_TARGET RAW_COUNT; do
+            GH_SRC=$(echo "$RAW_GH" | xargs)
+            DOCKER_SRC=$(echo "$RAW_DOCKER" | xargs)
+            TARGET=$(echo "$RAW_TARGET" | xargs)
+            COUNT=$(echo "$RAW_COUNT" | xargs)
+            COUNT=${COUNT:-10}
+
+            echo "=================================================="
+            echo "🚀 开始极速搬运项目: $TARGET"
+
+            # 1. 自动在你的账号下创建公开仓库（如果不存在）
+            if ! gh repo view "$OWNER/$TARGET" >/dev/null 2>&1; then
+              echo "📦 自动创建公开仓库: $OWNER/$TARGET"
+              gh repo create "$OWNER/$TARGET" --public
+            fi
+
+            # 2. 极速同步 GitHub 源码（全部默认分支与历史 Tags）
+            if [ "$GH_SRC" != "none" ] && [ -n "$GH_SRC" ]; then
+              echo "⚡ 裸仓库极速同步源码: $GH_SRC -> $OWNER/$TARGET"
+              rm -rf temp_repo.git
+              git clone --bare "https://x-access-token:${GH_TOKEN}@://github.com{GH_SRC}.git" temp_repo.git
+              git -C temp_repo.git push "https://x-access-token:${GH_TOKEN}@://github.com{OWNER}/${TARGET}.git" "refs/heads/*:refs/heads/*" "refs/tags/*:refs/tags/*" --force
+              rm -rf temp_repo.git
+
+              # 3. 同步最新 Release 更新日志与全部编译好的安装包附件
+              LATEST_TAG=$(gh release view --repo "$GH_SRC" --json tagName -q '.tagName' 2>/dev/null || true)
+              if [ -n "$LATEST_TAG" ] && ! gh release view "$LATEST_TAG" --repo "$OWNER/$TARGET" >/dev/null 2>&1; then
+                echo "📥 搬运最新 Release 安装包: $LATEST_TAG"
+                rm -rf release_assets && mkdir -p release_assets
+                gh release download "$LATEST_TAG" --repo "$GH_SRC" --dir release_assets || true
+                BODY=$(gh release view "$LATEST_TAG" --repo "$GH_SRC" --json body -q '.body' 2>/dev/null || echo "Auto mirrored release")
+                if [ "$(ls -A release_assets)" ]; then
+                  gh release create "$LATEST_TAG" release_assets/* --repo "$OWNER/$TARGET" --title "$LATEST_TAG" --notes "$BODY"
+                else
+                  gh release create "$LATEST_TAG" --repo "$OWNER/$TARGET" --title "$LATEST_TAG" --notes "$BODY"
+                fi
+              fi
+            fi
+
+            # 4. 8 线程并发无损搬运 Docker 双架构镜像
+            if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
+              echo "🐳 8 线程并发搬运镜像: $DOCKER_SRC (最新 $COUNT 个版本)"
+              TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
+              TAGS=$(curl -s "https://docker.com{DOCKER_SRC}/tags?page_size=${COUNT}&ordering=last_updated" | jq -r '.results[].name' 2>/dev/null || true)
+              TAGS=$(printf "latest\n%s" "$TAGS" | sort -u)
+
+              echo "$TAGS" | xargs -I {} -P 8 bash -c '
+                docker buildx imagetools create -t "ghcr.io/$2/$3:{}" "$1:{}" >/dev/null 2>&1 && echo "  ✅ 镜像已同步: $3:{}" || true
+              ' _ "$DOCKER_SRC" "$OWNER" "$TARGET_LOWER"
+            fi
+          done
