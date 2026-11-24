@@ -49,7 +49,8 @@ clash-verge-rev/clash-verge-rev | none | clash-verge-rev | 1
 MHSanaei/3x-ui | ghcr.io/mhsanaei/3x-ui | 3x-ui | 5
 
 # --- 7. 网页OFFICE ---
-dream-num/univer | univer | univer | 10
+dream-num/univer | none | univer | 10
+
 
 
 
