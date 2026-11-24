@@ -1,4 +1,4 @@
-name: 一键极速批量搬运（全平台镜像 + 源码 + Releases）
+name: 一键极速批量搬运（完整源码 + Wiki + Releases + 镜像）
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
           GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
         run: |
           echo "${{ secrets.MIRROR_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
-          gh auth setup-git
+          git config --global credential.helper '!f() { echo "username=x-access-token"; echo "password=${GH_TOKEN}"; }; f'
 
       - name: 设置多架构并发构建工具
         uses: docker/setup-buildx-action@v3
@@ -40,23 +40,39 @@ jobs:
             echo "=================================================="
             echo "🚀 开始搬运项目: $TARGET"
 
-            # 1. 仅对需要备份源码的项目创建独立公开仓库（纯镜像项目直接挂在 mirror-hub 下，既干净又防建仓限流）
+            # 1. 创建公开仓库（不加默认README，保持纯净空仓库以便 --mirror 完整推送）
             if [ "$GH_SRC" != "none" ] && [ -n "$GH_SRC" ] && [[ "$GH_SRC" != postgres/* ]] && [[ "$GH_SRC" != redis/* ]] && [[ "$GH_SRC" != nginx/* ]]; then
               if ! gh repo view "$OWNER/$TARGET" >/dev/null 2>&1; then
                 echo "📦 自动创建公开仓库: $OWNER/$TARGET (等待12秒防限流)"
-                gh repo create "$OWNER/$TARGET" --public --add-readme || true
+                gh repo create "$OWNER/$TARGET" --public --enable-wiki || true
                 sleep 12
+              else
+                gh repo edit "$OWNER/$TARGET" --enable-wiki || true
               fi
 
-              # 2. 使用 gh repo clone 极速同步完整源码与 Tags（彻底避免 URL 符号转义问题）
-              echo "⚡ 同步源码: $GH_SRC -> $OWNER/$TARGET"
+              # 2. 使用 printf 拼接地址 + git clone --mirror 完整镜像克隆源码与 Tags
+              echo "⚡ 镜像同步源码: $GH_SRC -> $OWNER/$TARGET"
               rm -rf temp_repo.git
-              if gh repo clone "$GH_SRC" temp_repo.git -- --bare; then
-                git -C temp_repo.git push "https://github.com{OWNER}/${TARGET}.git" "refs/heads/*:refs/heads/*" "refs/tags/*:refs/tags/*" --force || true
+              SRC_URL=$(printf '%s://%s/%s.git' 'https' 'github.com' "$GH_SRC")
+              DST_URL=$(printf '%s://%s/%s/%s.git' 'https' 'github.com' "$OWNER" "$TARGET")
+              if git clone --mirror "$SRC_URL" temp_repo.git; then
+                git -C temp_repo.git push --mirror "$DST_URL" || echo "⚠️ 部分受保护引用推送跳过"
                 rm -rf temp_repo.git
+              else
+                echo "❌ 源码克隆失败: $SRC_URL"
               fi
 
-              # 3. 同步最新 Release 安装包（如 OpenList、Clash、Lucky 等）
+              # 3. 同步官方 Wiki 百科文档（如果存在）
+              rm -rf temp_wiki.git
+              WIKI_SRC=$(printf '%s://%s/%s.wiki.git' 'https' 'github.com' "$GH_SRC")
+              WIKI_DST=$(printf '%s://%s/%s/%s.wiki.git' 'https' 'github.com' "$OWNER" "$TARGET")
+              if git clone --mirror "$WIKI_SRC" temp_wiki.git >/dev/null 2>&1; then
+                echo "📚 发现官方 Wiki，正在同步..."
+                git -C temp_wiki.git push --mirror "$WIKI_DST" >/dev/null 2>&1 || echo "  ℹ️ 需先在网页点开 Wiki 标签初始化后再同步"
+                rm -rf temp_wiki.git
+              fi
+
+              # 4. 同步最新 Release 安装包与更新日志
               LATEST_TAG=$(gh release view --repo "$GH_SRC" --json tagName -q '.tagName' 2>/dev/null || true)
               if [ -n "$LATEST_TAG" ] && ! gh release view "$LATEST_TAG" --repo "$OWNER/$TARGET" >/dev/null 2>&1; then
                 echo "📥 搬运最新 Release 安装包: $LATEST_TAG"
@@ -71,20 +87,23 @@ jobs:
               fi
             fi
 
-            # 4. 8 线程并发无损搬运 Docker 镜像（全部镜像统一存入 ghcr.io/你的用户名/镜像名）
+            # 5. 并发无损搬运 Docker 镜像
             if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
               echo "🐳 并发搬运镜像: $DOCKER_SRC"
               TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
               
               if [[ "$DOCKER_SRC" != *.* ]]; then
-                TAGS=$(curl -s "https://docker.com{DOCKER_SRC}/tags?page_size=${COUNT}&ordering=last_updated" | jq -r '.results[].name' 2>/dev/null || true)
-                TAGS=$(printf "latest\nstable\n16-alpine\n6-alpine\n%s" "$TAGS" | sort -u)
+                API_URL=$(printf '%s://%s/v2/repositories/%s/tags?page_size=%s&ordering=last_updated' 'https' 'hub''.''docker.com' "$DOCKER_SRC" "$COUNT")
+                TAGS=$(curl -s "$API_URL" | jq -r '.results[].name' 2>/dev/null || true)
+                TAGS=$(printf "latest\n%s" "$TAGS" | sort -u)
               else
                 TAGS="latest stable 6.6.5 0.17.0 libtorrentv1 RELEASE.2025-04-22T22-12-26Z"
               fi
 
-              echo "$TAGS" | xargs -I {} -P 8 bash -c '
-                docker buildx imagetools create -t "ghcr.io/$2/$3:{}" "$1:{}" >/dev/null 2>&1 && echo "  ✅ 镜像已同步: $3:{}" || true
+              echo "$TAGS" | xargs -I {} -P 6 bash -c '
+                if docker buildx imagetools create -t "ghcr.io/$2/$3:{}" "$1:{}" >/dev/null 2>&1; then
+                  echo "  ✅ 镜像已同步: $3:{}"
+                fi
               ' _ "$DOCKER_SRC" "$OWNER" "$TARGET_LOWER"
             fi
           done
