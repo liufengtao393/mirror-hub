@@ -52,6 +52,47 @@ MHSanaei/3x-ui | ghcr.io/mhsanaei/3x-ui | 3x-ui | 5
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
 dream-num/univer | none | univer | 10
 
+# 音视频处理引擎 - 跨平台音视频录制、转换、流媒体及编解码核心工具库
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+FFmpeg/FFmpeg | jrottenberg/ffmpeg | ffmpeg | 10
+
+# AI 视频剪辑技能 - 面向 Claude Code/Cursor 的本地 FFmpeg 自动化剪辑工具集与 MCP 服务
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+kajisho5/ffmpeg-skill | none | ffmpeg-skill | 10
+
+# AI 代码审查门禁 - 专为 AI 生成代码打造的开源自动化代码审查与质量检测工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+alibaba/open-code-review | none | open-code-review | 10
+
+# 个人财务管理 - 支持自托管与多端同步的开源记账、资产追踪及财务规划应用
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+we-promise/sure | ghcr.io/we-promise/sure | sure | 10
+
+# 前端开发规范库 - Google Chrome 官方维护的现代 Web 最佳实践与 AI 编程指南
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+GoogleChrome/modern-web-guidance-src | none | modern-web-guidance-src | 10
+
+# 免费大模型聚合网关 - 支持多平台免费 LLM API 智能路由、故障转移与 OpenAI 兼容接口
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+tashfeenahmed/freellmapi | none | freellmapi | 10
+
+# AI 联网搜索工具 - 赋予 AI Agent 零成本读取 B站/小红书/YouTube/Twitter 等全网数据的 CLI 工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+Panniantong/Agent-Reach | none | agent-reach | 10
+
+# 软件逆向工程框架 - 美国国家安全局 (NSA) 开源的二进制反编译与安全分析套件
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+NationalSecurityAgency/ghidra | none | ghidra | 10
+
+# 中华古诗词数据库 - 收录全唐诗、全宋词、四书五经等最全中华古典文学开源数据集
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+chinese-poetry/chinese-poetry | none | chinese-poetry | 10
+
+# 全球行政区划数据库 - 包含全球国家、省州、城市及经纬度邮编的多格式开源地理数据集
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+dr5hn/countries-states-cities-database | none | countries-states-cities-database | 10
+
+
 
 
 
