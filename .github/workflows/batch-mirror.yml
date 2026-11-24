@@ -15,11 +15,12 @@ jobs:
       - name: 读取搬运清单
         uses: actions/checkout@v4
 
-      - name: 登录 GitHub 镜像仓库与 CLI
+      - name: 登录 GitHub 镜像仓库与 Git 认证
         env:
           GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
         run: |
           echo "${{ secrets.MIRROR_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          gh auth setup-git
 
       - name: 设置多架构并发构建工具
         uses: docker/setup-buildx-action@v3
@@ -39,29 +40,29 @@ jobs:
             echo "=================================================="
             echo "🚀 开始搬运项目: $TARGET"
 
-            # 1. 自动创建公开仓库（如不存在）
-            if ! gh repo view "$OWNER/$TARGET" >/dev/null 2>&1; then
-              echo "📦 自动创建公开仓库: $OWNER/$TARGET"
-              gh repo create "$OWNER/$TARGET" --public
-            fi
-
-            # 2. 极速同步 GitHub 源码（跳过庞大的 linux/postgres/nginx 底层镜像源码以防超时）
+            # 1. 仅对需要备份源码的项目创建独立公开仓库（纯镜像项目直接挂在 mirror-hub 下，既干净又防建仓限流）
             if [ "$GH_SRC" != "none" ] && [ -n "$GH_SRC" ] && [[ "$GH_SRC" != postgres/* ]] && [[ "$GH_SRC" != redis/* ]] && [[ "$GH_SRC" != nginx/* ]]; then
+              if ! gh repo view "$OWNER/$TARGET" >/dev/null 2>&1; then
+                echo "📦 自动创建公开仓库: $OWNER/$TARGET (等待12秒防限流)"
+                gh repo create "$OWNER/$TARGET" --public --add-readme || true
+                sleep 12
+              fi
+
+              # 2. 使用 gh repo clone 极速同步完整源码与 Tags（彻底避免 URL 符号转义问题）
               echo "⚡ 同步源码: $GH_SRC -> $OWNER/$TARGET"
               rm -rf temp_repo.git
-              git clone --bare "https://x-access-token:${GH_TOKEN}@://github.com{GH_SRC}.git" temp_repo.git || true
-              if [ -d "temp_repo.git" ]; then
-                git -C temp_repo.git push "https://x-access-token:${GH_TOKEN}@://github.com{OWNER}/${TARGET}.git" "refs/heads/*:refs/heads/*" "refs/tags/*:refs/tags/*" --force || true
+              if gh repo clone "$GH_SRC" temp_repo.git -- --bare; then
+                git -C temp_repo.git push "https://github.com{OWNER}/${TARGET}.git" "refs/heads/*:refs/heads/*" "refs/tags/*:refs/tags/*" --force || true
                 rm -rf temp_repo.git
               fi
 
-              # 3. 同步最新 Release 安装包（如 OpenList、Lucky 等的飞牛/Linux压缩包）
+              # 3. 同步最新 Release 安装包（如 OpenList、Clash、Lucky 等）
               LATEST_TAG=$(gh release view --repo "$GH_SRC" --json tagName -q '.tagName' 2>/dev/null || true)
               if [ -n "$LATEST_TAG" ] && ! gh release view "$LATEST_TAG" --repo "$OWNER/$TARGET" >/dev/null 2>&1; then
                 echo "📥 搬运最新 Release 安装包: $LATEST_TAG"
                 rm -rf release_assets && mkdir -p release_assets
                 gh release download "$LATEST_TAG" --repo "$GH_SRC" --dir release_assets || true
-                BODY=$(gh release view "$LATEST_TAG" --repo "$GH_SRC" --json body -q '.body' 2>/dev/null || echo "Auto mirrored release")
+                BODY=$(gh release view "$GH_SRC" --repo "$GH_SRC" --json body -q '.body' 2>/dev/null || echo "Auto mirrored release")
                 if [ "$(ls -A release_assets)" ]; then
                   gh release create "$LATEST_TAG" release_assets/* --repo "$OWNER/$TARGET" --title "$LATEST_TAG" --notes "$BODY" || true
                 else
@@ -70,17 +71,15 @@ jobs:
               fi
             fi
 
-            # 4. 8 线程并发无损搬运 Docker 镜像（自动兼容 Docker Hub 与第三方源）
+            # 4. 8 线程并发无损搬运 Docker 镜像（全部镜像统一存入 ghcr.io/你的用户名/镜像名）
             if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
               echo "🐳 并发搬运镜像: $DOCKER_SRC"
               TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
               
-              # 判断是否为 Docker Hub 镜像（不含域名点号）
               if [[ "$DOCKER_SRC" != *.* ]]; then
                 TAGS=$(curl -s "https://docker.com{DOCKER_SRC}/tags?page_size=${COUNT}&ordering=last_updated" | jq -r '.results[].name' 2>/dev/null || true)
                 TAGS=$(printf "latest\nstable\n16-alpine\n6-alpine\n%s" "$TAGS" | sort -u)
               else
-                # 第三方仓库（ghcr.io / lscr.io / 华为云）直接搬运常用核心标签与截图中的特定版本
                 TAGS="latest stable 6.6.5 0.17.0 libtorrentv1 RELEASE.2025-04-22T22-12-26Z"
               fi
 
