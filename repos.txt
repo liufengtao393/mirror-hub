@@ -289,3 +289,43 @@ newsnext/newsnow | ghcr.io/newsnext/newsnow | newsnow | 10
 # 软路由固件 - 基于 OpenWrt 官方稳定分支优化、支持在线插件库与云端定制的纯净版软路由系统
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
 kiddin9/Kwrt | none | kwrt | 10
+
+# AI多媒体 - 开源AI人脸替换与图像增强平台
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+facefusion/facefusion | facefusion/facefusion | facefusion | 10
+
+# Web服务器 - 具备自动HTTPS功能的现代化Web服务器与反向代理
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+caddyserver/caddy | caddy | caddy | 10
+
+# 软路由固件 - 面向中国大陆用户优化的开源OpenWrt分支系统
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+immortalwrt/immortalwrt | none | immortalwrt | 10
+
+# 软路由固件 - 自动编译的x86_64架构OpenWrt定制固件
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+DHDAXCW/OpenWRT_x86_x64 | none | openwrt_x86_x64 | 10
+
+# 网络代理 - 支持多种主流内核的跨平台网络代理客户端
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+2dust/v2rayN | none | v2rayn | 10
+
+# 运维监控 - 用于监控和管理Proxmox VE虚拟化服务器的Android客户端
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+Fanju6/ProxMonitor | none | proxmonitor | 10
+
+# 下载管理 - 基于Vue.js开发的现代化qBittorrent网页管理界面
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+VueTorrent/VueTorrent | ghcr.io/vuetorrent/vuetorrent-backend | vuetorrent | 10
+
+# 系统激活 - 支持Windows与Office的离线KMS及数字权利激活工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+zbezj/HEU_KMS_Activator | none | heu_kms_activator | 10
+
+# 系统工具 - 用于彻底移除Windows Defender及内置安全组件的脚本工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+ionuttbara/windows-defender-remover | none | windows-defender-remover | 10
+
+# 系统工具 - Windows映射网络驱动器与网络位置双向转换及共享诊断工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+RingoCaviar/DriveUNCConverter | none | driveuncconverter | 10
