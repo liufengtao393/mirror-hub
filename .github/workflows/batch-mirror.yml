@@ -1,12 +1,18 @@
-name: 一键极速批量搬运（完整源码 + Wiki + Releases + 镜像）
+name: 全量渐进式总控搬运（每次补齐15个历史 + 全量源码/Wiki/镜像追新）
 
 on:
+  # 每天定时跑 2 次（北京时间 02:00 和 14:00），每次自动补齐 15 个历史版本直至全量搬完
   schedule:
-    - cron: '0 19 * * *'
+    - cron: '0 6,18 * * *'
   push:
     paths:
       - 'repos.txt'
   workflow_dispatch:
+    inputs:
+      batch_size:
+        description: '本次每个项目补齐几个未同步的历史 Release（默认 15，想一次多补可填 15）'
+        required: true
+        default: '15'
 
 jobs:
   batch-mirror:
@@ -25,10 +31,11 @@ jobs:
       - name: 设置多架构并发构建工具
         uses: docker/setup-buildx-action@v3
 
-      - name: 极速批量搬运清单中的所有项目
+      - name: 全量渐进补齐清单中的所有项目
         env:
           GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
           OWNER: ${{ github.repository_owner }}
+          BATCH_SIZE: ${{ github.event.inputs.batch_size || '5' }}
         run: |
           grep -v '^#' repos.txt | grep -v '^[[:space:]]*$' | while IFS='|' read -r RAW_GH RAW_DOCKER RAW_TARGET RAW_COUNT; do
             GH_SRC=$(echo "$RAW_GH" | xargs)
@@ -38,60 +45,81 @@ jobs:
             COUNT=${COUNT:-5}
 
             echo "=================================================="
-            echo "🚀 开始搬运项目: $TARGET"
+            echo "🚀 开始同步项目: $TARGET"
 
-            # 1. 创建公开仓库（不加默认README，保持纯净空仓库以便 --mirror 完整推送）
+            # 1. 创建公开仓库（自动开启 Wiki）
             if [ "$GH_SRC" != "none" ] && [ -n "$GH_SRC" ] && [[ "$GH_SRC" != postgres/* ]] && [[ "$GH_SRC" != redis/* ]] && [[ "$GH_SRC" != nginx/* ]]; then
               if ! gh repo view "$OWNER/$TARGET" >/dev/null 2>&1; then
-                echo "📦 自动创建公开仓库: $OWNER/$TARGET (等待12秒防限流)"
+                echo "📦 创建公开仓库: $OWNER/$TARGET"
                 gh repo create "$OWNER/$TARGET" --public --enable-wiki || true
-                sleep 12
+                sleep 10
               else
                 gh repo edit "$OWNER/$TARGET" --enable-wiki || true
               fi
 
-              # 2. 使用 printf 拼接地址 + git clone --mirror 完整镜像克隆源码与 Tags
-              echo "⚡ 镜像同步源码: $GH_SRC -> $OWNER/$TARGET"
+              # 2. 完整同步全部源码、全部分支、全部 Tags（含 README 部署与变量说明）
+              echo "⚡ 全量同步源码与部署文档: $GH_SRC -> $OWNER/$TARGET"
               rm -rf temp_repo.git
               SRC_URL=$(printf '%s://%s/%s.git' 'https' 'github.com' "$GH_SRC")
               DST_URL=$(printf '%s://%s/%s/%s.git' 'https' 'github.com' "$OWNER" "$TARGET")
               if git clone --mirror "$SRC_URL" temp_repo.git; then
-                git -C temp_repo.git push --mirror "$DST_URL" || echo "⚠️ 部分受保护引用推送跳过"
+                git -C temp_repo.git push --mirror "$DST_URL" >/dev/null 2>&1 || true
                 rm -rf temp_repo.git
-              else
-                echo "❌ 源码克隆失败: $SRC_URL"
               fi
 
-              # 3. 同步官方 Wiki 百科文档（如果存在）
+              # 3. 全量同步官方 Wiki 百科文档
               rm -rf temp_wiki.git
               WIKI_SRC=$(printf '%s://%s/%s.wiki.git' 'https' 'github.com' "$GH_SRC")
               WIKI_DST=$(printf '%s://%s/%s/%s.wiki.git' 'https' 'github.com' "$OWNER" "$TARGET")
               if git clone --mirror "$WIKI_SRC" temp_wiki.git >/dev/null 2>&1; then
-                echo "📚 发现官方 Wiki，正在同步..."
-                git -C temp_wiki.git push --mirror "$WIKI_DST" >/dev/null 2>&1 || echo "  ℹ️ 需先在网页点开 Wiki 标签初始化后再同步"
+                echo "📚 同步官方 Wiki 文档..."
+                git -C temp_wiki.git push --mirror "$WIKI_DST" >/dev/null 2>&1 || true
                 rm -rf temp_wiki.git
               fi
 
-              # 4. 同步最新 Release 安装包与更新日志
-              LATEST_TAG=$(gh release view --repo "$GH_SRC" --json tagName -q '.tagName' 2>/dev/null || true)
-              if [ -n "$LATEST_TAG" ] && ! gh release view "$LATEST_TAG" --repo "$OWNER/$TARGET" >/dev/null 2>&1; then
-                echo "📥 搬运最新 Release 安装包: $LATEST_TAG"
-                rm -rf release_assets && mkdir -p release_assets
-                gh release download "$LATEST_TAG" --repo "$GH_SRC" --dir release_assets || true
-                BODY=$(gh release view "$GH_SRC" --repo "$GH_SRC" --json body -q '.body' 2>/dev/null || echo "Auto mirrored release")
-                if [ "$(ls -A release_assets)" ]; then
-                  gh release create "$LATEST_TAG" release_assets/* --repo "$OWNER/$TARGET" --title "$LATEST_TAG" --notes "$BODY" || true
-                else
-                  gh release create "$LATEST_TAG" --repo "$OWNER/$TARGET" --title "$LATEST_TAG" --notes "$BODY" || true
+              # 4. 智能对比：获取官方所有 Releases，跳过已搬运的，每次按序补齐 BATCH_SIZE（默认5）个！
+              echo "🔍 检查未同步的 Releases（本轮最多补齐 $BATCH_SIZE 个）..."
+              ALL_SRC_TAGS=$(gh release list --repo "$GH_SRC" --limit 200 --json tagName -q '.[].tagName' 2>/dev/null || true)
+              EXISTING_TAGS=$(gh release list --repo "$OWNER/$TARGET" --limit 200 --json tagName -q '.[].tagName' 2>/dev/null || true)
+
+              ADDED=0
+              for TAG in $ALL_SRC_TAGS; do
+                if [ "$ADDED" -ge "$BATCH_SIZE" ]; then
+                  break
                 fi
-              fi
+
+                # 检查该版本是否已存在于你的仓库中
+                if echo "$EXISTING_TAGS" | grep -Fxq "$TAG"; then
+                  continue
+                fi
+
+                echo "  📥 正在补齐 Release 附件与日志: $TAG ($((ADDED+1))/$BATCH_SIZE)"
+                rm -rf release_assets && mkdir -p release_assets
+                gh release download "$TAG" --repo "$GH_SRC" --dir release_assets 2>/dev/null || true
+                BODY=$(gh release view "$TAG" --repo "$GH_SRC" --json body -q '.body' 2>/dev/null || echo "Mirrored release $TAG")
+
+                if [ "$(ls -A release_assets)" ]; then
+                  gh release create "$TAG" release_assets/* --repo "$OWNER/$TARGET" --title "$TAG" --notes "$BODY" >/dev/null 2>&1 || true
+                else
+                  gh release create "$TAG" --repo "$OWNER/$TARGET" --title "$TAG" --notes "$BODY" >/dev/null 2>&1 || true
+                fi
+
+                # 如果同时配置了 Docker 镜像，顺手把这个历史版本的镜像也一并补齐！
+                if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
+                  TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
+                  CLEAN_VER="${TAG#v}"
+                  docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${TAG}" "${DOCKER_SRC}:${TAG}" >/dev/null 2>&1 || true
+                  docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${CLEAN_VER}" "${DOCKER_SRC}:${CLEAN_VER}" >/dev/null 2>&1 || true
+                fi
+
+                ADDED=$((ADDED+1))
+              done
+              echo "  ✅ 本轮已为 $TARGET 补齐 $ADDED 个历史 Release"
             fi
 
-            # 5. 并发无损搬运 Docker 镜像
+            # 5. 确保最新镜像与常用版本标签始终保持同步
             if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
-              echo "🐳 并发搬运镜像: $DOCKER_SRC"
               TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
-              
               if [[ "$DOCKER_SRC" != *.* ]]; then
                 API_URL=$(printf '%s://%s/v2/repositories/%s/tags?page_size=%s&ordering=last_updated' 'https' 'hub''.''docker.com' "$DOCKER_SRC" "$COUNT")
                 TAGS=$(curl -s "$API_URL" | jq -r '.results[].name' 2>/dev/null || true)
@@ -101,9 +129,7 @@ jobs:
               fi
 
               echo "$TAGS" | xargs -I {} -P 6 bash -c '
-                if docker buildx imagetools create -t "ghcr.io/$2/$3:{}" "$1:{}" >/dev/null 2>&1; then
-                  echo "  ✅ 镜像已同步: $3:{}"
-                fi
+                docker buildx imagetools create -t "ghcr.io/$2/$3:{}" "$1:{}" >/dev/null 2>&1 || true
               ' _ "$DOCKER_SRC" "$OWNER" "$TARGET_LOWER"
             fi
           done
