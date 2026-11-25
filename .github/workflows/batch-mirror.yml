@@ -17,6 +17,8 @@ on:
 jobs:
   batch-mirror:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: 读取搬运清单
         uses: actions/checkout@v4
