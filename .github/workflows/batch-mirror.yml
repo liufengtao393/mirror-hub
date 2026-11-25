@@ -158,3 +158,14 @@ jobs:
               ' _ "$DOCKER_SRC" "$OWNER" "$TARGET_LOWER"
             fi
           done
+
+      - name: 自动记录运行时间（防止 60 天无操作停用）
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          date -u "+Last run: %Y-%m-%d %H:%M:%S UTC" > .github/.last_run
+          git add .github/.last_run
+          git commit -m "chore: keep workflow alive [skip ci]" || exit 0
+          git push
+
