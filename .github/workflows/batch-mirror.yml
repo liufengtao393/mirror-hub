@@ -80,30 +80,48 @@ jobs:
                 rm -rf temp_wiki.git
               fi
 
-              # 4. 智能对比：获取官方所有 Releases，跳过已搬运的，每次按序补齐 BATCH_SIZE 个
+              # 4. 智能对比：获取官方所有 Releases（含预发布/测试版状态），每次按序补齐 BATCH_SIZE 个并 100% 还原官方标签
               echo "🔍 检查未同步的 Releases（本轮最多补齐 $BATCH_SIZE 个）..."
-              ALL_SRC_TAGS=$(gh release list --repo "$GH_SRC" --limit 200 --json tagName -q '.[].tagName' 2>/dev/null || true)
+              REAL_LATEST=$(gh release view --repo "$GH_SRC" --json tagName -q '.tagName' 2>/dev/null || true)
               EXISTING_TAGS=$(gh release list --repo "$OWNER/$TARGET" --limit 200 --json tagName -q '.[].tagName' 2>/dev/null || true)
 
+              # 获取官方最近 200 个版本的 标签名 与 是否为预发布测试版(isPrerelease)
+              SRC_RELEASES_JSON=$(gh release list --repo "$GH_SRC" --limit 200 --json tagName,isPrerelease 2>/dev/null || echo "[]")
+
               ADDED=0
-              for TAG in $ALL_SRC_TAGS; do
+              for ROW in $(echo "$SRC_RELEASES_JSON" | jq -c '.[]'); do
                 if [ "$ADDED" -ge "$BATCH_SIZE" ]; then
                   break
                 fi
 
+                TAG=$(echo "$ROW" | jq -r '.tagName')
+                IS_PRE=$(echo "$ROW" | jq -r '.isPrerelease')
+
+                # 已存在的版本跳过，但顺手校准一次它的预发布状态
                 if echo "$EXISTING_TAGS" | grep -Fxq "$TAG"; then
+                  if [ "$IS_PRE" = "true" ]; then
+                    gh release edit "$TAG" --repo "$OWNER/$TARGET" --prerelease >/dev/null 2>&1 || true
+                  fi
                   continue
                 fi
 
-                echo "  📥 正在补齐 Release 附件与日志: $TAG ($((ADDED+1))/$BATCH_SIZE)"
+                # 根据官方属性决定是打上 Pre-release 测试标，还是保持普通正式版（且绝不抢占 Latest）
+                EXTRA_FLAGS="--latest=false"
+                LABEL_TEXT="正式版"
+                if [ "$IS_PRE" = "true" ]; then
+                  EXTRA_FLAGS="--prerelease --latest=false"
+                  LABEL_TEXT="Pre-release 测试版"
+                fi
+
+                echo "  📥 正在补齐 Release [$LABEL_TEXT]: $TAG ($((ADDED+1))/$BATCH_SIZE)"
                 rm -rf release_assets && mkdir -p release_assets
                 gh release download "$TAG" --repo "$GH_SRC" --dir release_assets 2>/dev/null || true
                 BODY=$(gh release view "$TAG" --repo "$GH_SRC" --json body -q '.body' 2>/dev/null || echo "Mirrored release $TAG")
 
                 if [ "$(ls -A release_assets)" ]; then
-                  gh release create "$TAG" release_assets/* --repo "$OWNER/$TARGET" --title "$TAG" --notes "$BODY" >/dev/null 2>&1 || true
+                  gh release create "$TAG" release_assets/* --repo "$OWNER/$TARGET" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 || true
                 else
-                  gh release create "$TAG" --repo "$OWNER/$TARGET" --title "$TAG" --notes "$BODY" >/dev/null 2>&1 || true
+                  gh release create "$TAG" --repo "$OWNER/$TARGET" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 || true
                 fi
 
                 # 顺手把这个历史版本对应的 Docker 镜像也一并补齐
@@ -116,7 +134,12 @@ jobs:
 
                 ADDED=$((ADDED+1))
               done
-              echo "  ✅ 本轮已为 $TARGET 补齐 $ADDED 个历史 Release"
+
+              # 最终校准：强制把官方真正的最新正式版设为 Latest 绿标，并解除旧版本的误标
+              if [ -n "$REAL_LATEST" ]; then
+                gh release edit "$REAL_LATEST" --repo "$OWNER/$TARGET" --latest --prerelease=false >/dev/null 2>&1 || true
+              fi
+              echo "  ✅ 本轮已为 $TARGET 补齐 $ADDED 个历史 Release（全部标签已严格对齐官方）"
             fi
 
             # 5. 确保最新镜像与常用版本标签始终保持同步
