@@ -46,6 +46,42 @@ facefusion/facefusion | facefusion/facefusion | facefusion | 10
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
 songquanpeng/one-api | justsong/one-api | one-api | 10
 
+# 12. 大模型API聚合网关 (One-API预览版) - 支持主流大模型统一接口管理与Key二次分发
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+songquanpeng/one-api | ghcr.io/songquanpeng/one-api-alpha | one-api-alpha | 10
+
+# 13. 新一代大模型API网关 (New-API) - 兼容OpenAI/Claude/Gemini协议的AI模型路由与计费分发系统
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+QuantumNous/new-api | calciumion/new-api | new-api | 10
+
+# 14. 企业级AI知识库与工作流平台 (FastGPT) - 基于大模型的知识库问答与可视化流程编排系统
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+labring/FastGPT | ghcr.io/labring/fastgpt | fastgpt | 10
+
+# 15. 跨平台AI聊天网页端 (NextChat) - 支持一键部署的轻量级多模型ChatGPT网页交互界面
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+Yidadaa/ChatGPT-Next-Web | yidadaa/chatgpt-next-web | chatgpt-next-web | 10
+
+# 16. 经典Vue3版AI对话网页端 - 基于Express与Vue3构建的开源ChatGPT网页交互客户端
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+Chanzhaoyu/chatgpt-web | chenzhaoyu94/chatgpt-web | chatgpt-web | 10
+
+# 17. QQ/微信生态AI机器人引擎 (QChatGPT) - 支持多消息平台接入与插件扩展的开源聊天机器人
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+RockChinQ/QChatGPT | rockchin/qchatgpt | qchatgpt | 10
+
+# 18. 全能AI桌面工作站 (Cherry Studio) - 支持多模型对话、Agent与本地知识库的跨平台桌面客户端
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+CherryHQ/cherry-studio | none | cherry-studio | 10
+
+# 19. AI工作站移动端 (Cherry Studio App) - 支持iOS与Android的多模型对话及桌面端数据同步客户端
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+CherryHQ/cherry-studio-app | none | cherry-studio-app | 10
+
+# 20. Cherry Studio官网与文档源码 - 开源AI桌面客户端官方门户网站与使用指南前端仓库
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+CherryHQ/cherry-studio-website | none | cherry-studio-website | 10
+
 # ==============================================================================
 # 二、数据库、存储与基础架构组件
 # ==============================================================================
