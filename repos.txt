@@ -32,11 +32,11 @@ none | langgenius/dify-sandbox | dify-sandbox | 10
 
 # 免费大模型聚合网关 - 支持多平台免费 LLM API 智能路由、故障转移与 OpenAI 兼容接口
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-tashfeenahmed/freellmapi | none | freellmapi | 1
+tashfeenahmed/freellmapi | ghcr.io/tashfeenahmed/freellmapi | freellmapi | 10
 
 # AI 联网搜索工具 - 赋予 AI Agent 零成本读取 B站/小红书/YouTube/Twitter 等全网数据的 CLI 工具
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-Panniantong/Agent-Reach | none | agent-reach | 1
+Panniantong/Agent-Reach | none | agent-reach | 10
 
 # AI 多媒体处理平台 - 开源 AI 人脸替换与图像增强工具
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
@@ -156,7 +156,7 @@ linuxserver/docker-wps-office | lscr.io/linuxserver/wps-office | wps-office | 10
 
 # 协同办公引擎 - 开源在线表格、文档与幻灯片 Office SDK 核心库
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-dream-num/univer | none | univer | 1
+dream-num/univer | none | univer | 10
 
 # 本地全能 PDF 工具箱 (Stirling-PDF) - 支持 PDF 合并、拆分、OCR 识别与格式转换
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
@@ -184,7 +184,7 @@ vodtv/SzeMeng76-LunaTV | ghcr.io/szemeng76/lunatv | lunatv | 10
 
 # LunaTV 影视数据源配置集 - 适配 LunaTV 的聚合影视接口与订阅规则仓库
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-hafrey1/LunaTV-config | none | lunatv-config | 1
+hafrey1/LunaTV-config | none | lunatv-config | 10
 
 # 小雅 TvBox 代理服务 - 聚合小雅资源库并提供 TvBox 订阅与播放搜索接口
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
@@ -260,7 +260,7 @@ FlareSolverr/FlareSolverr | ghcr.io/flaresolverr/flaresolverr | flaresolverr | 1
 
 # 独服 PT 刷流一键配置脚本 - 专用于 Linux 独立服务器的 qBittorrent/Deluge 调优与部署脚本
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-jerry048/Dedicated-Seedbox | none | dedicated-seedbox | 1
+jerry048/Dedicated-Seedbox | none | dedicated-seedbox | 10
 
 # ==============================================================================
 # 8. 软路由固件与网络代理工具
@@ -270,9 +270,9 @@ jerry048/Dedicated-Seedbox | none | dedicated-seedbox | 1
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
 kiddin9/Kwrt | none | kwrt | 10
 
-# 软路由固件 (ImmortalWrt) - 面向中国大陆用户优化的开源 OpenWrt 分支系统
+# 软路由固件 (Docker旁路由容器版) - 面向中国大陆用户优化的开源OpenWrt分支系统
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-immortalwrt/immortalwrt | none | immortalwrt | 10
+immortalwrt/immortalwrt | immortalwrt/rootfs | immortalwrt | 10
 
 # 软路由固件 (x86_64 定制版) - 自动编译的 x86_64 架构 OpenWrt 定制固件
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
@@ -284,7 +284,7 @@ MHSanaei/3x-ui | ghcr.io/mhsanaei/3x-ui | 3x-ui | 10
 
 # 跨平台桌面代理客户端 - 基于 Tauri 开发的 Windows/macOS/Linux 现代 Clash Mihomo 图形界面
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-clash-verge-rev/clash-verge-rev | none | clash-verge-rev | 1
+clash-verge-rev/clash-verge-rev | none | clash-verge-rev | 10
 
 # Windows 跨平台代理客户端 - 支持多种主流内核的网络代理图形客户端
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
@@ -292,7 +292,7 @@ clash-verge-rev/clash-verge-rev | none | clash-verge-rev | 1
 
 # 安卓端 Mihomo 代理客户端 - 支持 Clash.Meta 内核的全功能 Android 网络代理工具
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-MetaCubeX/ClashMetaForAndroid | none | clashmetaforandroid | 1
+MetaCubeX/ClashMetaForAndroid | none | clashmetaforandroid | 10
 
 # ==============================================================================
 # 9. 开发工具、音视频引擎与公开数据集
@@ -304,27 +304,27 @@ FFmpeg/FFmpeg | jrottenberg/ffmpeg | ffmpeg | 10
 
 # AI 视频剪辑技能 - 面向 Claude Code/Cursor 的本地 FFmpeg 自动化剪辑工具集与 MCP 服务
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-kajisho5/ffmpeg-skill | none | ffmpeg-skill | 1
+kajisho5/ffmpeg-skill | none | ffmpeg-skill | 10
 
 # AI 代码审查门禁 - 专为 AI 生成代码打造的开源自动化代码审查与质量检测工具
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-alibaba/open-code-review | none | open-code-review | 1
+alibaba/open-code-review | none | open-code-review | 10
 
 # 前端开发规范库 - Google Chrome 官方维护的现代 Web 最佳实践与 AI 编程指南
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-GoogleChrome/modern-web-guidance-src | none | modern-web-guidance-src | 1
+GoogleChrome/modern-web-guidance-src | none | modern-web-guidance-src | 10
 
 # 软件逆向工程框架 - 美国国家安全局 (NSA) 开源的二进制反编译与安全分析套件
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-NationalSecurityAgency/ghidra | none | ghidra | 1
+NationalSecurityAgency/ghidra | none | ghidra | 10
 
 # 中华古诗词数据库 - 收录全唐诗、全宋词、四书五经等最全中华古典文学开源数据集
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-chinese-poetry/chinese-poetry | none | chinese-poetry | 1
+chinese-poetry/chinese-poetry | none | chinese-poetry | 10
 
 # 全球行政区划数据库 - 包含全球国家、省州、城市及经纬度邮编的多格式开源地理数据集
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
-dr5hn/countries-states-cities-database | none | countries-states-cities-database | 1
+dr5hn/countries-states-cities-database | none | countries-states-cities-database | 10
 
 # ==============================================================================
 # 10. Windows 系统工具与游戏服务端
