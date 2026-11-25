@@ -42,6 +42,10 @@ Panniantong/Agent-Reach | none | agent-reach | 10
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
 facefusion/facefusion | facefusion/facefusion | facefusion | 10
 
+# 11. LLM API 聚合网关 - 统一适配与二次分发主流大模型 API 接口的管理系统
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+songquanpeng/one-api | justsong/one-api | one-api | 10
+
 # ==============================================================================
 # 二、数据库、存储与基础架构组件
 # ==============================================================================
