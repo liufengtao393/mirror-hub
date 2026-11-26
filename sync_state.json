@@ -2826,7 +2826,7 @@
   "cherry-studio": {
     "gh_src": "CherryHQ/cherry-studio",
     "docker_src": "none",
-    "last_repo_push": "2026-11-26T13:18:03Z",
+    "last_repo_push": "2026-11-26T16:38:47Z",
     "baseline_time": "2026-11-26T13:29:17Z",
     "synced_releases": [],
     "failed_releases": [
