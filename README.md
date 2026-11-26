@@ -8,10 +8,10 @@
 
 <p>
   <b>简体中文</b> &nbsp;•&nbsp;
-  <a href="./README.zh-TW.md">繁體中文</a> &nbsp;•&nbsp;
-  <a href="./README.en.md">English</a> &nbsp;•&nbsp;
-  <a href="./README.ja.md">日本語</a> &nbsp;•&nbsp;
-  <a href="./README.ko.md">한국어</a>
+  <a href="./README_TW.md">繁體中文</a> &nbsp;•&nbsp;
+  <a href="./README_EN.md">English</a> &nbsp;•&nbsp;
+  <a href="./README_JA.md">日本語</a> &nbsp;•&nbsp;
+  <a href="./README_KO.md">한국어</a>
 </p>
 
 <p align="center">
@@ -19,6 +19,12 @@
   <a href="./sync_state.json"><img src="https://img.shields.io/badge/State_Machine-JSON_Ledger-00C853?style=for-the-badge&logo=json&logoColor=white" alt="State Machine" /></a>
   <a href="./.github/workflows/batch-mirror.yml"><img src="https://img.shields.io/badge/Auto_Split-%3E1.9GB_Chunks-FF6D00?style=for-the-badge&logo=files&logoColor=white" alt="Auto Split" /></a>
   <a href="./.github/workflows/batch-mirror.yml"><img src="https://img.shields.io/badge/404_Rescue-Cross_Repo-D50000?style=for-the-badge&logo=github&logoColor=white" alt="404 Rescue" /></a>
+</p>
+
+<p>
+  <a href="../../wiki">📘 <b>核心技术手册 (Wiki)</b></a> &nbsp;|&nbsp;
+  <a href="../../actions">🚀 <b>运行监控台 (Actions)</b></a> &nbsp;|&nbsp;
+  <a href="./sync_state.json">📒 <b>实时状态账本 (JSON)</b></a>
 </p>
 
 </div>
