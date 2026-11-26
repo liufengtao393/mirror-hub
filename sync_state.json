@@ -840,5 +840,55 @@
         "sync_time": "2026-11-26 03:23:15 UTC"
       }
     }
+  },
+  "dify-web": {
+    "gh_src": "none",
+    "docker_src": "langgenius/dify-web",
+    "synced_images": {
+      "1bdc159cd09eecebb649a077260bf62f1eff797a": {
+        "digest": "sha256:5b3cee5ff143cca18ca9f182dc09779a82023b6e583381d0d1cde1d8ab5a4c7d",
+        "sync_time": "2026-11-26 03:23:27 UTC"
+      },
+      "3193f958dde874d0d3d957fa771e177214cf35d7": {
+        "digest": "sha256:7f9fdaba5216236d29508da7f446c6f90d27ceffb92f70276e04979b51d2714e",
+        "sync_time": "2026-11-26 03:23:36 UTC"
+      },
+      "4751850820db36fe4bfcded7ba98af4f89d423e7": {
+        "digest": "sha256:e2bee03f5a8ca36dbc7940a9ea80d2c6dfb14d74997584cf56b065487e997ec5",
+        "sync_time": "2026-11-26 03:23:45 UTC"
+      },
+      "4ca30bfab3bc14eee984dad2ad802bad5320572c": {
+        "digest": "sha256:dc8956136f6ddfb2be70d228041ced3302a0e31cff537c05bc6cbf050bee22fc",
+        "sync_time": "2026-11-26 03:23:55 UTC"
+      },
+      "67463042f7ec1ee7ede8eb392ce919d5af36603b": {
+        "digest": "sha256:7fc51db647cdc642a1bab6a8b52fbfa3bc970a63b4b41bd31ceb36339aebf3bf",
+        "sync_time": "2026-11-26 03:24:04 UTC"
+      },
+      "build-feat-hitl-im-dev": {
+        "digest": "sha256:5b3cee5ff143cca18ca9f182dc09779a82023b6e583381d0d1cde1d8ab5a4c7d",
+        "sync_time": "2026-11-26 03:24:07 UTC"
+      },
+      "build-test-export-log": {
+        "digest": "sha256:9af9f903f7a40530ffbf8f8271fb29011c17c2036fea23ffa89de99bca38c42e",
+        "sync_time": "2026-11-26 03:24:17 UTC"
+      },
+      "c5796fd7b01a9bf681e19f99dd481b0bbe73a239": {
+        "digest": "sha256:57d38006bf3a71e22bfb24fd6253012d5292acf962f765e45995b7875bda528a",
+        "sync_time": "2026-11-26 03:24:26 UTC"
+      },
+      "f0804267e8efcac64c02701231f93ef01e49f9f7": {
+        "digest": "sha256:9af9f903f7a40530ffbf8f8271fb29011c17c2036fea23ffa89de99bca38c42e",
+        "sync_time": "2026-11-26 03:24:30 UTC"
+      },
+      "latest": {
+        "digest": "sha256:70bfcf68a607a38d65fdc3b84a00386bd76413ffb293e2ab1fe5e6768f6b3efc",
+        "sync_time": "2026-11-26 03:24:33 UTC"
+      },
+      "main": {
+        "digest": "sha256:e2bee03f5a8ca36dbc7940a9ea80d2c6dfb14d74997584cf56b065487e997ec5",
+        "sync_time": "2026-11-26 03:24:37 UTC"
+      }
+    }
   }
 }
