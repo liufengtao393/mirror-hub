@@ -1184,5 +1184,111 @@
         "sync_time": "2026-11-26 03:27:41 UTC"
       }
     }
+  },
+  "one-api": {
+    "gh_src": "songquanpeng/one-api",
+    "docker_src": "justsong/one-api",
+    "last_repo_push": "2026-01-09T03:26:43Z",
+    "baseline_time": "2026-11-26T03:29:10Z",
+    "synced_releases": [
+      "v0.6.10",
+      "v0.6.9",
+      "v0.6.8",
+      "v0.6.7",
+      "v0.6.6",
+      "v0.6.5",
+      "v0.6.4",
+      "v0.6.3",
+      "v0.6.2",
+      "v0.6.1",
+      "v0.6.0",
+      "v0.5.11",
+      "v0.5.10",
+      "v0.5.9",
+      "v0.5.8",
+      "v0.5.7",
+      "v0.5.6",
+      "v0.5.5",
+      "v0.5.4",
+      "v0.5.3",
+      "v0.5.2",
+      "v0.5.1",
+      "v0.5.0",
+      "v0.4.9",
+      "v0.4.8",
+      "v0.4.7",
+      "v0.4.6",
+      "v0.4.5",
+      "v0.4.4",
+      "v0.4.3",
+      "v0.4.2",
+      "v0.4.1",
+      "v0.4.0",
+      "v0.3.4",
+      "v0.3.3",
+      "v0.3.2",
+      "v0.3.1",
+      "v0.3.0",
+      "v0.2.6",
+      "v0.2.6-alpha.1",
+      "v0.2.5",
+      "v0.2.4",
+      "v0.2.3",
+      "v0.2.2",
+      "v0.2.1",
+      "v0.2.0",
+      "v0.1.5",
+      "v0.1.4",
+      "v0.1.3",
+      "v0.1.2",
+      "v0.1.2-alpha.2",
+      "v0.1.2-alpha.1",
+      "v0.1.2-alpha",
+      "v0.1.1",
+      "v0.1.0"
+    ],
+    "history_completed": true,
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:a55fb5181854aa0823cc04797ee875dfc5a953c0deb5e7e7ec39a8148e70cbc3",
+        "sync_time": "2026-11-26 03:29:14 UTC"
+      },
+      "v0.6.11-alpha.7": {
+        "digest": "sha256:4b5d40aba5429ca3984ff5d792cd3af476e1fe9fe98e7696514ec05973fad799",
+        "sync_time": "2026-11-26 03:29:17 UTC"
+      },
+      "v0.6.11-alpha.8": {
+        "digest": "sha256:d0cb20e41bd90988cb825c6511ac0ab4634a5095a1764341a1d90a7347b6a00d",
+        "sync_time": "2026-11-26 03:29:19 UTC"
+      },
+      "v0.6.11-preview": {
+        "digest": "sha256:521c68a774522508f01d89d798bec0782b81279629f94b02855547c18a2720ff",
+        "sync_time": "2026-11-26 03:29:22 UTC"
+      },
+      "v0.6.11-preview.1": {
+        "digest": "sha256:dc6ab43ed003d5e176a0b5ea99f76db7c2d262d019e9a508fc24f8cecbb42822",
+        "sync_time": "2026-11-26 03:29:24 UTC"
+      },
+      "v0.6.11-preview.3": {
+        "digest": "sha256:2915d141b6e6dbea765044d339bdc2d0e62d4fb1b022e84f25357153d1565a4d",
+        "sync_time": "2026-11-26 03:29:27 UTC"
+      },
+      "v0.6.11-preview.4": {
+        "digest": "sha256:c2c4466fb3a356a443ee20ddfff6ab888e10dfc35e8488ba586b4f0b369ea307",
+        "sync_time": "2026-11-26 03:29:29 UTC"
+      },
+      "v0.6.11-preview.5": {
+        "digest": "sha256:0218e8f004d5f5cce2ffd1d4df6a6ebee7416a278b4d7c6557b690928cfc5319",
+        "sync_time": "2026-11-26 03:29:31 UTC"
+      },
+      "v0.6.11-preview.6": {
+        "digest": "sha256:87422bbedf253ffad2c1cd405edf37a139fcd08dc8716ce760338419e8cdeed2",
+        "sync_time": "2026-11-26 03:29:34 UTC"
+      },
+      "v0.6.11-preview.7": {
+        "digest": "sha256:a55fb5181854aa0823cc04797ee875dfc5a953c0deb5e7e7ec39a8148e70cbc3",
+        "sync_time": "2026-11-26 03:29:36 UTC"
+      }
+    }
   }
 }
