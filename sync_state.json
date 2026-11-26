@@ -2232,5 +2232,72 @@
         "sync_time": "2026-11-26 13:16:06 UTC"
       }
     }
+  },
+  "qchatgpt": {
+    "gh_src": "RockChinQ/QChatGPT",
+    "docker_src": "rockchin/qchatgpt",
+    "last_repo_push": "2026-11-26T12:25:08Z",
+    "baseline_time": "2026-11-26T13:17:18Z",
+    "synced_releases": [
+      "v4.11.0",
+      "v4.11.0-beta.3",
+      "v4.11.0-beta.6",
+      "v4.11.0-rc.1",
+      "v4.11.0-rc.2",
+      "v4.11.0-rc.3",
+      "v4.11.1",
+      "v4.11.2",
+      "v4.11.3",
+      "v4.11.4",
+      "v4.11.5",
+      "v4.11.6",
+      "v4.11.7",
+      "v4.11.8",
+      "v4.11.9"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-26 13:19:30 UTC",
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:e15ffbbb182041c09a4086c423387dbd661ee83fce7f76afeabfd8c4aafc6c60",
+        "sync_time": "2026-11-26 13:19:50 UTC"
+      },
+      "v3.2.1": {
+        "digest": "sha256:90b8bc0752691a3002b26b7b4df8c65bafb111fd85b32077fa9f905260d233d9",
+        "sync_time": "2026-11-26 13:20:05 UTC"
+      },
+      "v3.2.2": {
+        "digest": "sha256:46d83651c7c5790fba5faafacfd8ab07fd040e2f5345b0c8c69be8ebb81dd9de",
+        "sync_time": "2026-11-26 13:20:20 UTC"
+      },
+      "v3.2.3": {
+        "digest": "sha256:0fb56bbaa31c4148b52f515fb7434645d3b518a2d84e3abde5bab36155005238",
+        "sync_time": "2026-11-26 13:20:34 UTC"
+      },
+      "v3.2.4": {
+        "digest": "sha256:7fcb70a185e738923720230cc4c3999044ec53489f1b69acdf1e54ab2baf95fe",
+        "sync_time": "2026-11-26 13:20:48 UTC"
+      },
+      "v3.3.0": {
+        "digest": "sha256:fde0ae76690a66d2168fa770efe2811264616870f0e31891e632b5651c9fbf11",
+        "sync_time": "2026-11-26 13:21:02 UTC"
+      },
+      "v3.3.0.1": {
+        "digest": "sha256:b85e1b59d63c06b4ac7b705e637c12bf20c657316435be86a253b0e082b9f6a2",
+        "sync_time": "2026-11-26 13:21:16 UTC"
+      },
+      "v3.3.0.2": {
+        "digest": "sha256:9e757d0cda6a3b00cafb60ec31c6a0328e7b4901c9c741ac56936edc0ea506de",
+        "sync_time": "2026-11-26 13:21:30 UTC"
+      },
+      "v3.3.1.0": {
+        "digest": "sha256:2ed7a9b1fe5f2126ea97d304afbf6cc37e71fa3a3433fbbe62d8ff1f5ff15d2f",
+        "sync_time": "2026-11-26 13:21:45 UTC"
+      },
+      "v3.3.1.1": {
+        "digest": "sha256:e15ffbbb182041c09a4086c423387dbd661ee83fce7f76afeabfd8c4aafc6c60",
+        "sync_time": "2026-11-26 13:21:49 UTC"
+      }
+    }
   }
 }
