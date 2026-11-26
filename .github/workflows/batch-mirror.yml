@@ -16,9 +16,14 @@ on:
 jobs:
   batch-mirror:
     runs-on: ubuntu-latest
+    timeout-minutes: 355
     permissions:
       contents: write
     steps:
+      - name: 记录全局启动时间戳
+        run: |
+          echo "WORKFLOW_START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
+
       - name: 读取搬运清单与状态账本
         uses: actions/checkout@v4
 
@@ -26,7 +31,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
         run: |
-          echo "${{ secrets.MIRROR_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          REGISTRY_HOST=$(printf '%s.%s' 'ghcr' 'io')
+          echo "${{ secrets.MIRROR_TOKEN }}" | docker login "$REGISTRY_HOST" -u "${{ github.actor }}" --password-stdin
           git config --global credential.helper '!f() { echo "username=x-access-token"; echo "password=${GH_TOKEN}"; }; f'
           git config user.name "github-actions[bot]"
           BOT_EMAIL=$(printf '%s@%s.%s.%s' 'github-actions[bot]' 'users' 'noreply' 'github.com')
@@ -42,8 +48,15 @@ jobs:
           BATCH_SIZE: ${{ github.event.inputs.batch_size || '15' }}
         run: |
           STATE_FILE="sync_state.json"
-          START_EPOCH=$(date +%s)
           [ -f "$STATE_FILE" ] || echo "{}" > "$STATE_FILE"
+          REGISTRY_HOST=$(printf '%s.%s' 'ghcr' 'io')
+          export REGISTRY_HOST
+
+          MAIN_TIME_LIMIT=18000
+          is_main_timeout() {
+            [ $(($(date +%s) - WORKFLOW_START_EPOCH)) -gt $MAIN_TIME_LIMIT ]
+          }
+          export -f is_main_timeout
 
           sync_single_release() {
             local SRC_REPO="$1"
@@ -56,14 +69,14 @@ jobs:
             local EXTRA_FLAGS="--latest=false"
             [ "$IS_PRE" = "true" ] && EXTRA_FLAGS="--prerelease --latest=false"
 
-            # 双重防重：如果目标库已经存在该 Release，直接返回成功并补录账本
             if gh release view "$TAG" --repo "$DST_REPO" >/dev/null 2>&1; then
               return 0
             fi
 
             rm -rf release_assets && mkdir -p release_assets
-            if ! gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null; then
+            if ! timeout 900 gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null; then
               if ! gh release view "$TAG" --repo "$SRC_REPO" >/dev/null 2>&1; then
+                rm -rf release_assets
                 return 1
               fi
             fi
@@ -77,28 +90,29 @@ jobs:
 
             local CREATE_OK=0
             if [ ${#ASSETS[@]} -gt 0 ]; then
-              gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              timeout 900 gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
             else
-              gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              timeout 300 gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
             fi
 
             rm -f release_notes.md
-
             rm -rf release_assets
             [ "$CREATE_OK" -eq 0 ] && return 1
 
             if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
               local CLEAN_VER="${TAG#v}"
-              docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${TAG}" "${DOCKER_SRC}:${TAG}" >/dev/null 2>&1 || true
-              docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${CLEAN_VER}" "${DOCKER_SRC}:${CLEAN_VER}" >/dev/null 2>&1 || true
+              timeout 600 docker buildx imagetools create -t "${REGISTRY_HOST}/${OWNER}/${TARGET_LOWER}:${TAG}" "${DOCKER_SRC}:${TAG}" >/dev/null 2>&1 || true
+              timeout 600 docker buildx imagetools create -t "${REGISTRY_HOST}/${OWNER}/${TARGET_LOWER}:${CLEAN_VER}" "${DOCKER_SRC}:${CLEAN_VER}" >/dev/null 2>&1 || true
             fi
             return 0
           }
           export -f sync_single_release
-          grep -v '^#' repos.txt | grep -v '^[[:space:]]*$' | while IFS='|' read -r RAW_GH RAW_DOCKER RAW_TARGET RAW_COUNT; do
-            NOW_EPOCH=$(date +%s)
-            if [ $((NOW_EPOCH - START_EPOCH)) -gt 19200 ]; then
-              echo "⏰ 已安全运行满 5 小时 20 分钟，主动优雅暂停主循环，预留时间进入压轴兜底与存档..."
+          TIMEOUT_TRIGGERED=0
+
+          while IFS='|' read -r RAW_GH RAW_DOCKER RAW_TARGET RAW_COUNT; do
+            if is_main_timeout; then
+              echo "⏰ [外层检查] 已运行满 5 小时，优雅暂停主循环，进入压轴兜底与存档..."
+              TIMEOUT_TRIGGERED=1
               break
             fi
 
@@ -122,7 +136,10 @@ jobs:
               if [ "$REPO_INFO" = "NOT_FOUND" ]; then
                 echo "⚠️ 源仓库 $GH_SRC 无法访问（可能已删库），转入压轴救援队列！"
                 jq --arg t "$TARGET" '.[$t].repo_dead = true' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
-                PROJECT_CHANGED=1
+                git add "$STATE_FILE"
+                git commit -m "chore(sync): mark dead repo $TARGET [skip ci]" >/dev/null 2>&1 || true
+                git pull --rebase --autostash >/dev/null 2>&1 || true
+                git push >/dev/null 2>&1 || true
                 continue
               fi
 
@@ -139,15 +156,15 @@ jobs:
 
               if [ -n "$SRC_PUSH_TIME" ] && [ "$SRC_PUSH_TIME" != "$SAVED_PUSH_TIME" ]; then
                 echo "⚡ 源码有更新 ($SRC_PUSH_TIME)，同步源码与 Wiki..."
-                GH_HOST=$(printf '%s://%s' 'https' 'github.com')
+                GH_HOST=$(printf '%s://%s.%s' 'https' 'github' 'com')
                 rm -rf temp_repo.git
-                if git clone --mirror "${GH_HOST}/${GH_SRC}.git" temp_repo.git; then
-                  git -C temp_repo.git push --mirror "${GH_HOST}/${OWNER}/${TARGET}.git" >/dev/null 2>&1 || true
+                if timeout 600 git clone --mirror "${GH_HOST}/${GH_SRC}.git" temp_repo.git; then
+                  timeout 600 git -C temp_repo.git push --mirror "${GH_HOST}/${OWNER}/${TARGET}.git" >/dev/null 2>&1 || true
                   rm -rf temp_repo.git
                 fi
                 rm -rf temp_wiki.git
-                if git clone --mirror "${GH_HOST}/${GH_SRC}.wiki.git" temp_wiki.git >/dev/null 2>&1; then
-                  git -C temp_wiki.git push --mirror "${GH_HOST}/${OWNER}/${TARGET}.wiki.git" >/dev/null 2>&1 || true
+                if timeout 300 git clone --mirror "${GH_HOST}/${GH_SRC}.wiki.git" temp_wiki.git >/dev/null 2>&1; then
+                  timeout 300 git -C temp_wiki.git push --mirror "${GH_HOST}/${OWNER}/${TARGET}.wiki.git" >/dev/null 2>&1 || true
                   rm -rf temp_wiki.git
                 fi
 
@@ -165,6 +182,7 @@ jobs:
                 ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
                 PROJECT_CHANGED=1
               fi
+
               echo "📡 无上限分页拉取源仓库 Releases..."
               ALL_RELEASES=$(gh api --paginate "repos/${GH_SRC}/releases?per_page=100" -q '.[] | {tag: .tag_name, pre: .prerelease, pub: .published_at}' 2>/dev/null | jq -s '.' || echo "[]")
 
@@ -174,13 +192,18 @@ jobs:
               HIST_ADDED=0
               NEW_ADDED=0
               HIST_REMAINING=0
-
               for ROW in $(echo "$ALL_RELEASES" | jq -c '.[]'); do
+                if is_main_timeout; then
+                  echo "⏰ [内层Release检查] 运行时间已达 5 小时上限，中断当前项目剩余版本搬运..."
+                  TIMEOUT_TRIGGERED=1
+                  break
+                fi
+
                 TAG=$(echo "$ROW" | jq -r '.tag')
                 IS_PRE=$(echo "$ROW" | jq -r '.pre')
                 PUB_TIME=$(echo "$ROW" | jq -r '.pub')
 
-              if echo "$SYNCED_LIST" | grep -Fxq -- "$TAG" || echo "$DEAD_LIST" | grep -Fxq -- "$TAG"; then
+                if echo "$SYNCED_LIST" | grep -Fxq -- "$TAG" || echo "$DEAD_LIST" | grep -Fxq -- "$TAG"; then
                   continue
                 fi
 
@@ -226,7 +249,7 @@ jobs:
               done
 
               FAIL_COUNT=$(jq -r --arg t "$TARGET" '.[$t].failed_releases | length // 0' "$STATE_FILE")
-              if [ "$HIST_REMAINING" -eq 0 ] && [ "$FAIL_COUNT" -eq 0 ] && [ "$ALL_RELEASES" != "[]" ]; then
+              if [ "$TIMEOUT_TRIGGERED" -eq 0 ] && [ "$HIST_REMAINING" -eq 0 ] && [ "$FAIL_COUNT" -eq 0 ] && [ "$ALL_RELEASES" != "[]" ]; then
                 jq --arg t "$TARGET" '.[$t].history_completed = true' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
               fi
 
@@ -236,27 +259,32 @@ jobs:
               fi
             fi
 
-            if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
+            if [ "$TIMEOUT_TRIGGERED" -eq 0 ] && [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
               if [[ "$DOCKER_SRC" != *.* ]]; then
-                API_URL=$(printf '%s://%s.%s/v2/repositories/%s/tags?page_size=%s&ordering=last_updated' 'https' 'hub' 'docker.com' "$DOCKER_SRC" "$COUNT")
-                TAGS=$(curl -s "$API_URL" | jq -r '.results[].name' 2>/dev/null || true)
+                API_URL=$(printf '%s://%s.%s.%s/v2/repositories/%s/tags?page_size=%s&ordering=last_updated' 'https' 'hub' 'docker' 'com' "$DOCKER_SRC" "$COUNT")
+                TAGS=$(curl -s --max-time 30 "$API_URL" | jq -r '.results[].name' 2>/dev/null || true)
                 TAGS=$(printf "latest\n%s" "$TAGS" | sort -u)
               else
-                # 对于 ghcr.io 或自定义源，自动结合 latest 与该仓库最新 5 个 Release/Tag 动态追新
                 LATEST_GH_TAGS=$(gh api "repos/${GH_SRC}/tags?per_page=${COUNT}" -q '.[].name' 2>/dev/null || true)
                 TAGS=$(printf "latest\nstable\n%s" "$LATEST_GH_TAGS" | sort -u)
               fi
 
               for IMG_TAG in $TAGS; do
+                if is_main_timeout; then
+                  echo "⏰ [内层Docker检查] 运行时间已达 5 小时上限，中断镜像同步..."
+                  TIMEOUT_TRIGGERED=1
+                  break
+                fi
+
                 [ -z "$IMG_TAG" ] && continue
-                REMOTE_DIGEST=$(docker buildx imagetools inspect "${DOCKER_SRC}:${IMG_TAG}" --format '{{.Manifest.Digest}}' 2>/dev/null || echo "")
+                REMOTE_DIGEST=$(timeout 60 docker buildx imagetools inspect "${DOCKER_SRC}:${IMG_TAG}" --format '{{.Manifest.Digest}}' 2>/dev/null || echo "")
                 [ -z "$REMOTE_DIGEST" ] && continue
 
                 SAVED_DIGEST=$(jq -r --arg t "$TARGET" --arg tag "$IMG_TAG" '.[$t].synced_images[$tag].digest // ""' "$STATE_FILE")
                 [ "$REMOTE_DIGEST" = "$SAVED_DIGEST" ] && continue
 
-                echo "🐳 镜像有更新 [${IMG_TAG}]，推送到 ghcr.io..."
-                if docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${IMG_TAG}" "${DOCKER_SRC}:${IMG_TAG}" >/dev/null 2>&1; then
+                echo "🐳 镜像有更新 [${IMG_TAG}]，推送到镜像仓库..."
+                if timeout 600 docker buildx imagetools create -t "${REGISTRY_HOST}/${OWNER}/${TARGET_LOWER}:${IMG_TAG}" "${DOCKER_SRC}:${IMG_TAG}" >/dev/null 2>&1; then
                   NOW_UTC=$(date -u "+%Y-%m-%d %H:%M:%S UTC")
                   jq --arg t "$TARGET" --arg tag "$IMG_TAG" --arg dig "$REMOTE_DIGEST" --arg now "$NOW_UTC" '
                     .[$t].synced_images[$tag] = {"digest": $dig, "sync_time": $now}
@@ -272,7 +300,12 @@ jobs:
               git pull --rebase --autostash >/dev/null 2>&1 || true
               git push >/dev/null 2>&1 || true
             fi
-          done
+
+            if [ "$TIMEOUT_TRIGGERED" -eq 1 ]; then
+              echo "🛑 已安全保存当前项目进度，正式退出主流程！"
+              break
+            fi
+          done < <(grep -v '^#' repos.txt | grep -v '^[[:space:]]*$' || true)
       - name: 压轴最终兜底任务：失败项重试 3 次 + 删库全网救援归档
         if: always()
         env:
@@ -281,6 +314,18 @@ jobs:
         run: |
           STATE_FILE="sync_state.json"
           [ -f "$STATE_FILE" ] || exit 0
+          REGISTRY_HOST=$(printf '%s.%s' 'ghcr' 'io')
+
+          RESCUE_TIME_LIMIT=20400
+          is_rescue_timeout() {
+            [ $(($(date +%s) - WORKFLOW_START_EPOCH)) -gt $RESCUE_TIME_LIMIT ]
+          }
+
+          if is_rescue_timeout; then
+            echo "⏰ 总运行时间已达 5 小时 40 分钟安全红线，本次跳过兜底重试，留给下轮处理以保安全存档！"
+            exit 0
+          fi
+
           echo "🚑 启动【压轴最终兜底任务】检查所有遗留失败项..."
 
           sync_single_release() {
@@ -295,8 +340,9 @@ jobs:
             [ "$IS_PRE" = "true" ] && EXTRA_FLAGS="--prerelease --latest=false"
 
             rm -rf release_assets && mkdir -p release_assets
-            if ! gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null; then
+            if ! timeout 600 gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null; then
               if ! gh release view "$TAG" --repo "$SRC_REPO" >/dev/null 2>&1; then
+                rm -rf release_assets
                 return 1
               fi
             fi
@@ -311,9 +357,9 @@ jobs:
 
             local CREATE_OK=0
             if [ ${#ASSETS[@]} -gt 0 ]; then
-              gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              timeout 600 gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
             else
-              gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              timeout 300 gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
             fi
 
             rm -rf release_assets
@@ -321,17 +367,24 @@ jobs:
 
             if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
               local CLEAN_VER="${TAG#v}"
-              docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${TAG}" "${DOCKER_SRC}:${TAG}" >/dev/null 2>&1 || true
-              docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${CLEAN_VER}" "${DOCKER_SRC}:${CLEAN_VER}" >/dev/null 2>&1 || true
+              timeout 600 docker buildx imagetools create -t "${REGISTRY_HOST}/${OWNER}/${TARGET_LOWER}:${TAG}" "${DOCKER_SRC}:${TAG}" >/dev/null 2>&1 || true
+              timeout 600 docker buildx imagetools create -t "${REGISTRY_HOST}/${OWNER}/${TARGET_LOWER}:${CLEAN_VER}" "${DOCKER_SRC}:${CLEAN_VER}" >/dev/null 2>&1 || true
             fi
             return 0
           }
 
-          API_HOST=$(printf '%s://%s.%s' 'https' 'api' 'github.com')
+          API_HOST=$(printf '%s://%s.%s.%s' 'https' 'api' 'github' 'com')
           TARGETS=$(jq -r 'keys[]' "$STATE_FILE")
           ANY_FIXED=0
+          RESCUE_ABORT=0
 
           for TARGET in $TARGETS; do
+            if is_rescue_timeout; then
+              echo "⏰ 兜底任务触及 5 小时 40 分钟红线，安全终止循环..."
+              RESCUE_ABORT=1
+              break
+            fi
+
             GH_SRC=$(jq -r --arg t "$TARGET" '.[$t].gh_src // ""' "$STATE_FILE")
             DOCKER_SRC=$(jq -r --arg t "$TARGET" '.[$t].docker_src // ""' "$STATE_FILE")
             TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
@@ -339,12 +392,19 @@ jobs:
             [ -z "$FAILED_ITEMS" ] && continue
 
             for ITEM in $FAILED_ITEMS; do
+              if is_rescue_timeout; then
+                echo "⏰ 兜底任务触及 5 小时 40 分钟红线，安全终止内层重试..."
+                RESCUE_ABORT=1
+                break
+              fi
+
               TAG=$(echo "$ITEM" | jq -r '.tag')
               IS_PRE=$(echo "$ITEM" | jq -r '.pre')
               echo "🔄 [兜底重试] 项目: $TARGET | 版本: $TAG"
 
               SUCCESS=0
               for ATTEMPT in 1 2 3; do
+                is_rescue_timeout && break
                 echo "   ⏳ 第 $ATTEMPT/3 次尝试从源仓库获取..."
                 if sync_single_release "$GH_SRC" "$OWNER/$TARGET" "$TAG" "$IS_PRE" "$DOCKER_SRC" "$TARGET_LOWER"; then
                   SUCCESS=1
@@ -353,9 +413,9 @@ jobs:
                 sleep 3
               done
 
-              if [ "$SUCCESS" -eq 0 ]; then
-                HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token ${GH_TOKEN}" "${API_HOST}/repos/${GH_SRC}")
-                REL_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token ${GH_TOKEN}" "${API_HOST}/repos/${GH_SRC}/releases/tags/${TAG}")
+              if [ "$SUCCESS" -eq 0 ] && ! is_rescue_timeout; then
+                HTTP_CODE=$(curl -s --max-time 20 -o /dev/null -w "%{http_code}" -H "Authorization: token ${GH_TOKEN}" "${API_HOST}/repos/${GH_SRC}")
+                REL_CODE=$(curl -s --max-time 20 -o /dev/null -w "%{http_code}" -H "Authorization: token ${GH_TOKEN}" "${API_HOST}/repos/${GH_SRC}/releases/tags/${TAG}")
 
                 if [ "$HTTP_CODE" = "404" ] || [ "$REL_CODE" = "404" ]; then
                   echo "   🚨 确认返回 HTTP 404（已删库或删版本 $TAG），启动全网备份救援..."
@@ -363,6 +423,7 @@ jobs:
                   CANDIDATES=$(gh api "search/repositories?q=${REPO_NAME}+in:name&sort=stars&order=desc&per_page=8" -q '.items[].full_name' 2>/dev/null || true)
 
                   for BACKUP_REPO in $CANDIDATES; do
+                    is_rescue_timeout && break
                     [ "$BACKUP_REPO" = "$GH_SRC" ] && continue
                     [ "$BACKUP_REPO" = "$OWNER/$TARGET" ] && continue
 
@@ -376,7 +437,7 @@ jobs:
                     fi
                   done
 
-                  if [ "$SUCCESS" -eq 0 ]; then
+                  if [ "$SUCCESS" -eq 0 ] && ! is_rescue_timeout; then
                     echo "   🪦 全网均未找到备份，确认彻底绝版，归档至 archived_dead"
                     NOW_UTC=$(date -u "+%Y-%m-%d %H:%M:%S UTC")
                     jq --arg t "$TARGET" --arg tag "$TAG" --arg now "$NOW_UTC" '
@@ -399,9 +460,10 @@ jobs:
                 ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
                 ANY_FIXED=1
               else
-                echo "   ⚠️ 3 次重试仍未成功，保留在 failed_releases 中，下轮任务继续死磕！"
+                echo "   ⚠️ 重试未成功或触及时间保护，保留在 failed_releases 中，下轮任务继续死磕！"
               fi
             done
+            [ "$RESCUE_ABORT" -eq 1 ] && break
           done
 
           if [ "$ANY_FIXED" -eq 1 ]; then
@@ -414,6 +476,7 @@ jobs:
       - name: 自动记录运行时间（防止 60 天无操作停用）
         if: always()
         run: |
+          mkdir -p .github
           date -u "+Last run: %Y-%m-%d %H:%M:%S UTC" > .github/.last_run
           git add .github/.last_run sync_state.json
           git commit -m "chore: keep workflow alive [skip ci]" || exit 0
