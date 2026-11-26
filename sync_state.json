@@ -7873,7 +7873,7 @@
   "pocket-id": {
     "gh_src": "pocket-id/pocket-id",
     "docker_src": "ghcr.io/pocket-id/pocket-id",
-    "last_repo_push": "2026-11-26T10:13:00Z",
+    "last_repo_push": "2026-11-26T17:07:06Z",
     "baseline_time": "2026-11-26T16:24:55Z",
     "synced_releases": [
       "v2.14.0",
