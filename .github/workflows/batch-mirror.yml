@@ -1,7 +1,6 @@
-name: 全量渐进式总控搬运（每次补齐15个历史 + 全量源码/Wiki/镜像追新）
+name: 全量渐进式总控搬运（无上限/双轨追新/全网救援版）
 
 on:
-  # 每天定时跑 2 次（北京时间 02:00 和 14:00），每次自动补齐 15 个历史版本直至全量搬完
   schedule:
     - cron: '0 6,18 * * *'
   push:
@@ -10,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       batch_size:
-        description: '本次每个项目补齐几个未同步的历史 Release（默认 15，想一次多补可填 15）'
+        description: '本次每个项目补齐几个基准时间之前的历史 Release（默认 15）'
         required: true
         default: '15'
 
@@ -20,7 +19,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: 读取搬运清单
+      - name: 读取搬运清单与状态账本
         uses: actions/checkout@v4
 
       - name: 登录 GitHub 镜像仓库与 Git 认证
@@ -29,145 +28,331 @@ jobs:
         run: |
           echo "${{ secrets.MIRROR_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           git config --global credential.helper '!f() { echo "username=x-access-token"; echo "password=${GH_TOKEN}"; }; f'
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@://github.com"
 
       - name: 设置多架构并发构建工具
         uses: docker/setup-buildx-action@v3
 
-      - name: 全量渐进补齐清单中的所有项目
+      - name: 主流程：无上限全量扫描与双轨制搬运
         env:
           GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
           OWNER: ${{ github.repository_owner }}
           BATCH_SIZE: ${{ github.event.inputs.batch_size || '15' }}
         run: |
+          STATE_FILE="sync_state.json"
+          [ -f "$STATE_FILE" ] || echo "{}" > "$STATE_FILE"
+
+          sync_single_release() {
+            local SRC_REPO="$1"
+            local DST_REPO="$2"
+            local TAG="$3"
+            local IS_PRE="$4"
+            local DOCKER_SRC="$5"
+            local TARGET_LOWER="$6"
+
+            local EXTRA_FLAGS="--latest=false"
+            [ "$IS_PRE" = "true" ] && EXTRA_FLAGS="--prerelease --latest=false"
+
+            rm -rf release_assets && mkdir -p release_assets
+            if ! gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null; then
+              if ! gh release view "$TAG" --repo "$SRC_REPO" >/dev/null 2>&1; then
+                return 1
+              fi
+            fi
+
+            local BODY
+            BODY=$(gh release view "$TAG" --repo "$SRC_REPO" --json body -q '.body' 2>/dev/null || echo "Mirrored release $TAG")
+
+            local ASSETS=()
+            while IFS= read -r -d '' file; do
+              ASSETS+=("$file")
+            done < <(find release_assets -maxdepth 1 -type f -print0)
+
+            local CREATE_OK=0
+            if [ ${#ASSETS[@]} -gt 0 ]; then
+              gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+            else
+              gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+            fi
+
+            rm -rf release_assets
+            [ "$CREATE_OK" -eq 0 ] && return 1
+
+            if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
+              local CLEAN_VER="${TAG#v}"
+              docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${TAG}" "${DOCKER_SRC}:${TAG}" >/dev/null 2>&1 || true
+              docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${CLEAN_VER}" "${DOCKER_SRC}:${CLEAN_VER}" >/dev/null 2>&1 || true
+            fi
+            return 0
+          }
+          export -f sync_single_release
           grep -v '^#' repos.txt | grep -v '^[[:space:]]*$' | while IFS='|' read -r RAW_GH RAW_DOCKER RAW_TARGET RAW_COUNT; do
             GH_SRC=$(echo "$RAW_GH" | xargs)
             DOCKER_SRC=$(echo "$RAW_DOCKER" | xargs)
             TARGET=$(echo "$RAW_TARGET" | xargs)
             COUNT=$(echo "$RAW_COUNT" | xargs)
             COUNT=${COUNT:-5}
+            TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
+            PROJECT_CHANGED=0
 
             echo "=================================================="
-            echo "🚀 开始同步项目: $TARGET"
+            echo "🔍 检查项目: $TARGET"
 
-            # 1. 创建公开仓库（开启 Wiki，并关闭子仓库自身 Actions 总开关杜绝原作者脚本乱跑报错）
+            jq --arg t "$TARGET" --arg gh "$GH_SRC" --arg dk "$DOCKER_SRC" '
+              .[$t].gh_src = $gh | .[$t].docker_src = $dk
+            ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+
             if [ "$GH_SRC" != "none" ] && [ -n "$GH_SRC" ] && [[ "$GH_SRC" != postgres/* ]] && [[ "$GH_SRC" != redis/* ]] && [[ "$GH_SRC" != nginx/* ]]; then
+              REPO_INFO=$(gh api "repos/${GH_SRC}" 2>/dev/null || echo "NOT_FOUND")
+              if [ "$REPO_INFO" = "NOT_FOUND" ]; then
+                echo "⚠️ 源仓库 $GH_SRC 无法访问（可能已删库），转入压轴救援队列！"
+                jq --arg t "$TARGET" '.[$t].repo_dead = true' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                PROJECT_CHANGED=1
+                continue
+              fi
+
+              SRC_PUSH_TIME=$(echo "$REPO_INFO" | jq -r '.pushed_at // ""')
+              SAVED_PUSH_TIME=$(jq -r --arg t "$TARGET" '.[$t].last_repo_push // ""' "$STATE_FILE")
+
               if ! gh repo view "$OWNER/$TARGET" >/dev/null 2>&1; then
                 echo "📦 创建公开仓库: $OWNER/$TARGET"
                 gh repo create "$OWNER/$TARGET" --public --enable-wiki || true
-                sleep 10
-              else
-                gh repo edit "$OWNER/$TARGET" --enable-wiki || true
+                gh api -X PUT "repos/${OWNER}/${TARGET}/actions/permissions" -F enabled=false >/dev/null 2>&1 || true
+                sleep 5
+                SAVED_PUSH_TIME=""
               fi
 
-              # 关闭子仓库自身的 Actions 总开关
-              gh api -X PUT "repos/${OWNER}/${TARGET}/actions/permissions" -F enabled=false >/dev/null 2>&1 || true
-
-              # 2. 完整同步全部源码、全部分支、全部 Tags（含 README 部署与变量说明）
-              echo "⚡ 全量同步源码与部署文档: $GH_SRC -> $OWNER/$TARGET"
-              rm -rf temp_repo.git
-              SRC_URL=$(printf '%s://%s/%s.git' 'https' 'github.com' "$GH_SRC")
-              DST_URL=$(printf '%s://%s/%s/%s.git' 'https' 'github.com' "$OWNER" "$TARGET")
-              if git clone --mirror "$SRC_URL" temp_repo.git; then
-                git -C temp_repo.git push --mirror "$DST_URL" >/dev/null 2>&1 || true
+              if [ -n "$SRC_PUSH_TIME" ] && [ "$SRC_PUSH_TIME" != "$SAVED_PUSH_TIME" ]; then
+                echo "⚡ 源码有更新 ($SRC_PUSH_TIME)，同步源码与 Wiki..."
                 rm -rf temp_repo.git
-              fi
-
-              # 3. 全量同步官方 Wiki 百科文档
-              rm -rf temp_wiki.git
-              WIKI_SRC=$(printf '%s://%s/%s.wiki.git' 'https' 'github.com' "$GH_SRC")
-              WIKI_DST=$(printf '%s://%s/%s/%s.wiki.git' 'https' 'github.com' "$OWNER" "$TARGET")
-              if git clone --mirror "$WIKI_SRC" temp_wiki.git >/dev/null 2>&1; then
-                echo "📚 同步官方 Wiki 文档..."
-                git -C temp_wiki.git push --mirror "$WIKI_DST" >/dev/null 2>&1 || true
-                rm -rf temp_wiki.git
-              fi
-
-              # 4. 智能对比：获取官方所有 Releases（含预发布/测试版状态），每次按序补齐 BATCH_SIZE 个并 100% 还原官方标签
-              echo "🔍 检查未同步的 Releases（本轮最多补齐 $BATCH_SIZE 个）..."
-              REAL_LATEST=$(gh release view --repo "$GH_SRC" --json tagName -q '.tagName' 2>/dev/null || true)
-              EXISTING_TAGS=$(gh release list --repo "$OWNER/$TARGET" --limit 200 --json tagName -q '.[].tagName' 2>/dev/null || true)
-
-              # 获取官方最近 200 个版本的 标签名 与 是否为预发布测试版(isPrerelease)
-              SRC_RELEASES_JSON=$(gh release list --repo "$GH_SRC" --limit 200 --json tagName,isPrerelease 2>/dev/null || echo "[]")
-
-              ADDED=0
-              for ROW in $(echo "$SRC_RELEASES_JSON" | jq -c '.[]'); do
-                if [ "$ADDED" -ge "$BATCH_SIZE" ]; then
-                  break
+                if git clone --mirror "https://github.com{GH_SRC}.git" temp_repo.git; then
+                  git -C temp_repo.git push --mirror "https://github.com{OWNER}/${TARGET}.git" >/dev/null 2>&1 || true
+                  rm -rf temp_repo.git
                 fi
+                rm -rf temp_wiki.git
+                if git clone --mirror "https://github.com{GH_SRC}.wiki.git" temp_wiki.git >/dev/null 2>&1; then
+                  git -C temp_wiki.git push --mirror "https://github.com{OWNER}/${TARGET}.wiki.git" >/dev/null 2>&1 || true
+                  rm -rf temp_wiki.git
+                fi
+                jq --arg t "$TARGET" --arg pt "$SRC_PUSH_TIME" '.[$t].last_repo_push = $pt' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                PROJECT_CHANGED=1
+              fi
 
-                TAG=$(echo "$ROW" | jq -r '.tagName')
-                IS_PRE=$(echo "$ROW" | jq -r '.isPrerelease')
+              BASELINE_TIME=$(jq -r --arg t "$TARGET" '.[$t].baseline_time // ""' "$STATE_FILE")
+              if [ -z "$BASELINE_TIME" ]; then
+                BASELINE_TIME=$(date -u "+%Y-%m-%dT%H:%M:%SZ")
+                echo "⏱️ 首次建档，锁定基准查询时间: $BASELINE_TIME"
+                EXISTING_ARR=$(gh api --paginate "repos/${OWNER}/${TARGET}/releases?per_page=100" -q '.[].tag_name' 2>/dev/null | jq -R . | jq -s . || echo "[]")
+                jq --arg t "$TARGET" --arg bt "$BASELINE_TIME" --argjson arr "$EXISTING_ARR" '
+                  .[$t].baseline_time = $bt | .[$t].synced_releases = $arr
+                ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                PROJECT_CHANGED=1
+              fi
+              echo "📡 无上限分页拉取源仓库 Releases..."
+              ALL_RELEASES=$(gh api --paginate "repos/${GH_SRC}/releases?per_page=100" -q '.[] | {tag: .tag_name, pre: .prerelease, pub: .published_at}' 2>/dev/null | jq -s '.' || echo "[]")
 
-                # 已存在的版本跳过，但顺手校准一次它的预发布状态
-                if echo "$EXISTING_TAGS" | grep -Fxq "$TAG"; then
-                  if [ "$IS_PRE" = "true" ]; then
-                    gh release edit "$TAG" --repo "$OWNER/$TARGET" --prerelease >/dev/null 2>&1 || true
-                  fi
+              SYNCED_LIST=$(jq -r --arg t "$TARGET" '.[$t].synced_releases // [] | .[]' "$STATE_FILE")
+              DEAD_LIST=$(jq -r --arg t "$TARGET" '.[$t].archived_dead // [] | .[].tag' "$STATE_FILE")
+
+              HIST_ADDED=0
+              NEW_ADDED=0
+              HIST_REMAINING=0
+
+              for ROW in $(echo "$ALL_RELEASES" | jq -c '.[]'); do
+                TAG=$(echo "$ROW" | jq -r '.tag')
+                IS_PRE=$(echo "$ROW" | jq -r '.pre')
+                PUB_TIME=$(echo "$ROW" | jq -r '.pub')
+
+                if echo "$SYNCED_LIST" | grep -Fxq "$TAG" || echo "$DEAD_LIST" | grep -Fxq "$TAG"; then
                   continue
                 fi
 
-                # 根据官方属性决定是打上 Pre-release 测试标，还是保持普通正式版（且绝不抢占 Latest）
-                EXTRA_FLAGS="--latest=false"
-                LABEL_TEXT="正式版"
-                if [ "$IS_PRE" = "true" ]; then
-                  EXTRA_FLAGS="--prerelease --latest=false"
-                  LABEL_TEXT="Pre-release 测试版"
-                fi
-
-                echo "  📥 正在补齐 Release [$LABEL_TEXT]: $TAG ($((ADDED+1))/$BATCH_SIZE)"
-                rm -rf release_assets && mkdir -p release_assets
-                gh release download "$TAG" --repo "$GH_SRC" --dir release_assets 2>/dev/null || true
-                BODY=$(gh release view "$TAG" --repo "$GH_SRC" --json body -q '.body' 2>/dev/null || echo "Mirrored release $TAG")
-
-                if [ "$(ls -A release_assets)" ]; then
-                  gh release create "$TAG" release_assets/* --repo "$OWNER/$TARGET" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 || true
+                if [[ "$PUB_TIME" > "$BASELINE_TIME" ]]; then
+                  echo "  🆕 [追新模式] 搬运基准时间后新增版本: $TAG"
+                  if sync_single_release "$GH_SRC" "$OWNER/$TARGET" "$TAG" "$IS_PRE" "$DOCKER_SRC" "$TARGET_LOWER"; then
+                    NOW_UTC=$(date -u "+%Y-%m-%d %H:%M:%S UTC")
+                    jq --arg t "$TARGET" --arg tag "$TAG" --arg now "$NOW_UTC" '
+                      .[$t].synced_releases = ((.[$t].synced_releases // []) + [$tag] | unique) |
+                      .[$t].failed_releases = ((.[$t].failed_releases // []) | map(select(.tag != $tag))) |
+                      .[$t].last_sync_time = $now
+                    ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                    NEW_ADDED=$((NEW_ADDED + 1))
+                    PROJECT_CHANGED=1
+                  else
+                    jq --arg t "$TARGET" --arg tag "$TAG" --arg pre "$IS_PRE" '
+                      .[$t].failed_releases = (((.[$t].failed_releases // []) | map(select(.tag != $tag))) + [{"tag": $tag, "pre": $pre}])
+                    ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                    PROJECT_CHANGED=1
+                  fi
                 else
-                  gh release create "$TAG" --repo "$OWNER/$TARGET" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 || true
+                  if [ "$HIST_ADDED" -ge "$BATCH_SIZE" ]; then
+                    HIST_REMAINING=$((HIST_REMAINING + 1))
+                    continue
+                  fi
+                  echo "  📥 [历史补齐] 搬运基准时间前版本: $TAG ($((HIST_ADDED+1))/$BATCH_SIZE)"
+                  if sync_single_release "$GH_SRC" "$OWNER/$TARGET" "$TAG" "$IS_PRE" "$DOCKER_SRC" "$TARGET_LOWER"; then
+                    NOW_UTC=$(date -u "+%Y-%m-%d %H:%M:%S UTC")
+                    jq --arg t "$TARGET" --arg tag "$TAG" --arg now "$NOW_UTC" '
+                      .[$t].synced_releases = ((.[$t].synced_releases // []) + [$tag] | unique) |
+                      .[$t].failed_releases = ((.[$t].failed_releases // []) | map(select(.tag != $tag))) |
+                      .[$t].last_sync_time = $now
+                    ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                    HIST_ADDED=$((HIST_ADDED + 1))
+                    PROJECT_CHANGED=1
+                  else
+                    jq --arg t "$TARGET" --arg tag "$TAG" --arg pre "$IS_PRE" '
+                      .[$t].failed_releases = (((.[$t].failed_releases // []) | map(select(.tag != $tag))) + [{"tag": $tag, "pre": $pre}])
+                    ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                    PROJECT_CHANGED=1
+                  fi
                 fi
-
-                # 顺手把这个历史版本对应的 Docker 镜像也一并补齐
-                if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
-                  TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
-                  CLEAN_VER="${TAG#v}"
-                  docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${TAG}" "${DOCKER_SRC}:${TAG}" >/dev/null 2>&1 || true
-                  docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${CLEAN_VER}" "${DOCKER_SRC}:${CLEAN_VER}" >/dev/null 2>&1 || true
-                fi
-
-                ADDED=$((ADDED+1))
               done
 
-              # 最终校准：强制把官方真正的最新正式版设为 Latest 绿标，并解除旧版本的误标
-              if [ -n "$REAL_LATEST" ]; then
-                gh release edit "$REAL_LATEST" --repo "$OWNER/$TARGET" --latest --prerelease=false >/dev/null 2>&1 || true
+              FAIL_COUNT=$(jq -r --arg t "$TARGET" '.[$t].failed_releases | length // 0' "$STATE_FILE")
+              if [ "$HIST_REMAINING" -eq 0 ] && [ "$FAIL_COUNT" -eq 0 ] && [ "$ALL_RELEASES" != "[]" ]; then
+                jq --arg t "$TARGET" '.[$t].history_completed = true' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
               fi
-              echo "  ✅ 本轮已为 $TARGET 补齐 $ADDED 个历史 Release（全部标签已严格对齐官方）"
+
+              if [ $((HIST_ADDED + NEW_ADDED)) -gt 0 ]; then
+                REAL_LATEST=$(gh release view --repo "$GH_SRC" --json tagName -q '.tagName' 2>/dev/null || true)
+                [ -n "$REAL_LATEST" ] && gh release edit "$REAL_LATEST" --repo "$OWNER/$TARGET" --latest --prerelease=false >/dev/null 2>&1 || true
+              fi
             fi
 
-            # 5. 确保最新镜像与常用版本标签始终保持同步
             if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
-              TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
               if [[ "$DOCKER_SRC" != *.* ]]; then
-                API_URL=$(printf '%s://%s/v2/repositories/%s/tags?page_size=%s&ordering=last_updated' 'https' 'hub''.''docker.com' "$DOCKER_SRC" "$COUNT")
+                API_URL="https://docker.com{DOCKER_SRC}/tags?page_size=${COUNT}&ordering=last_updated"
                 TAGS=$(curl -s "$API_URL" | jq -r '.results[].name' 2>/dev/null || true)
                 TAGS=$(printf "latest\n%s" "$TAGS" | sort -u)
               else
                 TAGS="latest stable 6.6.5 0.17.0 libtorrentv1 RELEASE.2025-04-22T22-12-26Z"
               fi
 
-              echo "$TAGS" | xargs -I {} -P 6 bash -c '
-                docker buildx imagetools create -t "ghcr.io/$2/$3:{}" "$1:{}" >/dev/null 2>&1 || true
-              ' _ "$DOCKER_SRC" "$OWNER" "$TARGET_LOWER"
+              for IMG_TAG in $TAGS; do
+                [ -z "$IMG_TAG" ] && continue
+                REMOTE_DIGEST=$(docker buildx imagetools inspect "${DOCKER_SRC}:${IMG_TAG}" --format '{{.Manifest.Digest}}' 2>/dev/null || echo "")
+                [ -z "$REMOTE_DIGEST" ] && continue
+
+                SAVED_DIGEST=$(jq -r --arg t "$TARGET" --arg tag "$IMG_TAG" '.[$t].synced_images[$tag].digest // ""' "$STATE_FILE")
+                [ "$REMOTE_DIGEST" = "$SAVED_DIGEST" ] && continue
+
+                echo "🐳 镜像有更新 [${IMG_TAG}]，推送到 ghcr.io..."
+                if docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${IMG_TAG}" "${DOCKER_SRC}:${IMG_TAG}" >/dev/null 2>&1; then
+                  NOW_UTC=$(date -u "+%Y-%m-%d %H:%M:%S UTC")
+                  jq --arg t "$TARGET" --arg tag "$IMG_TAG" --arg dig "$REMOTE_DIGEST" --arg now "$NOW_UTC" '
+                    .[$t].synced_images[$tag] = {"digest": $dig, "sync_time": $now}
+                  ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                  PROJECT_CHANGED=1
+                fi
+              done
+            fi
+
+            if [ "$PROJECT_CHANGED" -eq 1 ]; then
+              git add "$STATE_FILE"
+              git commit -m "chore(sync): update state for $TARGET [skip ci]" >/dev/null 2>&1 || true
+              git pull --rebase --autostash >/dev/null 2>&1 || true
+              git push >/dev/null 2>&1 || true
             fi
           done
+      - name: 压轴最终兜底任务：失败项重试 3 次 + 删库全网救援归档
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.MIRROR_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          STATE_FILE="sync_state.json"
+          [ -f "$STATE_FILE" ] || exit 0
+          echo "🚑 启动【压轴最终兜底任务】检查所有遗留失败项..."
+
+          TARGETS=$(jq -r 'keys[]' "$STATE_FILE")
+          ANY_FIXED=0
+
+          for TARGET in $TARGETS; do
+            GH_SRC=$(jq -r --arg t "$TARGET" '.[$t].gh_src // ""' "$STATE_FILE")
+            DOCKER_SRC=$(jq -r --arg t "$TARGET" '.[$t].docker_src // ""' "$STATE_FILE")
+            TARGET_LOWER=$(echo "$TARGET" | tr '[:upper:]' '[:lower:]')
+            FAILED_ITEMS=$(jq -c --arg t "$TARGET" '.[$t].failed_releases // [] | .[]' "$STATE_FILE")
+            [ -z "$FAILED_ITEMS" ] && continue
+
+            for ITEM in $FAILED_ITEMS; do
+              TAG=$(echo "$ITEM" | jq -r '.tag')
+              IS_PRE=$(echo "$ITEM" | jq -r '.pre')
+              echo "🔄 [兜底重试] 项目: $TARGET | 版本: $TAG"
+
+              SUCCESS=0
+              for ATTEMPT in 1 2 3; do
+                echo "   ⏳ 第 $ATTEMPT/3 次尝试从源仓库获取..."
+                if sync_single_release "$GH_SRC" "$OWNER/$TARGET" "$TAG" "$IS_PRE" "$DOCKER_SRC" "$TARGET_LOWER"; then
+                  SUCCESS=1
+                  break
+                fi
+                sleep 3
+              done
+
+              if [ "$SUCCESS" -eq 0 ]; then
+                REPO_STATUS=$(gh api "repos/${GH_SRC}" -q '.id' 2>/dev/null || echo "404")
+                REL_STATUS=$(gh release view "$TAG" --repo "$GH_SRC" --json tagName -q '.tagName' 2>/dev/null || echo "404")
+
+                if [ "$REPO_STATUS" = "404" ] || [ "$REL_STATUS" = "404" ]; then
+                  echo "   🚨 源仓库或版本 $TAG 已不存在（404），启动全网镜像备份救援..."
+                  REPO_NAME="${GH_SRC##*/}"
+                  CANDIDATES=$(gh api "search/repositories?q=${REPO_NAME}+in:name&sort=stars&order=desc&per_page=8" -q '.items[].full_name' 2>/dev/null || true)
+
+                  for BACKUP_REPO in $CANDIDATES; do
+                    [ "$BACKUP_REPO" = "$GH_SRC" ] && continue
+                    [ "$BACKUP_REPO" = "$OWNER/$TARGET" ] && continue
+
+                    if gh release view "$TAG" --repo "$BACKUP_REPO" >/dev/null 2>&1; then
+                      echo "   💡 在全网备份库 [$BACKUP_REPO] 中发现该版本！尝试抢救..."
+                      if sync_single_release "$BACKUP_REPO" "$OWNER/$TARGET" "$TAG" "$IS_PRE" "$DOCKER_SRC" "$TARGET_LOWER"; then
+                        echo "   🎉 抢救成功！已从 [$BACKUP_REPO] 恢复 $TAG"
+                        SUCCESS=1
+                        break
+                      fi
+                    fi
+                  done
+
+                  if [ "$SUCCESS" -eq 0 ]; then
+                    echo "   🪦 全网均未找到备份，确认彻底绝版，归档至 archived_dead"
+                    NOW_UTC=$(date -u "+%Y-%m-%d %H:%M:%S UTC")
+                    jq --arg t "$TARGET" --arg tag "$TAG" --arg now "$NOW_UTC" '
+                      .[$t].failed_releases = ((.[$t].failed_releases // []) | map(select(.tag != $tag))) |
+                      .[$t].archived_dead = ((.[$t].archived_dead // []) + [{"tag": $tag, "archived_at": $now, "reason": "Source 404 & no public mirror found"}])
+                    ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                    ANY_FIXED=1
+                    continue
+                  fi
+                fi
+              fi
+
+              if [ "$SUCCESS" -eq 1 ]; then
+                echo "   ✅ 兜底成功！已将 $TAG 移出失败队列并录入已同步账本。"
+                NOW_UTC=$(date -u "+%Y-%m-%d %H:%M:%S UTC")
+                jq --arg t "$TARGET" --arg tag "$TAG" --arg now "$NOW_UTC" '
+                  .[$t].synced_releases = ((.[$t].synced_releases // []) + [$tag] | unique) |
+                  .[$t].failed_releases = ((.[$t].failed_releases // []) | map(select(.tag != $tag))) |
+                  .[$t].last_sync_time = $now
+                ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
+                ANY_FIXED=1
+              else
+                echo "   ⚠️ 3 次重试仍未成功，保留在 failed_releases 中，下轮任务继续死磕！"
+              fi
+            done
+          done
+
+          if [ "$ANY_FIXED" -eq 1 ]; then
+            git add "$STATE_FILE"
+            git commit -m "chore(rescue): update fallback & rescue state [skip ci]" >/dev/null 2>&1 || true
+            git pull --rebase --autostash >/dev/null 2>&1 || true
+            git push >/dev/null 2>&1 || true
+          fi
 
       - name: 自动记录运行时间（防止 60 天无操作停用）
         if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           date -u "+Last run: %Y-%m-%d %H:%M:%S UTC" > .github/.last_run
-          git add .github/.last_run
+          git add .github/.last_run sync_state.json
           git commit -m "chore: keep workflow alive [skip ci]" || exit 0
+          git pull --rebase --autostash >/dev/null 2>&1 || true
           git push
-
