@@ -937,8 +937,8 @@
         "sync_time": "2026-11-26 03:24:04 UTC"
       },
       "build-feat-hitl-im-dev": {
-        "digest": "sha256:5b3cee5ff143cca18ca9f182dc09779a82023b6e583381d0d1cde1d8ab5a4c7d",
-        "sync_time": "2026-11-26 03:24:07 UTC"
+        "digest": "sha256:042198fafdaaaff89d22c0fa58df9017f8624f04b4c718ce6be3352ae98a3c3c",
+        "sync_time": "2026-11-26 09:10:03 UTC"
       },
       "build-test-export-log": {
         "digest": "sha256:9af9f903f7a40530ffbf8f8271fb29011c17c2036fea23ffa89de99bca38c42e",
@@ -957,8 +957,40 @@
         "sync_time": "2026-11-26 03:24:33 UTC"
       },
       "main": {
-        "digest": "sha256:e2bee03f5a8ca36dbc7940a9ea80d2c6dfb14d74997584cf56b065487e997ec5",
-        "sync_time": "2026-11-26 03:24:37 UTC"
+        "digest": "sha256:f021b86d6babc5b3ea4e1f326dc0708aee26972f18cd8b41d65c982e52205c67",
+        "sync_time": "2026-11-26 09:10:22 UTC"
+      },
+      "0863455d8c8528c4e37e64e98669d5a50d4f5efa": {
+        "digest": "sha256:1b511035c17386b9175a9a2423cc0b720c180b07a830dcc81b45a836d1de81b0",
+        "sync_time": "2026-11-26 09:09:10 UTC"
+      },
+      "1e5735583e890e4edb428c4de84a9737489c15b9": {
+        "digest": "sha256:d881b2606c6369a6b310fa674197cc654de4767a3048c445514e2b31ff7b737b",
+        "sync_time": "2026-11-26 09:09:21 UTC"
+      },
+      "36953d443115dae2a63762cbdfe780aeab4fb0a6": {
+        "digest": "sha256:f021b86d6babc5b3ea4e1f326dc0708aee26972f18cd8b41d65c982e52205c67",
+        "sync_time": "2026-11-26 09:09:30 UTC"
+      },
+      "508abd719d303d1b17c89f3f8f3cc4b2a94e1cb7": {
+        "digest": "sha256:a779b3a47ebc14eb85a55a0f29f1c670ff41d5d38f15ad759327e43974eda13b",
+        "sync_time": "2026-11-26 09:09:40 UTC"
+      },
+      "7ac7a3d5afe9dde18046b524861241067c6a1517": {
+        "digest": "sha256:b88d36510d8a66ee8fc191f9c05cbd625be93e4d8379a0dba8375c8f5dd7fae1",
+        "sync_time": "2026-11-26 09:09:50 UTC"
+      },
+      "91c8819153272af240c49f4a23d0defcf15b1a36": {
+        "digest": "sha256:042198fafdaaaff89d22c0fa58df9017f8624f04b4c718ce6be3352ae98a3c3c",
+        "sync_time": "2026-11-26 09:09:59 UTC"
+      },
+      "d458202525d7a616d0f484a64ad632749bd957e9": {
+        "digest": "sha256:1f0a91b4ae7c1e0ccffeeb2e8c9d7e6b6021886b5d1428ae77e9cf34b64ea89f",
+        "sync_time": "2026-11-26 09:10:14 UTC"
+      },
+      "deploy-saas": {
+        "digest": "sha256:d881b2606c6369a6b310fa674197cc654de4767a3048c445514e2b31ff7b737b",
+        "sync_time": "2026-11-26 09:10:17 UTC"
       }
     }
   },
