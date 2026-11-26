@@ -302,9 +302,24 @@
   "teable": {
     "gh_src": "teableio/teable",
     "docker_src": "ghcr.io/teableio/teable",
-    "last_repo_push": "2026-11-26T02:38:24Z",
+    "last_repo_push": "2026-11-26T08:46:13Z",
     "baseline_time": "2026-11-26T03:05:45Z",
     "synced_releases": [
+      "release.2026-04-24T08-22-25Z.1554",
+      "release.2026-04-28T09-22-07Z.1576",
+      "release.2026-04-29T09-04-10Z.1585",
+      "release.2026-04-29T12-41-46Z.1591",
+      "release.2026-05-06T00-14-49Z.1601",
+      "release.2026-05-07T09-04-09Z.1611",
+      "release.2026-05-12T00-30-35Z.1655",
+      "release.2026-05-12T16-05-24Z.1665",
+      "release.2026-05-18T01-54-38Z.1703",
+      "release.2026-05-21T09-38-56Z.1747",
+      "release.2026-05-22T03-29-48Z.1753",
+      "release.2026-05-25T04-58-10Z.1765",
+      "release.2026-05-28T03-48-48Z.1788",
+      "release.2026-05-29T09-31-13Z.1795",
+      "release.2026-06-02T05-27-18Z.1813",
       "release.2026-06-03T15-01-34Z.1831",
       "release.2026-06-12T04-10-05Z.1889",
       "release.2026-06-12T12-22-48Z.1902",
@@ -447,7 +462,7 @@
       "release.2026-11-24T05-06-24Z.4043"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-26 03:13:33 UTC",
+    "last_sync_time": "2026-11-26 09:02:23 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:687ce65fa345050cda67958de5dde9ed9a605266421fbad469f1382a3f012ae1",
