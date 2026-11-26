@@ -7061,10 +7061,25 @@
   "rustfs": {
     "gh_src": "rustfs/rustfs",
     "docker_src": "rustfs/rustfs",
-    "last_repo_push": "2026-11-26T15:59:45Z",
+    "last_repo_push": "2026-11-26T17:47:15Z",
     "baseline_time": "2026-11-26T16:07:46Z",
     "synced_releases": [
       "1.0.0",
+      "1.0.0-alpha.47",
+      "1.0.0-alpha.48",
+      "1.0.0-alpha.49",
+      "1.0.0-alpha.50",
+      "1.0.0-alpha.51",
+      "1.0.0-alpha.52",
+      "1.0.0-alpha.53",
+      "1.0.0-alpha.54",
+      "1.0.0-alpha.55",
+      "1.0.0-alpha.56",
+      "1.0.0-alpha.57",
+      "1.0.0-alpha.58",
+      "1.0.0-alpha.59",
+      "1.0.0-alpha.60",
+      "1.0.0-alpha.61",
       "1.0.0-alpha.62",
       "1.0.0-alpha.63",
       "1.0.0-alpha.64",
@@ -7135,7 +7150,7 @@
       "1.0.7-preview.1"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-26 16:14:50 UTC",
+    "last_sync_time": "2026-11-26 18:43:04 UTC",
     "synced_images": {
       "1.0.5": {
         "digest": "sha256:b81d16a90ee25bd9511280127ca1471788c6e874cf0f0da759645f46b2dc1d74",
