@@ -6657,5 +6657,22 @@
         "sync_time": "2026-11-26 16:28:13 UTC"
       }
     }
+  },
+  "proxmonitor": {
+    "gh_src": "Fanju6/ProxMonitor",
+    "docker_src": "none",
+    "last_repo_push": "2026-04-14T13:10:37Z",
+    "baseline_time": "2026-11-26T16:28:18Z",
+    "synced_releases": [
+      "v1.0.7",
+      "v1.0.6",
+      "v1.0.5",
+      "v1.0.4",
+      "v1.0.3",
+      "v1.0.2",
+      "v1.0.1",
+      "v1.0.0"
+    ],
+    "history_completed": true
   }
 }
