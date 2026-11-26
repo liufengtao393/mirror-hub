@@ -7647,5 +7647,103 @@
         "sync_time": "2026-11-26 16:46:50 UTC"
       }
     }
+  },
+  "siyuan-unlock": {
+    "gh_src": "appdev/siyuan-unlock",
+    "docker_src": "apkdv/siyuan-unlock",
+    "last_repo_push": "2026-11-26T02:51:29Z",
+    "baseline_time": "2026-11-26T16:47:07Z",
+    "synced_releases": [
+      "v3.1.31",
+      "v3.1.32",
+      "v3.2.0",
+      "v3.2.1",
+      "v3.3.0",
+      "v3.3.1",
+      "v3.3.2",
+      "v3.3.3",
+      "v3.3.4",
+      "v3.3.5",
+      "v3.3.6",
+      "v3.4.2",
+      "v3.5.0",
+      "v3.5.1",
+      "v3.5.10",
+      "v3.5.2",
+      "v3.5.3",
+      "v3.5.4",
+      "v3.5.5",
+      "v3.5.6",
+      "v3.5.7",
+      "v3.5.8",
+      "v3.5.9",
+      "v3.6.0",
+      "v3.6.1",
+      "v3.6.2",
+      "v3.6.3",
+      "v3.6.4",
+      "v3.6.5",
+      "v3.7.0",
+      "v3.7.1",
+      "v3.7.2",
+      "v3.7.3",
+      "v3.8.0",
+      "v3.8.1",
+      "v3.8.10",
+      "v3.8.11",
+      "v3.8.12",
+      "v3.8.2",
+      "v3.8.3",
+      "v3.8.4",
+      "v3.8.5",
+      "v3.8.6",
+      "v3.8.7",
+      "v3.8.8",
+      "v3.8.9"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-26 16:55:39 UTC",
+    "synced_images": {
+      "build-40950426073-1-verified": {
+        "digest": "sha256:2a7e08cf9ca977b3e54eecc06a70232f1ae4f5cbf723b71501556508ba9e2ca7",
+        "sync_time": "2026-11-26 16:55:49 UTC"
+      },
+      "build-43496008677-1-verified": {
+        "digest": "sha256:ef25260311db10b639c24313aba7bc596ecc1cb05c8852f6aa7bb2acf8865359",
+        "sync_time": "2026-11-26 16:55:55 UTC"
+      },
+      "build-44870663786-1-verified": {
+        "digest": "sha256:bbdc8264c4ffdc930208f155cb98d317c102604aa088ab73cf1264854749458b",
+        "sync_time": "2026-11-26 16:56:01 UTC"
+      },
+      "build-45101727692-1-verified": {
+        "digest": "sha256:3f6ed7ac7e3a85659299347bb486a19ae0f91e011f7f80fe1d90e9b1c17799fb",
+        "sync_time": "2026-11-26 16:56:07 UTC"
+      },
+      "build-45498323112-1-verified": {
+        "digest": "sha256:db5f52a93641c14c5803b8a3baf941aa305a5103ccc31b0fde9ff23ded10b4cb",
+        "sync_time": "2026-11-26 16:56:12 UTC"
+      },
+      "latest": {
+        "digest": "sha256:db5f52a93641c14c5803b8a3baf941aa305a5103ccc31b0fde9ff23ded10b4cb",
+        "sync_time": "2026-11-26 16:56:17 UTC"
+      },
+      "v3.8.10": {
+        "digest": "sha256:ef25260311db10b639c24313aba7bc596ecc1cb05c8852f6aa7bb2acf8865359",
+        "sync_time": "2026-11-26 16:56:22 UTC"
+      },
+      "v3.8.11": {
+        "digest": "sha256:3f6ed7ac7e3a85659299347bb486a19ae0f91e011f7f80fe1d90e9b1c17799fb",
+        "sync_time": "2026-11-26 16:56:27 UTC"
+      },
+      "v3.8.12": {
+        "digest": "sha256:db5f52a93641c14c5803b8a3baf941aa305a5103ccc31b0fde9ff23ded10b4cb",
+        "sync_time": "2026-11-26 16:56:32 UTC"
+      },
+      "v3.8.9": {
+        "digest": "sha256:2a7e08cf9ca977b3e54eecc06a70232f1ae4f5cbf723b71501556508ba9e2ca7",
+        "sync_time": "2026-11-26 16:56:38 UTC"
+      }
+    }
   }
 }
