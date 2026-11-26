@@ -4891,5 +4891,99 @@
         "sync_time": "2026-11-26 15:50:29 UTC"
       }
     }
+  },
+  "kvrocks": {
+    "gh_src": "apache/kvrocks",
+    "docker_src": "apache/kvrocks",
+    "last_repo_push": "2026-11-24T14:08:57Z",
+    "baseline_time": "2026-11-26T15:50:51Z",
+    "synced_releases": [
+      "v2.17.0",
+      "v2.16.0",
+      "v2.15.0",
+      "v2.14.0",
+      "v2.13.0",
+      "v2.12.1",
+      "v2.12.0",
+      "v2.11.1",
+      "v2.11.0",
+      "v2.10.1",
+      "v2.10.0",
+      "v2.9.0",
+      "v2.8.0",
+      "v2.7.0",
+      "v2.6.0",
+      "v2.5.1",
+      "v2.5.0",
+      "v2.4.0",
+      "v2.3.0",
+      "v2.2.0",
+      "v2.1.0",
+      "v2.0.6",
+      "v2.0.5",
+      "v2.0.4",
+      "v2.0.3",
+      "v2.0.2",
+      "v2.0.1",
+      "v1.3.3",
+      "v2.0.0",
+      "v1.3.2",
+      "v1.3.0",
+      "v1.2.0",
+      "v1.1.32",
+      "v1.1.27",
+      "v1.1.6",
+      "v.1.1.2",
+      "v1.1.0",
+      "v1.0.3",
+      "v1.0.1"
+    ],
+    "history_completed": true,
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:a1e99b3653fb900d5a17b80a9487f74079edc6d5e9b70e3103c01cbfc0d5146a",
+        "sync_time": "2026-11-26 15:50:57 UTC"
+      },
+      "nightly": {
+        "digest": "sha256:fbfde0d944e191f7890e79ba194f345296cd9a561baec65951eaec867539a64e",
+        "sync_time": "2026-11-26 15:51:01 UTC"
+      },
+      "nightly-20261121-6547aa6": {
+        "digest": "sha256:cca736c111238096e16fb25e4a4b4a5309abd51c9a1385c2942ae6a29136808e",
+        "sync_time": "2026-11-26 15:51:06 UTC"
+      },
+      "nightly-20261121-b92c2f0": {
+        "digest": "sha256:ec4851836f9e174e361084014ae8999a6063b2055993f14ea452f5b037672a93",
+        "sync_time": "2026-11-26 15:51:11 UTC"
+      },
+      "nightly-20261122-7f367ed": {
+        "digest": "sha256:3d24d82e79e2263e5251652f06f6ae0050a7a3528309fd5d4d90d4bf9b3d3067",
+        "sync_time": "2026-11-26 15:51:15 UTC"
+      },
+      "nightly-20261122-c77b33c": {
+        "digest": "sha256:0dc7c5e3a8393a70ed2834561933864e3c75fdb09d24de35c492f1d9a613ffaa",
+        "sync_time": "2026-11-26 15:51:20 UTC"
+      },
+      "nightly-20261123-46d0d73": {
+        "digest": "sha256:9d7aa331e8e7c60717b73c755b89ba400fe16ce5be0ebf9bafef41a189a05415",
+        "sync_time": "2026-11-26 15:51:25 UTC"
+      },
+      "nightly-20261123-e32fa79": {
+        "digest": "sha256:468f8249b6830038a113435935cf92052577e3ac76d987e246d3395a1909cfdb",
+        "sync_time": "2026-11-26 15:51:29 UTC"
+      },
+      "nightly-20261124-d5e0ce4": {
+        "digest": "sha256:fbfde0d944e191f7890e79ba194f345296cd9a561baec65951eaec867539a64e",
+        "sync_time": "2026-11-26 15:51:33 UTC"
+      },
+      "nightly-20261124-e301243": {
+        "digest": "sha256:4666fddf8bc01851ff65fba8c78792cdfa14dc4fdc11aac10f7cb80eb9065c3a",
+        "sync_time": "2026-11-26 15:51:38 UTC"
+      },
+      "nightly-20261124-ff8bb66": {
+        "digest": "sha256:9536422ceff672640c48751f2ffeda93c4b49afbe11d4339fa9979d131ff7866",
+        "sync_time": "2026-11-26 15:51:42 UTC"
+      }
+    }
   }
 }
