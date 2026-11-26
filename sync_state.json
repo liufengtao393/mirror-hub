@@ -2012,6 +2012,225 @@
   },
   "chatgpt-web": {
     "gh_src": "Chanzhaoyu/chatgpt-web",
-    "docker_src": "chenzhaoyu94/chatgpt-web"
+    "docker_src": "chenzhaoyu94/chatgpt-web",
+    "last_repo_push": "2024-08-16T15:26:57Z",
+    "baseline_time": "2026-11-26T13:12:22Z",
+    "synced_releases": [],
+    "failed_releases": [
+      {
+        "tag": "v2.11.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.11.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.10.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.9.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.9.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.9.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.9.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.8.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.8.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.8.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.8.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.7.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.7.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.7.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.7.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.6.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.6.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.6.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.5.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.5.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.5.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.4.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.4.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.3.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.3.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.3.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.3.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.2.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.1.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.0.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.0.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.0.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.0.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.0.2",
+        "pre": "false"
+      }
+    ],
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:abcaf63c89debf544a2c80a5e3142a5b4b1c106f30d6edcac02a4ff8c8fdc5da",
+        "sync_time": "2026-11-26 13:13:46 UTC"
+      },
+      "main": {
+        "digest": "sha256:abcaf63c89debf544a2c80a5e3142a5b4b1c106f30d6edcac02a4ff8c8fdc5da",
+        "sync_time": "2026-11-26 13:13:51 UTC"
+      },
+      "v2.10.4": {
+        "digest": "sha256:7e3a46706451a5312940cccdc3e41e6a6c0f4e2df39407b30266ea252dd2bd53",
+        "sync_time": "2026-11-26 13:14:06 UTC"
+      },
+      "v2.10.5": {
+        "digest": "sha256:d96992c1d5ec279a2be696616f4dffb5e685bc46f30557ac7d2b7e5760e12723",
+        "sync_time": "2026-11-26 13:14:22 UTC"
+      },
+      "v2.10.6": {
+        "digest": "sha256:ef7ecb7d2cd9e0062a62c884e7606a605a1b1f22956f9f0679f278324b85df94",
+        "sync_time": "2026-11-26 13:14:38 UTC"
+      },
+      "v2.10.7": {
+        "digest": "sha256:1112fa643551aae920ead0de983df40dcfa42ba0ecc14f21bce4fc4d6d90a6fe",
+        "sync_time": "2026-11-26 13:14:54 UTC"
+      },
+      "v2.10.8": {
+        "digest": "sha256:3265f52f072c420fcea3f95095b7c9f9a91ba80ce625fa63c0ef68645bf8f04c",
+        "sync_time": "2026-11-26 13:15:10 UTC"
+      },
+      "v2.10.9": {
+        "digest": "sha256:85a01e1dc63b6e1bef60bc28385f455a23da2cba73feb5af539a0fc99176e5a7",
+        "sync_time": "2026-11-26 13:15:28 UTC"
+      },
+      "v2.11.0": {
+        "digest": "sha256:042c63d8f800be91c7bc5a4d1178a4040b896a28c9559466bd030a118dfb3581",
+        "sync_time": "2026-11-26 13:15:47 UTC"
+      },
+      "v2.11.1": {
+        "digest": "sha256:fe4d8674218d6f4d5abee2c917745f3db39e86ca32506bb85474e2012a450510",
+        "sync_time": "2026-11-26 13:16:06 UTC"
+      }
+    }
   }
 }
