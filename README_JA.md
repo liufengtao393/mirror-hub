@@ -8,10 +8,10 @@
 
 <p>
   <a href="./README.md">简体中文</a> &nbsp;•&nbsp;
-  <a href="./README.zh-TW.md">繁體中文</a> &nbsp;•&nbsp;
-  <a href="./README.en.md">English</a> &nbsp;•&nbsp;
-  <a href="./README.ja.md"><b>日本語</b></a> &nbsp;•&nbsp;
-  <a href="./README.ko.md">한국어</a>
+  <a href="./README_TW.md">繁體中文</a> &nbsp;•&nbsp;
+  <a href="./README_en.md">English</a> &nbsp;•&nbsp;
+  <a href="./README_ja.md"><b>日本語</b></a> &nbsp;•&nbsp;
+  <a href="./README_ko.md">한국어</a>
 </p>
 
 <p>
