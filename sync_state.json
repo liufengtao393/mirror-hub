@@ -4532,5 +4532,72 @@
         "sync_time": "2026-11-26 15:35:11 UTC"
       }
     }
+  },
+  "apitable": {
+    "gh_src": "apitable/apitable",
+    "docker_src": "apitable/all-in-one",
+    "last_repo_push": "2026-09-06T11:26:21Z",
+    "baseline_time": "2026-11-26T15:36:19Z",
+    "synced_releases": [
+      "v1.10.0-beta",
+      "v1.10.0-beta.2",
+      "v1.10.0-beta.3",
+      "v1.13.0-beta",
+      "v1.13.0-beta.1",
+      "v1.14.0-beta",
+      "v1.6.0-beta",
+      "v1.6.0-beta.1",
+      "v1.7.0-beta",
+      "v1.7.0-beta.1",
+      "v1.8.0-beta",
+      "v1.8.0-beta.1",
+      "v1.8.0-beta.2",
+      "v1.8.0-beta.3",
+      "v1.9.0-beta.1"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-26 15:37:04 UTC",
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:5f800c81870813399272278c7fece10f11e84c793e60e9f7d125f64ba5febd44",
+        "sync_time": "2026-11-26 15:37:28 UTC"
+      },
+      "v1.10.0-beta.2_1994": {
+        "digest": "sha256:986d1da1c5aa9d8897831874c4118bb30bbae456adb3acf95026e057d9861801",
+        "sync_time": "2026-11-26 15:37:46 UTC"
+      },
+      "v1.10.0-beta.3_1993": {
+        "digest": "sha256:5dbf4a3ccc1196ee6e88ce79214a41465a171edf81d716a03ff3bc671eebc6a4",
+        "sync_time": "2026-11-26 15:38:04 UTC"
+      },
+      "v1.10.0-beta.3_1997": {
+        "digest": "sha256:7ca6897642857ee5def96f9c14a4294c4517ed4b160bd8da16f6dcc54afee8af",
+        "sync_time": "2026-11-26 15:38:24 UTC"
+      },
+      "v1.10.0-beta_1970": {
+        "digest": "sha256:143f1b1ee4c1fae0b4a562f833156f038c793db1ee4cee4f5eb0c1003b1d8205",
+        "sync_time": "2026-11-26 15:38:43 UTC"
+      },
+      "v1.13.0-beta.1_2016": {
+        "digest": "sha256:16d95aa4784d5bbc6b9cd12407141f05a330a72de3a39967d35a9d48dd56091d",
+        "sync_time": "2026-11-26 15:39:03 UTC"
+      },
+      "v1.13.0-beta_2011": {
+        "digest": "sha256:9bc91c5112dfaf1196d14723ccf291fec44a32b08a07ec9fccf22937d00085eb",
+        "sync_time": "2026-11-26 15:39:21 UTC"
+      },
+      "v1.14.0-beta_2031": {
+        "digest": "sha256:5f800c81870813399272278c7fece10f11e84c793e60e9f7d125f64ba5febd44",
+        "sync_time": "2026-11-26 15:39:26 UTC"
+      },
+      "v1.9.0-beta.1_1956": {
+        "digest": "sha256:c2c0b405fd60bb09f9fb8e47eef0fa7e3f459f63d998f1c4bc74fcf06c946f7a",
+        "sync_time": "2026-11-26 15:39:46 UTC"
+      },
+      "v1.9.0-beta_1948": {
+        "digest": "sha256:e21e4c7805b2a9ea13c0d9a21416b726aa71127af33633211b67ac2ec5501371",
+        "sync_time": "2026-11-26 15:40:03 UTC"
+      }
+    }
   }
 }
