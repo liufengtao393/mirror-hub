@@ -1,123 +1,33 @@
-<p align="center">
-  <b>简体中文</b> | <a href="./README_TW.md">繁體中文</a> | <a href="./README_EN.md">English</a> | <a href="./README_JA.md">日本語</a> | <a href="./README_KO.md">한국어</a>
-</p>
+# 🚀 Mirror Hub — 全量渐进式总控搬运系统
 
-<div align="center">
+[简体中文](./README.md) | [繁體中文](./README.zh-TW.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md)
 
-# 🚀 OmniMirror Sync Engine
-### 全自动 · 无上限 · 双轨制开源资产与容器镜像容灾中枢
+基于 GitHub Actions 的自动化开源资产镜像与容灾归档系统。支持 **Git 源码、Wiki、全量历史 Releases（突破 2GB 单文件限制）以及 Docker 多架构镜像** 的全自动同步与全网救援。
 
-<p align="center">
-  <a href="../../actions"><code>⚡ Engine: GitHub Actions</code></a> &nbsp;•&nbsp;
-  <a href="./.github/workflows/batch-mirror.yml"><code>🔄 Mode: Dual-Track Incremental</code></a> &nbsp;•&nbsp;
-  <a href="https://ghcr.io"><code>🐳 Registry: GHCR.io</code></a> &nbsp;•&nbsp;
-  <a href="./sync_state.json"><code>📒 Ledger: sync_state.json</code></a>
-</p>
+## ✨ 核心特性
 
-**基于状态账本驱动（State-Driven）的分布式自动化镜像同步系统**  
-*实现 Git 源码、Wiki 百科、全量 Releases 二进制资产与多架构 Docker 镜像的永久防丢失归档*
+- **双轨制追新与历史补齐**：首次建档锁定 `baseline_time`。基准时间后的新版本**实时追新**；基准时间前的海量历史版本按批次（默认 15 个/轮）**渐进式补齐**。
+- **突破 GitHub 2GB 单文件限制**：自动检测超过 `1900MB` 的 Release 资产，使用 `split` 无损切割为 `.part_000` 分卷上传，并在发布说明中自动生成合并命令。
+- **动态时间熔断与断点续传**：实时监控运行耗时，在触及 GitHub 6 小时硬限制前（5 小时处）优雅保存 `sync_state.json` 状态账本并安全退出，绝不丢进度。
+- **404 删库全网救援**：兜底任务对失败项自动重试 3 次；若确认源仓库或版本已删库（HTTP 404），自动搜索全网公开镜像库抢救恢复，彻底绝版则归档至 `archived_dead`。
+- **自动保活机制**：每次运行自动更新 `.github/.last_run`，防止仓库因 60 天无活动被官方停用定时任务。
 
-</div>
+## ⚙️ 快速配置
 
----
+### 1. 配置密钥 (`MIRROR_TOKEN`)
+在仓库 `Settings -> Secrets and variables -> Actions` 中新建 Secret，名称为 `MIRROR_TOKEN`，填入具备 `repo`、`workflow`、`write:packages`、`read:packages` 权限的 Personal Access Token (Classic)。
 
-## 📖 项目概述 (Overview)
-
-**OmniMirror Sync Engine** 是一套专为高可用私有化部署与开源资产永久归档设计的自动化调度中枢。针对传统同步脚本普遍存在的**运行超时、重复拉取、版本漏抓、源站删库（404）资产永久丢失**等痛点，本系统引入了结构化状态账本（`sync_state.json`）与双轨制调度算法，实现毫秒级差分过滤与全自动全网打捞救援。
-
----
-
-## ✨ 核心架构与特性 (Core Architecture)
-
-### 1. 🧭 基准时间双轨分流算法 (Dual-Track Scheduling)
-* **实时追新通道（Zero-Quota Fast Track）**：以项目首次建档的 `baseline_time` 为界，凡在基准线之后发布的新版本，**无条件全量优先同步**，不占用历史补齐配额，确保上游最新动态秒级触达。
-* **渐进历史清零（Progressive History Backfill）**：针对拥有数千个历史版本的庞大仓库，采用无上限底层分页接口（`--paginate`）全量测绘，按批次平稳回溯补齐；清零后自动标记 `history_completed: true`，切换至轻量巡检模式。
-
-### 2. 🔐 指纹级差分去重 (Digest-Level Deduplication)
-* **代码与文档按需克隆**：实时比对上游 `pushed_at` 时间戳，源码无变更时跳过 `git clone --mirror`，节省 90% 以上的网络与 I/O 开销。
-* **容器镜像 SHA256 校验**：通过 `buildx imagetools` 提取远程 Manifest Digest 指纹，仅在镜像哈希发生实质变化或新增 Tag 时执行跨库推送至 `ghcr.io`。
-
-### 3. 🚑 压轴兜底与全网打捞救援 (Fallback & 404 Rescue)
-* **队列级重试机制**：所有正常任务执行完毕后，自动触发压轴兜底阶段，对本轮及历史遗留失败项执行多轮自动重试，直至清零。
-* **删库检测与全网救援**：精确捕获上游 `HTTP 404` 状态；一旦确认原作者删库或撤回版本，引擎将自动检索全网高星公开备份库（Forks/Mirrors）并抢救打捞 Release 资产；确认全网绝版后自动归档至 `archived_dead`，保持账目绝对清晰。
-
-### 4. 🛡️ 优雅熔断与实时事务存档 (Graceful Circuit Breaker)
-* **单项目原子提交**：每完成一个项目的同步即刻通过 `rebase` 合并并推送更新 `sync_state.json`，彻底杜绝网络波动导致的进度丢失。
-* **安全时间窗口控制**：内置运行计时器，单次执行满 5 小时 20 分钟自动触发优雅刹车，预留充足时间完成压轴兜底与状态落盘，确保每次 CI 任务全绿收官。
-
----
-
-## 📂 仓库目录结构 (Directory Structure)
-
+### 2. 编辑搬运清单 (`repos.txt`)
+每行一个项目，使用 `|` 分隔四个参数（支持 `#` 注释）：
 ```text
-.
-├── .github/
-│   ├── workflows/
-│   │   └── batch-mirror.yml   # 核心调度引擎工作流（定时巡检 + 变更触发 + 手动调度）
-│   └── .last_run              # 自动化保活心跳时间戳（防止 60 天无活动休眠）
-├── repos.txt                  # 同步任务声明式配置清单
-├── sync_state.json            # 全局状态账本（记录基准时间、已同步版本、指纹与救援档案）
-├── README.md                  # 简体中文说明文档
-├── README_TW.md               # 繁體中文說明文檔
-├── README_EN.md               # English documentation
-├── README_JA.md               # 日本語ドキュメント
-└── README_KO.md               # 한국어 문서
+# 格式：源GitHub仓库 | 源Docker镜像 | 目标仓库名 | 每次同步Docker标签数
+# 无对应项请填 none
+dify-ai/dify | langgenius/dify-api | dify | 5
+n8n-io/n8n | n8nio/n8n | n8n | 5
+torvalds/linux | none | linux-kernel | 0
 ```
 
----
-
-## ⚙️ 配置清单规范 (`repos.txt`)
-
-系统采用声明式管道符（`|`）配置格式，修改并推送 `repos.txt` 将自动触发增量同步：
-
-```text
-# 格式：GitHub源仓库 | Docker源镜像(无则填 none) | 目标仓库名 | 镜像动态追新数量
-n8n-io/n8n               | docker.n8n.io/n8nio/n8n         | n8n          | 10
-teableio/teable          | ghcr.io/teableio/teable         | teable       | 10
-langgenius/dify          | langgenius/dify-api             | dify-api     | 10
-none                     | postgres                        | postgres     | 10
-Panniantong/Agent-Reach  | none                            | agent-reach  | 10
-```
-
-| 字段位置 | 参数名称 | 填写说明 |
-| :--- | :--- | :--- |
-| **第 1 列** | `GitHub Source` | 上游 `owner/repo` 路径；纯镜像项目填 `none` |
-| **第 2 列** | `Docker Source` | 支持 Docker Hub、GHCR 及第三方私有域名；无镜像填 `none` |
-| **第 3 列** | `Target Name` | 同步至当前账号下的目标仓库名及 `ghcr.io` 镜像名 |
-| **第 4 列** | `Tag Limit` | 每次巡检动态追新的最新镜像 Tag 数量（默认 `5`） |
-
----
-
-## 🐳 镜像拉取使用指南 (Usage)
-
-所有同步的容器镜像均托管于 GitHub Container Registry（GHCR），支持多架构（`linux/amd64` / `linux/arm64`）原生拉取：
-
-```bash
-# 拉取最新版镜像
-docker pull ghcr.io/liufengtao393/<目标仓库名>:latest
-
-# 拉取指定历史版本镜像
-docker pull ghcr.io/liufengtao393/<目标仓库名>:<版本号>
-```
-
----
-
-## 📊 状态账本结构说明 (`sync_state.json`)
-
-系统全自动维护的 JSON 状态机，支持随时审计每个项目的同步健康度：
-
-* `baseline_time`：项目首次纳入监管的 UTC 基准时间戳。
-* `history_completed`：布尔值标记，`true` 代表基准线之前的所有历史资产已 100% 搬运清零。
-* `synced_releases`：已完成镜像的全部 Release Tag 集合。
-* `synced_images`：各镜像 Tag 对应的最新 `sha256` Digest 指纹及同步时间。
-* `failed_releases`：待压轴兜底任务自动重试的异常队列。
-* `archived_dead`：经全网检索确认上游已删库且无公开备份的绝版历史档案。
-
----
-
-<div align="center">
-
-**Powered by GitHub Actions & Buildx Imagetools**  
-*Automated · Resilient · Self-Healing*
-
-</div>
+## 🧩 大文件分卷合并指南
+当搬运的单个文件超过 2GB 时，系统会自动将其拆分为 `文件名.part_000`、`文件名.part_001` 等分卷。下载所有分卷至同一目录后执行：
+- **Linux / macOS**：`cat 文件名.part_* > 文件名`
+- **Windows (CMD)**：`copy /b 文件名.part_* 文件名`
