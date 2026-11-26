@@ -1,33 +1,93 @@
-# 🚀 Mirror Hub — Progressive Full-Scale Asset Mirroring System
+<div align="center">
 
-[简体中文](./README.md) | [繁體中文](./README.zh-TW.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md)
+<h1>⚡ MIRROR HUB</h1>
 
-An automated open-source asset mirroring and disaster-recovery archiving system powered by GitHub Actions. It supports full-scale synchronization and cross-network rescue for **Git repositories, Wikis, historical Releases (bypassing the 2GB file limit), and multi-arch Docker images**.
+<p>
+  <strong>Enterprise-Grade Autonomous Asset Mirroring, Disaster Recovery & Cross-Repo Rescue Engine</strong>
+</p>
 
-## ✨ Key Features
+<p>
+  <a href="./README.md">简体中文</a> &nbsp;•&nbsp;
+  <a href="./README.zh-TW.md">繁體中文</a> &nbsp;•&nbsp;
+  <a href="./README.en.md"><b>English</b></a> &nbsp;•&nbsp;
+  <a href="./README.ja.md">日本語</a> &nbsp;•&nbsp;
+  <a href="./README.ko.md">한국어</a>
+</p>
 
-- **Dual-Track Sync Engine**: Locks a `baseline_time` upon initial indexing. Releases published after the baseline are mirrored **immediately**, while older historical releases are backfilled **progressively** in configurable batches (default: 15 per run).
-- **Bypass GitHub 2GB Single-File Limit**: Automatically detects release assets larger than `1900MB`, splits them losslessly into `.part_000` chunks, uploads all parts, and appends restoration commands to the release notes.
-- **Dynamic Timeout & Checkpointing**: Continuously monitors execution time and gracefully saves `sync_state.json` at the 5-hour mark before hitting GitHub's 6-hour hard kill limit.
-- **404 Deleted-Repo Rescue**: Retries failed releases 3 times. If an upstream repo or tag returns HTTP 404, it searches public GitHub mirrors to rescue the assets, or logs permanently lost versions under `archived_dead`.
-- **Workflow Keep-Alive**: Automatically updates `.github/.last_run` on every execution to prevent GitHub from disabling scheduled workflows after 60 days of inactivity.
+<p>
+  <code>Engine: GitHub Actions</code> &nbsp;|&nbsp;
+  <code>State Machine: JSON Ledger</code> &nbsp;|&nbsp;
+  <code>Chunking: >1.9GB Auto-Split</code> &nbsp;|&nbsp;
+  <code>Rescue: Cross-Repo 404 Recovery</code>
+</p>
 
-## ⚙️ Quick Setup
+</div>
 
-### 1. Configure Secret (`MIRROR_TOKEN`)
-Navigate to `Settings -> Secrets and variables -> Actions`, create a new secret named `MIRROR_TOKEN`, and paste a Personal Access Token (Classic) with `repo`, `workflow`, `write:packages`, and `read:packages` scopes.
+---
 
-### 2. Configure `repos.txt`
-Add one project per line separated by `|` (`#` comments supported):
+### 🏗️ System Architecture & Execution Flow
+
+```mermaid
+flowchart TD
+    A[Cron / Push / Manual Trigger] --> B[Init Global Clock WORKFLOW_START_EPOCH]
+    B --> C{Load sync_state.json Ledger}
+    C --> D[Mirror Git Source & Wiki]
+    D --> E{Baseline Router baseline_time}
+    E -->|Published > Baseline| F[🆕 Fast-Track: Zero-Latency Sync]
+    E -->|Published <= Baseline| G[📥 Backfill Track: Progressive Batching]
+    F & G --> H{Asset Size Inspector}
+    H -->|> 1900MB| I[✂️ Binary Chunking + Inject Merge Guide]
+    H -->|<= 1900MB| J[📦 Direct Release Upload]
+    I & J --> K[🐳 Multi-Arch Docker Digest Sync]
+    K --> L{Inner Circuit Breaker >= 18000s?}
+    L -->|Safe| C
+    L -->|Soft Cutoff| M[💾 Atomic State Commit]
+    M --> N[🚑 Rescue Job: 3x Retry + 404 Public Search]
+    N --> O[🔒 20400s Hard Cutoff & Keep-Alive Push]
+```
+
+---
+
+### 📊 Engineering Capability Matrix
+
+| Dimension | Legacy Mirror Scripts | Mirror Hub Architecture |
+| :--- | :--- | :--- |
+| **Timeout Safety** | Killed abruptly at GitHub's 6h limit; progress lost | **3-Tier Circuit Breaker**: Inner/outer loop probes + dynamic `REM_SEC` calculation + 20m buffer |
+| **Large Assets** | Fails permanently on files >2GB due to API limits | **Lossless Binary Split**: Auto-chunks `>1900MB` assets into `.part_000` with merge commands |
+| **Sync Strategy** | Full API scans trigger rate limits rapidly | **Dual-Track Baseline**: Locks `baseline_time` for instant new releases & batched history |
+| **Upstream 404** | Assets lost forever if upstream deletes repo/tag | **Cross-Repo Rescue**: Searches top public GitHub mirrors; archives dead tags in `archived_dead` |
+| **Concurrency** | Manual edits during runs cause `git push` failures | **Optimistic Rebase**: Executes 3x backoff retries with `git pull --rebase --autostash` |
+
+---
+
+### 🚀 Quick Deployment
+
+#### 1. Configure Secret (`MIRROR_TOKEN`)
+Go to `Settings` ➔ `Secrets and variables` ➔ `Actions` ➔ `New repository secret`:
+- **Name**: `MIRROR_TOKEN`
+- **Scopes**: `repo`, `workflow`, `write:packages`, `read:packages`
+
+#### 2. Define Topology (`repos.txt`)
 ```text
-# Format: SOURCE_GH_REPO | SOURCE_DOCKER_IMAGE | TARGET_REPO_NAME | DOCKER_TAG_COUNT
+# Syntax: SOURCE_GH_REPO | SOURCE_DOCKER_IMAGE | TARGET_REPO_NAME | DOCKER_TAG_COUNT
 # Use "none" if not applicable
 dify-ai/dify | langgenius/dify-api | dify | 5
 n8n-io/n8n | n8nio/n8n | n8n | 5
 torvalds/linux | none | linux-kernel | 0
 ```
 
-## 🧩 Merging Split Archives (>2GB)
-Files exceeding 2GB are automatically split into `filename.part_000`, `filename.part_001`, etc. Download all parts into the same folder and run:
-- **Linux / macOS**: `cat filename.part_* > filename`
-- **Windows (CMD)**: `copy /b filename.part_* filename`
+<details>
+<summary><b>🧩 Expand: Large File (>2GB) Reconstruction Protocol</b></summary>
+<br>
+
+Assets exceeding `1900MB` are automatically split into `filename.part_000`, `filename.part_001`, etc. Download all parts into the same directory and run:
+
+- **Linux / macOS (POSIX)**:
+  ```bash
+  cat filename.part_* > filename
+  ```
+- **Windows (CMD)**:
+  ```cmd
+  copy /b filename.part_* filename
+  ```
+</details>
