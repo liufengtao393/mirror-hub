@@ -14,11 +14,11 @@
   <a href="./README.ko.md">한국어</a>
 </p>
 
-<p>
-  <img src="REPLACE_HERE/badge/Engine-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="Engine" />
-  <img src="REPLACE_HERE/badge/State_Machine-JSON_Ledger-00C853?style=for-the-badge&logo=json&logoColor=white" alt="State Machine" />
-  <img src="REPLACE_HERE/badge/Auto_Split-%3E1.9GB_Chunks-FF6D00?style=for-the-badge&logo=files&logoColor=white" alt="Auto Split" />
-  <img src="REPLACE_HERE/badge/404_Rescue-Cross_Repo-D50000?style=for-the-badge&logo=github&logoColor=white" alt="404 Rescue" />
+<p align="center">
+  <a href="../../actions"><code>⚡ Engine: GitHub Actions</code></a> &nbsp;•&nbsp;
+  <a href="./.github/workflows/batch-mirror.yml"><code>🔄 Mode: Dual-Track Incremental</code></a> &nbsp;•&nbsp;
+  <a href="https://ghcr.io"><code>🐳 Registry: GHCR.io</code></a> &nbsp;•&nbsp;
+  <a href="./sync_state.json"><code>📒 Ledger: sync_state.json</code></a>
 </p>
 
 </div>
