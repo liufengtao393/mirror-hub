@@ -3629,5 +3629,12 @@
         "pre": "false"
       }
     ]
+  },
+  "cherry-studio-website": {
+    "gh_src": "CherryHQ/cherry-studio-website",
+    "docker_src": "none",
+    "last_repo_push": "2026-11-26T13:24:35Z",
+    "baseline_time": "2026-11-26T15:23:57Z",
+    "synced_releases": []
   }
 }
