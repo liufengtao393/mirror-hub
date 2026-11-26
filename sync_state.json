@@ -5028,6 +5028,10 @@
       "latest": {
         "digest": "sha256:f843d5aa8daa3bf6556a2e5ef210658af1b3c2103fba59010fb000cbdb770759",
         "sync_time": "2026-11-26 15:35:11 UTC"
+      },
+      "2026.08.2": {
+        "digest": "sha256:4b760f0d25471fb49707d515f161d9d36b49c88e7ecbe25eded774af385be5a9",
+        "sync_time": "2026-11-26 18:16:55 UTC"
       }
     }
   },
