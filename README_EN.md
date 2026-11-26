@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="../../">简体中文</a> | <b>English</b>
+  <a href="../../">简体中文</a> | <a href="./README_TW.md">繁體中文</a> | <b>English</b> | <a href="./README_JA.md">日本語</a> | <a href="./README_KO.md">한국어</a>
 </p>
 
 <div align="center">
@@ -7,10 +7,12 @@
 # 🚀 OmniMirror Sync Engine
 ### Autonomous · Unlimited · Dual-Track Open-Source Asset & Container Disaster Recovery Hub
 
-[![GitHub Actions Status](https://shields.io)](../../actions)
-[![Sync Mode](https://shields.io)](#core-architecture)
-[![Container Registry](https://shields.io)](https://ghcr.io)
-[![State Ledger](https://shields.io)](./sync_state.json)
+<p align="center">
+  <a href="../../actions"><code>⚡ Engine: GitHub Actions</code></a> &nbsp;•&nbsp;
+  <a href="./.github/workflows/batch-mirror.yml"><code>🔄 Mode: Dual-Track Incremental</code></a> &nbsp;•&nbsp;
+  <a href="https://ghcr.io"><code>🐳 Registry: GHCR.io</code></a> &nbsp;•&nbsp;
+  <a href="./sync_state.json"><code>📒 Ledger: sync_state.json</code></a>
+</p>
 
 **State-Driven Distributed Mirroring & Disaster Recovery System**  
 *Zero-loss archival for Git repositories, Wikis, full Release assets, and multi-arch Docker images*
@@ -56,7 +58,10 @@
 ├── repos.txt                  # Declarative mirroring manifest
 ├── sync_state.json            # Global state ledger (baselines, synced tags, digests & rescue logs)
 ├── README.md                  # Simplified Chinese documentation
-└── README_EN.md               # English documentation
+├── README_TW.md               # Traditional Chinese documentation
+├── README_EN.md               # English documentation
+├── README_JA.md               # Japanese documentation
+└── README_KO.md               # Korean documentation
 ```
 
 ---
