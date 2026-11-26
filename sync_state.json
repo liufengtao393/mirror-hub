@@ -653,7 +653,7 @@
   "dify-api": {
     "gh_src": "langgenius/dify",
     "docker_src": "langgenius/dify-api",
-    "last_repo_push": "2026-11-26T03:11:42Z",
+    "last_repo_push": "2026-11-26T09:02:10Z",
     "baseline_time": "2026-11-26T03:18:05Z",
     "synced_releases": [
       "0.10.0",
@@ -855,8 +855,8 @@
         "sync_time": "2026-11-26 03:22:37 UTC"
       },
       "build-feat-hitl-im-dev": {
-        "digest": "sha256:7ab3b37f99d6609f799c262a8c546084c4e1fc2971afda7e716bdef42e2029a3",
-        "sync_time": "2026-11-26 03:22:41 UTC"
+        "digest": "sha256:a5e901a49e25ecd3c3b0ddd5321014a03b883d8a41d902e100b5dc86df2508e0",
+        "sync_time": "2026-11-26 09:08:11 UTC"
       },
       "build-test-export-log": {
         "digest": "sha256:2113e8a62b2bed769ec530edab0d9838d83de9ac89047daf529c3f88eefa215c",
@@ -875,8 +875,40 @@
         "sync_time": "2026-11-26 03:23:11 UTC"
       },
       "main": {
-        "digest": "sha256:d162fb8e6c48481b10804f79de6be1555626b6e286490e7d881fb1bbf2af57e4",
-        "sync_time": "2026-11-26 03:23:15 UTC"
+        "digest": "sha256:911dcff45d44eea47b5caacf4b2a4916011cdd5750c53ac99908be82b55a38da",
+        "sync_time": "2026-11-26 09:08:59 UTC"
+      },
+      "0863455d8c8528c4e37e64e98669d5a50d4f5efa": {
+        "digest": "sha256:51e583ab02aa4c755b47d981836e4dc337073c6844dbebea18d43d52af5cff17",
+        "sync_time": "2026-11-26 09:07:18 UTC"
+      },
+      "36953d443115dae2a63762cbdfe780aeab4fb0a6": {
+        "digest": "sha256:911dcff45d44eea47b5caacf4b2a4916011cdd5750c53ac99908be82b55a38da",
+        "sync_time": "2026-11-26 09:07:24 UTC"
+      },
+      "508abd719d303d1b17c89f3f8f3cc4b2a94e1cb7": {
+        "digest": "sha256:895e0c44690fe030b187b69645f27593605104a61612b016098fcfeb44cbae06",
+        "sync_time": "2026-11-26 09:07:42 UTC"
+      },
+      "7ac7a3d5afe9dde18046b524861241067c6a1517": {
+        "digest": "sha256:ec221e79c20c6e2154e4a2dab5d134622011479e9fe92c0c693529a90a7fb045",
+        "sync_time": "2026-11-26 09:07:48 UTC"
+      },
+      "91c8819153272af240c49f4a23d0defcf15b1a36": {
+        "digest": "sha256:a5e901a49e25ecd3c3b0ddd5321014a03b883d8a41d902e100b5dc86df2508e0",
+        "sync_time": "2026-11-26 09:08:07 UTC"
+      },
+      "d458202525d7a616d0f484a64ad632749bd957e9": {
+        "digest": "sha256:77087bc6e95ea75438da38b26d9b218cea139d7831dc0125df8e18a1697982f5",
+        "sync_time": "2026-11-26 09:08:30 UTC"
+      },
+      "deploy-app-builder": {
+        "digest": "sha256:895e0c44690fe030b187b69645f27593605104a61612b016098fcfeb44cbae06",
+        "sync_time": "2026-11-26 09:08:34 UTC"
+      },
+      "deploy-saas": {
+        "digest": "sha256:95a5f415b57011216bc1593280ad007ef777486ea1e1b9f8753da9b756e8890c",
+        "sync_time": "2026-11-26 09:08:54 UTC"
       }
     }
   },
