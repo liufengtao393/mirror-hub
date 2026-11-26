@@ -8153,5 +8153,54 @@
         "sync_time": "2026-11-26 17:08:37 UTC"
       }
     }
+  },
+  "sure": {
+    "gh_src": "we-promise/sure",
+    "docker_src": "ghcr.io/we-promise/sure",
+    "last_repo_push": "2026-11-26T14:03:32Z",
+    "baseline_time": "2026-11-26T17:09:47Z",
+    "synced_releases": [
+      "v0.6.0",
+      "v0.6.1",
+      "v0.6.2",
+      "v0.6.3",
+      "v0.6.4",
+      "v0.6.5",
+      "v0.6.5-hotfix.1",
+      "v0.6.6",
+      "v0.6.6-hotfix.1",
+      "v0.6.7",
+      "v0.6.8",
+      "v0.6.9",
+      "v0.7.0",
+      "v0.7.0-hotfix.3",
+      "v0.7.1",
+      "v0.7.1-hotfix.1",
+      "v0.7.2",
+      "v0.7.3",
+      "v0.7.4",
+      "v0.7.5",
+      "v0.7.5-hotfix.3",
+      "v0.7.6",
+      "v0.7.6-hotfix.1",
+      "v0.7.6-hotfix.2",
+      "v2026.11.17-alpha",
+      "v2026.11.20-alpha",
+      "v2026.11.23-alpha",
+      "v2026.11.25-alpha"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-26 17:10:15 UTC",
+    "history_completed": true,
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:1346cd53a7bf7d69f2c056b4b4b430fc6cdcc4bad8ae6adc2c5eea62149d5b3a",
+        "sync_time": "2026-11-26 17:10:22 UTC"
+      },
+      "stable": {
+        "digest": "sha256:08f4fb26cedd0e5743792178ee744c1ea8b3ccd8cd9da1941ffc3ba7ef16ae6c",
+        "sync_time": "2026-11-26 17:10:27 UTC"
+      }
+    }
   }
 }
