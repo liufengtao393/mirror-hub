@@ -8075,5 +8075,83 @@
         "sync_time": "2026-11-26 17:07:54 UTC"
       }
     }
+  },
+  "mortis": {
+    "gh_src": "mudkipme/mortis",
+    "docker_src": "ghcr.io/mudkipme/mortis",
+    "last_repo_push": "2026-11-22T16:15:39Z",
+    "baseline_time": "2026-11-26T17:07:58Z",
+    "synced_releases": [
+      "26.11.2",
+      "26.11.1",
+      "26.11.0",
+      "26.10.0",
+      "0.31.0",
+      "0.30.0",
+      "0.29.1",
+      "0.29.0",
+      "0.28.0",
+      "0.27.1",
+      "0.27.0",
+      "0.26.2",
+      "0.26.1",
+      "0.26.0",
+      "0.25.3",
+      "0.25.2",
+      "0.25.1",
+      "0.25.0",
+      "0.24.4",
+      "0.24.3",
+      "0.24.2",
+      "0.24.1",
+      "0.24.0"
+    ],
+    "history_completed": true,
+    "synced_images": {
+      "0.27.1": {
+        "digest": "sha256:18f8f3f7cbfb4bb82416b11541cc29d5bcc3fe2f3e85b31359a93a8dd73aec95",
+        "sync_time": "2026-11-26 17:08:03 UTC"
+      },
+      "0.28.0": {
+        "digest": "sha256:008373ab493c32e5d718d753f3de2b546b7588cf259bf4316a3eedf907324227",
+        "sync_time": "2026-11-26 17:08:06 UTC"
+      },
+      "0.29.0": {
+        "digest": "sha256:fffa8047b53d90ff23bb0cd84cae527a65ae8c63650c007e84bf7eae26c2146e",
+        "sync_time": "2026-11-26 17:08:10 UTC"
+      },
+      "0.29.1": {
+        "digest": "sha256:09b8ff2f5e47257c3956870eee1033bdecb850a8a1f610671888bea871987c1d",
+        "sync_time": "2026-11-26 17:08:13 UTC"
+      },
+      "0.30.0": {
+        "digest": "sha256:7375fc0754610565a98a513566928ad9d80bb814570c13a320a1a56832472c1e",
+        "sync_time": "2026-11-26 17:08:16 UTC"
+      },
+      "0.31.0": {
+        "digest": "sha256:94e133a6284bde987263fb1c3aeb5aa54a24a610038473aa7cb59ba5bb1ac7f5",
+        "sync_time": "2026-11-26 17:08:20 UTC"
+      },
+      "26.10.0": {
+        "digest": "sha256:5cec5895a501117df93ce752f0317140476333e10c547bb551d69e5e2a881697",
+        "sync_time": "2026-11-26 17:08:23 UTC"
+      },
+      "26.11.0": {
+        "digest": "sha256:be6c349c2bc6e21b0dc76e919090c97f2ed150b41f6a87f93e79348c7fe81e73",
+        "sync_time": "2026-11-26 17:08:26 UTC"
+      },
+      "26.11.1": {
+        "digest": "sha256:44bc39f310f1be8e7afabca262eb163b0ae0312f5391a69f049ab4425a23f297",
+        "sync_time": "2026-11-26 17:08:30 UTC"
+      },
+      "26.11.2": {
+        "digest": "sha256:a9f98682b2dcdbef08ea98d2f41876cad8abb2de8f2f58b6c9e92a767aad10df",
+        "sync_time": "2026-11-26 17:08:33 UTC"
+      },
+      "latest": {
+        "digest": "sha256:a9f98682b2dcdbef08ea98d2f41876cad8abb2de8f2f58b6c9e92a767aad10df",
+        "sync_time": "2026-11-26 17:08:37 UTC"
+      }
+    }
   }
 }
