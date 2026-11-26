@@ -82,6 +82,22 @@ CherryHQ/cherry-studio-app | none | cherry-studio-app | 10
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
 CherryHQ/cherry-studio-website | none | cherry-studio-website | 10
 
+# 21. 多维表格 - 基于 PostgreSQL 的高性能实时无代码数据库与 AI 工作流平台
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+teableio/teable | ghcr.io/teableio/teable | teable | 10
+
+# 22. 多维表格 - 开源 Airtable 替代品，可将任意关系型数据库转化为智能电子表格
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+nocodb/nocodb | nocodb/nocodb | nocodb | 10
+
+# 23. 多维表格 - 面向 API 的开源企业级多维表格与低代码数字化协作平台
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+apitable/apitable | apitable/all-in-one | apitable | 10
+
+# 24. 多维表格 - 支持自托管的开源无代码数据库与应用构建平台
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+baserow/baserow | baserow/baserow | baserow | 10
+
 # ==============================================================================
 # 二、数据库、存储与基础架构组件
 # ==============================================================================
