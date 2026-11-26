@@ -1105,5 +1105,84 @@
       "v1.1.0"
     ],
     "history_completed": true
+  },
+  "facefusion": {
+    "gh_src": "facefusion/facefusion",
+    "docker_src": "facefusion/facefusion",
+    "last_repo_push": "2026-11-25T22:11:36Z",
+    "baseline_time": "2026-11-26T03:27:13Z",
+    "synced_releases": [
+      "3.9.2",
+      "3.9.1",
+      "3.9.0",
+      "3.8.3",
+      "3.8.2",
+      "3.8.1",
+      "3.8.0",
+      "3.7.1",
+      "3.7.0",
+      "3.6.1",
+      "3.6.0",
+      "3.5.4",
+      "3.5.3",
+      "3.5.2",
+      "3.5.1",
+      "3.5.0",
+      "3.4.2",
+      "3.4.1",
+      "3.4.0",
+      "3.3.2",
+      "3.3.1",
+      "3.3.0",
+      "3.2.0",
+      "3.1.2",
+      "3.1.1",
+      "3.1.0",
+      "3.0.1",
+      "3.0.0"
+    ],
+    "history_completed": true,
+    "synced_images": {
+      "3.9.0-rocm": {
+        "digest": "sha256:938ed8197fd6e421feb08e913443f708707d8a47a4898549d539ff7c51ffe8d3",
+        "sync_time": "2026-11-26 03:27:17 UTC"
+      },
+      "3.9.0-tensorrt": {
+        "digest": "sha256:02e5164ed86fd8d8d98693fc5d65d30462df5777fae25f04490b484e116cef4e",
+        "sync_time": "2026-11-26 03:27:20 UTC"
+      },
+      "3.9.1-cpu": {
+        "digest": "sha256:838581c93156e127b3783450ab901fa0b4e1a6802a3749fa44ea134af3f98344",
+        "sync_time": "2026-11-26 03:27:23 UTC"
+      },
+      "3.9.1-cuda": {
+        "digest": "sha256:dcf1b3be41431c4703e099684a0ac7c95178400ad17e494e914f57ef8be6ad3e",
+        "sync_time": "2026-11-26 03:27:25 UTC"
+      },
+      "3.9.1-rocm": {
+        "digest": "sha256:ebafb380bcd647ae3209ad68954844088bd7af6c894d41f6527ecd7c8363b562",
+        "sync_time": "2026-11-26 03:27:28 UTC"
+      },
+      "3.9.1-tensorrt": {
+        "digest": "sha256:c0508737d8a859e7a0c7a455dfb117c7f0451733b5404568642d130c5b09df50",
+        "sync_time": "2026-11-26 03:27:31 UTC"
+      },
+      "3.9.2-cpu": {
+        "digest": "sha256:e7e51277c5c6744a5b7e4cb2af415eabfc1fe5b1a705df36d88ec90d187724dd",
+        "sync_time": "2026-11-26 03:27:33 UTC"
+      },
+      "3.9.2-cuda": {
+        "digest": "sha256:4fa13d347939f620daefde20e4244f247e5646ec506d79e0596101bb5822210b",
+        "sync_time": "2026-11-26 03:27:36 UTC"
+      },
+      "3.9.2-rocm": {
+        "digest": "sha256:97d87d064b2a539ecba977a2a905793de3ead12258d375df7285cb46e1a46616",
+        "sync_time": "2026-11-26 03:27:39 UTC"
+      },
+      "3.9.2-tensorrt": {
+        "digest": "sha256:276589871519a0da3da6f4f1f70ec1c3562853a08be842b2175ba45fe40f65c7",
+        "sync_time": "2026-11-26 03:27:41 UTC"
+      }
+    }
   }
 }
