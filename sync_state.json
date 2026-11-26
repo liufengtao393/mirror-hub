@@ -5245,5 +5245,108 @@
         "sync_time": "2026-11-26 16:16:06 UTC"
       }
     }
+  },
+  "lucky": {
+    "gh_src": "gdy666/lucky",
+    "docker_src": "gdy666/lucky",
+    "last_repo_push": "2026-10-29T05:42:27Z",
+    "baseline_time": "2026-11-26T16:16:10Z",
+    "synced_releases": [
+      "v3.5.0",
+      "v2.27.2",
+      "v2.26.2",
+      "v2.26.1",
+      "v2.24.0",
+      "v2.20.2",
+      "v2.19.5",
+      "v2.19.4",
+      "v2.18.6",
+      "v2.18.5",
+      "v2.18.1",
+      "v2.17.8",
+      "v2.15.10",
+      "v2.15.8",
+      "v2.15.7",
+      "v2.14.0",
+      "v2.13.4",
+      "v2.10.8",
+      "v2.10.5",
+      "v1.10.8",
+      "v1.10.3",
+      "v1.9.3",
+      "v1.9.1",
+      "v1.8.5",
+      "v1.8.3",
+      "v1.7.21",
+      "v1.7.17",
+      "v1.7.16",
+      "v1.7.5",
+      "v1.7.4",
+      "v1.7.3",
+      "v1.6.2",
+      "v1.6.1",
+      "v1.6.0",
+      "v1.5.1",
+      "v1.4.10",
+      "v1.4.9",
+      "v1.3.1",
+      "v1.2.5",
+      "v1.2.4",
+      "v1.2.3",
+      "v1.2.2",
+      "v1.2.1",
+      "v1.1.9",
+      "v1.1.8",
+      "v1.1.7",
+      "v1.1.6",
+      "v1.1.5"
+    ],
+    "history_completed": true,
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:315c57e502ae26485593d0245f85f37ec54403893fc69f553ea1541e68f4ace6",
+        "sync_time": "2026-11-26 16:16:18 UTC"
+      },
+      "v3.8.1_lucky": {
+        "digest": "sha256:f3ac1744b3ea0e7e7f3c83eaf167031cf36e3b6ed6d057f4de3ab90673185694",
+        "sync_time": "2026-11-26 16:16:22 UTC"
+      },
+      "v3.8.1_wanji": {
+        "digest": "sha256:45c4fbc6620b5a2f9c48b9252ca663af85710c84c6efac7ea7dc088e1c66b608",
+        "sync_time": "2026-11-26 16:16:27 UTC"
+      },
+      "v3.8.1_xiaojv": {
+        "digest": "sha256:7771152b54c0308cafa5eacf36f27313d9e5f9ba96bbe8b4f3c3ff30c11cbdde",
+        "sync_time": "2026-11-26 16:16:32 UTC"
+      },
+      "v3.8.1_xiaojv_waf": {
+        "digest": "sha256:80353190cb0ac47a08748d0087aae0226b6e7a6017c951f27486c33a93111b8a",
+        "sync_time": "2026-11-26 16:16:37 UTC"
+      },
+      "v3.8.1_xiaoman": {
+        "digest": "sha256:30b908b63d5f3dea301107ca0716fafb1ae9087992d95c4e63e0d4debae10e07",
+        "sync_time": "2026-11-26 16:16:43 UTC"
+      },
+      "v3_lucky": {
+        "digest": "sha256:f3ac1744b3ea0e7e7f3c83eaf167031cf36e3b6ed6d057f4de3ab90673185694",
+        "sync_time": "2026-11-26 16:16:47 UTC"
+      },
+      "v3_wanji": {
+        "digest": "sha256:45c4fbc6620b5a2f9c48b9252ca663af85710c84c6efac7ea7dc088e1c66b608",
+        "sync_time": "2026-11-26 16:16:51 UTC"
+      },
+      "v3_xiaojv": {
+        "digest": "sha256:7771152b54c0308cafa5eacf36f27313d9e5f9ba96bbe8b4f3c3ff30c11cbdde",
+        "sync_time": "2026-11-26 16:16:55 UTC"
+      },
+      "v3_xiaojv_waf": {
+        "digest": "sha256:80353190cb0ac47a08748d0087aae0226b6e7a6017c951f27486c33a93111b8a",
+        "sync_time": "2026-11-26 16:16:59 UTC"
+      },
+      "v3_xiaoman": {
+        "digest": "sha256:30b908b63d5f3dea301107ca0716fafb1ae9087992d95c4e63e0d4debae10e07",
+        "sync_time": "2026-11-26 16:17:03 UTC"
+      }
+    }
   }
 }
