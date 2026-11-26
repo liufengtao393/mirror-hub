@@ -242,7 +242,9 @@ jobs:
                 TAGS=$(curl -s "$API_URL" | jq -r '.results[].name' 2>/dev/null || true)
                 TAGS=$(printf "latest\n%s" "$TAGS" | sort -u)
               else
-                TAGS="latest stable 6.6.5 0.17.0 libtorrentv1 RELEASE.2025-04-22T22-12-26Z"
+                # 对于 ghcr.io 或自定义源，自动结合 latest 与该仓库最新 5 个 Release/Tag 动态追新
+                LATEST_GH_TAGS=$(gh api "repos/${GH_SRC}/tags?per_page=${COUNT}" -q '.[].name' 2>/dev/null || true)
+                TAGS=$(printf "latest\nstable\n%s" "$LATEST_GH_TAGS" | sort -u)
               fi
 
               for IMG_TAG in $TAGS; do
