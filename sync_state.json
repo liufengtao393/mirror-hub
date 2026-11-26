@@ -8313,5 +8313,59 @@
         "sync_time": "2026-11-26 17:15:35 UTC"
       }
     }
+  },
+  "verysync": {
+    "gh_src": "Jonnyan404/verysync",
+    "docker_src": "jonnyan404/verysync",
+    "last_repo_push": "2026-10-11T13:33:24Z",
+    "baseline_time": "2026-11-26T17:15:40Z",
+    "synced_releases": [
+      "v2.33.2",
+      "v2.21.3",
+      "v2.20.1"
+    ],
+    "history_completed": true,
+    "synced_images": {
+      "2.17.0": {
+        "digest": "sha256:7431e6b56344029e26cb2b5ec66907664fcaea699c8510a47e15a5c8b384ec40",
+        "sync_time": "2026-11-26 17:15:46 UTC"
+      },
+      "2.18.3": {
+        "digest": "sha256:b5f328fe69f257d24fe116422ba1758ed9aa69fdaaa3bed7798dc3ed0ff58492",
+        "sync_time": "2026-11-26 17:15:51 UTC"
+      },
+      "2.20.1": {
+        "digest": "sha256:9cb276be8380a9059f1bd76562ee84b55993bf68ae2dd889bf99c62c4c69ec6e",
+        "sync_time": "2026-11-26 17:15:56 UTC"
+      },
+      "2.4.3": {
+        "digest": "sha256:c1c3919e2e50e378c41e63d14514831c5f9e3cc12fad8e1baaca8993def84d1a",
+        "sync_time": "2026-11-26 17:16:00 UTC"
+      },
+      "2.5.5": {
+        "digest": "sha256:7a33c178481fe0bd84bd94d1215c0f8ac659e41d319b527b18b2ea9546ee46f4",
+        "sync_time": "2026-11-26 17:16:04 UTC"
+      },
+      "latest": {
+        "digest": "sha256:6ef12fb4228ac83e165a466df7f7b20af1f1e6cc5ebdb5a724534c84a26748d6",
+        "sync_time": "2026-11-26 17:16:09 UTC"
+      },
+      "test": {
+        "digest": "sha256:82853181c97d4dcb3302a9a1a74fb4a0a975dfc3cde7f90d984c746ac9c8ba5b",
+        "sync_time": "2026-11-26 17:16:13 UTC"
+      },
+      "v2.20.1": {
+        "digest": "sha256:199d2119769c8a981cd2dd017cecf7ce890f852261097c056ded6778987fa8d4",
+        "sync_time": "2026-11-26 17:16:18 UTC"
+      },
+      "v2.21.3": {
+        "digest": "sha256:7f98a52599efec834b34d058200e0b8aed26702ee9d392e29deb05e5eef1b3c8",
+        "sync_time": "2026-11-26 17:16:23 UTC"
+      },
+      "v2.33.2": {
+        "digest": "sha256:6ef12fb4228ac83e165a466df7f7b20af1f1e6cc5ebdb5a724534c84a26748d6",
+        "sync_time": "2026-11-26 17:16:27 UTC"
+      }
+    }
   }
 }
