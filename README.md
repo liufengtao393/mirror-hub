@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="../../actions"><code>⚡ Engine: GitHub Actions</code></a> &nbsp;•&nbsp;
-  <code>🔄 Mode: Dual-Track Incremental</code> &nbsp;•&nbsp;
+  <a href="./.github/workflows/batch-mirror.yml"><code>🔄 Mode: Dual-Track Incremental</code></a> &nbsp;•&nbsp;
   <a href="https://ghcr.io"><code>🐳 Registry: GHCR.io</code></a> &nbsp;•&nbsp;
   <a href="./sync_state.json"><code>📒 Ledger: sync_state.json</code></a>
 </p>
