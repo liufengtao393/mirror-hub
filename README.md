@@ -15,10 +15,10 @@
 </p>
 
 <p>
-  <img src="REPLACE_ME/liufengtao393/mirror-hub/blob/main/.github/badges/engine.svg?raw=true" alt="Engine" />
-  <img src="REPLACE_ME/liufengtao393/mirror-hub/blob/main/.github/badges/state.svg?raw=true" alt="State Machine" />
-  <img src="REPLACE_ME/liufengtao393/mirror-hub/blob/main/.github/badges/chunking.svg?raw=true" alt="Auto Split" />
-  <img src="REPLACE_ME/liufengtao393/mirror-hub/blob/main/.github/badges/rescue.svg?raw=true" alt="404 Rescue" />
+  <img src="REPLACE_HERE/badge/Engine-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="Engine" />
+  <img src="REPLACE_HERE/badge/State_Machine-JSON_Ledger-00C853?style=for-the-badge&logo=json&logoColor=white" alt="State Machine" />
+  <img src="REPLACE_HERE/badge/Auto_Split-%3E1.9GB_Chunks-FF6D00?style=for-the-badge&logo=files&logoColor=white" alt="Auto Split" />
+  <img src="REPLACE_HERE/badge/404_Rescue-Cross_Repo-D50000?style=for-the-badge&logo=github&logoColor=white" alt="404 Rescue" />
 </p>
 
 </div>
