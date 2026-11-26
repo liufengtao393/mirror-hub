@@ -8367,5 +8367,800 @@
         "sync_time": "2026-11-26 17:16:27 UTC"
       }
     }
+  },
+  "wps-office": {
+    "gh_src": "linuxserver/docker-wps-office",
+    "docker_src": "lscr.io/linuxserver/wps-office",
+    "last_repo_push": "2026-11-23T23:21:49Z",
+    "baseline_time": "2026-11-26T17:16:32Z",
+    "synced_releases": [
+      "11.1.0.11723-2-ls150",
+      "11.1.0.11723-2-ls151",
+      "11.1.0.11723-2-ls152",
+      "11.1.0.11723-2-ls153",
+      "11.1.0.11723-2-ls154",
+      "11.1.0.11723-2-ls155",
+      "11.1.0.11723-2-ls156",
+      "11.1.0.11723-2-ls157",
+      "11.1.0.11723-2-ls158",
+      "11.1.0.11723-2-ls159",
+      "11.1.0.11723-2-ls162",
+      "11.1.0.11723-2-ls163",
+      "11.1.0.11723-2-ls164",
+      "11.1.0.11723-2-ls165",
+      "11.1.0.11723-2-ls166",
+      "11.1.0.11723-2-ls167",
+      "11.1.0.11723-2-ls168",
+      "11.1.0.11723-2-ls169",
+      "11.1.0.11723-2-ls170",
+      "11.1.0.11723-2-ls171",
+      "11.1.0.11723-2-ls172",
+      "11.1.0.11723-2-ls173",
+      "11.1.0.11723-2-ls174",
+      "11.1.0.11723-2-ls175",
+      "11.1.0.11723-2-ls176",
+      "11.1.0.11723-2-ls177",
+      "11.1.0.11723-2-ls178",
+      "11.1.0.11723-2-ls179",
+      "11.1.0.11723-2-ls180",
+      "11.1.0.11723-2-ls181",
+      "11.1.0.11723-2-ls182",
+      "11.1.0.11723-2-ls183",
+      "11.1.0.11723-2-ls184",
+      "11.1.0.11723-2-ls185",
+      "11.1.0.11723-2-ls186",
+      "11.1.0.11723-2-ls187",
+      "11.1.0.11723-2-ls188",
+      "11.1.0.11723-2-ls189",
+      "11.1.0.11723-2-ls190",
+      "11.1.0.11723-2-ls191",
+      "11.1.0.11723-2-ls192",
+      "11.1.0.11723-2-ls193",
+      "11.1.0.11723-2-ls194",
+      "11.1.0.11723-2-ls195",
+      "12.1.2.29183-1-ls196",
+      "12.1.2.29183-1-ls197",
+      "12.1.2.29183-1-ls198",
+      "12.1.2.29183-1-ls199"
+    ],
+    "failed_releases": [
+      {
+        "tag": "11.1.0.11723-2-ls161",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-2-ls160",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-2-ls149",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-2-ls148",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-2-ls147",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-2-ls146",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-2-ls145",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls144",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls143",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls142",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls141",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls140",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls139",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls138",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls137",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls136",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls135",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls134",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls133",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls132",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls131",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls130",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls129",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls128",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls127",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls126",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls125",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls124",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls123",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-07-12-ls141",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls122",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls121",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-07-12-ls140",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls120",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-07-12-ls139",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls119",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls118",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-07-12-ls138",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-07-11-ls137",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls117",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-07-04-ls136",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls116",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-06-27-ls135",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-06-27-ls134",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls115",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-06-20-ls133",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls114",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-06-13-ls132",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-06-13-ls131",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls113",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-06-06-ls130",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls112",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-05-30-ls129",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-05-30-ls128",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls111",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-05-23-ls127",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls110",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-05-16-ls126",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-05-16-ls125",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls109",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-05-09-ls124",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-05-09-ls123",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls108",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-05-02-ls122",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-05-02-ls121",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls107",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-04-25-ls120",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-04-18-ls119",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-04-18-ls118",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls106",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-04-13-ls117",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-04-11-ls116",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls105",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-04-04-ls115",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-04-04-ls114",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls104",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-03-28-ls113",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-03-28-ls112",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls103",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-03-21-ls111",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-03-21-ls110",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls102",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-03-14-ls109",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls101",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-03-07-ls108",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-03-07-ls107",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls100",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-02-28-ls106",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls99",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-02-21-ls105",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-02-21-ls104",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls98",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-02-14-ls103",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-02-14-ls102",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-02-07-ls101",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls97",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-01-31-ls100",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls96",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-01-31-ls99",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-01-31-ls98",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls95",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-01-24-ls97",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-01-24-ls96",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls94",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11723-ls93",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-01-19-ls95",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-01-17-ls94",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls92",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-01-10-ls93",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-01-10-ls92",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls91",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2025-01-03-ls91",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2025-01-03-ls90",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-12-27-ls89",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls90",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-12-20-ls88",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-12-20-ls87",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls89",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-12-13-ls86",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-12-13-ls85",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-12-10-ls84",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls88",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-12-06-ls83",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls87",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-11-29-ls82",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-11-29-ls81",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls86",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-11-22-ls80",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-11-22-ls79",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls85",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-11-15-ls78",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-11-08-ls77",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls84",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-11-08-ls76",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls83",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-11-01-ls75",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-11-01-ls74",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls82",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-10-25-ls73",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-10-25-ls72",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls81",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-10-18-ls71",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls80",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-10-04-ls70",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls79",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-10-04-ls69",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-10-04-ls68",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls78",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-09-29-ls67",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-09-28-ls66",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-09-27-ls65",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls77",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-09-23-ls64",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls76",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-09-13-ls63",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-09-13-ls62",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls75",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-09-06-ls61",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls74",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-08-30-ls60",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-08-30-ls59",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls73",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-08-23-ls58",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-08-23-ls57",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls72",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-08-09-ls56",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls71",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-08-09-ls55",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-08-09-ls54",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls70",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-08-02-ls53",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11723-ls69",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11720-ls68",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-07-26-ls52",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-07-26-ls51",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11720-ls67",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-07-19-ls50",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11720-ls66",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-07-12-ls49",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-07-12-ls48",
+        "pre": "true"
+      },
+      {
+        "tag": "11.1.0.11720-ls65",
+        "pre": "false"
+      },
+      {
+        "tag": "11.1.0.11719-ls64",
+        "pre": "false"
+      },
+      {
+        "tag": "chinese-2024-07-05-ls47",
+        "pre": "true"
+      },
+      {
+        "tag": "chinese-2024-07-05-ls46",
+        "pre": "true"
+      }
+    ],
+    "last_sync_time": "2026-11-26 17:16:55 UTC"
   }
 }
