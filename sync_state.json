@@ -4599,5 +4599,156 @@
         "sync_time": "2026-11-26 15:40:03 UTC"
       }
     }
+  },
+  "baserow": {
+    "gh_src": "baserow/baserow",
+    "docker_src": "baserow/baserow",
+    "last_repo_push": "2026-11-26T15:35:52Z",
+    "baseline_time": "2026-11-26T15:41:34Z",
+    "synced_releases": [],
+    "failed_releases": [
+      {
+        "tag": "2.4.3",
+        "pre": "false"
+      },
+      {
+        "tag": "2.4.2",
+        "pre": "false"
+      },
+      {
+        "tag": "2.4.1",
+        "pre": "false"
+      },
+      {
+        "tag": "2.4.0",
+        "pre": "false"
+      },
+      {
+        "tag": "2.3.4",
+        "pre": "false"
+      },
+      {
+        "tag": "2.3.3",
+        "pre": "false"
+      },
+      {
+        "tag": "2.3.2",
+        "pre": "false"
+      },
+      {
+        "tag": "2.3.1",
+        "pre": "false"
+      },
+      {
+        "tag": "2.3.0",
+        "pre": "false"
+      },
+      {
+        "tag": "2.2.2",
+        "pre": "false"
+      },
+      {
+        "tag": "2.2.1",
+        "pre": "false"
+      },
+      {
+        "tag": "2.2.0",
+        "pre": "false"
+      },
+      {
+        "tag": "2.1.6",
+        "pre": "false"
+      },
+      {
+        "tag": "2.1.5",
+        "pre": "false"
+      },
+      {
+        "tag": "2.1.4",
+        "pre": "false"
+      },
+      {
+        "tag": "2.1.3",
+        "pre": "false"
+      },
+      {
+        "tag": "2.1.2",
+        "pre": "false"
+      },
+      {
+        "tag": "2.1.1",
+        "pre": "false"
+      },
+      {
+        "tag": "2.1.0",
+        "pre": "false"
+      },
+      {
+        "tag": "2.0.6",
+        "pre": "false"
+      },
+      {
+        "tag": "2.0.5",
+        "pre": "false"
+      },
+      {
+        "tag": "2.0.4",
+        "pre": "false"
+      },
+      {
+        "tag": "2.0.3",
+        "pre": "false"
+      },
+      {
+        "tag": "2.0.2",
+        "pre": "false"
+      },
+      {
+        "tag": "2.0.1",
+        "pre": "false"
+      },
+      {
+        "tag": "2.0.0",
+        "pre": "false"
+      }
+    ],
+    "synced_images": {
+      "2.3.2": {
+        "digest": "sha256:bb2b366268e799aae84c98065ae984f18694940bcfa729eea51699fa621067ec",
+        "sync_time": "2026-11-26 15:43:20 UTC"
+      },
+      "2.3.3": {
+        "digest": "sha256:41adb3493379403946a493f30873f743bb65b19b5f387d630ec75f41e25d5b5b",
+        "sync_time": "2026-11-26 15:43:46 UTC"
+      },
+      "2.3.4": {
+        "digest": "sha256:97e1818daf5dd64a0a8f7069db4199c2a79b9234cff450b60d97fc99b8c4ab39",
+        "sync_time": "2026-11-26 15:44:18 UTC"
+      },
+      "2.4.0": {
+        "digest": "sha256:f35444dbbbd390c48dae30eaed0b9668b04ff4b71c97d08f9cb2dd436ba22150",
+        "sync_time": "2026-11-26 15:44:51 UTC"
+      },
+      "2.4.1": {
+        "digest": "sha256:2229bc0ad9c8e1c3c44cef3324ff0501639d44a7b6f64026ebaa44f61cfb038e",
+        "sync_time": "2026-11-26 15:45:21 UTC"
+      },
+      "2.4.2": {
+        "digest": "sha256:630bf7a9baa31523a3a55a595a61416f20c1761c1e0ee62d4f0f9ae47ff23ee2",
+        "sync_time": "2026-11-26 15:45:54 UTC"
+      },
+      "2.4.3": {
+        "digest": "sha256:304bebe22bf4c66d96d11bb746727492fa91637bd6deb807b2ef464f071c215c",
+        "sync_time": "2026-11-26 15:46:20 UTC"
+      },
+      "develop-latest": {
+        "digest": "sha256:de4e316f9a268be3347d791bb3364cdbcf8190ea4847563d052995cdd1aee681",
+        "sync_time": "2026-11-26 15:46:40 UTC"
+      },
+      "latest": {
+        "digest": "sha256:304bebe22bf4c66d96d11bb746727492fa91637bd6deb807b2ef464f071c215c",
+        "sync_time": "2026-11-26 15:46:46 UTC"
+      }
+    }
   }
 }
