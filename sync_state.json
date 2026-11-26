@@ -1743,6 +1743,18 @@
     "last_repo_push": "2026-10-20T10:19:31Z",
     "baseline_time": "2026-11-26T03:46:58Z",
     "synced_releases": [
+      "v1.0",
+      "v1.1",
+      "v1.2",
+      "v1.3",
+      "v1.4",
+      "v1.5",
+      "v1.6",
+      "v1.7",
+      "v1.7.1",
+      "v1.7.2",
+      "v1.8",
+      "v1.9",
       "v1.9.1",
       "v1.9.2",
       "v1.9.3",
@@ -1810,7 +1822,7 @@
       "v2.9.9"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-26 03:49:54 UTC",
+    "last_sync_time": "2026-11-26 09:27:27 UTC",
     "synced_images": {
       "2.15.5": {
         "digest": "sha256:2d689511a0783758eb5242155e5dd8ecbf9bdf4e343a2b28fe4f27531fd6467c",
@@ -1852,7 +1864,8 @@
         "digest": "sha256:eaaa469ddeeb5fa58fb35f8767e9e096a2f1c8468c54b6703323624bf3071c5a",
         "sync_time": "2026-11-26 03:50:24 UTC"
       }
-    }
+    },
+    "history_completed": true
   },
   "chatgpt-web": {
     "gh_src": "Chanzhaoyu/chatgpt-web",
