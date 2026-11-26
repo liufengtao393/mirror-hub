@@ -7095,5 +7095,542 @@
       "v1.0.0"
     ],
     "history_completed": true
+  },
+  "siyuan": {
+    "gh_src": "siyuan-note/siyuan",
+    "docker_src": "b3log/siyuan",
+    "last_repo_push": "2026-11-26T15:35:45Z",
+    "baseline_time": "2026-11-26T16:29:22Z",
+    "synced_releases": [
+      "v3.7.1",
+      "v3.7.1-alpha.2",
+      "v3.7.2",
+      "v3.7.2-alpha.1",
+      "v3.7.2-alpha.2",
+      "v3.7.3",
+      "v3.7.3-beta.1",
+      "v3.7.3-beta.2",
+      "v3.7.3-beta.3",
+      "v3.7.4-alpha.1",
+      "v3.7.4-alpha.2",
+      "v3.7.4-alpha.3",
+      "v3.7.4-alpha.4",
+      "v3.7.4-alpha.5",
+      "v3.7.4-alpha.6",
+      "v3.8.10",
+      "v3.8.10-alpha.1",
+      "v3.8.10-alpha.2",
+      "v3.8.10-alpha.3",
+      "v3.8.10-alpha.5",
+      "v3.8.10-alpha.6",
+      "v3.8.10-alpha.7",
+      "v3.8.10-beta.1",
+      "v3.8.10-beta.2",
+      "v3.8.10-beta.3",
+      "v3.8.10-beta.4",
+      "v3.8.10-beta.5",
+      "v3.8.10-rc.1",
+      "v3.8.10-rc.2",
+      "v3.8.10-rc.3",
+      "v3.8.10-rc.5",
+      "v3.8.11",
+      "v3.8.11-alpha.2",
+      "v3.8.11-alpha.4",
+      "v3.8.11-alpha.5",
+      "v3.8.11-alpha.6",
+      "v3.8.11-beta.1",
+      "v3.8.11-beta.2",
+      "v3.8.11-beta.3",
+      "v3.8.11-rc.1",
+      "v3.8.11-rc.3",
+      "v3.8.12",
+      "v3.8.12-alpha.1",
+      "v3.8.12-alpha.2",
+      "v3.8.12-alpha.3",
+      "v3.8.12-beta.1",
+      "v3.8.12-beta.2",
+      "v3.8.12-beta.3",
+      "v3.8.9",
+      "v3.8.9-alpha.10",
+      "v3.8.9-alpha.7",
+      "v3.8.9-alpha.8",
+      "v3.8.9-alpha.9",
+      "v3.8.9-beta.1",
+      "v3.8.9-beta.2",
+      "v3.8.9-beta.3",
+      "v3.8.9-beta.4",
+      "v3.8.9-beta.5",
+      "v3.8.9-beta.6",
+      "v3.8.9-rc.1"
+    ],
+    "failed_releases": [
+      {
+        "tag": "v3.9.0-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.9.0-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.9.0-alpha.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.9-alpha.6",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.9-alpha.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.9-alpha.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.9-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.9-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.9-alpha.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.8.8-beta.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8-beta.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8-beta.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8-alpha.6",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8-alpha.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8-alpha.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.8-alpha.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.8.7-beta.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-beta.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-beta.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-alpha.9",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-alpha.8",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-alpha.7",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-alpha.6",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-alpha.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-alpha.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.7-alpha.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.8.6-beta.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.9",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.10",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.8",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.7",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.6",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.6-alpha.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.8.5-beta.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5-beta.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5-beta.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5-beta.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5-alpha.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5-alpha.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.5-alpha.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.8.4-beta.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-beta.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-beta.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-beta.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-alpha.9",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-alpha.8",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-alpha.7",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-alpha.6",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-alpha.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-alpha.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.4-alpha.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.8.3-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.3-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.3-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.3-alpha.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.8.2-beta.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-beta.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-beta.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-alpha.7",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-alpha.6",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-alpha.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-alpha.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.2-alpha.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.8.1-beta.6",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.1-beta.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.1-beta.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.1-beta.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.1-beta.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.1-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.8.0-beta.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.0-beta.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.0-beta.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.0-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.0-alpha.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.0-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.0-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v3.8.0-alpha.1",
+        "pre": "true"
+      }
+    ],
+    "last_sync_time": "2026-11-26 16:43:37 UTC",
+    "synced_images": {
+      "build-45845686916-1-amd64": {
+        "digest": "sha256:00157edd54571df527537ba62688a3f4c9b5ac9c8bbb76883e82b7db6fb4a3cf",
+        "sync_time": "2026-11-26 16:44:03 UTC"
+      },
+      "build-45845686916-1-arm64": {
+        "digest": "sha256:38f22b25409b4e60062881d2b29041a245f1efb8a4810dd42d7cc3faee7d327a",
+        "sync_time": "2026-11-26 16:44:12 UTC"
+      },
+      "build-45845686916-1-armv7": {
+        "digest": "sha256:59b7dd77bddde1e490392f4d9ec20ca7a3f1f69aff1447e7728e7e2c59242445",
+        "sync_time": "2026-11-26 16:44:20 UTC"
+      },
+      "buildcache-release-v2-amd64": {
+        "digest": "sha256:2653a48ba8e7a2f1c347dc49108f44d4fb08e32634db619d329df239624d0a39",
+        "sync_time": "2026-11-26 16:44:45 UTC"
+      },
+      "buildcache-release-v2-arm64": {
+        "digest": "sha256:f929f2eecae1ec6316c533310223846f8b30766f9d1223676c67734c69bb3dd8",
+        "sync_time": "2026-11-26 16:45:19 UTC"
+      },
+      "buildcache-release-v2-armv7": {
+        "digest": "sha256:5569a6ef1661bdd84aef57a009e4b3226ab7a55c0607db9b32e5bfb3d05f3b7e",
+        "sync_time": "2026-11-26 16:45:47 UTC"
+      },
+      "buildcache-release-v2-armv8": {
+        "digest": "sha256:e9b35fe23343d2f072367ae06483fc2472d0148bfb4d465cf36be9baba27df9d",
+        "sync_time": "2026-11-26 16:46:06 UTC"
+      },
+      "latest": {
+        "digest": "sha256:3e1b65ce633e437fed4ed440367d0dc316039b02d4554a47bdda16790b6a973d",
+        "sync_time": "2026-11-26 16:46:11 UTC"
+      },
+      "v3.9.0-alpha.1": {
+        "digest": "sha256:c1448851ab33dc538ee0aa993234d42a427e228f3e10172a00870104eae6f4a7",
+        "sync_time": "2026-11-26 16:46:32 UTC"
+      },
+      "v3.9.0-alpha.2": {
+        "digest": "sha256:be80b90a6f769208b8aa813ce60ab84af1766f5dca36b9c935a79ab29ac8b34f",
+        "sync_time": "2026-11-26 16:46:50 UTC"
+      }
+    }
   }
 }
