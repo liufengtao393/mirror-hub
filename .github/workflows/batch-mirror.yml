@@ -74,8 +74,16 @@ jobs:
             fi
 
             rm -rf release_assets && mkdir -p release_assets
-            if ! timeout 900 gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null; then
-              if ! gh release view "$TAG" --repo "$SRC_REPO" >/dev/null 2>&1; then
+                        local DL_CODE=0
+            timeout 900 gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null || DL_CODE=$?
+            if [ "$DL_CODE" -ne 0 ]; then
+              if [ "$DL_CODE" -eq 124 ]; then
+                rm -rf release_assets
+                return 1
+              fi
+              local ASSET_COUNT
+              ASSET_COUNT=$(gh release view "$TAG" --repo "$SRC_REPO" --json assets -q '.assets | length' 2>/dev/null || echo "-1")
+              if [ "$ASSET_COUNT" != "0" ]; then
                 rm -rf release_assets
                 return 1
               fi
@@ -340,8 +348,16 @@ jobs:
             [ "$IS_PRE" = "true" ] && EXTRA_FLAGS="--prerelease --latest=false"
 
             rm -rf release_assets && mkdir -p release_assets
-            if ! timeout 600 gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null; then
-              if ! gh release view "$TAG" --repo "$SRC_REPO" >/dev/null 2>&1; then
+                        local DL_CODE=0
+            timeout 600 gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null || DL_CODE=$?
+            if [ "$DL_CODE" -ne 0 ]; then
+              if [ "$DL_CODE" -eq 124 ]; then
+                rm -rf release_assets
+                return 1
+              fi
+              local ASSET_COUNT
+              ASSET_COUNT=$(gh release view "$TAG" --repo "$SRC_REPO" --json assets -q '.assets | length' 2>/dev/null || echo "-1")
+              if [ "$ASSET_COUNT" != "0" ]; then
                 rm -rf release_assets
                 return 1
               fi
@@ -391,7 +407,7 @@ jobs:
             FAILED_ITEMS=$(jq -c --arg t "$TARGET" '.[$t].failed_releases // [] | .[]' "$STATE_FILE")
             [ -z "$FAILED_ITEMS" ] && continue
 
-            for ITEM in $FAILED_ITEMS; do
+            while IFS= read -r ITEM; do
               if is_rescue_timeout; then
                 echo "⏰ 兜底任务触及 5 小时 40 分钟红线，安全终止内层重试..."
                 RESCUE_ABORT=1
@@ -462,7 +478,7 @@ jobs:
               else
                 echo "   ⚠️ 重试未成功或触及时间保护，保留在 failed_releases 中，下轮任务继续死磕！"
               fi
-            done
+            done <<< "$FAILED_ITEMS"
             [ "$RESCUE_ABORT" -eq 1 ] && break
           done
 
