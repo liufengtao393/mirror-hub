@@ -5880,5 +5880,55 @@
         "sync_time": "2026-11-26 16:21:28 UTC"
       }
     }
+  },
+  "nginx": {
+    "gh_src": "nginx/nginx",
+    "docker_src": "library/nginx",
+    "synced_images": {
+      "1.31-alpine-perl": {
+        "digest": "sha256:657ad086276f94adb66bfd17d26331abc2170adc68c8feec852ba6e7e85ce60d",
+        "sync_time": "2026-11-26 16:22:07 UTC"
+      },
+      "1.31-alpine3.24-perl": {
+        "digest": "sha256:657ad086276f94adb66bfd17d26331abc2170adc68c8feec852ba6e7e85ce60d",
+        "sync_time": "2026-11-26 16:22:15 UTC"
+      },
+      "1.31.10-alpine-perl": {
+        "digest": "sha256:657ad086276f94adb66bfd17d26331abc2170adc68c8feec852ba6e7e85ce60d",
+        "sync_time": "2026-11-26 16:22:24 UTC"
+      },
+      "1.31.10-alpine3.24-perl": {
+        "digest": "sha256:657ad086276f94adb66bfd17d26331abc2170adc68c8feec852ba6e7e85ce60d",
+        "sync_time": "2026-11-26 16:22:32 UTC"
+      },
+      "alpine-perl": {
+        "digest": "sha256:657ad086276f94adb66bfd17d26331abc2170adc68c8feec852ba6e7e85ce60d",
+        "sync_time": "2026-11-26 16:22:40 UTC"
+      },
+      "alpine3.24-perl": {
+        "digest": "sha256:657ad086276f94adb66bfd17d26331abc2170adc68c8feec852ba6e7e85ce60d",
+        "sync_time": "2026-11-26 16:22:49 UTC"
+      },
+      "latest": {
+        "digest": "sha256:6a3df739b6312289e87d70947d900669c1b3087474ece5814b9c01bbf2e6dde3",
+        "sync_time": "2026-11-26 16:22:56 UTC"
+      },
+      "mainline-alpine-perl": {
+        "digest": "sha256:657ad086276f94adb66bfd17d26331abc2170adc68c8feec852ba6e7e85ce60d",
+        "sync_time": "2026-11-26 16:23:05 UTC"
+      },
+      "mainline-alpine3.24-perl": {
+        "digest": "sha256:657ad086276f94adb66bfd17d26331abc2170adc68c8feec852ba6e7e85ce60d",
+        "sync_time": "2026-11-26 16:23:13 UTC"
+      },
+      "stable-alpine-perl": {
+        "digest": "sha256:5a772e2c6ecca812a72d1b2a8dbc59ba6f37213983959aa84bcc0fcdfa42fcf6",
+        "sync_time": "2026-11-26 16:23:47 UTC"
+      },
+      "stable-alpine3.24-perl": {
+        "digest": "sha256:5a772e2c6ecca812a72d1b2a8dbc59ba6f37213983959aa84bcc0fcdfa42fcf6",
+        "sync_time": "2026-11-26 16:23:55 UTC"
+      }
+    }
   }
 }
