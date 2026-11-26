@@ -15,10 +15,10 @@
 </p>
 
 <p>
-  <img src="./.github/badges/engine.svg?raw=true" alt="Engine" />
-  <img src="./.github/badges/state.svg?raw=true" alt="State Machine" />
-  <img src="./.github/badges/chunking.svg?raw=true" alt="Auto Split" />
-  <img src="./.github/badges/rescue.svg?raw=true" alt="404 Rescue" />
+  <img src="REPLACE_ME/liufengtao393/mirror-hub/blob/main/.github/badges/engine.svg?raw=true" alt="Engine" />
+  <img src="REPLACE_ME/liufengtao393/mirror-hub/blob/main/.github/badges/state.svg?raw=true" alt="State Machine" />
+  <img src="REPLACE_ME/liufengtao393/mirror-hub/blob/main/.github/badges/chunking.svg?raw=true" alt="Auto Split" />
+  <img src="REPLACE_ME/liufengtao393/mirror-hub/blob/main/.github/badges/rescue.svg?raw=true" alt="404 Rescue" />
 </p>
 
 </div>
