@@ -8292,5 +8292,26 @@
         "sync_time": "2026-11-26 17:15:11 UTC"
       }
     }
+  },
+  "aipan-netdisk-search": {
+    "gh_src": "unilei/aipan-netdisk-search",
+    "docker_src": "wbsu2003/aipan-netdisk-search",
+    "last_repo_push": "2026-08-14T07:04:17Z",
+    "baseline_time": "2026-11-26T17:15:22Z",
+    "synced_releases": [],
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:cffc068e6d51281bc285e1034e9a2795192d9fc4c0adb26bafb26e2cf6d71b2f",
+        "sync_time": "2026-11-26 17:15:26 UTC"
+      },
+      "v1": {
+        "digest": "sha256:cffc068e6d51281bc285e1034e9a2795192d9fc4c0adb26bafb26e2cf6d71b2f",
+        "sync_time": "2026-11-26 17:15:30 UTC"
+      },
+      "v2": {
+        "digest": "sha256:b207c474ff5436ef7c69ad7cce0c509e25c6f27fb597bbe93984e5ed8ace7a61",
+        "sync_time": "2026-11-26 17:15:35 UTC"
+      }
+    }
   }
 }
