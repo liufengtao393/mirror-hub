@@ -1,33 +1,93 @@
-# 🚀 Mirror Hub — 무제한 점진적 통합 미러링 시스템
+<div align="center">
 
-[简体中文](./README.md) | [繁體中文](./README.zh-TW.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md)
+<h1>⚡ MIRROR HUB</h1>
 
-GitHub Actions 기반의 자동화 오픈소스 자산 미러링 및 재해 복구 아카이빙 시스템입니다. **Git 소스 코드, Wiki, 전체 과거 Releases(2GB 단일 파일 제한 돌파) 및 멀티 아키텍처 Docker 이미지**의 자동 동기화와 전체 네트워크 구조를 지원합니다.
+<p>
+  <strong>엔터프라이즈급 오픈소스 자산 자동 미러링·재해 복구·전체 네트워크 구조 엔진</strong>
+</p>
 
-## ✨ 핵심 기능
+<p>
+  <a href="./README.md">简体中文</a> &nbsp;•&nbsp;
+  <a href="./README.zh-TW.md">繁體中文</a> &nbsp;•&nbsp;
+  <a href="./README.en.md">English</a> &nbsp;•&nbsp;
+  <a href="./README.ja.md">日本語</a> &nbsp;•&nbsp;
+  <a href="./README.ko.md"><b>한국어</b></a>
+</p>
 
-- **듀얼 트랙 동기화 엔진**: 최초 등록 시 `baseline_time`을 고정합니다. 기준 시간 이후의 새 버전은 **즉시 추적**하며, 기준 시간 이전의 방대한 과거 버전은 배치 단위(기본 15개/회)로 **점진적 보완**을 수행합니다.
-- **GitHub 2GB 단일 파일 제한 돌파**: `1900MB`를 초과하는 릴리스 자산을 자동 감지하여 `split`으로 `.part_000` 분할 업로드하며, 릴리스 노트에 복원 명령어를 자동으로 추가합니다.
-- **동적 타임아웃 및 체크포인트 저장**: 실행 시간을 실시간으로 감시하여 GitHub의 6시간 강제 종료 한도에 도달하기 전(5시간 시점)에 `sync_state.json` 상태 장부를 안전하게 저장하고 종료합니다.
-- **404 삭제 저장소 전체 네트워크 구조**: 실패한 항목을 3회 자동 재시도합니다. 원본 저장소나 태그가 삭제(HTTP 404)된 경우 공개 미러 저장소를 검색해 복구하며, 완전히 유실된 경우 `archived_dead`에 기록합니다.
-- **자동 활성 유지(Keep-Alive)**: 실행 시마다 `.github/.last_run`을 업데이트하여 60일 비활성으로 인한 워크플로우 자동 중지를 방지합니다.
+<p>
+  <code>Engine: GitHub Actions</code> &nbsp;|&nbsp;
+  <code>State Machine: JSON Ledger</code> &nbsp;|&nbsp;
+  <code>Chunking: >1.9GB Auto-Split</code> &nbsp;|&nbsp;
+  <code>Rescue: Cross-Repo 404 Recovery</code>
+</p>
 
-## ⚙️ 빠른 설정
+</div>
 
-### 1. 시크릿 설정 (`MIRROR_TOKEN`)
-저장소의 `Settings -> Secrets and variables -> Actions`에서 `MIRROR_TOKEN`이라는 이름으로 시크릿을 생성하고, `repo`, `workflow`, `write:packages`, `read:packages` 권한이 있는 Personal Access Token (Classic)을 입력합니다.
+---
 
-### 2. 미러링 목록 편집 (`repos.txt`)
-한 줄에 하나의 프로젝트를 `|`로 구분하여 작성합니다(`#` 주석 지원):
+### 🏗️ 시스템 아키텍처 및 실행 흐름
+
+```mermaid
+flowchart TD
+    A[Cron / Push / Manual Trigger] --> B[전역 타이머 초기화 WORKFLOW_START_EPOCH]
+    B --> C{sync_state.json 상태 장부 로드}
+    C --> D[Git 소스 코드 & Wiki 미러 동기화]
+    D --> E{기준 시간 라우터 baseline_time}
+    E -->|배포 시간 > 기준| F[🆕 최신 추적: 무지연 즉시 동기화]
+    E -->|배포 시간 <= 기준| G[📥 과거 보완: 배치 단위 점진적 수집]
+    F & G --> H{단일 파일 크기 검사}
+    H -->|> 1900MB| I[✂️ 바이너리 자동 분할 + 병합 가이드 생성]
+    H -->|<= 1900MB| J[📦 네이티브 직접 업로드]
+    I & J --> K[🐳 멀티 아키텍처 Docker 다이제스트 동기화]
+    K --> L{내부 동적 차단 검사 >= 18000s?}
+    L -->|안전| C
+    L -->|소프트 차단| M[💾 현재 프로젝트 진행 상황 즉시 커밋]
+    M --> N[🚑 최종 구제 작업: 3회 재시도 + 404 전체 검색]
+    N --> O[🔒 20400s 하드 제한 보호 & 활성 유지 푸시]
+```
+
+---
+
+### 📊 핵심 엔지니어링 역량 매트릭스
+
+| 아키텍처 차원 | 기존 미러링 스크립트의 한계 | Mirror Hub 엔지니어링 솔루션 |
+| :--- | :--- | :--- |
+| **타임아웃 제어** | GitHub 6시간 강제 종료 시 동기화 진행률 전량 유실 | **3중 동적 차단기**: 내/외부 루프 감시 + 동적 남은 시간 계산 + 20분 안전 버퍼 |
+| **초대용량 파일** | 2GB 초과 단일 파일 업로드 시 API 오류로 영구 누락 | **무손실 바이너리 분할**: `>1900MB` 자산을 `.part_000`으로 자동 분할 및 복원 명령 삽입 |
+| **증분 전략** | 전체 API 스캔으로 인한 호출 한도(Rate Limit) 고갈 | **듀얼 트랙 기준선**: `baseline_time` 고정으로 최신 버전 즉시 추적 및 과거 버전 분할 수집 |
+| **원본 저장소 삭제** | 원본 저장소 또는 태그 삭제(404) 시 복구 불가 | **전체 네트워크 구조**: 공개 미러 저장소 자동 검색 및 복구, 영구 유실 시 `archived_dead` 기록 |
+| **동시성 안전** | 실행 중 수동 편집으로 인한 마지막 `git push` 충돌 | **낙관적 리베이스 재시도**: `git pull --rebase --autostash` 최대 3회 자동 백오프 재시도 |
+
+---
+
+### 🚀 빠른 배포 가이드
+
+#### 1. 권한 시크릿 설정 (`MIRROR_TOKEN`)
+`Settings` ➔ `Secrets and variables` ➔ `Actions` ➔ `New repository secret` 이동 후 생성:
+- **Name**: `MIRROR_TOKEN`
+- **Scopes**: `repo`, `workflow`, `write:packages`, `read:packages` 필수 체크
+
+#### 2. 동기화 토폴로지 정의 (`repos.txt`)
 ```text
-# 형식: 원본GitHub저장소 | 원본Docker이미지 | 대상저장소이름 | 동기화할Docker태그수
+# 구문: 원본GitHub저장소 | 원본Docker이미지 | 대상저장소이름 | 동기화할Docker태그수
 # 해당 사항이 없으면 none 입력
 dify-ai/dify | langgenius/dify-api | dify | 5
 n8n-io/n8n | n8nio/n8n | n8n | 5
 torvalds/linux | none | linux-kernel | 0
 ```
 
-## 🧩 분할 파일(>2GB) 병합 가이드
-2GB를 초과하는 단일 파일은 `파일명.part_000`, `파일명.part_001` 등으로 자동 분할됩니다. 모든 분할 파일을 같은 폴더에 다운로드한 후 아래 명령어를 실행하세요:
-- **Linux / macOS**: `cat 파일명.part_* > 파일명`
-- **Windows (CMD)**: `copy /b 파일명.part_* 파일명`
+<details>
+<summary><b>🧩 펼치기: 초대용량 파일 (>2GB) 병합 프로토콜</b></summary>
+<br>
+
+`1900MB`를 초과하는 단일 파일은 자동으로 `파일명.part_000`, `파일명.part_001` 등으로 분할됩니다. 모든 분할 파일을 동일한 디렉터리에 다운로드한 후 실행하세요:
+
+- **Linux / macOS (POSIX)**:
+  ```bash
+  cat 파일명.part_* > 파일명
+  ```
+- **Windows (CMD)**:
+  ```cmd
+  copy /b 파일명.part_* 파일명
+  ```
+</details>
