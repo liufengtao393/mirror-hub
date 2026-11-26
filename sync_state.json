@@ -1732,9 +1732,24 @@
   "fastgpt": {
     "gh_src": "labring/FastGPT",
     "docker_src": "ghcr.io/labring/fastgpt",
-    "last_repo_push": "2026-11-26T07:33:58Z",
+    "last_repo_push": "2026-11-26T12:20:44Z",
     "baseline_time": "2026-11-26T03:40:55Z",
     "synced_releases": [
+      "v4.11.1-fix3",
+      "v4.12.0",
+      "v4.12.1",
+      "v4.12.1-fix",
+      "v4.12.2",
+      "v4.12.2-fix",
+      "v4.12.2-fix2",
+      "v4.12.2-fix3",
+      "v4.12.3",
+      "v4.12.4",
+      "v4.13.0",
+      "v4.13.0-fix",
+      "v4.13.1",
+      "v4.13.2",
+      "v4.13.2-fix",
       "v4.14.0",
       "v4.14.0-fix",
       "v4.14.1",
@@ -1817,7 +1832,7 @@
       "v4.17.5"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-26 09:25:58 UTC",
+    "last_sync_time": "2026-11-26 13:01:30 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:8d387cc6160d5741274c4d031aa55d034aa3dda0f85872b57ca17bf80c03a75e",
