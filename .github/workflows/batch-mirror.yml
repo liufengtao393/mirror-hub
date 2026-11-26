@@ -496,5 +496,11 @@ jobs:
           date -u "+Last run: %Y-%m-%d %H:%M:%S UTC" > .github/.last_run
           git add .github/.last_run sync_state.json
           git commit -m "chore: keep workflow alive [skip ci]" || exit 0
-          git pull --rebase --autostash >/dev/null 2>&1 || true
-          git push
+          for i in 1 2 3; do
+            git pull --rebase --autostash >/dev/null 2>&1 || true
+            if git push >/dev/null 2>&1; then
+              echo "✅ 状态账本与保活记录推送成功"
+              break
+            fi
+            sleep 3
+          done
