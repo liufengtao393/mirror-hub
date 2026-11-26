@@ -1086,5 +1086,24 @@
         "sync_time": "2026-11-26 03:26:56 UTC"
       }
     }
+  },
+  "agent-reach": {
+    "gh_src": "Panniantong/Agent-Reach",
+    "docker_src": "none",
+    "last_repo_push": "2026-11-24T12:25:18Z",
+    "baseline_time": "2026-11-26T03:27:03Z",
+    "synced_releases": [
+      "v1.6.1",
+      "v1.6.0",
+      "v1.5.0",
+      "v1.4.2",
+      "v1.4.1",
+      "v1.4.0",
+      "v1.3.0",
+      "v1.2.0",
+      "v1.1.0",
+      "v1.1.0"
+    ],
+    "history_completed": true
   }
 }
