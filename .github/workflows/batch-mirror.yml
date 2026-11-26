@@ -29,7 +29,8 @@ jobs:
           echo "${{ secrets.MIRROR_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
           git config --global credential.helper '!f() { echo "username=x-access-token"; echo "password=${GH_TOKEN}"; }; f'
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@://github.com"
+          BOT_EMAIL=$(printf '%s@%s.%s.%s' 'github-actions[bot]' 'users' 'noreply' 'github.com')
+          git config user.email "$BOT_EMAIL"
 
       - name: 设置多架构并发构建工具
         uses: docker/setup-buildx-action@v3
@@ -125,16 +126,18 @@ jobs:
 
               if [ -n "$SRC_PUSH_TIME" ] && [ "$SRC_PUSH_TIME" != "$SAVED_PUSH_TIME" ]; then
                 echo "⚡ 源码有更新 ($SRC_PUSH_TIME)，同步源码与 Wiki..."
+                GH_HOST=$(printf '%s://%s' 'https' 'github.com')
                 rm -rf temp_repo.git
-                if git clone --mirror "https://github.com{GH_SRC}.git" temp_repo.git; then
-                  git -C temp_repo.git push --mirror "https://github.com{OWNER}/${TARGET}.git" >/dev/null 2>&1 || true
+                if git clone --mirror "${GH_HOST}/${GH_SRC}.git" temp_repo.git; then
+                  git -C temp_repo.git push --mirror "${GH_HOST}/${OWNER}/${TARGET}.git" >/dev/null 2>&1 || true
                   rm -rf temp_repo.git
                 fi
                 rm -rf temp_wiki.git
-                if git clone --mirror "https://github.com{GH_SRC}.wiki.git" temp_wiki.git >/dev/null 2>&1; then
-                  git -C temp_wiki.git push --mirror "https://github.com{OWNER}/${TARGET}.wiki.git" >/dev/null 2>&1 || true
+                if git clone --mirror "${GH_HOST}/${GH_SRC}.wiki.git" temp_wiki.git >/dev/null 2>&1; then
+                  git -C temp_wiki.git push --mirror "${GH_HOST}/${OWNER}/${TARGET}.wiki.git" >/dev/null 2>&1 || true
                   rm -rf temp_wiki.git
                 fi
+
                 jq --arg t "$TARGET" --arg pt "$SRC_PUSH_TIME" '.[$t].last_repo_push = $pt' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
                 PROJECT_CHANGED=1
               fi
@@ -164,7 +167,7 @@ jobs:
                 IS_PRE=$(echo "$ROW" | jq -r '.pre')
                 PUB_TIME=$(echo "$ROW" | jq -r '.pub')
 
-                if echo "$SYNCED_LIST" | grep -Fxq "$TAG" || echo "$DEAD_LIST" | grep -Fxq "$TAG"; then
+              if echo "$SYNCED_LIST" | grep -Fxq -- "$TAG" || echo "$DEAD_LIST" | grep -Fxq -- "$TAG"; then
                   continue
                 fi
 
@@ -222,7 +225,7 @@ jobs:
 
             if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
               if [[ "$DOCKER_SRC" != *.* ]]; then
-                API_URL="https://docker.com{DOCKER_SRC}/tags?page_size=${COUNT}&ordering=last_updated"
+                API_URL=$(printf '%s://%s.%s/v2/repositories/%s/tags?page_size=%s&ordering=last_updated' 'https' 'hub' 'docker.com' "$DOCKER_SRC" "$COUNT")
                 TAGS=$(curl -s "$API_URL" | jq -r '.results[].name' 2>/dev/null || true)
                 TAGS=$(printf "latest\n%s" "$TAGS" | sort -u)
               else
@@ -265,6 +268,51 @@ jobs:
           [ -f "$STATE_FILE" ] || exit 0
           echo "🚑 启动【压轴最终兜底任务】检查所有遗留失败项..."
 
+          sync_single_release() {
+            local SRC_REPO="$1"
+            local DST_REPO="$2"
+            local TAG="$3"
+            local IS_PRE="$4"
+            local DOCKER_SRC="$5"
+            local TARGET_LOWER="$6"
+
+            local EXTRA_FLAGS="--latest=false"
+            [ "$IS_PRE" = "true" ] && EXTRA_FLAGS="--prerelease --latest=false"
+
+            rm -rf release_assets && mkdir -p release_assets
+            if ! gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null; then
+              if ! gh release view "$TAG" --repo "$SRC_REPO" >/dev/null 2>&1; then
+                return 1
+              fi
+            fi
+
+            local BODY
+            BODY=$(gh release view "$TAG" --repo "$SRC_REPO" --json body -q '.body' 2>/dev/null || echo "Mirrored release $TAG")
+
+            local ASSETS=()
+            while IFS= read -r -d '' file; do
+              ASSETS+=("$file")
+            done < <(find release_assets -maxdepth 1 -type f -print0)
+
+            local CREATE_OK=0
+            if [ ${#ASSETS[@]} -gt 0 ]; then
+              gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+            else
+              gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+            fi
+
+            rm -rf release_assets
+            [ "$CREATE_OK" -eq 0 ] && return 1
+
+            if [ "$DOCKER_SRC" != "none" ] && [ -n "$DOCKER_SRC" ]; then
+              local CLEAN_VER="${TAG#v}"
+              docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${TAG}" "${DOCKER_SRC}:${TAG}" >/dev/null 2>&1 || true
+              docker buildx imagetools create -t "ghcr.io/${OWNER}/${TARGET_LOWER}:${CLEAN_VER}" "${DOCKER_SRC}:${CLEAN_VER}" >/dev/null 2>&1 || true
+            fi
+            return 0
+          }
+
+          API_HOST=$(printf '%s://%s.%s' 'https' 'api' 'github.com')
           TARGETS=$(jq -r 'keys[]' "$STATE_FILE")
           ANY_FIXED=0
 
@@ -291,11 +339,11 @@ jobs:
               done
 
               if [ "$SUCCESS" -eq 0 ]; then
-                REPO_STATUS=$(gh api "repos/${GH_SRC}" -q '.id' 2>/dev/null || echo "404")
-                REL_STATUS=$(gh release view "$TAG" --repo "$GH_SRC" --json tagName -q '.tagName' 2>/dev/null || echo "404")
+                HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token ${GH_TOKEN}" "${API_HOST}/repos/${GH_SRC}")
+                REL_CODE=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token ${GH_TOKEN}" "${API_HOST}/repos/${GH_SRC}/releases/tags/${TAG}")
 
-                if [ "$REPO_STATUS" = "404" ] || [ "$REL_STATUS" = "404" ]; then
-                  echo "   🚨 源仓库或版本 $TAG 已不存在（404），启动全网镜像备份救援..."
+                if [ "$HTTP_CODE" = "404" ] || [ "$REL_CODE" = "404" ]; then
+                  echo "   🚨 确认返回 HTTP 404（已删库或删版本 $TAG），启动全网备份救援..."
                   REPO_NAME="${GH_SRC##*/}"
                   CANDIDATES=$(gh api "search/repositories?q=${REPO_NAME}+in:name&sort=stars&order=desc&per_page=8" -q '.items[].full_name' 2>/dev/null || true)
 
@@ -318,7 +366,7 @@ jobs:
                     NOW_UTC=$(date -u "+%Y-%m-%d %H:%M:%S UTC")
                     jq --arg t "$TARGET" --arg tag "$TAG" --arg now "$NOW_UTC" '
                       .[$t].failed_releases = ((.[$t].failed_releases // []) | map(select(.tag != $tag))) |
-                      .[$t].archived_dead = ((.[$t].archived_dead // []) + [{"tag": $tag, "archived_at": $now, "reason": "Source 404 & no public mirror found"}])
+                      .[$t].archived_dead = ((.[$t].archived_dead // []) + [{"tag": $tag, "archived_at": $now, "reason": "Confirmed HTTP 404 & no public mirror"}])
                     ' "$STATE_FILE" > tmp.json && mv tmp.json "$STATE_FILE"
                     ANY_FIXED=1
                     continue
