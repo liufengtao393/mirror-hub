@@ -5853,6 +5853,7 @@
     "last_repo_push": "2026-11-24T07:49:20Z",
     "baseline_time": "2026-11-26T16:17:22Z",
     "synced_releases": [
+      "v2.1.1",
       "v2.10.0",
       "v2.10.0-beta.1",
       "v2.10.0-beta.2",
@@ -5869,13 +5870,37 @@
       "v2.11.6",
       "v2.11.7",
       "v2.11.8",
-      "v2.11.9"
+      "v2.11.9",
+      "v2.2.0",
+      "v2.2.0-rc.1",
+      "v2.2.0-rc.2",
+      "v2.2.0-rc.3",
+      "v2.2.1",
+      "v2.3.0",
+      "v2.3.0-beta.1",
+      "v2.3.0-rc.1",
+      "v2.4.0",
+      "v2.4.0-beta.1",
+      "v2.4.0-beta.2",
+      "v2.4.0-rc.1",
+      "v2.4.1",
+      "v2.4.2",
+      "v2.4.3",
+      "v2.4.4",
+      "v2.4.5",
+      "v2.4.6",
+      "v2.5.0",
+      "v2.5.0-beta.1",
+      "v2.5.0-rc.1",
+      "v2.5.1",
+      "v2.5.2",
+      "v2.6.0",
+      "v2.6.0-beta.3",
+      "v2.6.0-beta.5",
+      "v2.6.1",
+      "v2.9.1"
     ],
     "failed_releases": [
-      {
-        "tag": "v2.9.1",
-        "pre": "false"
-      },
       {
         "tag": "v2.9.0",
         "pre": "false"
@@ -5962,118 +5987,6 @@
       },
       {
         "tag": "v2.6.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.6.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.6.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.6.0-beta.5",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.6.0-beta.3",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.5.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.5.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.5.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.5.0-rc.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.5.0-beta.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.4.6",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.4.5",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.4.4",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.4.3",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.4.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.4.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.4.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.4.0-rc.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.4.0-beta.2",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.4.0-beta.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.3.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.3.0-rc.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.3.0-beta.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.2.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.2.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.2.0-rc.3",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.2.0-rc.2",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.2.0-rc.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.1.1",
         "pre": "false"
       },
       {
@@ -6365,7 +6278,7 @@
         "pre": "false"
       }
     ],
-    "last_sync_time": "2026-11-26 16:18:06 UTC",
+    "last_sync_time": "2026-11-26 17:56:55 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:4851e54a46b206517c574821bb5cc67f170d2156041e9fbc4c9193b45e84a75b",
