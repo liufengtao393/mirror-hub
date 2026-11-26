@@ -15,10 +15,10 @@
 </p>
 
 <p>
-  <img src="https://shields.io" alt="Engine" />
-  <img src="https://shields.io" alt="State Machine" />
-  <img src="https://shields.io" alt="Chunking" />
-  <img src="https://shields.io" alt="Rescue" />
+  <img src="./.github/badges/engine.svg" alt="Engine" />
+  <img src="./.github/badges/state.svg" alt="State Machine" />
+  <img src="./.github/badges/chunking.svg" alt="Auto Split" />
+  <img src="./.github/badges/rescue.svg" alt="404 Rescue" />
 </p>
 
 </div>
