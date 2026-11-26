@@ -7,18 +7,24 @@
 </p>
 
 <p>
-  <a href="./README.md">简体中文</a> &nbsp;•&nbsp;
-  <a href="./README_TW.md">繁體中文</a> &nbsp;•&nbsp;
-  <a href="./README_EN.md"><b>English</b></a> &nbsp;•&nbsp;
+  <a href="./">简体中文</a> &nbsp;•&nbsp;
+  <b>繁體中文</b> &nbsp;•&nbsp;
+  <a href="./README_EN.md">English</a> &nbsp;•&nbsp;
   <a href="./README_JA.md">日本語</a> &nbsp;•&nbsp;
   <a href="./README_KO.md">한국어</a>
 </p>
 
+<p align="center">
+  <a href="../../actions"><img src="https://img.shields.io/badge/Engine-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="Engine" /></a>
+  <a href="./sync_state.json"><img src="https://img.shields.io/badge/State_Machine-JSON_Ledger-00C853?style=for-the-badge&logo=json&logoColor=white" alt="State Machine" /></a>
+  <a href="./.github/workflows/batch-mirror.yml"><img src="https://img.shields.io/badge/Auto_Split-%3E1.9GB_Chunks-FF6D00?style=for-the-badge&logo=files&logoColor=white" alt="Auto Split" /></a>
+  <a href="./.github/workflows/batch-mirror.yml"><img src="https://img.shields.io/badge/404_Rescue-Cross_Repo-D50000?style=for-the-badge&logo=github&logoColor=white" alt="404 Rescue" /></a>
+</p>
+
 <p>
-  <code>Engine: GitHub Actions</code> &nbsp;|&nbsp;
-  <code>State Machine: JSON Ledger</code> &nbsp;|&nbsp;
-  <code>Chunking: >1.9GB Auto-Split</code> &nbsp;|&nbsp;
-  <code>Rescue: Cross-Repo 404 Recovery</code>
+  <a href="../../wiki/Home-zh-TW">📘 <b>核心技術手冊 (Wiki)</b></a> &nbsp;|&nbsp;
+  <a href="../../actions">🚀 <b>運行監控台 (Actions)</b></a> &nbsp;|&nbsp;
+  <a href="./sync_state.json">📒 <b>即時狀態帳本 (JSON)</b></a>
 </p>
 
 </div>
