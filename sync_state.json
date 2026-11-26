@@ -1421,7 +1421,7 @@
   "facefusion": {
     "gh_src": "facefusion/facefusion",
     "docker_src": "facefusion/facefusion",
-    "last_repo_push": "2026-11-26T08:40:09Z",
+    "last_repo_push": "2026-11-26T16:22:32Z",
     "baseline_time": "2026-11-26T03:27:13Z",
     "synced_releases": [
       "3.9.2",
