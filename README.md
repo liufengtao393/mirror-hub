@@ -15,10 +15,10 @@
 </p>
 
 <p align="center">
-  <a href="../../actions"><code>⚡ Engine: GitHub Actions</code></a> &nbsp;•&nbsp;
-  <a href="./.github/workflows/batch-mirror.yml"><code>🔄 Mode: Dual-Track Incremental</code></a> &nbsp;•&nbsp;
-  <a href="https://ghcr.io"><code>🐳 Registry: GHCR.io</code></a> &nbsp;•&nbsp;
-  <a href="./sync_state.json"><code>📒 Ledger: sync_state.json</code></a>
+  <a href="../../actions"><img src="SHIELDS_URL/badge/Engine-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="Engine" /></a>
+  <a href="./sync_state.json"><img src="SHIELDS_URL/badge/State_Machine-JSON_Ledger-00C853?style=for-the-badge&logo=json&logoColor=white" alt="State Machine" /></a>
+  <a href="./.github/workflows/batch-mirror.yml"><img src="SHIELDS_URL/badge/Auto_Split-%3E1.9GB_Chunks-FF6D00?style=for-the-badge&logo=files&logoColor=white" alt="Auto Split" /></a>
+  <a href="./.github/workflows/batch-mirror.yml"><img src="SHIELDS_URL/badge/404_Rescue-Cross_Repo-D50000?style=for-the-badge&logo=github&logoColor=white" alt="404 Rescue" /></a>
 </p>
 
 </div>
