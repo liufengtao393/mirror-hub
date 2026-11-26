@@ -890,5 +890,55 @@
         "sync_time": "2026-11-26 03:24:37 UTC"
       }
     }
+  },
+  "dify-sandbox": {
+    "gh_src": "none",
+    "docker_src": "langgenius/dify-sandbox",
+    "synced_images": {
+      "44cdbd5d1991b97e40cb113c669800f4628920bb": {
+        "digest": "sha256:41632ad63bddd8bcea83453270f3284d287c9e7cb463dac96644268770270788",
+        "sync_time": "2026-11-26 03:24:42 UTC"
+      },
+      "44cdbd5d1991b97e40cb113c669800f4628920bb-amd64": {
+        "digest": "sha256:cb3a781bdd7e9168ac8b69c12d3e92f9db2f7cce2fbe9fdb1fea5fe5b4e943d0",
+        "sync_time": "2026-11-26 03:24:44 UTC"
+      },
+      "44cdbd5d1991b97e40cb113c669800f4628920bb-arm64": {
+        "digest": "sha256:37c97627d92bd75c7114edb0e944de3a2f36072b0bd9acae30b20639a59022b9",
+        "sync_time": "2026-11-26 03:24:47 UTC"
+      },
+      "97c8097d51d0f46238bb720b1e9e9439ce68784d": {
+        "digest": "sha256:cb076f71cc84c14d4e4f7753ff95c4ba70a3b5816962b4f93bcf42f23a6e5cb8",
+        "sync_time": "2026-11-26 03:24:50 UTC"
+      },
+      "97c8097d51d0f46238bb720b1e9e9439ce68784d-amd64": {
+        "digest": "sha256:3a740915619d2827865f5ee1fc6e7a139f8fd39a01a9372ee850744d69f042f6",
+        "sync_time": "2026-11-26 03:24:52 UTC"
+      },
+      "97c8097d51d0f46238bb720b1e9e9439ce68784d-arm64": {
+        "digest": "sha256:399a0e58c49753538556e37593845677a4858f11459f59b4ebc748a412682731",
+        "sync_time": "2026-11-26 03:24:55 UTC"
+      },
+      "a94a4666f2ea1871d17bd3a131187b72f7e3c95f": {
+        "digest": "sha256:08b94846803327d0d8babd47678905ad81f5379f6bb309c3c8ef74368d555ffa",
+        "sync_time": "2026-11-26 03:24:58 UTC"
+      },
+      "latest": {
+        "digest": "sha256:750e1111426ef31a9217b81c98cccfb750f17b182af3221102e420afa9f0928e",
+        "sync_time": "2026-11-26 03:25:02 UTC"
+      },
+      "main": {
+        "digest": "sha256:cb076f71cc84c14d4e4f7753ff95c4ba70a3b5816962b4f93bcf42f23a6e5cb8",
+        "sync_time": "2026-11-26 03:25:05 UTC"
+      },
+      "main-amd64": {
+        "digest": "sha256:3a740915619d2827865f5ee1fc6e7a139f8fd39a01a9372ee850744d69f042f6",
+        "sync_time": "2026-11-26 03:25:07 UTC"
+      },
+      "main-arm64": {
+        "digest": "sha256:399a0e58c49753538556e37593845677a4858f11459f59b4ebc748a412682731",
+        "sync_time": "2026-11-26 03:25:10 UTC"
+      }
+    }
   }
 }
