@@ -494,6 +494,9 @@
       "release.2026-11-23T09-53-24Z.4031",
       "release.2026-11-24T05-06-24Z.4043",
       "v1.10.0",
+      "v1.2.1-beta.0",
+      "v1.3.0-beta.0",
+      "v1.3.1",
       "v1.3.2",
       "v1.4.0",
       "v1.4.1",
@@ -508,18 +511,6 @@
     ],
     "failed_releases": [
       {
-        "tag": "v1.3.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.3.0-beta.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.2.1-beta.0",
-        "pre": "false"
-      },
-      {
         "tag": "v1.2.0-beta",
         "pre": "false"
       },
@@ -532,7 +523,7 @@
         "pre": "true"
       }
     ],
-    "last_sync_time": "2026-11-26 12:35:31 UTC",
+    "last_sync_time": "2026-11-26 16:18:25 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:687ce65fa345050cda67958de5dde9ed9a605266421fbad469f1382a3f012ae1",
