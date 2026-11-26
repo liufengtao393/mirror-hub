@@ -1057,6 +1057,46 @@
       "deploy-saas": {
         "digest": "sha256:d881b2606c6369a6b310fa674197cc654de4767a3048c445514e2b31ff7b737b",
         "sync_time": "2026-11-26 09:10:17 UTC"
+      },
+      "0b9fb0bcf8bbf9d75d373ce5ccebc66f22320ea5": {
+        "digest": "sha256:4266fe0ccce7ae628edc60bd1dbfa922a671737db7229ab21f8b6aa56d0f10ad",
+        "sync_time": "2026-11-26 12:44:40 UTC"
+      },
+      "519beda7b2e17094a19820740fbd2d51ec2526cc": {
+        "digest": "sha256:3184345f54b9e17c33431ac07c44dd89f59243dbed27b6018d83c886568292a7",
+        "sync_time": "2026-11-26 12:44:53 UTC"
+      },
+      "6b9341f2aeb70c39d41fc2f7ddbfc3ca1db57225": {
+        "digest": "sha256:5975ff04221f671565a521ed7b515f3e70b9e2099cc2265087c50b16a3af7a8b",
+        "sync_time": "2026-11-26 12:45:06 UTC"
+      },
+      "acbbb9de23123d1c906fdbaf822e4c481871070a": {
+        "digest": "sha256:c35ce6d7cd15084ea4694faa1e474fa6cb244e89ad03a3b1ad0e2f27fb9463ca",
+        "sync_time": "2026-11-26 12:45:19 UTC"
+      },
+      "adcc8b330b0addb53757254143e66c583962e3da": {
+        "digest": "sha256:83ffb68497931eb57dc1d0d86f623f0bdf53b79f0641afc23350af39c09331a8",
+        "sync_time": "2026-11-26 12:45:33 UTC"
+      },
+      "b160644eaf9c98bc913919377396a3dc857fcc18": {
+        "digest": "sha256:68f64b682d47a1a90ce3d35ff2bee877f985e67d23bb720dc6f4088370703f52",
+        "sync_time": "2026-11-26 12:45:45 UTC"
+      },
+      "c127616e271c0f1d2f0eb0d88c3bf450aa09ae6d": {
+        "digest": "sha256:dc5047f25eaac9c81bab856a2b5b4817c976a553924188ab4058a6cbfaa4ace3",
+        "sync_time": "2026-11-26 12:45:57 UTC"
+      },
+      "c61508c4a997d05aee4b6d0ecc2666784ad2eaa1": {
+        "digest": "sha256:3a69eb0fe9457175f2b9b9b65a6bac5765795d4e1723a70e3c85e12dcac11278",
+        "sync_time": "2026-11-26 12:46:10 UTC"
+      },
+      "deploy-app-builder": {
+        "digest": "sha256:3a69eb0fe9457175f2b9b9b65a6bac5765795d4e1723a70e3c85e12dcac11278",
+        "sync_time": "2026-11-26 12:46:15 UTC"
+      },
+      "deploy-konwledge": {
+        "digest": "sha256:dc5047f25eaac9c81bab856a2b5b4817c976a553924188ab4058a6cbfaa4ace3",
+        "sync_time": "2026-11-26 12:46:20 UTC"
       }
     }
   },
