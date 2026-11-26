@@ -5227,5 +5227,23 @@
         "sync_time": "2026-11-26 16:15:51 UTC"
       }
     }
+  },
+  "db_online": {
+    "gh_src": "none",
+    "docker_src": "dbonline/db_online",
+    "synced_images": {
+      "1.22.249": {
+        "digest": "sha256:7d37535bbd4d91e1d39bd9ff7d8abc4b04541c8e60c2e700f88759031c942483",
+        "sync_time": "2026-11-26 16:15:57 UTC"
+      },
+      "1.22.257": {
+        "digest": "sha256:fc6a4590e9d3ee8e9197e6ce44df78380fbcd6de91fe29e4e909988e86f687ee",
+        "sync_time": "2026-11-26 16:16:01 UTC"
+      },
+      "latest": {
+        "digest": "sha256:fc6a4590e9d3ee8e9197e6ce44df78380fbcd6de91fe29e4e909988e86f687ee",
+        "sync_time": "2026-11-26 16:16:06 UTC"
+      }
+    }
   }
 }
