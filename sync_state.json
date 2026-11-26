@@ -1240,7 +1240,7 @@
   "freellmapi": {
     "gh_src": "tashfeenahmed/freellmapi",
     "docker_src": "ghcr.io/tashfeenahmed/freellmapi",
-    "last_repo_push": "2026-11-26T10:59:45Z",
+    "last_repo_push": "2026-11-26T14:40:08Z",
     "baseline_time": "2026-11-26T03:25:25Z",
     "synced_releases": [
       "v0.10.0",
@@ -1343,8 +1343,8 @@
     "history_completed": true,
     "synced_images": {
       "latest": {
-        "digest": "sha256:679527e9fe8a13062277df7ec3b8fb3dbb4167a3f5e1da9c29468c65b32720b3",
-        "sync_time": "2026-11-26 12:47:36 UTC"
+        "digest": "sha256:6a575cb6dd22b5d99c487db327dbf764725107f5e925317f64d83e8221bc77eb",
+        "sync_time": "2026-11-26 16:28:19 UTC"
       },
       "v0.16.36": {
         "digest": "sha256:95a5eeba5690d1bce247ef8f75a9abb61bc782d99d9b7caf15cbeead8ed503b7",
@@ -1385,9 +1385,18 @@
       "v0.16.45": {
         "digest": "sha256:679527e9fe8a13062277df7ec3b8fb3dbb4167a3f5e1da9c29468c65b32720b3",
         "sync_time": "2026-11-26 12:47:52 UTC"
+      },
+      "v0.16.46": {
+        "digest": "sha256:6a575cb6dd22b5d99c487db327dbf764725107f5e925317f64d83e8221bc77eb",
+        "sync_time": "2026-11-26 16:28:37 UTC"
       }
     },
-    "failed_releases": [],
+    "failed_releases": [
+      {
+        "tag": "v0.16.46",
+        "pre": "false"
+      }
+    ],
     "last_sync_time": "2026-11-26 12:47:28 UTC"
   },
   "agent-reach": {
