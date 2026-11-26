@@ -7,18 +7,18 @@
 </p>
 
 <p>
-  <a href="./README.md"><b>简体中文</b></a> &nbsp;•&nbsp;
-  <a href="./README_TW.md">繁體中文</a> &nbsp;•&nbsp;
-  <a href="./README_en.md">English</a> &nbsp;•&nbsp;
-  <a href="./README_ja.md">日本語</a> &nbsp;•&nbsp;
-  <a href="./README_ko.md">한국어</a>
+  <b>简体中文</b> &nbsp;•&nbsp;
+  <a href="./README.zh-TW.md">繁體中文</a> &nbsp;•&nbsp;
+  <a href="./README.en.md">English</a> &nbsp;•&nbsp;
+  <a href="./README.ja.md">日本語</a> &nbsp;•&nbsp;
+  <a href="./README.ko.md">한국어</a>
 </p>
 
 <p>
-  <code>Engine: GitHub Actions</code> &nbsp;|&nbsp;
-  <code>State Machine: JSON Ledger</code> &nbsp;|&nbsp;
-  <code>Chunking: >1.9GB Auto-Split</code> &nbsp;|&nbsp;
-  <code>Rescue: Cross-Repo 404 Recovery</code>
+  <img src="https://shields.io" alt="Engine" />
+  <img src="https://shields.io" alt="State Machine" />
+  <img src="https://shields.io" alt="Chunking" />
+  <img src="https://shields.io" alt="Rescue" />
 </p>
 
 </div>
