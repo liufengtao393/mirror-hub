@@ -714,7 +714,7 @@
   "dify-api": {
     "gh_src": "langgenius/dify",
     "docker_src": "langgenius/dify-api",
-    "last_repo_push": "2026-11-26T12:31:09Z",
+    "last_repo_push": "2026-11-26T15:15:47Z",
     "baseline_time": "2026-11-26T03:18:05Z",
     "synced_releases": [
       "0.10.0",
@@ -936,8 +936,8 @@
         "sync_time": "2026-11-26 03:23:11 UTC"
       },
       "main": {
-        "digest": "sha256:911dcff45d44eea47b5caacf4b2a4916011cdd5750c53ac99908be82b55a38da",
-        "sync_time": "2026-11-26 09:08:59 UTC"
+        "digest": "sha256:6737575a8f3d22aeabf947da2e22d9d63b8389806a90cc3afdfa22b471d52604",
+        "sync_time": "2026-11-26 16:25:50 UTC"
       },
       "0863455d8c8528c4e37e64e98669d5a50d4f5efa": {
         "digest": "sha256:51e583ab02aa4c755b47d981836e4dc337073c6844dbebea18d43d52af5cff17",
@@ -964,12 +964,12 @@
         "sync_time": "2026-11-26 09:08:30 UTC"
       },
       "deploy-app-builder": {
-        "digest": "sha256:4b54ee23c00dc4f446465acb0bd2797d3248c64062e20519c9eba26f783cb826",
-        "sync_time": "2026-11-26 12:44:17 UTC"
+        "digest": "sha256:a698677abf18a16dd017234d3d9aa829b0797a48ffd11dcfb02b3e502311c7be",
+        "sync_time": "2026-11-26 16:25:30 UTC"
       },
       "deploy-saas": {
-        "digest": "sha256:95a5f415b57011216bc1593280ad007ef777486ea1e1b9f8753da9b756e8890c",
-        "sync_time": "2026-11-26 09:08:54 UTC"
+        "digest": "sha256:5f16e25fbdfc20c6fdf5a0a476b4085d2851d9d6142e975e568ce3002bddf238",
+        "sync_time": "2026-11-26 16:25:36 UTC"
       },
       "0b9fb0bcf8bbf9d75d373ce5ccebc66f22320ea5": {
         "digest": "sha256:2a32a3a93b39f06a763e41ca78a1de3aa5de6ba362d56cd0382c3945bd8efdd1",
@@ -1006,6 +1006,34 @@
       "deploy-konwledge": {
         "digest": "sha256:bf07cd382f76571ccd2536a3f6bed5134b75f32d9e10d9b8ce921eaccc680d08",
         "sync_time": "2026-11-26 12:44:22 UTC"
+      },
+      "2287826b18503565465a97263bbf06d41a5739e9": {
+        "digest": "sha256:a698677abf18a16dd017234d3d9aa829b0797a48ffd11dcfb02b3e502311c7be",
+        "sync_time": "2026-11-26 16:23:42 UTC"
+      },
+      "76c33f30cd490f1d42e8e2f3a76b395ab7b0f0db": {
+        "digest": "sha256:6737575a8f3d22aeabf947da2e22d9d63b8389806a90cc3afdfa22b471d52604",
+        "sync_time": "2026-11-26 16:24:07 UTC"
+      },
+      "a66dd8a15e65124590d451cf8a3aabfdedbac573": {
+        "digest": "sha256:8e90f1638636260468f112b66d041d698ca79aee845e00e11790e295ebe6b261",
+        "sync_time": "2026-11-26 16:24:21 UTC"
+      },
+      "build-agent-snp1244-checkout-route-20261126": {
+        "digest": "sha256:57841e254a0410898d7420a9456f564b6dbfd831d222b29d7119bba54acb6730",
+        "sync_time": "2026-11-26 16:24:55 UTC"
+      },
+      "c6dd5b4829b0e0079a6b8e9be60cca84233bb489": {
+        "digest": "sha256:5f16e25fbdfc20c6fdf5a0a476b4085d2851d9d6142e975e568ce3002bddf238",
+        "sync_time": "2026-11-26 16:25:20 UTC"
+      },
+      "d5ac1b3e09657c6b005159acde3f657c0f272457": {
+        "digest": "sha256:57841e254a0410898d7420a9456f564b6dbfd831d222b29d7119bba54acb6730",
+        "sync_time": "2026-11-26 16:25:25 UTC"
+      },
+      "ff824427bb7099c3af411489ec19039fa6bfed05": {
+        "digest": "sha256:218a484c70dec0b09c892b49a732accb98ca18d8d6fbd0e1316fb74c3583a4f9",
+        "sync_time": "2026-11-26 16:25:44 UTC"
       }
     }
   },
