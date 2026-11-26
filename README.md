@@ -1,6 +1,6 @@
 <div id="chinese"></div>
 <p align="center">
-  <b>简体中文</b> | <a href="#english">English</a>
+  <a href="#user-content-english">English</a>
 </p>
 
 <div align="center">
@@ -113,7 +113,7 @@ docker pull ghcr.io/liufengtao393/<目标仓库名>:<版本号>
 
 <div id="english"></div>
 <p align="center">
-  <a href="#chinese">简体中文</a> | <b>English</b>
+  <a href="#user-content-chinese">简体中文</a>
 </p>
 
 <div align="center">
