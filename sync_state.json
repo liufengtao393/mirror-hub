@@ -3496,5 +3496,138 @@
         "pre": "false"
       }
     ]
+  },
+  "cherry-studio-app": {
+    "gh_src": "CherryHQ/cherry-studio-app",
+    "docker_src": "none",
+    "last_repo_push": "2026-11-26T10:03:26Z",
+    "baseline_time": "2026-11-26T15:22:57Z",
+    "synced_releases": [],
+    "failed_releases": [
+      {
+        "tag": "v0.6.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.6.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.6.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.6.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.5.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.5.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.5.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.5.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.5.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.5.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.4.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.3.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.2.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.2.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.0-beta.6",
+        "pre": "true"
+      },
+      {
+        "tag": "v0.1.0-beta.5",
+        "pre": "true"
+      },
+      {
+        "tag": "v0.1.0-beta.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v0.1.0-beta.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v0.1.0-beta.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v0.1.0-beta.1",
+        "pre": "true"
+      },
+      {
+        "tag": "legacy-v0.1.7",
+        "pre": "false"
+      },
+      {
+        "tag": "legacy-v0.1.6",
+        "pre": "false"
+      },
+      {
+        "tag": "legacy-v0.1.5",
+        "pre": "false"
+      },
+      {
+        "tag": "legacy-v0.1.4",
+        "pre": "false"
+      },
+      {
+        "tag": "legacy-v0.1.3",
+        "pre": "false"
+      },
+      {
+        "tag": "legacy-v0.1.2",
+        "pre": "false"
+      },
+      {
+        "tag": "legacy-v0.1.1",
+        "pre": "false"
+      },
+      {
+        "tag": "legacy-v0.1.0",
+        "pre": "false"
+      }
+    ]
   }
 }
