@@ -4750,5 +4750,54 @@
         "sync_time": "2026-11-26 15:46:46 UTC"
       }
     }
+  },
+  "pgvector": {
+    "gh_src": "pgvector/pgvector",
+    "docker_src": "pgvector/pgvector",
+    "last_repo_push": "2026-11-24T20:39:26Z",
+    "baseline_time": "2026-11-26T15:46:52Z",
+    "synced_releases": [],
+    "synced_images": {
+      "0.8.7-pg17-trixie": {
+        "digest": "sha256:89947206f52eac3a9df9b663df7e76987cbdc623be6576b3a524953d568700d7",
+        "sync_time": "2026-11-26 15:46:57 UTC"
+      },
+      "0.8.7-pg18-trixie": {
+        "digest": "sha256:ab49524d18df7200b74ac9a475e1db6297fc1eb57da4c214c63d10ecc4b754fa",
+        "sync_time": "2026-11-26 15:47:02 UTC"
+      },
+      "0.8.7-pg19": {
+        "digest": "sha256:89879f41d564f67b0c1462a491d16fcbc6de39ac10db17e7a4bba2138a5e0ba5",
+        "sync_time": "2026-11-26 15:47:06 UTC"
+      },
+      "0.8.7-pg19-bookworm": {
+        "digest": "sha256:89879f41d564f67b0c1462a491d16fcbc6de39ac10db17e7a4bba2138a5e0ba5",
+        "sync_time": "2026-11-26 15:47:11 UTC"
+      },
+      "0.8.7-pg19-trixie": {
+        "digest": "sha256:ace863afa68a13560603dc7366fad0adb4f5ddd0a21c8f06418195f32e03fa08",
+        "sync_time": "2026-11-26 15:47:15 UTC"
+      },
+      "pg17-trixie": {
+        "digest": "sha256:89947206f52eac3a9df9b663df7e76987cbdc623be6576b3a524953d568700d7",
+        "sync_time": "2026-11-26 15:47:20 UTC"
+      },
+      "pg18-trixie": {
+        "digest": "sha256:ab49524d18df7200b74ac9a475e1db6297fc1eb57da4c214c63d10ecc4b754fa",
+        "sync_time": "2026-11-26 15:47:25 UTC"
+      },
+      "pg19": {
+        "digest": "sha256:89879f41d564f67b0c1462a491d16fcbc6de39ac10db17e7a4bba2138a5e0ba5",
+        "sync_time": "2026-11-26 15:47:29 UTC"
+      },
+      "pg19-bookworm": {
+        "digest": "sha256:89879f41d564f67b0c1462a491d16fcbc6de39ac10db17e7a4bba2138a5e0ba5",
+        "sync_time": "2026-11-26 15:47:34 UTC"
+      },
+      "pg19-trixie": {
+        "digest": "sha256:ace863afa68a13560603dc7366fad0adb4f5ddd0a21c8f06418195f32e03fa08",
+        "sync_time": "2026-11-26 15:47:38 UTC"
+      }
+    }
   }
 }
