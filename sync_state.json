@@ -1368,5 +1368,119 @@
         "sync_time": "2026-11-26 03:31:24 UTC"
       }
     }
+  },
+  "new-api": {
+    "gh_src": "QuantumNous/new-api",
+    "docker_src": "calciumion/new-api",
+    "last_repo_push": "2026-11-25T16:29:18Z",
+    "baseline_time": "2026-11-26T03:34:16Z",
+    "synced_releases": [
+      "v0.12.10",
+      "v0.12.11",
+      "v0.12.12",
+      "v0.12.13",
+      "v0.12.14",
+      "v0.12.15",
+      "v0.13.0",
+      "v0.13.1",
+      "v0.13.1-patch.1",
+      "v0.13.2",
+      "v1.0.0-alpha.1",
+      "v1.0.0-rc.1",
+      "v1.0.0-rc.10",
+      "v1.0.0-rc.11",
+      "v1.0.0-rc.12",
+      "v1.0.0-rc.13",
+      "v1.0.0-rc.14",
+      "v1.0.0-rc.15",
+      "v1.0.0-rc.16",
+      "v1.0.0-rc.17",
+      "v1.0.0-rc.18",
+      "v1.0.0-rc.19",
+      "v1.0.0-rc.19-i18nfix.2",
+      "v1.0.0-rc.2",
+      "v1.0.0-rc.20",
+      "v1.0.0-rc.21",
+      "v1.0.0-rc.22",
+      "v1.0.0-rc.23",
+      "v1.0.0-rc.24",
+      "v1.0.0-rc.25",
+      "v1.0.0-rc.26",
+      "v1.0.0-rc.27",
+      "v1.0.0-rc.28",
+      "v1.0.0-rc.29",
+      "v1.0.0-rc.3",
+      "v1.0.0-rc.30",
+      "v1.0.0-rc.31",
+      "v1.0.0-rc.32",
+      "v1.0.0-rc.33",
+      "v1.0.0-rc.34",
+      "v1.0.0-rc.35",
+      "v1.0.0-rc.36",
+      "v1.0.0-rc.37",
+      "v1.0.0-rc.38",
+      "v1.0.0-rc.39",
+      "v1.0.0-rc.4",
+      "v1.0.0-rc.40",
+      "v1.0.0-rc.41",
+      "v1.0.0-rc.42",
+      "v1.0.0-rc.43",
+      "v1.0.0-rc.44",
+      "v1.0.0-rc.45",
+      "v1.0.0-rc.46",
+      "v1.0.0-rc.47",
+      "v1.0.0-rc.48",
+      "v1.0.0-rc.49",
+      "v1.0.0-rc.5",
+      "v1.0.0-rc.50",
+      "v1.0.0-rc.51",
+      "v1.0.0-rc.6",
+      "v1.0.0-rc.7",
+      "v1.0.0-rc.8"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-26 03:39:10 UTC",
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:d6effcdbc58175494765c0cc5954bdacb2300516eec79ba1a9c61f9b9fae7b49",
+        "sync_time": "2026-11-26 03:39:18 UTC"
+      },
+      "latest-amd64": {
+        "digest": "sha256:e84e2e5cf4e84c4e86990598d6abb9d130afcd16c09bd9ec2070c423a99a39e7",
+        "sync_time": "2026-11-26 03:39:20 UTC"
+      },
+      "latest-arm64": {
+        "digest": "sha256:45bb4ccdc222852d6a0e3d62e2b9fa04944b526bc790f8c007eacedb7c8c678e",
+        "sync_time": "2026-11-26 03:39:23 UTC"
+      },
+      "sha256-d6effcdbc58175494765c0cc5954bdacb2300516eec79ba1a9c61f9b9fae7b49.sig": {
+        "digest": "sha256:1d2cd6db3d1d8eb4df6a30e252262b544be8197311778469a2e203a72360c99a",
+        "sync_time": "2026-11-26 03:39:25 UTC"
+      },
+      "sha256-f03e88226bd054bc5d45f174c58187f70f5db661ace8d252838ae38baa6655fa.sig": {
+        "digest": "sha256:2612d331028ff6fdb3129bcf6324d5c27dc986de9186b20f935e181b6c87e3ec",
+        "sync_time": "2026-11-26 03:39:27 UTC"
+      },
+      "v1.0.0-rc.50": {
+        "digest": "sha256:f03e88226bd054bc5d45f174c58187f70f5db661ace8d252838ae38baa6655fa",
+        "sync_time": "2026-11-26 03:39:30 UTC"
+      },
+      "v1.0.0-rc.50-amd64": {
+        "digest": "sha256:e762bfda49d1a904dff3c41c7f832f850e4895b3fbae3c495faf126a9d236f1a",
+        "sync_time": "2026-11-26 03:39:32 UTC"
+      },
+      "v1.0.0-rc.51": {
+        "digest": "sha256:d6effcdbc58175494765c0cc5954bdacb2300516eec79ba1a9c61f9b9fae7b49",
+        "sync_time": "2026-11-26 03:39:35 UTC"
+      },
+      "v1.0.0-rc.51-amd64": {
+        "digest": "sha256:e84e2e5cf4e84c4e86990598d6abb9d130afcd16c09bd9ec2070c423a99a39e7",
+        "sync_time": "2026-11-26 03:39:37 UTC"
+      },
+      "v1.0.0-rc.51-arm64": {
+        "digest": "sha256:45bb4ccdc222852d6a0e3d62e2b9fa04944b526bc790f8c007eacedb7c8c678e",
+        "sync_time": "2026-11-26 03:39:40 UTC"
+      }
+    }
   }
 }
