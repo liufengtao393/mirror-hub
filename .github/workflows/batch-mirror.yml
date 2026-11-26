@@ -74,8 +74,10 @@ jobs:
             fi
 
             rm -rf release_assets && mkdir -p release_assets
-                        local DL_CODE=0
-            timeout 900 gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null || DL_CODE=$?
+            local DL_CODE=0
+            local REM_SEC=$((MAIN_TIME_LIMIT - ($(date +%s) - WORKFLOW_START_EPOCH)))
+            [ "$REM_SEC" -lt 60 ] && { rm -rf release_assets; return 1; }
+            timeout "$REM_SEC" gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null || DL_CODE=$?
             if [ "$DL_CODE" -ne 0 ]; then
               if [ "$DL_CODE" -eq 124 ]; then
                 rm -rf release_assets
@@ -91,16 +93,33 @@ jobs:
 
             gh release view "$TAG" --repo "$SRC_REPO" --json body -q '.body' > release_notes.md 2>/dev/null || echo "Mirrored release $TAG" > release_notes.md
 
+            local SPLIT_NOTES=""
+            while IFS= read -r -d '' bigfile; do
+              local BNAME
+              BNAME=$(basename "$bigfile")
+              echo "    ✂️ 文件 [$BNAME] 超过 1.9GB，正在自动分卷切割..."
+              split -b 1900M -d -a 3 "$bigfile" "${bigfile}.part_"
+              rm -f "$bigfile"
+              SPLIT_NOTES="${SPLIT_NOTES}\n- \`${BNAME}\` 超过 GitHub 2GB 单文件限制，已自动分卷。合并命令：\n  - Linux/macOS: \`cat ${BNAME}.part_* > ${BNAME}\`\n  - Windows CMD: \`copy /b ${BNAME}.part_* ${BNAME}\`"
+            done < <(find release_assets -maxdepth 1 -type f -size +1900M -print0)
+
+            if [ -n "$SPLIT_NOTES" ]; then
+              printf "\n\n---\n### 📦 超大文件分卷恢复说明%b\n" "$SPLIT_NOTES" >> release_notes.md
+            fi
+
             local ASSETS=()
             while IFS= read -r -d '' file; do
               ASSETS+=("$file")
             done < <(find release_assets -maxdepth 1 -type f -print0)
 
             local CREATE_OK=0
-            if [ ${#ASSETS[@]} -gt 0 ]; then
-              timeout 900 gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
-            else
-              timeout 300 gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+            REM_SEC=$((MAIN_TIME_LIMIT - ($(date +%s) - WORKFLOW_START_EPOCH)))
+            if [ "$REM_SEC" -ge 60 ]; then
+              if [ ${#ASSETS[@]} -gt 0 ]; then
+                timeout "$REM_SEC" gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              else
+                timeout 300 gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              fi
             fi
 
             rm -f release_notes.md
@@ -348,8 +367,10 @@ jobs:
             [ "$IS_PRE" = "true" ] && EXTRA_FLAGS="--prerelease --latest=false"
 
             rm -rf release_assets && mkdir -p release_assets
-                        local DL_CODE=0
-            timeout 600 gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null || DL_CODE=$?
+            local DL_CODE=0
+            local REM_SEC=$((RESCUE_TIME_LIMIT - ($(date +%s) - WORKFLOW_START_EPOCH)))
+            [ "$REM_SEC" -lt 60 ] && { rm -rf release_assets; return 1; }
+            timeout "$REM_SEC" gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null || DL_CODE=$?
             if [ "$DL_CODE" -ne 0 ]; then
               if [ "$DL_CODE" -eq 124 ]; then
                 rm -rf release_assets
@@ -366,16 +387,33 @@ jobs:
             local BODY
             BODY=$(gh release view "$TAG" --repo "$SRC_REPO" --json body -q '.body' 2>/dev/null || echo "Mirrored release $TAG")
 
+            local SPLIT_NOTES=""
+            while IFS= read -r -d '' bigfile; do
+              local BNAME
+              BNAME=$(basename "$bigfile")
+              echo "    ✂️ 文件 [$BNAME] 超过 1.9GB，正在自动分卷切割..."
+              split -b 1900M -d -a 3 "$bigfile" "${bigfile}.part_"
+              rm -f "$bigfile"
+              SPLIT_NOTES="${SPLIT_NOTES}\n- \`${BNAME}\` 超过 GitHub 2GB 单文件限制，已自动分卷。合并命令：\n  - Linux/macOS: \`cat ${BNAME}.part_* > ${BNAME}\`\n  - Windows CMD: \`copy /b ${BNAME}.part_* ${BNAME}\`"
+            done < <(find release_assets -maxdepth 1 -type f -size +1900M -print0)
+
+            if [ -n "$SPLIT_NOTES" ]; then
+              BODY=$(printf "%s\n\n---\n### 📦 超大文件分卷恢复说明%b" "$BODY" "$SPLIT_NOTES")
+            fi
+
             local ASSETS=()
             while IFS= read -r -d '' file; do
               ASSETS+=("$file")
             done < <(find release_assets -maxdepth 1 -type f -print0)
 
             local CREATE_OK=0
-            if [ ${#ASSETS[@]} -gt 0 ]; then
-              timeout 600 gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
-            else
-              timeout 300 gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+            REM_SEC=$((RESCUE_TIME_LIMIT - ($(date +%s) - WORKFLOW_START_EPOCH)))
+            if [ "$REM_SEC" -ge 60 ]; then
+              if [ ${#ASSETS[@]} -gt 0 ]; then
+                timeout "$REM_SEC" gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              else
+                timeout 300 gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              fi
             fi
 
             rm -rf release_assets
@@ -408,6 +446,7 @@ jobs:
             [ -z "$FAILED_ITEMS" ] && continue
 
             while IFS= read -r ITEM; do
+              [ -z "$ITEM" ] && continue
               if is_rescue_timeout; then
                 echo "⏰ 兜底任务触及 5 小时 40 分钟红线，安全终止内层重试..."
                 RESCUE_ABORT=1
