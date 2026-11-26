@@ -42,6 +42,7 @@ jobs:
           BATCH_SIZE: ${{ github.event.inputs.batch_size || '15' }}
         run: |
           STATE_FILE="sync_state.json"
+          START_EPOCH=$(date +%s)
           [ -f "$STATE_FILE" ] || echo "{}" > "$STATE_FILE"
 
           sync_single_release() {
@@ -55,6 +56,11 @@ jobs:
             local EXTRA_FLAGS="--latest=false"
             [ "$IS_PRE" = "true" ] && EXTRA_FLAGS="--prerelease --latest=false"
 
+            # 双重防重：如果目标库已经存在该 Release，直接返回成功并补录账本
+            if gh release view "$TAG" --repo "$DST_REPO" >/dev/null 2>&1; then
+              return 0
+            fi
+
             rm -rf release_assets && mkdir -p release_assets
             if ! gh release download "$TAG" --repo "$SRC_REPO" --dir release_assets 2>/dev/null; then
               if ! gh release view "$TAG" --repo "$SRC_REPO" >/dev/null 2>&1; then
@@ -62,8 +68,7 @@ jobs:
               fi
             fi
 
-            local BODY
-            BODY=$(gh release view "$TAG" --repo "$SRC_REPO" --json body -q '.body' 2>/dev/null || echo "Mirrored release $TAG")
+            gh release view "$TAG" --repo "$SRC_REPO" --json body -q '.body' > release_notes.md 2>/dev/null || echo "Mirrored release $TAG" > release_notes.md
 
             local ASSETS=()
             while IFS= read -r -d '' file; do
@@ -72,10 +77,12 @@ jobs:
 
             local CREATE_OK=0
             if [ ${#ASSETS[@]} -gt 0 ]; then
-              gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              gh release create "$TAG" "${ASSETS[@]}" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
             else
-              gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes "$BODY" $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
+              gh release create "$TAG" --repo "$DST_REPO" --title "$TAG" --notes-file release_notes.md $EXTRA_FLAGS >/dev/null 2>&1 && CREATE_OK=1
             fi
+
+            rm -f release_notes.md
 
             rm -rf release_assets
             [ "$CREATE_OK" -eq 0 ] && return 1
@@ -89,6 +96,12 @@ jobs:
           }
           export -f sync_single_release
           grep -v '^#' repos.txt | grep -v '^[[:space:]]*$' | while IFS='|' read -r RAW_GH RAW_DOCKER RAW_TARGET RAW_COUNT; do
+            NOW_EPOCH=$(date +%s)
+            if [ $((NOW_EPOCH - START_EPOCH)) -gt 19200 ]; then
+              echo "⏰ 已安全运行满 5 小时 20 分钟，主动优雅暂停主循环，预留时间进入压轴兜底与存档..."
+              break
+            fi
+
             GH_SRC=$(echo "$RAW_GH" | xargs)
             DOCKER_SRC=$(echo "$RAW_DOCKER" | xargs)
             TARGET=$(echo "$RAW_TARGET" | xargs)
