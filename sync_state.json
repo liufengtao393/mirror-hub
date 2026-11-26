@@ -2220,9 +2220,21 @@
   "fastgpt": {
     "gh_src": "labring/FastGPT",
     "docker_src": "ghcr.io/labring/fastgpt",
-    "last_repo_push": "2026-11-26T12:20:44Z",
+    "last_repo_push": "2026-11-26T16:32:14Z",
     "baseline_time": "2026-11-26T03:40:55Z",
     "synced_releases": [
+      "v4.10.0",
+      "v4.10.0-alpha",
+      "v4.10.0-fix",
+      "v4.10.1",
+      "v4.10.1-alpha",
+      "v4.10.1-fix",
+      "v4.10.1-fix2",
+      "v4.10.1-fix3",
+      "v4.11.0",
+      "v4.11.1",
+      "v4.11.1-fix",
+      "v4.11.1-fix2",
       "v4.11.1-fix3",
       "v4.12.0",
       "v4.12.1",
@@ -2317,14 +2329,18 @@
       "v4.17.2",
       "v4.17.3",
       "v4.17.4",
-      "v4.17.5"
+      "v4.17.5",
+      "v4.17.6",
+      "v4.9.13",
+      "v4.9.14",
+      "v4.9.14-fix"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-26 13:01:30 UTC",
+    "last_sync_time": "2026-11-26 16:45:31 UTC",
     "synced_images": {
       "latest": {
-        "digest": "sha256:8d387cc6160d5741274c4d031aa55d034aa3dda0f85872b57ca17bf80c03a75e",
-        "sync_time": "2026-11-26 03:46:04 UTC"
+        "digest": "sha256:9a69de5ca23163c26a1896a4e131f7cdbfca47f6e55bad90accdf17c0ea26423",
+        "sync_time": "2026-11-26 16:45:40 UTC"
       },
       "v4.16.0": {
         "digest": "sha256:df5ab9dc2324931b8223185a0b29ccb052f7181984c586e1139fe653d72cad23",
@@ -2365,6 +2381,10 @@
       "v4.17.5": {
         "digest": "sha256:8d387cc6160d5741274c4d031aa55d034aa3dda0f85872b57ca17bf80c03a75e",
         "sync_time": "2026-11-26 03:46:40 UTC"
+      },
+      "v4.17.6": {
+        "digest": "sha256:9a69de5ca23163c26a1896a4e131f7cdbfca47f6e55bad90accdf17c0ea26423",
+        "sync_time": "2026-11-26 16:45:59 UTC"
       }
     }
   },
