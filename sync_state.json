@@ -9090,6 +9090,26 @@
       "v0.29": {
         "digest": "sha256:269adea6b7046b904e4c5a0a75717fe41717e78ccb452fe5b7bbc8d675356aca",
         "sync_time": "2026-11-27 12:20:57 UTC"
+      },
+      "v0.29.0": {
+        "digest": "sha256:269adea6b7046b904e4c5a0a75717fe41717e78ccb452fe5b7bbc8d675356aca",
+        "sync_time": "2026-11-27 18:02:10 UTC"
+      },
+      "v0.30": {
+        "digest": "sha256:f4e1ad9cad392065acdae6f60bd1165f5a687c045289d3258a3463636ede71d2",
+        "sync_time": "2026-11-27 18:02:22 UTC"
+      },
+      "v0.30.0": {
+        "digest": "sha256:f4e1ad9cad392065acdae6f60bd1165f5a687c045289d3258a3463636ede71d2",
+        "sync_time": "2026-11-27 18:02:24 UTC"
+      },
+      "v0.31": {
+        "digest": "sha256:1287412dc4ad5b44a5e0a0f6b43273fcabd7ad2da801bddeb7423078c7f8aa48",
+        "sync_time": "2026-11-27 18:02:35 UTC"
+      },
+      "v0.31.0": {
+        "digest": "sha256:1287412dc4ad5b44a5e0a0f6b43273fcabd7ad2da801bddeb7423078c7f8aa48",
+        "sync_time": "2026-11-27 18:02:38 UTC"
       }
     }
   },
