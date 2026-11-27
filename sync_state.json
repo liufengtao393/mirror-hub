@@ -16742,5 +16742,17 @@
         "sync_time": "2026-11-27 05:03:04 UTC"
       }
     }
+  },
+  "reader": {
+    "gh_src": "hectorqin/reader",
+    "docker_src": "hectorqin/reader",
+    "last_repo_push": "2026-11-26T04:53:51Z",
+    "baseline_time": "2026-11-27T05:03:10Z",
+    "synced_releases": [
+      "v1.0.0"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-27 05:03:15 UTC",
+    "history_completed": true
   }
 }
