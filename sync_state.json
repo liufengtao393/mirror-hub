@@ -18905,9 +18905,12 @@
     "last_repo_push": "2026-11-25T09:30:00Z",
     "baseline_time": "2026-11-27T05:53:05Z",
     "synced_releases": [
+      "Ghidra_10.2.2_build",
+      "Ghidra_10.2.3_build",
       "Ghidra_10.3.1_build",
       "Ghidra_10.3.2_build",
       "Ghidra_10.3.3_build",
+      "Ghidra_10.3_build",
       "Ghidra_10.4_build",
       "Ghidra_11.0.1_build",
       "Ghidra_11.0.2_build",
@@ -18936,8 +18939,105 @@
       "Ghidra_12.1_build",
       "Ghidra_12.2_build"
     ],
-    "failed_releases": [],
-    "last_sync_time": "2026-11-27 05:56:48 UTC"
+    "failed_releases": [
+      {
+        "tag": "Ghidra_10.2.1_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.2_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.1.5_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.1.4_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.1.3_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.1.2_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.1.1_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.1_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.0.4_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.0.3_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.0.2_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.0.1_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_10.0_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.2.4_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.2.3_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.2.2_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.2.1_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.2_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.1.2_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.1.1_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.1_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.0.4_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.0.2_build",
+        "pre": "false"
+      },
+      {
+        "tag": "Ghidra_9.0.1_build",
+        "pre": "false"
+      }
+    ],
+    "last_sync_time": "2026-11-27 19:59:06 UTC"
   },
   "chinese-poetry": {
     "gh_src": "chinese-poetry/chinese-poetry",
