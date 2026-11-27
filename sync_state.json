@@ -13345,7 +13345,7 @@
   "memos": {
     "gh_src": "usememos/memos",
     "docker_src": "neosmemo/memos",
-    "last_repo_push": "2026-11-26T14:23:35Z",
+    "last_repo_push": "2026-11-27T01:24:55Z",
     "baseline_time": "2026-11-26T16:57:13Z",
     "synced_releases": [
       "26.10-rc.1",
@@ -13354,6 +13354,21 @@
       "26.11.0",
       "26.11.1",
       "26.11.2",
+      "v0.11.2",
+      "v0.12.0",
+      "v0.12.1",
+      "v0.12.2",
+      "v0.13.0",
+      "v0.13.1",
+      "v0.13.2",
+      "v0.14.0",
+      "v0.14.1",
+      "v0.14.2",
+      "v0.14.3",
+      "v0.14.4",
+      "v0.15.0",
+      "v0.15.1",
+      "v0.15.2",
       "v0.16.0",
       "v0.16.1",
       "v0.17.0",
@@ -13405,7 +13420,7 @@
       "v0.31.0-rc.2"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-26 16:58:38 UTC",
+    "last_sync_time": "2026-11-27 03:43:46 UTC",
     "synced_images": {
       "26.10": {
         "digest": "sha256:fbc6ef8e9e0b377377f0d71d426d6192a9a0f08a8e3e35bec3557a43f4399260",
@@ -13440,8 +13455,8 @@
         "sync_time": "2026-11-26 16:59:17 UTC"
       },
       "canary": {
-        "digest": "sha256:1912884df524c899d4750d36f77dd6f244dcf901e5d29ebacb8dc89024408a58",
-        "sync_time": "2026-11-26 16:59:27 UTC"
+        "digest": "sha256:247f7e471537a2a8cd9f96989bec35f7a0d735a69d28b93a1c0c3a7491407132",
+        "sync_time": "2026-11-27 03:43:58 UTC"
       },
       "stable": {
         "digest": "sha256:3c7bd779510403350465ecabb7e6fbc0887206f9d55b8decf51a205613fa5616",
