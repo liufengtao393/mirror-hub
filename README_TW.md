@@ -9,11 +9,11 @@
 
 <!-- 高對比雙色拼接徽章 -->
 <p align="center">
-  <a href="../../actions"><img src="https://shields.io/badge/CI%2FCD-GitHub%20Actions-2563EB?style=flat-square&logo=githubactions&logoColor=white&labelColor=1E293B" alt="CI/CD - GitHub Actions"></a>
-  <a href="../../packages"><img src="https://shields.io/badge/Registry-GHCR%20%7C%20DockerHub%20%7C%20LSCR-0284C7?style=flat-square&logo=docker&logoColor=white&labelColor=1E293B" alt="Registry - GHCR | DockerHub | LSCR"></a>
-  <a href="./sync_state.json"><img src="https://shields.io/badge/Ledger-Atomic%20JSON-059669?style=flat-square&logo=json&logoColor=white&labelColor=1E293B" alt="Ledger - Atomic JSON"></a>
-  <a href="./batch-mirror.yml"><img src="https://shields.io/badge/Core-Bash%20%26%20jq%20Engine-D97706?style=flat-square&logo=gnubash&logoColor=white&labelColor=1E293B" alt="Core - Bash & jq Engine"></a>
-  <a href="./LICENSE"><img src="https://shields.io/badge/License-MIT-7C3AED?style=flat-square&logo=opensourceinitiative&logoColor=white&labelColor=1E293B" alt="License - MIT"></a>
+  <a href="../../actions"><img src="https://shields.io/badge/ENGINE-GITHUB%20ACTIONS-0969DA?style=for-the-badge&logo=githubactions&logoColor=white&labelColor=555555" alt="ENGINE - GITHUB ACTIONS"></a>
+  <a href="./sync_state.json"><img src="https://shields.io/badge/STATE%20MACHINE-JSON%20LEDGER-10B981?style=for-the-badge&logo=json&logoColor=white&labelColor=555555" alt="STATE MACHINE - JSON LEDGER"></a>
+  <a href="./batch-mirror.yml"><img src="https://shields.io/badge/AUTO%20SPLIT-%3E1.9GB%20CHUNKS-F97316?style=for-the-badge&logo=files&logoColor=white&labelColor=555555" alt="AUTO SPLIT - >1.9GB CHUNKS"></a>
+  <a href="../../wiki/Troubleshooting-and-Maintenance"><img src="https://shields.io/badge/404%20RESCUE-CROSS%20REPO-DC2626?style=for-the-badge&logo=github&logoColor=white&labelColor=555555" alt="404 RESCUE - CROSS REPO"></a>
+  <a href="../../packages"><img src="https://shields.io/badge/REGISTRY-GHCR%20%26%20DOCKER-8B5CF6?style=for-the-badge&logo=docker&logoColor=white&labelColor=555555" alt="REGISTRY - GHCR & DOCKER"></a>
 </p>
 
 <!-- 多語言切換 -->
