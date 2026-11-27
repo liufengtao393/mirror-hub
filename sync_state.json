@@ -16932,5 +16932,92 @@
     "failed_releases": [],
     "last_sync_time": "2026-11-27 05:12:19 UTC",
     "history_completed": true
+  },
+  "moviepilot-v3": {
+    "gh_src": "jxxghp/MoviePilot",
+    "docker_src": "jxxghp/moviepilot-v3",
+    "last_repo_push": "2026-11-27T01:03:46Z",
+    "baseline_time": "2026-11-27T05:12:43Z",
+    "synced_releases": [
+      "v3.0.10",
+      "v3.0.10-1",
+      "v3.0.4",
+      "v3.0.5",
+      "v3.0.6",
+      "v3.0.7",
+      "v3.0.8",
+      "v3.0.9",
+      "v3.1.0",
+      "v3.1.1",
+      "v3.1.2",
+      "v3.1.2-1",
+      "v3.1.3",
+      "v3.1.4",
+      "v3.1.5",
+      "v3.1.6",
+      "v3.1.7",
+      "v3.1.8",
+      "v3.1.9",
+      "v3.2.0",
+      "v3.2.1",
+      "v3.2.10",
+      "v3.2.11",
+      "v3.2.12",
+      "v3.2.13",
+      "v3.2.14",
+      "v3.2.15",
+      "v3.2.2",
+      "v3.2.3",
+      "v3.2.4",
+      "v3.2.5",
+      "v3.2.6",
+      "v3.2.7",
+      "v3.2.8",
+      "v3.2.9"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-27 05:15:30 UTC",
+    "synced_images": {
+      "3.2.10": {
+        "digest": "sha256:1859c79bf510fae9815fc2098248093dfd2d9ce36fd91f780fe05c32c9662ea1",
+        "sync_time": "2026-11-27 05:15:39 UTC"
+      },
+      "3.2.11": {
+        "digest": "sha256:049b735f3a6c28174cc38655c208fd9cb556d9ab975e8984cad5b42cd4823b41",
+        "sync_time": "2026-11-27 05:15:42 UTC"
+      },
+      "3.2.12": {
+        "digest": "sha256:a2d8f47df6cfedd415360287ba369e28bc805595cef2b119602edffd61ccce96",
+        "sync_time": "2026-11-27 05:15:45 UTC"
+      },
+      "3.2.13": {
+        "digest": "sha256:d45d26c9afd7ff169d14e149eb4236877cba0b4481ca85526ab757e95b7721f0",
+        "sync_time": "2026-11-27 05:15:47 UTC"
+      },
+      "3.2.14": {
+        "digest": "sha256:ca5baab5e685db42fad7f7156eb3f439029e2fd53389e31924a0084860e29f26",
+        "sync_time": "2026-11-27 05:15:50 UTC"
+      },
+      "3.2.15": {
+        "digest": "sha256:4116195f316c0896795d33a856cfd6d85ea268ecdb36dfbc6e70da4f4f1b7bd8",
+        "sync_time": "2026-11-27 05:15:53 UTC"
+      },
+      "3.2.7": {
+        "digest": "sha256:bc8ad17ea8d26480317b2b376dbe1f65e02847fd878cae719dc832e0b6ab06d8",
+        "sync_time": "2026-11-27 05:15:55 UTC"
+      },
+      "3.2.8": {
+        "digest": "sha256:51cf8fe90a474bde2d79bbbccb5ce83f926b4da887b6fcc7c9457730095d6ebb",
+        "sync_time": "2026-11-27 05:15:58 UTC"
+      },
+      "3.2.9": {
+        "digest": "sha256:11651b5c262d26572a98a6562615f1f3b0498c93b8d848b294799c2fb117f69a",
+        "sync_time": "2026-11-27 05:16:00 UTC"
+      },
+      "latest": {
+        "digest": "sha256:4116195f316c0896795d33a856cfd6d85ea268ecdb36dfbc6e70da4f4f1b7bd8",
+        "sync_time": "2026-11-27 05:16:03 UTC"
+      }
+    }
   }
 }
