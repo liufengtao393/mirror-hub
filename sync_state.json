@@ -7637,6 +7637,14 @@
     "baseline_time": "2026-11-26T16:07:46Z",
     "synced_releases": [
       "1.0.0",
+      "1.0.0-alpha.39",
+      "1.0.0-alpha.40",
+      "1.0.0-alpha.41",
+      "1.0.0-alpha.42",
+      "1.0.0-alpha.43",
+      "1.0.0-alpha.44",
+      "1.0.0-alpha.45",
+      "1.0.0-alpha.46",
       "1.0.0-alpha.47",
       "1.0.0-alpha.48",
       "1.0.0-alpha.49",
@@ -7722,38 +7730,6 @@
       "1.0.7-preview.1"
     ],
     "failed_releases": [
-      {
-        "tag": "1.0.0-alpha.46",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.45",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.44",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.43",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.42",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.41",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.40",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.39",
-        "pre": "true"
-      },
       {
         "tag": "1.0.0-alpha.38",
         "pre": "true"
@@ -7903,7 +7879,7 @@
         "pre": "true"
       }
     ],
-    "last_sync_time": "2026-11-26 18:43:04 UTC",
+    "last_sync_time": "2026-11-27 12:14:29 UTC",
     "synced_images": {
       "1.0.5": {
         "digest": "sha256:b81d16a90ee25bd9511280127ca1471788c6e874cf0f0da759645f46b2dc1d74",
