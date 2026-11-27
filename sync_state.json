@@ -592,7 +592,7 @@
   "teable-deployment": {
     "gh_src": "teableio/teable-deployment",
     "docker_src": "none",
-    "last_repo_push": "2026-11-26T04:19:20Z",
+    "last_repo_push": "2026-11-27T06:59:12Z",
     "baseline_time": "2026-11-26T03:13:46Z",
     "synced_releases": [
       "v2026.10.0",
@@ -643,6 +643,7 @@
       "v2026.11.29",
       "v2026.11.3",
       "v2026.11.30",
+      "v2026.11.31",
       "v2026.11.4",
       "v2026.11.5",
       "v2026.11.7",
@@ -766,7 +767,7 @@
       "v2026.9.9"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-26 09:02:44 UTC",
+    "last_sync_time": "2026-11-27 07:44:57 UTC",
     "history_completed": true
   },
   "dify-api": {
