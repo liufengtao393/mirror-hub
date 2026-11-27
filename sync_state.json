@@ -4011,7 +4011,7 @@
   "cherry-studio-app": {
     "gh_src": "CherryHQ/cherry-studio-app",
     "docker_src": "none",
-    "last_repo_push": "2026-11-26T10:03:26Z",
+    "last_repo_push": "2026-11-27T02:54:51Z",
     "baseline_time": "2026-11-26T15:22:57Z",
     "synced_releases": [],
     "failed_releases": [
