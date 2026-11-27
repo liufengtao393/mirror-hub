@@ -7497,7 +7497,7 @@
   "rustfs": {
     "gh_src": "rustfs/rustfs",
     "docker_src": "rustfs/rustfs",
-    "last_repo_push": "2026-11-26T17:47:15Z",
+    "last_repo_push": "2026-11-27T03:08:29Z",
     "baseline_time": "2026-11-26T16:07:46Z",
     "synced_releases": [
       "1.0.0",
@@ -7585,7 +7585,188 @@
       "1.0.7",
       "1.0.7-preview.1"
     ],
-    "failed_releases": [],
+    "failed_releases": [
+      {
+        "tag": "1.0.0-alpha.46",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.45",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.44",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.43",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.42",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.41",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.40",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.39",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.38",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.37",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.36",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.34",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.33",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.32",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.31",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.30",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.29",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.28",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.27",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.26",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.25",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.24",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.23",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.22",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.21",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.20",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.19",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.18",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.17",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.16",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.15",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.14",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.13",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.9",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.8",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.7",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.6",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.5",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.12",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.11",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.10",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.4",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.3",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.2",
+        "pre": "true"
+      },
+      {
+        "tag": "1.0.0-alpha.1",
+        "pre": "true"
+      }
+    ],
     "last_sync_time": "2026-11-26 18:43:04 UTC",
     "synced_images": {
       "1.0.5": {
