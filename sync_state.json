@@ -5526,6 +5526,46 @@
       "trixie": {
         "digest": "sha256:4ea94de574c17f0372722806c949757050fbb1cd7648410fe45d6bba275cc00e",
         "sync_time": "2026-11-26 15:49:19 UTC"
+      },
+      "15": {
+        "digest": "sha256:868b5ee219026c0f34c99d696d4494ccb3705cf1a18bed1e0b9de64d9c011ccd",
+        "sync_time": "2026-11-27 03:09:01 UTC"
+      },
+      "15-trixie": {
+        "digest": "sha256:868b5ee219026c0f34c99d696d4494ccb3705cf1a18bed1e0b9de64d9c011ccd",
+        "sync_time": "2026-11-27 03:09:06 UTC"
+      },
+      "15.20": {
+        "digest": "sha256:868b5ee219026c0f34c99d696d4494ccb3705cf1a18bed1e0b9de64d9c011ccd",
+        "sync_time": "2026-11-27 03:09:11 UTC"
+      },
+      "15.20-trixie": {
+        "digest": "sha256:868b5ee219026c0f34c99d696d4494ccb3705cf1a18bed1e0b9de64d9c011ccd",
+        "sync_time": "2026-11-27 03:09:16 UTC"
+      },
+      "16": {
+        "digest": "sha256:ce81150802644ddfac1db4da9e63be6f2a3818aa6ee98a7a28838aeea65dc37a",
+        "sync_time": "2026-11-27 03:09:43 UTC"
+      },
+      "16-trixie": {
+        "digest": "sha256:ce81150802644ddfac1db4da9e63be6f2a3818aa6ee98a7a28838aeea65dc37a",
+        "sync_time": "2026-11-27 03:09:48 UTC"
+      },
+      "16.16": {
+        "digest": "sha256:ce81150802644ddfac1db4da9e63be6f2a3818aa6ee98a7a28838aeea65dc37a",
+        "sync_time": "2026-11-27 03:09:54 UTC"
+      },
+      "16.16-trixie": {
+        "digest": "sha256:ce81150802644ddfac1db4da9e63be6f2a3818aa6ee98a7a28838aeea65dc37a",
+        "sync_time": "2026-11-27 03:09:59 UTC"
+      },
+      "17.12": {
+        "digest": "sha256:97fb53376be3e4fb1a8a61421daa69dcc3bf2fa39bda3259f5245f9a455af1a9",
+        "sync_time": "2026-11-27 03:10:24 UTC"
+      },
+      "17.12-trixie": {
+        "digest": "sha256:97fb53376be3e4fb1a8a61421daa69dcc3bf2fa39bda3259f5245f9a455af1a9",
+        "sync_time": "2026-11-27 03:10:30 UTC"
       }
     }
   },
