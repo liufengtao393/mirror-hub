@@ -15090,5 +15090,76 @@
         "sync_time": "2026-11-27 04:09:58 UTC"
       }
     }
+  },
+  "jellyfin": {
+    "gh_src": "jellyfin/jellyfin",
+    "docker_src": "jellyfin/jellyfin",
+    "last_repo_push": "2026-11-27T03:17:34Z",
+    "baseline_time": "2026-11-27T04:12:27Z",
+    "synced_releases": [
+      "v10.11.10",
+      "v10.11.11",
+      "v10.11.9",
+      "v12.0",
+      "v12.0-rc1",
+      "v12.0-rc2",
+      "v12.0-rc3",
+      "v12.0-rc4",
+      "v12.0-rc5",
+      "v12.0-rc6",
+      "v12.0-rc7",
+      "v12.1",
+      "v12.2",
+      "v12.3",
+      "v12.4"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-27 04:13:19 UTC",
+    "synced_images": {
+      "2026110913": {
+        "digest": "sha256:95e37bb3f338fe93d3ced30c25d930abe817baecddaa8495727c3e9080fd0d8b",
+        "sync_time": "2026-11-27 04:13:24 UTC"
+      },
+      "2026110913-amd64": {
+        "digest": "sha256:b17a8b7cf36da3dff8b068bd6e31a15a4fc7da52cd4d94ce853d3be0c98f9708",
+        "sync_time": "2026-11-27 04:13:25 UTC"
+      },
+      "2026110913-arm64": {
+        "digest": "sha256:e25b753273b367b8649c11d2cc088feac90de183c3ad5eec9ba18bfec5bdc824",
+        "sync_time": "2026-11-27 04:13:27 UTC"
+      },
+      "2026111613": {
+        "digest": "sha256:e9351b7367beb388a789f2dee02108cd1e86f8114654bf12bdfb9f5e4b03f81c",
+        "sync_time": "2026-11-27 04:13:28 UTC"
+      },
+      "2026111613-amd64": {
+        "digest": "sha256:10ee6bac6ceff8033ba27d222b358e0ed2ac7ecb6c2a206f97b39c2fb479a916",
+        "sync_time": "2026-11-27 04:13:30 UTC"
+      },
+      "2026111613-arm64": {
+        "digest": "sha256:529dc95e9e7220e17c3dbeec3967c1deb99b3c693cdaa3d320007c09420a069a",
+        "sync_time": "2026-11-27 04:13:32 UTC"
+      },
+      "2026112315": {
+        "digest": "sha256:1ec34411ba5f7207e770ff29e5a78bf78ddd467fd39aa601e5145b6d2f5270ee",
+        "sync_time": "2026-11-27 04:13:34 UTC"
+      },
+      "2026112315-amd64": {
+        "digest": "sha256:994222f638927b9bd121de7b52fb038fb377bbbd10cfa93bd3a34e062cc623d3",
+        "sync_time": "2026-11-27 04:13:35 UTC"
+      },
+      "2026112315-arm64": {
+        "digest": "sha256:18c3e08ee7670b59e016d964700ff51c419d02c0b7cef78251145d3fb9a45e99",
+        "sync_time": "2026-11-27 04:13:37 UTC"
+      },
+      "latest": {
+        "digest": "sha256:fea863d0cd9ec445985d9c75fc6ed64e38a1d2766cf0c250a33d553f4fc1b771",
+        "sync_time": "2026-11-27 04:13:39 UTC"
+      },
+      "unstable": {
+        "digest": "sha256:1ec34411ba5f7207e770ff29e5a78bf78ddd467fd39aa601e5145b6d2f5270ee",
+        "sync_time": "2026-11-27 04:13:41 UTC"
+      }
+    }
   }
 }
