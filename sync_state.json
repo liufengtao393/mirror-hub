@@ -301,7 +301,7 @@
   "n8n-hosting": {
     "gh_src": "n8n-io/n8n-hosting",
     "docker_src": "none",
-    "last_repo_push": "2026-11-25T16:46:26Z",
+    "last_repo_push": "2026-11-26T18:01:50Z",
     "baseline_time": "2026-11-26T03:05:19Z",
     "synced_releases": [
       "v1.21.0",
