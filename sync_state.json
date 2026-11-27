@@ -5654,8 +5654,8 @@
         "sync_time": "2026-11-26 15:46:20 UTC"
       },
       "develop-latest": {
-        "digest": "sha256:9aef303711ba4d69ffacc9f99037bd19ee58b1bb9e2931c093dcd74d52275b70",
-        "sync_time": "2026-11-27 11:56:35 UTC"
+        "digest": "sha256:51efbf949199ff959c19fa469e9abd8da385935a91a7b6df37c8ee8febe0e72b",
+        "sync_time": "2026-11-27 17:49:37 UTC"
       },
       "latest": {
         "digest": "sha256:304bebe22bf4c66d96d11bb746727492fa91637bd6deb807b2ef464f071c215c",
