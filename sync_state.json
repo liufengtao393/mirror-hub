@@ -19418,5 +19418,18 @@
         "pre": "false"
       }
     ]
+  },
+  "driveuncconverter": {
+    "gh_src": "RingoCaviar/DriveUNCConverter",
+    "docker_src": "none",
+    "last_repo_push": "2026-07-27T03:11:53Z",
+    "baseline_time": "2026-11-27T06:10:40Z",
+    "synced_releases": [
+      "v1.0.3",
+      "v1.0.2",
+      "v1.0.1",
+      "V1.0.0"
+    ],
+    "history_completed": true
   }
 }
