@@ -5574,44 +5574,56 @@
     "docker_src": "library/redis",
     "synced_images": {
       "8.6-trixie": {
-        "digest": "sha256:fa066aacdbdca15b843799d30e0d7d210054ad6ed25646a6311f7ffe18dbe49a",
-        "sync_time": "2026-11-26 15:49:28 UTC"
+        "digest": "sha256:876fabd22bbc477bbf0c8b1341f311ccaf7d948feb8db8e9d2a95c8d62d05e86",
+        "sync_time": "2026-11-27 03:11:08 UTC"
       },
       "8.6.8": {
-        "digest": "sha256:fa066aacdbdca15b843799d30e0d7d210054ad6ed25646a6311f7ffe18dbe49a",
-        "sync_time": "2026-11-26 15:49:35 UTC"
+        "digest": "sha256:876fabd22bbc477bbf0c8b1341f311ccaf7d948feb8db8e9d2a95c8d62d05e86",
+        "sync_time": "2026-11-27 03:11:12 UTC"
       },
       "8.6.8-trixie": {
-        "digest": "sha256:fa066aacdbdca15b843799d30e0d7d210054ad6ed25646a6311f7ffe18dbe49a",
-        "sync_time": "2026-11-26 15:49:41 UTC"
+        "digest": "sha256:876fabd22bbc477bbf0c8b1341f311ccaf7d948feb8db8e9d2a95c8d62d05e86",
+        "sync_time": "2026-11-27 03:11:16 UTC"
       },
       "8.8": {
-        "digest": "sha256:3ddc62c69a71d3dbc47052fab73cec2e9eecafb210ea38b36d42ec8754aa2418",
-        "sync_time": "2026-11-26 15:49:48 UTC"
+        "digest": "sha256:20ffc84326887d4d951e0d173c790f105a2daa836d1610ca126cbae27d617894",
+        "sync_time": "2026-11-27 03:11:23 UTC"
       },
       "8.8-trixie": {
-        "digest": "sha256:3ddc62c69a71d3dbc47052fab73cec2e9eecafb210ea38b36d42ec8754aa2418",
-        "sync_time": "2026-11-26 15:49:55 UTC"
+        "digest": "sha256:20ffc84326887d4d951e0d173c790f105a2daa836d1610ca126cbae27d617894",
+        "sync_time": "2026-11-27 03:11:27 UTC"
       },
       "8.8.4": {
-        "digest": "sha256:3ddc62c69a71d3dbc47052fab73cec2e9eecafb210ea38b36d42ec8754aa2418",
-        "sync_time": "2026-11-26 15:50:02 UTC"
+        "digest": "sha256:20ffc84326887d4d951e0d173c790f105a2daa836d1610ca126cbae27d617894",
+        "sync_time": "2026-11-27 03:11:31 UTC"
       },
       "8.8.4-trixie": {
-        "digest": "sha256:3ddc62c69a71d3dbc47052fab73cec2e9eecafb210ea38b36d42ec8754aa2418",
-        "sync_time": "2026-11-26 15:50:09 UTC"
+        "digest": "sha256:20ffc84326887d4d951e0d173c790f105a2daa836d1610ca126cbae27d617894",
+        "sync_time": "2026-11-27 03:11:35 UTC"
       },
       "bookworm": {
         "digest": "sha256:bb302517211721bf85ae3152b663c848a7cb36e79b02d69239ce20b5ddce95be",
         "sync_time": "2026-11-26 15:50:14 UTC"
       },
       "latest": {
-        "digest": "sha256:ca1cb6df9313d0186b68f19b60fc2802e0c76e8542b2c05650b560e7bbb3cc8f",
-        "sync_time": "2026-11-26 15:50:22 UTC"
+        "digest": "sha256:56a1737794e36c3ebe8a4544a8ab421af3ab1a6488fb2238aec228c404933fed",
+        "sync_time": "2026-11-27 03:11:40 UTC"
       },
       "trixie": {
         "digest": "sha256:ca1cb6df9313d0186b68f19b60fc2802e0c76e8542b2c05650b560e7bbb3cc8f",
         "sync_time": "2026-11-26 15:50:29 UTC"
+      },
+      "8.4.8": {
+        "digest": "sha256:b9e537e7a39419c7cc2da1b359932a69de48a891c91f3fb605e19021148bc0fb",
+        "sync_time": "2026-11-27 03:10:54 UTC"
+      },
+      "8.4.8-trixie": {
+        "digest": "sha256:b9e537e7a39419c7cc2da1b359932a69de48a891c91f3fb605e19021148bc0fb",
+        "sync_time": "2026-11-27 03:10:58 UTC"
+      },
+      "8.6": {
+        "digest": "sha256:876fabd22bbc477bbf0c8b1341f311ccaf7d948feb8db8e9d2a95c8d62d05e86",
+        "sync_time": "2026-11-27 03:11:04 UTC"
       }
     }
   },
