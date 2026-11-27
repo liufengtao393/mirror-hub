@@ -18461,5 +18461,45 @@
       "audit-data"
     ],
     "history_completed": true
+  },
+  "ghidra": {
+    "gh_src": "NationalSecurityAgency/ghidra",
+    "docker_src": "none",
+    "last_repo_push": "2026-11-25T09:30:00Z",
+    "baseline_time": "2026-11-27T05:53:05Z",
+    "synced_releases": [
+      "Ghidra_10.3.1_build",
+      "Ghidra_10.3.2_build",
+      "Ghidra_10.3.3_build",
+      "Ghidra_10.4_build",
+      "Ghidra_11.0.1_build",
+      "Ghidra_11.0.2_build",
+      "Ghidra_11.0.3_build",
+      "Ghidra_11.0_build",
+      "Ghidra_11.1.1_build",
+      "Ghidra_11.1.2_build",
+      "Ghidra_11.1_build",
+      "Ghidra_11.2.1_build",
+      "Ghidra_11.2_build",
+      "Ghidra_11.3.1_build",
+      "Ghidra_11.3.2_build",
+      "Ghidra_11.3_build",
+      "Ghidra_11.4.1_build",
+      "Ghidra_11.4.2_build",
+      "Ghidra_11.4.3_build",
+      "Ghidra_11.4_build",
+      "Ghidra_12.0.1_build",
+      "Ghidra_12.0.2_build",
+      "Ghidra_12.0.3_build",
+      "Ghidra_12.0.4_build",
+      "Ghidra_12.0_build",
+      "Ghidra_12.1.2_build",
+      "Ghidra_12.1.3_build",
+      "Ghidra_12.1.4_build",
+      "Ghidra_12.1_build",
+      "Ghidra_12.2_build"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-27 05:56:48 UTC"
   }
 }
