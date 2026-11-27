@@ -15181,5 +15181,1020 @@
     "last_repo_push": "2026-11-26T17:10:41Z",
     "baseline_time": "2026-11-27T04:14:05Z",
     "synced_releases": []
+  },
+  "xiaoya-tvbox": {
+    "gh_src": "power721/alist-tvbox",
+    "docker_src": "haroldli/xiaoya-tvbox",
+    "last_repo_push": "2026-11-26T12:53:03Z",
+    "baseline_time": "2026-11-27T04:15:05Z",
+    "synced_releases": [],
+    "failed_releases": [
+      {
+        "tag": "1.137.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.136.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.135.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.134.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.133.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.132.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.131.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.130.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.129.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.128.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.127.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.126.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.125.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.124.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.123.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.122.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.121.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.120.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.119.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.118.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.117.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.116.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.115.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.114.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.113.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.112.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.111.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.110.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.109.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.108.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.107.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.106.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.105.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.104.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.103.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.102.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.101.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.100.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.99.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.98.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.97.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.96.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.95.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.94.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.93.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.92.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.91.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.90.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.89.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.88.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.87.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.86.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.85.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.84.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.83.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.82.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.82.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.81.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.80.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.79.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.78.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.77.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.77.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.76.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.75.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.74.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.73.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.72.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.72.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.71.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.70.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.70.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.69.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.68.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.67.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.66.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.65.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.64.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.64.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.63.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.62.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.61.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.60.3",
+        "pre": "false"
+      },
+      {
+        "tag": "1.60.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.60.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.60.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.59.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.58.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.57.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.57.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.56.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.55.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.54.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.53.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.52.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.51.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.50.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.49.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.48.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.48.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.47.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.47.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.46.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.45.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.45.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.45.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.44.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.43.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.42.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.41.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.41.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.40.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.40.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.40.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.39.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.38.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.37.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.37.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.36.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.35.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.34.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.33.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.33.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.32.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.31.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.30.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.29.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.29.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.28.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.27.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.26.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.25.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.24.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.23.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.22.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.21.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.21.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.21.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.20.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.19.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.18.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.17.3",
+        "pre": "false"
+      },
+      {
+        "tag": "1.17.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.17.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.17.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.16.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.16.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.16.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.15.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.14.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.13.3",
+        "pre": "false"
+      },
+      {
+        "tag": "1.13.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.13.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.13.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.12.3",
+        "pre": "false"
+      },
+      {
+        "tag": "1.12.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.12.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.12.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.11.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.10.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.9.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.9.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.9.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.8.9",
+        "pre": "false"
+      },
+      {
+        "tag": "1.8.7",
+        "pre": "false"
+      },
+      {
+        "tag": "1.8.6",
+        "pre": "false"
+      },
+      {
+        "tag": "1.8.4",
+        "pre": "false"
+      },
+      {
+        "tag": "1.8.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.8.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.8.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.7.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.6.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.5.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.4.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.3.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.3.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.2.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.2.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.1.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.0.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.0.0",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.23",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.22",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.21",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.20",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.19",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.17",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.16",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.15",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.14",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.13",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.12",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.11",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.10",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.9",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.8",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.7",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.6",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.5",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.4",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.3",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.2",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.1",
+        "pre": "false"
+      },
+      {
+        "tag": "0.4.0",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.11",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.10",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.9",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.7",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.6",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.5",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.4",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.3",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.2",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.1",
+        "pre": "false"
+      },
+      {
+        "tag": "0.3.0",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.31",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.30",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.29",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.28",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.27",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.26",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.25",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.23",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.22",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.21",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.20",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.19",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.18",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.17",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.7",
+        "pre": "false"
+      },
+      {
+        "tag": "0.2.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.0.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.7.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.1.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.1",
+        "pre": "false"
+      }
+    ],
+    "synced_images": {
+      "1.133.0": {
+        "digest": "sha256:9edc1a79e672d2276a993baaa532662e91f1787927552606e5c02c9b4afffce5",
+        "sync_time": "2026-11-27 04:43:36 UTC"
+      },
+      "1.134.0": {
+        "digest": "sha256:fc49b5ba3bce6f10931fdb76391fe06fd8d1d5ec6a6d94022b74298b39286e89",
+        "sync_time": "2026-11-27 04:43:39 UTC"
+      },
+      "1.135.0": {
+        "digest": "sha256:63fe7e635925c37f1472039b4765cb1639ac284e0eb2d0c9bd767b8122f1f436",
+        "sync_time": "2026-11-27 04:43:42 UTC"
+      },
+      "1.136.0": {
+        "digest": "sha256:fc29c46538b4fb8ba04d078b4ffc525595b725bfb1ceadd91f3e2e6ff71dae2a",
+        "sync_time": "2026-11-27 04:43:44 UTC"
+      },
+      "1.137.0": {
+        "digest": "sha256:033ffaa075280b817bf56afc18322cc664bd834ac0b07494e7fb53b2c61bfbb1",
+        "sync_time": "2026-11-27 04:43:56 UTC"
+      },
+      "host": {
+        "digest": "sha256:37cefe8e4d3b3339f6ab7d45363873b5e9b5f4cdc3a21cbd63a4643ef8be2824",
+        "sync_time": "2026-11-27 04:44:07 UTC"
+      },
+      "hostmode": {
+        "digest": "sha256:37cefe8e4d3b3339f6ab7d45363873b5e9b5f4cdc3a21cbd63a4643ef8be2824",
+        "sync_time": "2026-11-27 04:44:10 UTC"
+      },
+      "latest": {
+        "digest": "sha256:033ffaa075280b817bf56afc18322cc664bd834ac0b07494e7fb53b2c61bfbb1",
+        "sync_time": "2026-11-27 04:44:14 UTC"
+      },
+      "native": {
+        "digest": "sha256:3aa2f4b183a423ec6165b02fd9ad70e396e6216db25fca6d142a45b05fced318",
+        "sync_time": "2026-11-27 04:44:23 UTC"
+      },
+      "native-host": {
+        "digest": "sha256:36c57876af9ce790cae205d01f504bdf77957d8888be4a9c9ce5012894b56b0f",
+        "sync_time": "2026-11-27 04:44:32 UTC"
+      }
+    }
   }
 }
