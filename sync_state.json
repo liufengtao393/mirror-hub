@@ -13806,7 +13806,7 @@
   "sure": {
     "gh_src": "we-promise/sure",
     "docker_src": "ghcr.io/we-promise/sure",
-    "last_repo_push": "2026-11-26T14:03:32Z",
+    "last_repo_push": "2026-11-27T01:33:40Z",
     "baseline_time": "2026-11-26T17:09:47Z",
     "synced_releases": [
       "v0.6.0",
