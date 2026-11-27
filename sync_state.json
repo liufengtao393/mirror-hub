@@ -2721,10 +2721,12 @@
   "qchatgpt": {
     "gh_src": "RockChinQ/QChatGPT",
     "docker_src": "rockchin/qchatgpt",
-    "last_repo_push": "2026-11-26T16:31:17Z",
+    "last_repo_push": "2026-11-26T19:04:59Z",
     "baseline_time": "2026-11-26T13:17:18Z",
     "synced_releases": [
       "v4.10.0",
+      "v4.10.0-beta.1",
+      "v4.10.0-beta.2",
       "v4.10.0-beta.3",
       "v4.10.1",
       "v4.10.10",
@@ -2753,10 +2755,23 @@
       "v4.11.6",
       "v4.11.7",
       "v4.11.8",
-      "v4.11.9"
+      "v4.11.9",
+      "v4.8.3",
+      "v4.8.4",
+      "v4.8.5",
+      "v4.8.6",
+      "v4.8.7",
+      "v4.9.0",
+      "v4.9.1",
+      "v4.9.2",
+      "v4.9.3",
+      "v4.9.4",
+      "v4.9.5",
+      "v4.9.6",
+      "v4.9.7"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-26 16:49:36 UTC",
+    "last_sync_time": "2026-11-27 01:51:40 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:e15ffbbb182041c09a4086c423387dbd661ee83fce7f76afeabfd8c4aafc6c60",
