@@ -16788,6 +16788,21 @@
     "last_repo_push": "2026-11-27T04:52:39Z",
     "baseline_time": "2026-11-27T04:56:25Z",
     "synced_releases": [
+      "v0.35.0",
+      "v0.35.1",
+      "v0.36.0",
+      "v0.36.1",
+      "v0.37.0",
+      "v0.38.0",
+      "v0.39.0",
+      "v0.40.0",
+      "v0.41.0",
+      "v0.41.1",
+      "v0.42.0",
+      "v0.42.1",
+      "v0.43.0",
+      "v0.44.0",
+      "v0.44.1",
       "v0.45.0",
       "v0.45.1",
       "v0.46.0",
@@ -16838,11 +16853,11 @@
       "v0.64.2"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-27 04:59:09 UTC",
+    "last_sync_time": "2026-11-27 19:22:51 UTC",
     "synced_images": {
       "develop": {
-        "digest": "sha256:58b4b25994b948603a827fa569f4c7d8884e3c77792dc27872661d1559e6bb5b",
-        "sync_time": "2026-11-27 04:59:28 UTC"
+        "digest": "sha256:b01e83a0cc5fde9f83a31f148974e192af8a84176404b0a5d43759a49de13654",
+        "sync_time": "2026-11-27 19:23:10 UTC"
       },
       "latest": {
         "digest": "sha256:38dc2727bfcfd5ede290f8ada114fc90368146f265ae4701ddddbcbe2a44ee52",
@@ -16881,8 +16896,24 @@
         "sync_time": "2026-11-27 05:02:12 UTC"
       },
       "pr-6562": {
-        "digest": "sha256:ffab0266523d455141c6117fed5072f031e8423a4e27b1f7227ecc5b7aee1cc5",
-        "sync_time": "2026-11-27 05:02:30 UTC"
+        "digest": "sha256:c35fee24d4e70b61f6f04d6417c2bad616dc586f1f05af6f1b98f499508cfe73",
+        "sync_time": "2026-11-27 19:24:08 UTC"
+      },
+      "pr-6222": {
+        "digest": "sha256:e973bf097c368aec7a24f7ca3f01ee876a8850152697f3ba4e5a5477f066d653",
+        "sync_time": "2026-11-27 19:23:28 UTC"
+      },
+      "pr-6473": {
+        "digest": "sha256:470315b073251b176a9c3c0d06574e84200fbe594a71c6b3f06e4cf6028fcac1",
+        "sync_time": "2026-11-27 19:23:46 UTC"
+      },
+      "pr-6565": {
+        "digest": "sha256:d75a321de6b907bf1ea799651774b19b75cce3f4e1baaf147044d4d921571fb8",
+        "sync_time": "2026-11-27 19:24:27 UTC"
+      },
+      "pr-6566": {
+        "digest": "sha256:bac213289e35ed6f1bc8ebbaff442874ea74eb25854c383b66494538c7c11f8d",
+        "sync_time": "2026-11-27 19:24:47 UTC"
       }
     }
   },
