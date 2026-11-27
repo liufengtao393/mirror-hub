@@ -17336,5 +17336,54 @@
         "sync_time": "2026-11-27 05:25:39 UTC"
       }
     }
+  },
+  "vertex": {
+    "gh_src": "vertex-app/vertex",
+    "docker_src": "lswl/vertex",
+    "last_repo_push": "2026-11-10T03:01:33Z",
+    "baseline_time": "2026-11-27T05:25:43Z",
+    "synced_releases": [],
+    "synced_images": {
+      "2026.09.19": {
+        "digest": "sha256:25104a02b345108e8c7cb2dfbf81a4e5fd38c5d839371584e75629816f06d62f",
+        "sync_time": "2026-11-27 05:25:45 UTC"
+      },
+      "2026.10.08": {
+        "digest": "sha256:6695f6b9c107157bef331e908ff5c64ec0ca5787943b2b9191bb1c710fae3dde",
+        "sync_time": "2026-11-27 05:25:47 UTC"
+      },
+      "2026.10.13": {
+        "digest": "sha256:2a2836e4217bb8e008b7af46305363760d24323823e24f35bba231e81ce0ef35",
+        "sync_time": "2026-11-27 05:25:49 UTC"
+      },
+      "2026.10.29": {
+        "digest": "sha256:7b797231072b27e5611b1439a2d85226ab4f9d4564b9f578f24beceea8ea3fc2",
+        "sync_time": "2026-11-27 05:25:51 UTC"
+      },
+      "latest": {
+        "digest": "sha256:c62ce1ae12b0ee6f84d6480b6eed4ed81378f4d3f369e1b99da0f0b92c914cb8",
+        "sync_time": "2026-11-27 05:25:52 UTC"
+      },
+      "newnode": {
+        "digest": "sha256:30c8633f07208c80539ed89ba3cf8a384bfc96bfb1505b8525be398497dc09cb",
+        "sync_time": "2026-11-27 05:25:55 UTC"
+      },
+      "sha-1eb1c3e23d2f": {
+        "digest": "sha256:30c8633f07208c80539ed89ba3cf8a384bfc96bfb1505b8525be398497dc09cb",
+        "sync_time": "2026-11-27 05:25:57 UTC"
+      },
+      "sha-29ebf279c753": {
+        "digest": "sha256:762bfe731ac551ad967b6bf73774e2319726acfec3745073b99f9f32428ab898",
+        "sync_time": "2026-11-27 05:25:59 UTC"
+      },
+      "sha-ec6fa1e6de50": {
+        "digest": "sha256:c62ce1ae12b0ee6f84d6480b6eed4ed81378f4d3f369e1b99da0f0b92c914cb8",
+        "sync_time": "2026-11-27 05:26:01 UTC"
+      },
+      "stable": {
+        "digest": "sha256:c62ce1ae12b0ee6f84d6480b6eed4ed81378f4d3f369e1b99da0f0b92c914cb8",
+        "sync_time": "2026-11-27 05:26:02 UTC"
+      }
+    }
   }
 }
