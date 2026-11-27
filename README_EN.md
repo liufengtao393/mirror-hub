@@ -1,99 +1,250 @@
 <div align="center">
 
-<h1>⚡ MIRROR HUB</h1>
+<!-- Hero banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:2563eb&height=200&section=header&text=OmniMirror%20Hub&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Fully%20automated%20%C2%B7%20fault-tolerant%20%C2%B7%20resumable%20open-source%20asset%20disaster%20recovery%20%26%20multi-source%20mirror%20engine&descAlignY=58&descSize=15&animation=twinkling" width="100%" />
 
-<p>
-  <strong>Enterprise-Grade Autonomous Asset Mirroring, Disaster Recovery & Cross-Repo Rescue Engine</strong>
+<p align="center">
+  <strong>Permanent disaster-recovery archiving for source code, wikis, full Release binaries and multi-arch container images of critical open-source infrastructure.</strong>
 </p>
 
-<p>
-  <a href="./">简体中文</a> &nbsp;•&nbsp;
-  <a href="./README_TW.md">繁體中文</a> &nbsp;•&nbsp;
-  <b>English</b> &nbsp;•&nbsp;
-  <a href="./README_JA.md">日本語</a> &nbsp;•&nbsp;
+<!-- Dual-tone badges -->
+<p align="center">
+  <a href="../../actions"><img src="https://shields.io/badge/CI%2FCD-GitHub%20Actions-2563EB?style=flat-square&logo=githubactions&logoColor=white&labelColor=1E293B" alt="CI/CD - GitHub Actions"></a>
+  <a href="../../packages"><img src="https://shields.io/badge/Registry-GHCR%20%7C%20DockerHub%20%7C%20LSCR-0284C7?style=flat-square&logo=docker&logoColor=white&labelColor=1E293B" alt="Registry - GHCR | DockerHub | LSCR"></a>
+  <a href="./sync_state.json"><img src="https://shields.io/badge/Ledger-Atomic%20JSON-059669?style=flat-square&logo=json&logoColor=white&labelColor=1E293B" alt="Ledger - Atomic JSON"></a>
+  <a href="./batch-mirror.yml"><img src="https://shields.io/badge/Core-Bash%20%26%20jq%20Engine-D97706?style=flat-square&logo=gnubash&logoColor=white&labelColor=1E293B" alt="Core - Bash & jq Engine"></a>
+  <a href="./LICENSE"><img src="https://shields.io/badge/License-MIT-7C3AED?style=flat-square&logo=opensourceinitiative&logoColor=white&labelColor=1E293B" alt="License - MIT"></a>
+</p>
+
+<!-- Language switcher -->
+<p align="center">
+  <a href="../../">简体中文</a> &nbsp;│&nbsp;
+  <a href="./README_TW.md">繁體中文</a> &nbsp;│&nbsp;
+  <strong>English</strong> &nbsp;│&nbsp;
+  <a href="./README_JA.md">日本語</a> &nbsp;│&nbsp;
   <a href="./README_KO.md">한국어</a>
 </p>
 
+<!-- Quick links -->
 <p align="center">
-  <a href="../../actions"><img src="https://img.shields.io/badge/Engine-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="Engine" /></a>
-  <a href="./sync_state.json"><img src="https://img.shields.io/badge/State_Machine-JSON_Ledger-00C853?style=for-the-badge&logo=json&logoColor=white" alt="State Machine" /></a>
-  <a href="./.github/workflows/batch-mirror.yml"><img src="https://img.shields.io/badge/Auto_Split-%3E1.9GB_Chunks-FF6D00?style=for-the-badge&logo=files&logoColor=white" alt="Auto Split" /></a>
-  <a href="./.github/workflows/batch-mirror.yml"><img src="https://img.shields.io/badge/404_Rescue-Cross_Repo-D50000?style=for-the-badge&logo=github&logoColor=white" alt="404 Rescue" /></a>
-</p>
-
-<p>
-  <a href="../../wiki/Home-en">📘 <b>Technical Manual (Wiki)</b></a> &nbsp;|&nbsp;
-  <a href="../../actions">🚀 <b>Actions Monitor</b></a> &nbsp;|&nbsp;
-  <a href="./sync_state.json">📒 <b>State Ledger (JSON)</b></a>
+  <a href="../../wiki"><strong>📖 Wiki</strong></a> &nbsp;│&nbsp;
+  <a href="./repos.txt"><strong>⚙️ Mirror Manifest</strong></a> &nbsp;│&nbsp;
+  <a href="./sync_state.json"><strong>📊 State Ledger</strong></a> &nbsp;│&nbsp;
+  <a href="../../issues"><strong>🐛 Issues</strong></a>
 </p>
 
 </div>
 
 ---
 
-### 🏗️ System Architecture & Execution Flow
+## Overview
+
+Upstream repositories get deleted, historical Release assets get purged, single files exceed GitHub's `2GB` limit, and multi-arch container images become hard to pull — these are real single points of failure for self-hosted and enterprise intranet infrastructure.
+
+**OmniMirror Hub** is not a simple scheduled sync script. It is a **full, progressive disaster-recovery control plane** stress-tested to production limits. Through **dual-track scheduling**, **1.9GB smart binary splitting**, **mathematical asset-integrity verification**, and **global 404 rescue**, it turns upstream assets into a permanently controllable private/public mirror library with zero manual intervention.
+
+---
+
+## Architecture
 
 ```mermaid
 flowchart TD
-    A[Cron / Push / Manual Trigger] --> B[Init Global Clock WORKFLOW_START_EPOCH]
-    B --> C{Load sync_state.json Ledger}
-    C --> D[Mirror Git Source & Wiki]
-    D --> E{Baseline Router baseline_time}
-    E -->|Published > Baseline| F[🆕 Fast-Track: Zero-Latency Sync]
-    E -->|Published <= Baseline| G[📥 Backfill Track: Progressive Batching]
-    F & G --> H{Asset Size Inspector}
-    H -->|> 1900MB| I[✂️ Binary Chunking + Inject Merge Guide]
-    H -->|<= 1900MB| J[📦 Direct Release Upload]
-    I & J --> K[🐳 Multi-Arch Docker Digest Sync]
-    K --> L{Inner Circuit Breaker >= 18000s?}
-    L -->|Safe| C
-    L -->|Soft Cutoff| M[💾 Atomic State Commit]
-    M --> N[🚑 Rescue Job: 3x Retry + 404 Public Search]
-    N --> O[🔒 20400s Hard Cutoff & Keep-Alive Push]
+    A["Cron 06:00 / 18:00 UTC<br/>or workflow_dispatch"] --> B["Load repos.txt + sync_state.json"]
+    B --> C{"Per-project dispatch"}
+
+    C --> D["Source / Wiki mirror<br/>Clone + Push dual-success gate"]
+    C --> E["Release dual-track<br/>split by baseline_time"]
+    C --> F["Container mirror<br/>Docker Hub / GHCR / LSCR"]
+
+    E --> E1["New track<br/>after baseline · unlimited"]
+    E --> E2["History track<br/>before baseline · BATCH_SIZE backfill"]
+
+    E1 --> G{"Single file > 1.9GB ?"}
+    E2 --> G
+    G -- Yes --> H["split into .part_000...<br/>auto-generated restore notes"]
+    G -- No --> I["Upload as-is"]
+    H --> J["release_is_complete<br/>name + split-count verification"]
+    I --> J
+
+    F --> K["Anonymous Bearer Token<br/>/v2/<repo>/tags/list"]
+    K --> L["Buildx Imagetools<br/>amd64 / arm64 / armv7 passthrough"]
+
+    J --> M["Final fallback task"]
+    M --> N{"HTTP 404 ?"}
+    N -- Yes --> O["Global high-star mirror / Fork rescue"]
+    O --> P["Backup found → restore"]
+    O --> Q["No public backup → archived_dead"]
+    N -- No --> R["Keep in failed_releases, retry next run"]
 ```
 
 ---
 
-### 📊 Engineering Capability Matrix
+## Core Capabilities
 
-| Dimension | Legacy Mirror Scripts | Mirror Hub Architecture |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>⚡ Dual-track scheduling engine</h3>
+      <p>Using the first-build <code>baseline_time</code> as the split line: the <strong>new track</strong> mirrors every new Release with zero delay and no cap; the <strong>history track</strong> backfills legacy versions by <code>BATCH_SIZE</code> (default 15 per run), evading the GitHub API 5000/h limit while still archiving 100% over time.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>✂️ Beating 2GB: split + verification</h3>
+      <p>Files over <code>1.9GB</code> are split with <code>split</code> binary chunking (<code>.part_000...</code>) and one-line restore commands for Linux/macOS and Windows CMD are written into the Release notes. <code>release_is_complete</code> computes the expected part count N from source byte sizes, detects and rebuilds partial Releases with zero collateral damage.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🚑 Anti-404 global rescue</h3>
+      <p>Strictly separates <code>403/429/5xx</code> transient throttling from real <code>404</code> deletions. Already-mirrored assets are absolutely protected; when the source is confirmed <code>404</code> and the local copy is missing, it searches high-star mirrors/forks globally and only then archives to <code>archived_dead</code>.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🐳 Cross-registry multi-arch passthrough</h3>
+      <p>Supports Docker Hub, GHCR (<code>ghcr.io</code>), LinuxServer (<code>lscr.io</code>) and more. Anonymous Bearer Token exchange + real <code>/v2/&lt;repo&gt;/tags/list</code> lookups, with Buildx Imagetools giving <code>amd64</code> / <code>arm64</code> / <code>armv7</code> manifest passthrough without rebuilding.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🔒 Concurrency lock & atomic ledger</h3>
+      <p>Global <code>concurrency</code> queue lock + <code>fetch-depth: 0</code> + <code>safe_jq</code> atomic write validation eliminate concurrent conflicts and <code>sync_state.json</code> corruption.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>⏱️ Circuit breaking & keep-alive</h3>
+      <p>A 5-hour (18000s) graceful main-loop cut-off, a 5h40m (20400s) global safety line for final commit, and automatic keep-alive to prevent 60-day auto-disable.</p>
+    </td>
+  </tr>
+</table>
+
+---
+
+## Why OmniMirror Hub?
+
+| Dimension | Typical sync scripts | **OmniMirror Hub** |
 | :--- | :--- | :--- |
-| **Timeout Safety** | Killed abruptly at GitHub's 6h limit; progress lost | **3-Tier Circuit Breaker**: Inner/outer loop probes + dynamic `REM_SEC` calculation + 20m buffer |
-| **Large Assets** | Fails permanently on files >2GB due to API limits | **Lossless Binary Split**: Auto-chunks `>1900MB` assets into `.part_000` with merge commands |
-| **Sync Strategy** | Full API scans trigger rate limits rapidly | **Dual-Track Baseline**: Locks `baseline_time` for instant new releases & batched history |
-| **Upstream 404** | Assets lost forever if upstream deletes repo/tag | **Cross-Repo Rescue**: Searches top public GitHub mirrors; archives dead tags in `archived_dead` |
-| **Concurrency** | Manual edits during runs cause `git push` failures | **Optimistic Rebase**: Executes 3x backoff retries with `git pull --rebase --autostash` |
+| **Large source repos** | Timeout loses progress, sometimes falsely marked synced | **Clone + Push dual-success gate**, auto retry |
+| **Huge Release assets** | Fails on GitHub's 2GB per-file limit | **1.9GB auto binary split** + cross-platform restore commands |
+| **Partial Releases** | Existing tag → skipped forever | **Name + split math verification**, auto delete & rebuild |
+| **Upstream deletion** | 404 aborts, or local archive wrongly deleted | **Absolute protection of local archives** + global rescue |
+| **Concurrency & ledger** | Concurrent runs corrupt JSON | **Global Concurrency lock** + `safe_jq` atomic writes |
 
 ---
 
-### 🚀 Quick Deployment
+## Quick Start
 
-#### 1. Configure Secret (`MIRROR_TOKEN`)
-Go to `Settings` ➔ `Secrets and variables` ➔ `Actions` ➔ `New repository secret`:
-- **Name**: `MIRROR_TOKEN`
-- **Scopes**: `repo`, `workflow`, `write:packages`, `read:packages`
+### 1. Configure credentials
 
-#### 2. Define Topology (`repos.txt`)
+Go to **`Settings` → `Secrets and variables` → `Actions`** and add:
+
+| Secret | Permissions | Purpose |
+| :--- | :--- | :--- |
+| `MIRROR_TOKEN` | `repo`, `workflow`, `write:packages` | Create mirror repos, push source/wiki, publish Releases, push images |
+
+### 2. Define the manifest `repos.txt`
+
 ```text
-# Syntax: SOURCE_GH_REPO | SOURCE_DOCKER_IMAGE | TARGET_REPO_NAME | DOCKER_TAG_COUNT
-# Use "none" if not applicable
-dify-ai/dify | langgenius/dify-api | dify | 5
-n8n-io/n8n | n8nio/n8n | n8n | 5
-torvalds/linux | none | linux-kernel | 0
+# Format: GitHub source | container image source | target repo | latest image tags to keep
+n8n-io/n8n          | docker.n8n.io/n8nio/n8n | n8n      | 10
+langgenius/dify     | langgenius/dify-api      | dify-api | 15
+none                | langgenius/dify-web      | dify-web | 15
+siyuan-note/siyuan  | b3log/siyuan             | siyuan   | 10
 ```
+
+- `#` comments and blank lines are supported;
+- Use `none` in the first column for image-only projects;
+- See the [Configuration Guide](https://github.com/OWNER/REPO/wiki/Configuration-Guide).
+
+### 3. Run the workflow
+
+- **Scheduled**: daily at `06:00 UTC` and `18:00 UTC`;
+- **Manual**: `Actions` → `全量渐进式总控搬运` → `Run workflow`, optionally pass `batch_size` (default `15`).
+
+---
+
+## Advanced
 
 <details>
-<summary><b>🧩 Expand: Large File (>2GB) Reconstruction Protocol</b></summary>
-<br>
+<summary><strong>📦 How to restore a split file over 1.9GB?</strong></summary>
+<br/>
 
-Assets exceeding `1900MB` are automatically split into `filename.part_000`, `filename.part_001`, etc. Download all parts into the same directory and run:
+Files over `1.9GB` are split into `filename.ext.part_000`, `filename.ext.part_001`… Download all parts into one directory and merge:
 
-- **Linux / macOS (POSIX)**:
-  ```bash
-  cat filename.part_* > filename
-  ```
-- **Windows (CMD)**:
-  ```cmd
-  copy /b filename.part_* filename
-  ```
+```bash
+# Linux / macOS
+cat filename.ext.part_* > filename.ext
+```
+
+```cmd
+:: Windows CMD
+copy /b filename.ext.part_* filename.ext
+```
+
 </details>
+
+<details>
+<summary><strong>📊 How to read <code>sync_state.json</code>?</strong></summary>
+<br/>
+
+Maintained atomically by `safe_jq`. Key fields:
+
+| Field | Meaning |
+| :--- | :--- |
+| `baseline_time` | First-build time; the new/history split line |
+| `synced_releases` | Release tags verified and archived |
+| `failed_releases` | Transient failures, retried by the fallback task |
+| `archived_dead` | Records confirmed as globally gone |
+| `synced_images` | Image tag → `{digest, sync_time}` |
+| `last_repo_push` | Source `pushed_at` of the last successful mirror |
+| `repo_dead` | Marker for a 404 source repo (re-checked each run) |
+| `history_completed` | Human-readable "history fully archived" flag |
+
+</details>
+
+<details>
+<summary><strong>🛡️ Circuit breakers & quota protection</strong></summary>
+<br/>
+
+* **Main-loop cut-off**: at `18000s` (5h) it pauses gracefully and saves progress for the fallback phase;
+* **Global safety line**: at `20400s` (5h40m) it forces a final commit, avoiding data loss from GitHub Actions' 6h kill;
+* **Keep-alive**: writes `.github/.last_run` each run to avoid the 60-day disable.
+
+</details>
+
+<details>
+<summary><strong>🔁 Non-destructive audit of historical false successes (optional)</strong></summary>
+<br/>
+
+If you suspect an older version falsely marked partial Releases as synced, temporarily move them back into `failed_releases` to trigger the new completeness check:
+
+```bash
+cp sync_state.json "sync_state.json.bak.$(date +%Y%m%d%H%M%S)"
+jq 'with_entries(.value |= (
+  .failed_releases = ((.failed_releases // []) + ((.synced_releases // []) | map({"tag": .}))) | unique_by(.tag)
+  | .synced_releases = []
+  | .history_completed = false
+))' sync_state.json > tmp.json && mv tmp.json sync_state.json
+```
+
+Complete releases pass instantly and return to `synced_releases`; partial ones are deleted and rebuilt. See the [Troubleshooting guide](https://github.com/OWNER/REPO/wiki/Troubleshooting-and-Maintenance).
+
+</details>
+
+---
+
+## Documentation
+
+| Document | Contents |
+| :--- | :--- |
+| **[Wiki Home](https://github.com/OWNER/REPO/wiki)** | System overview |
+| **[Configuration Guide](https://github.com/OWNER/REPO/wiki/Configuration-Guide)** | `repos.txt` scenarios & permissions |
+| **[Architecture & Algorithms](https://github.com/OWNER/REPO/wiki/Architecture-and-Algorithms)** | Dual-track, split verification, Anti-404 |
+| **[Troubleshooting & Maintenance](https://github.com/OWNER/REPO/wiki/Troubleshooting-and-Maintenance)** | Ledger fields, audit & recovery, rate limits |
+
+<br/>
+
+<div align="center">
+  <sub>© 2025 OmniMirror Hub · Released under the MIT License · Powered by GitHub Actions</sub>
+</div>
+
+<!-- Footer waving banner (mirrors the hero) -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563eb,100:0f172a&height=110&section=footer&animation=twinkling" width="100%" />
+</div>
