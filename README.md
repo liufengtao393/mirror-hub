@@ -9,11 +9,11 @@
 
 <!-- 徽章矩阵 -->
 <p align="center">
-  <a href="../../actions"><img src="https://img.shields.io/badge/CI-Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white&labelColor=0F172A" alt="CI Engine"></a>
-  <a href="../../packages"><img src="https://img.shields.io/badge/Registry-GHCR-2496ED?style=flat-square&logo=docker&logoColor=white&labelColor=0F172A" alt="Container Registry"></a>
-  <a href="./sync_state.json"><img src="https://img.shields.io/badge/Ledger-Atomic-2EA44F?style=flat-square&logo=json&logoColor=white&labelColor=0F172A" alt="Atomic Ledger"></a>
-  <a href="./batch-mirror.yml"><img src="https://img.shields.io/badge/Core-Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white&labelColor=0F172A" alt="Core Engine"></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-F5C518?style=flat-square&logo=opensourceinitiative&logoColor=white&labelColor=0F172A" alt="License"></a>
+  <a href="../../actions"><img src="https://shields.io/badge/CI-Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white&labelColor=0F172A" alt="CI Engine"></a>
+  <a href="../../packages"><img src="https://shields.io/badge/Registry-GHCR-2496ED?style=flat-square&logo=docker&logoColor=white&labelColor=0F172A" alt="Container Registry"></a>
+  <a href="./sync_state.json"><img src="https://shields.io/badge/Ledger-Atomic-2EA44F?style=flat-square&logo=json&logoColor=white&labelColor=0F172A" alt="Atomic Ledger"></a>
+  <a href="./batch-mirror.yml"><img src="https://shields.io/badge/Core-Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white&labelColor=0F172A" alt="Core Engine"></a>
+  <a href="./LICENSE"><img src="https://shields.io/badge/License-MIT-F5C518?style=flat-square&logo=opensourceinitiative&logoColor=white&labelColor=0F172A" alt="License"></a>
 </p>
 
 <!-- 多语言切换 -->
