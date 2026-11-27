@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- 动态极简大厂风 Banner (利用 Capsule Render 自动生成渐变波浪与高定排版) -->
-<img src="https://vercel.app" width="100%" />
+<!-- 动态极简大厂风 Banner (Capsule Render 渐变波浪) -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=OmniMirror%20Hub&fontSize=60&fontAlignY=38&desc=Source%20%7C%20Wiki%20%7C%20Release%20%7C%20Container%20Mirror&descAlignY=62&descSize=16" width="100%" />
 
 <p align="center">
   <strong>全自动 · 高容错 · 断点续传的开源数字资产容灾与多源镜像总控引擎</strong><br/>
@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="../../actions"><img src="https://shields.io" alt="CI Engine"></a>
-  <a href="../../packages"><img src="https://shields.io" alt="Container Registry"></a>
-  <a href="./sync_state.json"><img src="https://shields.io" alt="Atomic Ledger"></a>
-  <a href="./LICENSE"><img src="https://shields.io" alt="License"></a>
+  <a href="../../actions"><img src="https://img.shields.io/badge/CI-Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="CI Engine"></a>
+  <a href="../../packages"><img src="https://img.shields.io/badge/Registry-GHCR-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Container Registry"></a>
+  <a href="./sync_state.json"><img src="https://img.shields.io/badge/Ledger-Atomic-2ea44f?style=flat-square&logo=json&logoColor=white" alt="Atomic Ledger"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="License"></a>
 </p>
 
 <p align="center">
@@ -134,6 +134,7 @@ siyuan-note/siyuan       | b3log/siyuan              | siyuan     | 10
 * `synced_releases`：已通过完整性校验并归档的 Release Tag 集合。
 * `failed_releases`：因瞬时网络波动或配额限制暂未完成的队列，将在压轴兜底任务中自动重试。
 * `archived_dead`：经全网检索确认上游已彻底删除且无公共备份的绝版版本记录。
+
 </details>
 
 <details>
@@ -156,5 +157,5 @@ siyuan-note/siyuan       | b3log/siyuan              | siyuan     | 10
 <br/>
 
 <div align="center">
-  <img src="https://vercel.app" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer" width="100%" />
 </div>
