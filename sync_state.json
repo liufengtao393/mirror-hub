@@ -1012,8 +1012,8 @@
         "sync_time": "2026-11-26 03:23:11 UTC"
       },
       "main": {
-        "digest": "sha256:4ec11679a23b5dbd790deb9d10734145af0d76fe17b353bf0b6f1b0d5a7c2380",
-        "sync_time": "2026-11-27 07:53:44 UTC"
+        "digest": "sha256:d1c887d0536c8efd388f57e807cb21c560f2a500b79a72c548c548abfa3575f8",
+        "sync_time": "2026-11-27 16:15:04 UTC"
       },
       "0863455d8c8528c4e37e64e98669d5a50d4f5efa": {
         "digest": "sha256:51e583ab02aa4c755b47d981836e4dc337073c6844dbebea18d43d52af5cff17",
@@ -1138,6 +1138,42 @@
       "f28697fd68b128e5d879fb693d35e43675b305e8": {
         "digest": "sha256:43adb26f7efe178122c39df18925c9797f7459890d9c5a6669f4057eee25fa58",
         "sync_time": "2026-11-27 07:53:38 UTC"
+      },
+      "16a54e6c1f4710252ef3791f7a74f16e0a221d2a": {
+        "digest": "sha256:3fff612ceb16aa6290324cfc9258488138872878458ca4c100d226372bfb1616",
+        "sync_time": "2026-11-27 16:14:00 UTC"
+      },
+      "3ec320d6b180d56fbed3fd0df9f3bb95a8720fad": {
+        "digest": "sha256:75981f84b1ce03d2b8789abb477058a0abb5946f2ff4c36e77b51fe90b6879cc",
+        "sync_time": "2026-11-27 16:14:07 UTC"
+      },
+      "4cbb38e8607fda71292f96ff9a0a1c4fa082570f": {
+        "digest": "sha256:d1c887d0536c8efd388f57e807cb21c560f2a500b79a72c548c548abfa3575f8",
+        "sync_time": "2026-11-27 16:14:14 UTC"
+      },
+      "6e0b78dc26733720a4df1a7684882fabb9badf24": {
+        "digest": "sha256:a52b68f8ef84c3b1598ea79b50308b2556ae666e24097fda797215743f39240a",
+        "sync_time": "2026-11-27 16:14:32 UTC"
+      },
+      "809bbddddcfff20a0ebf07440293a1c35837580b": {
+        "digest": "sha256:d473ebbcfe1ca7e4e14b9df483bd98d2ed9a2aa1914401a697dfcdd3118ff223",
+        "sync_time": "2026-11-27 16:14:39 UTC"
+      },
+      "8c945fd3b541e46f98878e57a2d25b8325a8ae85": {
+        "digest": "sha256:20d93c9458db1476fbb89bcf3f11dc4071da25ec1234b561c0839c180c2ee1e0",
+        "sync_time": "2026-11-27 16:14:46 UTC"
+      },
+      "a44b7b79d81408a7cfa7979ca121f0ee51fb156e": {
+        "digest": "sha256:2740427d626c9d1d56d1a4f86eaad4897ae1e974cc576736b8cb28afd201757e",
+        "sync_time": "2026-11-27 16:14:52 UTC"
+      },
+      "b2cfc31292a179801a02e89d97397d610da62e35": {
+        "digest": "sha256:11f253576d9f37cd3a9231565ee56127edccfe97c11444f9882ae5af0991f1c9",
+        "sync_time": "2026-11-27 16:14:57 UTC"
+      },
+      "hotfix-1.20.0-fix.3": {
+        "digest": "sha256:a52b68f8ef84c3b1598ea79b50308b2556ae666e24097fda797215743f39240a",
+        "sync_time": "2026-11-27 16:15:00 UTC"
       }
     }
   },
