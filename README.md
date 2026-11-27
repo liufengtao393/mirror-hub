@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- 顶部高定渐变 Banner -->
-<img src="https://capsule-render.vercel.app/api?type=soft&color=0:090D16,100:161B22&height=140&section=header&text=OmniMirror%20Hub&fontSize=36&fontColor=ffffff&fontAlignY=42&desc=全自动%20·%20高容错%20·%20断点续传的开源数字资产容灾与多源镜像总控引擎&descAlignY=66&descSize=14&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=soft&color=090D16&height=135&section=header&text=OmniMirror%20Hub&fontSize=36&fontColor=ffffff&fontAlignY=42&desc=全自动%20·%20高容错%20·%20断点续传的开源数字资产容灾与多源镜像总控引擎&descAlignY=66&descSize=14&animation=fadeIn" width="100%" />
 
 <p align="center">
   <strong>为关键开源基础设施提供源码、Wiki、全量 Release 二进制及多架构容器镜像的永久性容灾归档</strong>
@@ -9,11 +9,11 @@
 
 <!-- 徽章矩阵 -->
 <p align="center">
-  <a href="../../actions"><img src="https://shields.io/badge/CI%2FCD-GitHub%20Actions-0F172A?style=flat-square&logo=githubactions&logoColor=%2360A5FA&labelColor=1E293B" alt="CI/CD - GitHub Actions"></a>
-  <a href="../../packages"><img src="https://shields.io/badge/Registry-GHCR%20%7C%20DockerHub%20%7C%20LSCR-0F172A?style=flat-square&logo=docker&logoColor=%2338BDF8&labelColor=1E293B" alt="Registry - GHCR | DockerHub | LSCR"></a>
-  <a href="./sync_state.json"><img src="https://shields.io/badge/Ledger-Atomic%20JSON-0F172A?style=flat-square&logo=json&logoColor=%2310B981&labelColor=1E293B" alt="Ledger - Atomic JSON"></a>
-  <a href="./batch-mirror.yml"><img src="https://shields.io/badge/Core-Bash%20%26%20jq%20Engine-0F172A?style=flat-square&logo=gnubash&logoColor=%23F59E0B&labelColor=1E293B" alt="Core - Bash & jq Engine"></a>
-  <a href="./LICENSE"><img src="https://shields.io/badge/License-MIT-0F172A?style=flat-square&logo=opensourceinitiative&logoColor=%23C084FC&labelColor=1E293B" alt="License - MIT"></a>
+  <a href="../../actions"><img src="https://shields.io/badge/CI%2FCD-GitHub%20Actions-090D16?style=flat-square&logo=githubactions&logoColor=%2360A5FA&labelColor=161B22" alt="CI/CD - GitHub Actions"></a>
+  <a href="../../packages"><img src="https://shields.io/badge/Registry-GHCR%20%7C%20DockerHub%20%7C%20LSCR-090D16?style=flat-square&logo=docker&logoColor=%2338BDF8&labelColor=161B22" alt="Registry - GHCR | DockerHub | LSCR"></a>
+  <a href="./sync_state.json"><img src="https://shields.io/badge/Ledger-Atomic%20JSON-090D16?style=flat-square&logo=json&logoColor=%2334D399&labelColor=161B22" alt="Ledger - Atomic JSON"></a>
+  <a href="./batch-mirror.yml"><img src="https://shields.io/badge/Core-Bash%20%26%20jq%20Engine-090D16?style=flat-square&logo=gnubash&logoColor=%23FBBF24&labelColor=161B22" alt="Core - Bash & jq Engine"></a>
+  <a href="./LICENSE"><img src="https://shields.io/badge/License-MIT-090D16?style=flat-square&logo=opensourceinitiative&logoColor=%23C084FC&labelColor=161B22" alt="License - MIT"></a>
 </p>
 
 <!-- 多语言切换 -->
@@ -237,5 +237,5 @@ jq 'with_entries(.value |= (
 <br/>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:161B22,100:090D16&height=100&section=footer" width="100%" />
+  <sub>© 2025 OmniMirror Hub · Released under the MIT License · Powered by GitHub Actions</sub>
 </div>
