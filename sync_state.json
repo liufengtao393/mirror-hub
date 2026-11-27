@@ -17760,5 +17760,12 @@
     "last_repo_push": "2026-11-24T20:52:26Z",
     "baseline_time": "2026-11-27T05:33:00Z",
     "synced_releases": []
+  },
+  "kwrt": {
+    "gh_src": "kiddin9/Kwrt",
+    "docker_src": "none",
+    "last_repo_push": "2026-11-23T15:26:41Z",
+    "baseline_time": "2026-11-27T05:33:10Z",
+    "synced_releases": []
   }
 }
