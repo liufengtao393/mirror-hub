@@ -13467,9 +13467,24 @@
   "outline": {
     "gh_src": "outline/outline",
     "docker_src": "outlinewiki/outline",
-    "last_repo_push": "2026-11-26T16:42:39Z",
+    "last_repo_push": "2026-11-27T01:52:45Z",
     "baseline_time": "2026-11-26T17:01:35Z",
     "synced_releases": [
+      "v0.66.1",
+      "v0.66.2",
+      "v0.66.3",
+      "v0.67.0-pre.1",
+      "v0.67.1",
+      "v0.67.2",
+      "v0.68.0",
+      "v0.68.1",
+      "v0.69.0",
+      "v0.69.1",
+      "v0.69.2",
+      "v0.70.0",
+      "v0.70.1",
+      "v0.70.2",
+      "v0.71.0",
       "v0.72.0",
       "v0.72.1",
       "v0.72.2",
@@ -13526,15 +13541,15 @@
       "v1.9.2"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-26 17:03:38 UTC",
+    "last_sync_time": "2026-11-27 03:50:59 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:4583bb244dbb4464d8a632c75044d3b2f9fe44382b6a4b84d97995f473b823e4",
         "sync_time": "2026-11-26 17:03:45 UTC"
       },
       "nightly": {
-        "digest": "sha256:1f72aa2cc43240d5ca8cc97aa3e9b22097fb9217e3a7082741b7a20e9985e68c",
-        "sync_time": "2026-11-26 17:04:04 UTC"
+        "digest": "sha256:07230e9e1ebd2346492a9075ea6eb0c420c316514d5cd5d30d7afc5ad5121182",
+        "sync_time": "2026-11-27 03:51:14 UTC"
       },
       "nightly-20261122": {
         "digest": "sha256:49cea0f9bd2c61951d3cb58e8da9a4a5347db4f61ffb2fbc36099ebf0d74a2be",
@@ -13571,6 +13586,14 @@
       "nightly-fd66b5e": {
         "digest": "sha256:8985e14c4ed5220296be3acea9e8acd05d4af4d215e3330afdc14b0cd5143b89",
         "sync_time": "2026-11-26 17:04:47 UTC"
+      },
+      "nightly-20261127": {
+        "digest": "sha256:07230e9e1ebd2346492a9075ea6eb0c420c316514d5cd5d30d7afc5ad5121182",
+        "sync_time": "2026-11-27 03:51:18 UTC"
+      },
+      "nightly-2fb1503": {
+        "digest": "sha256:07230e9e1ebd2346492a9075ea6eb0c420c316514d5cd5d30d7afc5ad5121182",
+        "sync_time": "2026-11-27 03:51:21 UTC"
       }
     }
   },
