@@ -18451,5 +18451,15 @@
     ],
     "failed_releases": [],
     "last_sync_time": "2026-11-27 05:52:05 UTC"
+  },
+  "modern-web-guidance-src": {
+    "gh_src": "GoogleChrome/modern-web-guidance-src",
+    "docker_src": "none",
+    "last_repo_push": "2026-11-26T20:24:03Z",
+    "baseline_time": "2026-11-27T05:52:29Z",
+    "synced_releases": [
+      "audit-data"
+    ],
+    "history_completed": true
   }
 }
