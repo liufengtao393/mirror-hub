@@ -347,7 +347,7 @@
   "teable": {
     "gh_src": "teableio/teable",
     "docker_src": "ghcr.io/teableio/teable",
-    "last_repo_push": "2026-11-26T11:52:57Z",
+    "last_repo_push": "2026-11-26T23:39:56Z",
     "baseline_time": "2026-11-26T03:05:45Z",
     "synced_releases": [
       "release.2026-04-21T08-57-20Z.1513",
@@ -508,7 +508,10 @@
       "release.2026-11-21T01-51-32Z.4009",
       "release.2026-11-23T09-53-24Z.4031",
       "release.2026-11-24T05-06-24Z.4043",
+      "v1.0.0-beta",
+      "v1.1.0-beta",
       "v1.10.0",
+      "v1.2.0-beta",
       "v1.2.1-beta.0",
       "v1.3.0-beta.0",
       "v1.3.1",
@@ -524,27 +527,15 @@
       "v1.9.0",
       "v1.9.1"
     ],
-    "failed_releases": [
-      {
-        "tag": "v1.2.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.1.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.0.0-beta",
-        "pre": "true"
-      }
-    ],
-    "last_sync_time": "2026-11-26 16:18:25 UTC",
+    "failed_releases": [],
+    "last_sync_time": "2026-11-27 01:32:36 UTC",
     "synced_images": {
       "latest": {
-        "digest": "sha256:687ce65fa345050cda67958de5dde9ed9a605266421fbad469f1382a3f012ae1",
-        "sync_time": "2026-11-26 03:13:39 UTC"
+        "digest": "sha256:e45e3e2a3eb58812fe3ae80c24783b1dc217f1e8ae9af59c18c48e3608d61793",
+        "sync_time": "2026-11-27 01:33:00 UTC"
       }
-    }
+    },
+    "history_completed": true
   },
   "teable-deployment": {
     "gh_src": "teableio/teable-deployment",
