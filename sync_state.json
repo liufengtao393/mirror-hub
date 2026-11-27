@@ -16693,5 +16693,54 @@
         "sync_time": "2026-11-27 05:02:30 UTC"
       }
     }
+  },
+  "music-tag-web": {
+    "gh_src": "xhongc/music-tag-web",
+    "docker_src": "xhongc/music_tag_web",
+    "last_repo_push": "2026-11-20T07:11:14Z",
+    "baseline_time": "2026-11-27T05:02:34Z",
+    "synced_releases": [],
+    "synced_images": {
+      "2.7.6": {
+        "digest": "sha256:9e0bf7c69034f0c9ee0b5e0caf898cdd36633fcc1e8dbb0351f078da05766aba",
+        "sync_time": "2026-11-27 05:02:37 UTC"
+      },
+      "2.7.7": {
+        "digest": "sha256:e8507cb368af38a9bde43427201a214a243cf5327224d6e54c6840e09e39743b",
+        "sync_time": "2026-11-27 05:02:40 UTC"
+      },
+      "2.7.8": {
+        "digest": "sha256:a6c6687e29be10efb2a90d741dd45eaa5d52a9114335dcfd125c8b93d6c5223f",
+        "sync_time": "2026-11-27 05:02:43 UTC"
+      },
+      "2.7.9": {
+        "digest": "sha256:e5573acb764fe187940e7ef2e8662adc7b564183faf66974551f0a7e12e5e72b",
+        "sync_time": "2026-11-27 05:02:46 UTC"
+      },
+      "2.8.0": {
+        "digest": "sha256:d4279ce5b6a1334eb821ea870cb2549842513fe90c7f6da58277841d86b1c9e9",
+        "sync_time": "2026-11-27 05:02:49 UTC"
+      },
+      "2.8.1": {
+        "digest": "sha256:6e64c91a4dfa806480e5a0dd895421733a7cc989ac01b7309e9edcb4d0c5c2c1",
+        "sync_time": "2026-11-27 05:02:52 UTC"
+      },
+      "2.8.2": {
+        "digest": "sha256:4682a379f3b420afcbe0439ae2a78b2641748a96df60b9cfbec9600c804885fe",
+        "sync_time": "2026-11-27 05:02:55 UTC"
+      },
+      "beta": {
+        "digest": "sha256:e8507cb368af38a9bde43427201a214a243cf5327224d6e54c6840e09e39743b",
+        "sync_time": "2026-11-27 05:02:58 UTC"
+      },
+      "buildcache": {
+        "digest": "sha256:fb80522a6d78e3eb612719ebe848b1c3fc0ceeafabd40c5279bfbe95f97e0f41",
+        "sync_time": "2026-11-27 05:03:01 UTC"
+      },
+      "latest": {
+        "digest": "sha256:4682a379f3b420afcbe0439ae2a78b2641748a96df60b9cfbec9600c804885fe",
+        "sync_time": "2026-11-27 05:03:04 UTC"
+      }
+    }
   }
 }
