@@ -8149,9 +8149,31 @@
       "v1.0.1",
       "v1.0.2",
       "v1.0.3",
+      "v1.0.4",
+      "v2.0.0",
+      "v2.0.0-beta.13",
+      "v2.0.0-beta.14",
+      "v2.0.0-beta.15",
+      "v2.0.0-beta.17",
+      "v2.0.0-beta.18",
+      "v2.0.0-beta.19",
+      "v2.0.0-beta.20",
       "v2.0.0-beta1",
+      "v2.0.0-beta10",
+      "v2.0.0-beta11",
+      "v2.0.0-beta12",
       "v2.0.0-beta2",
       "v2.0.0-beta3",
+      "v2.0.0-beta4",
+      "v2.0.0-beta6",
+      "v2.0.0-beta7",
+      "v2.0.0-beta8",
+      "v2.0.0-beta9",
+      "v2.0.0-rc.1",
+      "v2.0.0-rc.2",
+      "v2.0.0-rc.3",
+      "v2.1.0",
+      "v2.1.0-beta.1",
       "v2.1.1",
       "v2.10.0",
       "v2.10.0-beta.1",
@@ -8197,6 +8219,9 @@
       "v2.6.0-beta.3",
       "v2.6.0-beta.5",
       "v2.6.1",
+      "v2.6.2",
+      "v2.6.3",
+      "v2.6.4",
       "v2.7.0",
       "v2.7.0-beta.1",
       "v2.7.0-beta.2",
@@ -8218,109 +8243,8 @@
       "v2.9.0-beta.3",
       "v2.9.1"
     ],
-    "failed_releases": [
-      {
-        "tag": "v2.6.4",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.6.3",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.6.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.1.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.1.0-beta.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.0.0-rc.3",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-rc.2",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-rc.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta.20",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta.19",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta.18",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta.17",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta.15",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta.14",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta.13",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta12",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta11",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta10",
-        "pre": "true"
-      },
-      {
-        "tag": "v1.0.4",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.0.0-beta9",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta8",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta7",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta6",
-        "pre": "true"
-      },
-      {
-        "tag": "v2.0.0-beta4",
-        "pre": "true"
-      }
-    ],
-    "last_sync_time": "2026-11-27 12:41:08 UTC",
+    "failed_releases": [],
+    "last_sync_time": "2026-11-27 20:20:39 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:4851e54a46b206517c574821bb5cc67f170d2156041e9fbc4c9193b45e84a75b",
