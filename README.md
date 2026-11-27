@@ -9,11 +9,11 @@
 
 <!-- 徽章矩阵 -->
 <p align="center">
-  <a href="../../actions"><img src="https://shields.io/badge/CI%2FCD-GitHub%20Actions-090D16?style=flat-square&logo=githubactions&logoColor=%2360A5FA&labelColor=161B22" alt="CI/CD - GitHub Actions"></a>
+  <a href="../../actions"><img src="https://shields.io/badge/CI%2FCD-GitHub%20Actions-090D16?style=flat-square&logo=githubactions&logoColor=%23FFFFFF&labelColor=161B22" alt="CI/CD - GitHub Actions"></a>
   <a href="../../packages"><img src="https://shields.io/badge/Registry-GHCR%20%7C%20DockerHub%20%7C%20LSCR-090D16?style=flat-square&logo=docker&logoColor=%2338BDF8&labelColor=161B22" alt="Registry - GHCR | DockerHub | LSCR"></a>
   <a href="./sync_state.json"><img src="https://shields.io/badge/Ledger-Atomic%20JSON-090D16?style=flat-square&logo=json&logoColor=%2334D399&labelColor=161B22" alt="Ledger - Atomic JSON"></a>
   <a href="./batch-mirror.yml"><img src="https://shields.io/badge/Core-Bash%20%26%20jq%20Engine-090D16?style=flat-square&logo=gnubash&logoColor=%23FBBF24&labelColor=161B22" alt="Core - Bash & jq Engine"></a>
-  <a href="./LICENSE"><img src="https://shields.io/badge/License-MIT-090D16?style=flat-square&logo=opensourceinitiative&logoColor=%23C084FC&labelColor=161B22" alt="License - MIT"></a>
+  <a href="./LICENSE"><img src="https://shields.io/badge/License-MIT-090D16?style=flat-square&logo=opensourceinitiative&logoColor=%23FFFFFF&labelColor=161B22" alt="License - MIT"></a>
 </p>
 
 <!-- 多语言切换 -->
