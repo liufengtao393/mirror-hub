@@ -18,7 +18,7 @@
 
 <!-- 多語言切換 -->
 <p align="center">
-  <a href="./README.md">简体中文</a> &nbsp;│&nbsp;
+  <a href="../../">简体中文</a> &nbsp;│&nbsp;
   <strong>繁體中文</strong> &nbsp;│&nbsp;
   <a href="./README_EN.md">English</a> &nbsp;│&nbsp;
   <a href="./README_JA.md">日本語</a> &nbsp;│&nbsp;
