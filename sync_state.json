@@ -13973,6 +13973,38 @@
       "stable": {
         "digest": "sha256:08f4fb26cedd0e5743792178ee744c1ea8b3ccd8cd9da1941ffc3ba7ef16ae6c",
         "sync_time": "2026-11-26 17:10:27 UTC"
+      },
+      "0.6.0": {
+        "digest": "sha256:e4afd7a78d70d71dac117bb9ffd442f8401efd09b19e20ffb224cfdfe55848b3",
+        "sync_time": "2026-11-27 18:23:57 UTC"
+      },
+      "sha-1d0cdb94d9703aeabe0639efd40e1785da9c01a1": {
+        "digest": "sha256:25bd04834115e0d8405ca9eea7d3f169884c58b1d02b4dcc9f4c372e7d575378",
+        "sync_time": "2026-11-27 18:24:06 UTC"
+      },
+      "sha-2a017c1a40b96e1ce0ff3479bf1af0909184650d": {
+        "digest": "sha256:a7c39e80290c5b2b96cceda8f464da5be11e3308430e8981e5897b8e0874b122",
+        "sync_time": "2026-11-27 18:24:14 UTC"
+      },
+      "sha-77b5469832758d1cbee1a940f3012a1ae1c74cd3": {
+        "digest": "sha256:e4afd7a78d70d71dac117bb9ffd442f8401efd09b19e20ffb224cfdfe55848b3",
+        "sync_time": "2026-11-27 18:24:17 UTC"
+      },
+      "sha-bb2df2086f58632a4525eb2c1c05b90289c09d42": {
+        "digest": "sha256:2c8e75fbbf9911cb09243910a60f99bbf4551f3d9830a2a45c4b150abad4e1cf",
+        "sync_time": "2026-11-27 18:24:25 UTC"
+      },
+      "sha-d3f35f100ff781c24074073a2a4c77df14141abb": {
+        "digest": "sha256:1e3369e2583dfb7ca3710cfc418acc5e791f9c6d28a5696fec71e2fee95b7af3",
+        "sync_time": "2026-11-27 18:24:34 UTC"
+      },
+      "sha-d8b62cb9595b2f53250bdd1abf2ca3f5435288c1": {
+        "digest": "sha256:c7faf5a1ca06db449739e4d7f9d37f53a3ef3daab1b376919a5b90ec32d71888",
+        "sync_time": "2026-11-27 18:24:43 UTC"
+      },
+      "sha-fb185215e569f6304dbaa240dd49dd1c6b7d6ce6": {
+        "digest": "sha256:ede8a7d4930910d3ab78dfcb936ca71b403c9faf1fcc10f19e96fa9d108c944d",
+        "sync_time": "2026-11-27 18:24:50 UTC"
       }
     }
   },
