@@ -1968,8 +1968,23 @@
     "synced_releases": [
       "nightly-20260317-44fc10b",
       "nightly-20260409",
+      "v0.10.6-alpha.2",
+      "v0.10.6-alpha.3",
+      "v0.10.6-alpha.4",
+      "v0.10.7",
+      "v0.10.7-alpha.1",
+      "v0.10.7-alpha.2",
       "v0.10.8",
+      "v0.10.8-alpha.1",
+      "v0.10.8-alpha.11",
       "v0.10.8-alpha.12",
+      "v0.10.8-alpha.2",
+      "v0.10.8-alpha.3",
+      "v0.10.8-alpha.4",
+      "v0.10.8-alpha.5",
+      "v0.10.8-alpha.6",
+      "v0.10.8-alpha.7",
+      "v0.10.8-alpha.8",
       "v0.10.8-alpha.9",
       "v0.10.9",
       "v0.10.9-alpha.1",
@@ -2105,66 +2120,6 @@
       "v1.0.0-rc.8"
     ],
     "failed_releases": [
-      {
-        "tag": "v0.10.8-alpha.11",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.8-alpha.8",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.8-alpha.7",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.8-alpha.6",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.8-alpha.5",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.8-alpha.4",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.8-alpha.3",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.8-alpha.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.8-alpha.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.7",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.7-alpha.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.7-alpha.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.6-alpha.4",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.6-alpha.3",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.10.6-alpha.2",
-        "pre": "false"
-      },
       {
         "tag": "v0.10.6-alpha.1",
         "pre": "false"
@@ -2362,7 +2317,7 @@
         "pre": "false"
       }
     ],
-    "last_sync_time": "2026-11-27 08:03:36 UTC",
+    "last_sync_time": "2026-11-27 16:23:26 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:d6effcdbc58175494765c0cc5954bdacb2300516eec79ba1a9c61f9b9fae7b49",
