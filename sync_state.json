@@ -2818,9 +2818,12 @@
   "cherry-studio": {
     "gh_src": "CherryHQ/cherry-studio",
     "docker_src": "none",
-    "last_repo_push": "2026-11-26T16:38:47Z",
+    "last_repo_push": "2026-11-27T00:16:28Z",
     "baseline_time": "2026-11-26T13:29:17Z",
-    "synced_releases": [],
+    "synced_releases": [
+      "v1.5.7-rc.2",
+      "v2.0.11"
+    ],
     "failed_releases": [
       {
         "tag": "v2.2.3",
@@ -2888,10 +2891,6 @@
       },
       {
         "tag": "v2.0.12",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.0.11",
         "pre": "false"
       },
       {
@@ -3249,10 +3248,6 @@
       {
         "tag": "v1.5.7",
         "pre": "false"
-      },
-      {
-        "tag": "v1.5.7-rc.2",
-        "pre": "true"
       },
       {
         "tag": "v1.5.7-rc.1",
@@ -4010,7 +4005,8 @@
         "tag": "v0.2.0",
         "pre": "false"
       }
-    ]
+    ],
+    "last_sync_time": "2026-11-27 02:55:37 UTC"
   },
   "cherry-studio-app": {
     "gh_src": "CherryHQ/cherry-studio-app",
