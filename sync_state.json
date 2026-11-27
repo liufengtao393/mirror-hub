@@ -17161,6 +17161,7 @@
       "v0.0.41",
       "v0.0.42",
       "v0.0.43",
+      "v0.0.44",
       "v0.0.5",
       "v0.0.6",
       "v0.0.7",
@@ -17168,7 +17169,7 @@
       "v0.0.9"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-27 05:12:19 UTC",
+    "last_sync_time": "2026-11-27 19:30:19 UTC",
     "history_completed": true
   },
   "moviepilot-v3": {
