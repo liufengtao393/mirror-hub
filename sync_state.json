@@ -523,6 +523,7 @@
       "release.2026-11-21T01-51-32Z.4009",
       "release.2026-11-23T09-53-24Z.4031",
       "release.2026-11-24T05-06-24Z.4043",
+      "release.2026-11-26T23-38-15Z.4093",
       "v1.0.0-beta",
       "v1.1.0-beta",
       "v1.10.0",
@@ -543,11 +544,47 @@
       "v1.9.1"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-27 01:32:36 UTC",
+    "last_sync_time": "2026-11-27 07:41:01 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:e45e3e2a3eb58812fe3ae80c24783b1dc217f1e8ae9af59c18c48e3608d61793",
         "sync_time": "2026-11-27 01:33:00 UTC"
+      },
+      "buildcache": {
+        "digest": "sha256:fcb4584df396c162ee5ab20e7a4c77cfb988aa892a84fc04fb896484ebd54864",
+        "sync_time": "2026-11-27 07:42:21 UTC"
+      },
+      "develop": {
+        "digest": "sha256:a937cc11272710a752925d26c57841423176b129038a8940463ee9be82d92f3f",
+        "sync_time": "2026-11-27 07:42:53 UTC"
+      },
+      "e89351822b22b5e3d0aee026fdb3ea432551679a": {
+        "digest": "sha256:ea9dda30063a7f48b8e2072c05e2aabd8c59ce8f683d506f2edc1322c782c35b",
+        "sync_time": "2026-11-27 07:43:12 UTC"
+      },
+      "pr-328": {
+        "digest": "sha256:2fa8c1738393703774872b50855b701ebc4e58c22bad1dc1eb31080056563759",
+        "sync_time": "2026-11-27 07:43:32 UTC"
+      },
+      "sha-27576db": {
+        "digest": "sha256:83d456bbec425e9c4ecd511a7424a740f1032b89d8ebdb8022a7e640c16b471c",
+        "sync_time": "2026-11-27 07:43:50 UTC"
+      },
+      "sha-47652db": {
+        "digest": "sha256:3eec67aff2b5b6920a34f94c0cbe33a90e07b73e3131f01b1fe12f7bab50817e",
+        "sync_time": "2026-11-27 07:44:08 UTC"
+      },
+      "sha-55bb0ac": {
+        "digest": "sha256:af9c81c4e3307acf7aaa4ef07b5ad58dd13d1319f0fe58c94b0bba3dbd432230",
+        "sync_time": "2026-11-27 07:44:25 UTC"
+      },
+      "sha-6f84fb0": {
+        "digest": "sha256:2fa8c1738393703774872b50855b701ebc4e58c22bad1dc1eb31080056563759",
+        "sync_time": "2026-11-27 07:44:29 UTC"
+      },
+      "sha-d31c17f": {
+        "digest": "sha256:68d6dc50b2cae75ff665246f8ab67ed1ee5fed7a9eb1dd8c5508684ed065a521",
+        "sync_time": "2026-11-27 07:44:46 UTC"
       }
     },
     "history_completed": true
