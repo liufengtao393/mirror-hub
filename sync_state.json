@@ -5307,6 +5307,14 @@
     "last_repo_push": "2026-09-06T11:26:21Z",
     "baseline_time": "2026-11-26T15:36:19Z",
     "synced_releases": [
+      "v0.17.0-alpha",
+      "v0.17.0-beta",
+      "v0.17.0-rc",
+      "v0.17.0-rc.2",
+      "v0.18.0-alpha",
+      "v0.18.0-beta",
+      "v0.18.0-rc",
+      "v0.18.0-rc.1",
       "v1.0.0-beta",
       "v1.0.0-beta.1",
       "v1.1.0-beta",
@@ -5434,41 +5442,9 @@
       {
         "tag": "v0.18.0-rc.2",
         "pre": "false"
-      },
-      {
-        "tag": "v0.18.0-rc.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.18.0-rc",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.18.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.18.0-alpha",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.17.0-rc.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.17.0-rc",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.17.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.17.0-alpha",
-        "pre": "false"
       }
     ],
-    "last_sync_time": "2026-11-27 11:53:44 UTC",
+    "last_sync_time": "2026-11-27 20:08:16 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:5f800c81870813399272278c7fece10f11e84c793e60e9f7d125f64ba5febd44",
