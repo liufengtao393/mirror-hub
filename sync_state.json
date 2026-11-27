@@ -18279,5 +18279,58 @@
       "v2.8.0"
     ],
     "history_completed": true
+  },
+  "ffmpeg": {
+    "gh_src": "FFmpeg/FFmpeg",
+    "docker_src": "jrottenberg/ffmpeg",
+    "last_repo_push": "2026-11-27T03:08:35Z",
+    "baseline_time": "2026-11-27T05:48:29Z",
+    "synced_releases": [],
+    "synced_images": {
+      "9-nvidia": {
+        "digest": "sha256:d6581205486eb5c6c232782d0171e6d2a56e40bea38285420744527c1c50ce96",
+        "sync_time": "2026-11-27 05:48:40 UTC"
+      },
+      "9-qsv": {
+        "digest": "sha256:880eab7d3176fef4efd4f287eb7a9aaea23f0b748b5c5cb53456034bf744d9b5",
+        "sync_time": "2026-11-27 05:48:46 UTC"
+      },
+      "9-scratch": {
+        "digest": "sha256:1982791b1fcca54ac718bb44d250547d59ec44a6d3cf6e38bbd875c97d9b9dee",
+        "sync_time": "2026-11-27 05:48:53 UTC"
+      },
+      "9-vaapi": {
+        "digest": "sha256:cc659883a2a3d9726f0f4fd5e49b1a4c0ff882c3675f8ceaa8c3ea870da6c8c6",
+        "sync_time": "2026-11-27 05:48:57 UTC"
+      },
+      "9.1-nvidia": {
+        "digest": "sha256:d6581205486eb5c6c232782d0171e6d2a56e40bea38285420744527c1c50ce96",
+        "sync_time": "2026-11-27 05:49:00 UTC"
+      },
+      "9.1-nvidia2404": {
+        "digest": "sha256:d6581205486eb5c6c232782d0171e6d2a56e40bea38285420744527c1c50ce96",
+        "sync_time": "2026-11-27 05:49:02 UTC"
+      },
+      "9.1-qsv": {
+        "digest": "sha256:880eab7d3176fef4efd4f287eb7a9aaea23f0b748b5c5cb53456034bf744d9b5",
+        "sync_time": "2026-11-27 05:49:04 UTC"
+      },
+      "9.1-vaapi": {
+        "digest": "sha256:cc659883a2a3d9726f0f4fd5e49b1a4c0ff882c3675f8ceaa8c3ea870da6c8c6",
+        "sync_time": "2026-11-27 05:49:06 UTC"
+      },
+      "9.1.0-nvidia2404": {
+        "digest": "sha256:d6581205486eb5c6c232782d0171e6d2a56e40bea38285420744527c1c50ce96",
+        "sync_time": "2026-11-27 05:49:09 UTC"
+      },
+      "9.1.0-qsv2404": {
+        "digest": "sha256:880eab7d3176fef4efd4f287eb7a9aaea23f0b748b5c5cb53456034bf744d9b5",
+        "sync_time": "2026-11-27 05:49:11 UTC"
+      },
+      "latest": {
+        "digest": "sha256:f215daca449172bd36abeb3e270ba665507cfadc0c8c6fda6c071fc3c34a2dc7",
+        "sync_time": "2026-11-27 05:49:18 UTC"
+      }
+    }
   }
 }
