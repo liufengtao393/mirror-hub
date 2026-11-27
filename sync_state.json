@@ -8329,6 +8329,10 @@
       "stable-alpine3.24-perl": {
         "digest": "sha256:5a772e2c6ecca812a72d1b2a8dbc59ba6f37213983959aa84bcc0fcdfa42fcf6",
         "sync_time": "2026-11-26 16:23:55 UTC"
+      },
+      "stable": {
+        "digest": "sha256:755983e0e0e568e4c86297cc91485d7a6f9fb73e42d8a19cdba3eac9e8b8cfc9",
+        "sync_time": "2026-11-27 12:17:19 UTC"
       }
     }
   },
