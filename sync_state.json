@@ -15174,5 +15174,12 @@
         "sync_time": "2026-11-27 04:13:55 UTC"
       }
     }
+  },
+  "lunatv-config": {
+    "gh_src": "hafrey1/LunaTV-config",
+    "docker_src": "none",
+    "last_repo_push": "2026-11-26T17:10:41Z",
+    "baseline_time": "2026-11-27T04:14:05Z",
+    "synced_releases": []
   }
 }
