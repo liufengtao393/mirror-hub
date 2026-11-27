@@ -4151,7 +4151,7 @@
   "nocodb": {
     "gh_src": "nocodb/nocodb",
     "docker_src": "nocodb/nocodb",
-    "last_repo_push": "2026-11-26T14:24:45Z",
+    "last_repo_push": "2026-11-26T18:51:59Z",
     "baseline_time": "2026-11-26T15:28:09Z",
     "synced_releases": [],
     "failed_releases": [
