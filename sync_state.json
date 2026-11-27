@@ -13855,7 +13855,7 @@
   "openlist": {
     "gh_src": "OpenListTeam/OpenList",
     "docker_src": "openlistteam/openlist",
-    "last_repo_push": "2026-11-26T04:56:42Z",
+    "last_repo_push": "2026-11-27T02:51:01Z",
     "baseline_time": "2026-11-26T17:10:43Z",
     "synced_releases": [
       "beta",
