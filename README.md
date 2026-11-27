@@ -1,41 +1,41 @@
 <div align="center">
 
-<!-- 顶部高定渐变 Banner -->
-<img src="https://capsule-render.vercel.app/api?type=soft&color=090D16&height=135&section=header&text=OmniMirror%20Hub&fontSize=36&fontColor=ffffff&fontAlignY=42&desc=全自动%20·%20高容错%20·%20断点续传的开源数字资产容灾与多源镜像总控引擎&descAlignY=66&descSize=14&animation=fadeIn" width="100%" />
+<!-- 顶部流光渐变动态波浪 Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:2563eb&height=200&section=header&text=OmniMirror%20Hub&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=全自动%20·%20高容错%20·%20断点续传的开源数字资产容灾与多源镜像总控引擎&descAlignY=58&descSize=15&animation=twinkling" width="100%" />
 
 <p align="center">
   <strong>为关键开源基础设施提供源码、Wiki、全量 Release 二进制及多架构容器镜像的永久性容灾归档</strong>
 </p>
 
-<!-- 徽章矩阵 -->
+<!-- 高对比双色拼接徽章 -->
 <p align="center">
-  <a href="../../actions"><img src="https://shields.io/badge/CI%2FCD-GitHub%20Actions-090D16?style=flat-square&logo=githubactions&logoColor=%23FFFFFF&labelColor=161B22" alt="CI/CD - GitHub Actions"></a>
-  <a href="../../packages"><img src="https://shields.io/badge/Registry-GHCR%20%7C%20DockerHub%20%7C%20LSCR-090D16?style=flat-square&logo=docker&logoColor=%2338BDF8&labelColor=161B22" alt="Registry - GHCR | DockerHub | LSCR"></a>
-  <a href="./sync_state.json"><img src="https://shields.io/badge/Ledger-Atomic%20JSON-090D16?style=flat-square&logo=json&logoColor=%2334D399&labelColor=161B22" alt="Ledger - Atomic JSON"></a>
-  <a href="./batch-mirror.yml"><img src="https://shields.io/badge/Core-Bash%20%26%20jq%20Engine-090D16?style=flat-square&logo=gnubash&logoColor=%23FBBF24&labelColor=161B22" alt="Core - Bash & jq Engine"></a>
-  <a href="./LICENSE"><img src="https://shields.io/badge/License-MIT-090D16?style=flat-square&logo=opensourceinitiative&logoColor=%23FFFFFF&labelColor=161B22" alt="License - MIT"></a>
+  <a href="../../actions"><img src="https://shields.io/badge/CI%2FCD-GitHub%20Actions-2563EB?style=flat-square&logo=githubactions&logoColor=white&labelColor=1E293B" alt="CI/CD - GitHub Actions"></a>
+  <a href="../../packages"><img src="https://shields.io/badge/Registry-GHCR%20%7C%20DockerHub%20%7C%20LSCR-0284C7?style=flat-square&logo=docker&logoColor=white&labelColor=1E293B" alt="Registry - GHCR | DockerHub | LSCR"></a>
+  <a href="./sync_state.json"><img src="https://shields.io/badge/Ledger-Atomic%20JSON-059669?style=flat-square&logo=json&logoColor=white&labelColor=1E293B" alt="Ledger - Atomic JSON"></a>
+  <a href="./batch-mirror.yml"><img src="https://shields.io/badge/Core-Bash%20%26%20jq%20Engine-D97706?style=flat-square&logo=gnubash&logoColor=white&labelColor=1E293B" alt="Core - Bash & jq Engine"></a>
+  <a href="./LICENSE"><img src="https://shields.io/badge/License-MIT-7C3AED?style=flat-square&logo=opensourceinitiative&logoColor=white&labelColor=1E293B" alt="License - MIT"></a>
 </p>
 
 <!-- 多语言切换 -->
 <p align="center">
-  <strong>简体中文</strong> &nbsp;·&nbsp;
-  <a href="./README_TW.md">繁體中文</a> &nbsp;·&nbsp;
-  <a href="./README_EN.md">English</a> &nbsp;·&nbsp;
-  <a href="./README_JA.md">日本語</a> &nbsp;·&nbsp;
+  <strong>简体中文</strong> &nbsp;│&nbsp;
+  <a href="./README_TW.md">繁體中文</a> &nbsp;│&nbsp;
+  <a href="./README_EN.md">English</a> &nbsp;│&nbsp;
+  <a href="./README_JA.md">日本語</a> &nbsp;│&nbsp;
   <a href="./README_KO.md">한국어</a>
 </p>
 
 <!-- 快捷入口 -->
 <p align="center">
-  <a href="../../wiki"><strong>📖 Wiki 文档</strong></a> &nbsp;|&nbsp;
-  <a href="./repos.txt"><strong>⚙️ 镜像清单</strong></a> &nbsp;|&nbsp;
-  <a href="./sync_state.json"><strong>📊 状态账本</strong></a> &nbsp;|&nbsp;
+  <a href="../../wiki"><strong>📖 Wiki 文档</strong></a> &nbsp;│&nbsp;
+  <a href="./repos.txt"><strong>⚙️ 镜像清单</strong></a> &nbsp;│&nbsp;
+  <a href="./sync_state.json"><strong>📊 状态账本</strong></a> &nbsp;│&nbsp;
   <a href="../../issues"><strong>🐛 问题反馈</strong></a>
 </p>
 
 </div>
 
-<br/>
+---
 
 ## 概述
 
@@ -43,7 +43,7 @@
 
 **OmniMirror Hub** 不是简单的定时同步脚本，而是一套经过生产级极限压测的**全量渐进式容灾总控架构**。它通过**双轨并发调度**、**1.9GB 智能二进制分卷**、**数学级资产完整性校验**以及**全网 404 自动抢救机制**，在完全零人工干预的前提下，把上游动态演进的软件资产沉淀为永久可控的私有/公有镜像库。
 
-<br/>
+---
 
 ## 核心架构
 
@@ -66,7 +66,7 @@ flowchart TD
     H --> J["release_is_complete<br/>按资产名 + 分卷数学校验"]
     I --> J
 
-    F --> K["匿名 Bearer Token 换取<br/>/v2/<repo>/tags/list"]
+    F --> K["匿名 Bearer Token 换取<br/>/v2/&lt;repo&gt;/tags/list"]
     K --> L["Buildx Imagetools<br/>amd64 / arm64 / armv7 透传"]
 
     J --> M["压轴兜底任务"]
@@ -77,7 +77,7 @@ flowchart TD
     N -- 否 --> R["保留 failed_releases，下轮重试"]
 ```
 
-<br/>
+---
 
 ## 核心能力
 
@@ -114,7 +114,7 @@ flowchart TD
   </tr>
 </table>
 
-<br/>
+---
 
 ## 为什么选择 OmniMirror Hub？
 
@@ -126,7 +126,7 @@ flowchart TD
 | **上游删库/删版本** | 遇 404 中断，或误删本地已有存档 | **本地绝版资产绝对保护** + 全网同名高星库救援 |
 | **并发与账本安全** | 多任务并发导致 JSON 冲突损坏 | **全局 Concurrency 锁** + `safe_jq` 原子写 |
 
-<br/>
+---
 
 ## 快速开始
 
@@ -157,7 +157,7 @@ siyuan-note/siyuan  | b3log/siyuan             | siyuan   | 10
 - **周期调度**：每日 `06:00 UTC` 与 `18:00 UTC` 自动巡检；
 - **手动触发**：`Actions` → `全量渐进式总控搬运` → `Run workflow`，可传 `batch_size`（默认 `15`）。
 
-<br/>
+---
 
 ## 进阶说明
 
@@ -167,14 +167,16 @@ siyuan-note/siyuan  | b3log/siyuan             | siyuan   | 10
 
 系统会将超过 `1.9GB` 的单文件切割为 `filename.ext.part_000`、`filename.ext.part_001`…。把同一文件全部分卷下载到同一目录后合并：
 
-* **Linux / macOS**
-  ```bash
-  cat filename.ext.part_* > filename.ext
-  ```
-* **Windows CMD**
-  ```cmd
-  copy /b filename.ext.part_* filename.ext
-  ```
+```bash
+# Linux / macOS
+cat filename.ext.part_* > filename.ext
+```
+
+```cmd
+:: Windows CMD
+copy /b filename.ext.part_* filename.ext
+```
+
 </details>
 
 <details>
@@ -225,14 +227,16 @@ jq 'with_entries(.value |= (
 
 </details>
 
-<br/>
+---
 
 ## 文档导航
 
-* **[Wiki 首页](https://github.com/OWNER/REPO/wiki)** — 系统全景与概念总览
-* **[配置指南](https://github.com/OWNER/REPO/wiki/Configuration-Guide)** — `repos.txt` 全场景与密钥权限
-* **[架构与算法](https://github.com/OWNER/REPO/wiki/Architecture-and-Algorithms)** — 双轨调度、分卷数学校验、Anti-404
-* **[故障排查与运维](https://github.com/OWNER/REPO/wiki/Troubleshooting-and-Maintenance)** — 账本字段、体检恢复、限流应对
+| 文档 | 内容 |
+| :--- | :--- |
+| **[Wiki 首页](https://github.com/OWNER/REPO/wiki)** | 系统全景与概念总览 |
+| **[配置指南](https://github.com/OWNER/REPO/wiki/Configuration-Guide)** | `repos.txt` 全场景与密钥权限 |
+| **[架构与算法](https://github.com/OWNER/REPO/wiki/Architecture-and-Algorithms)** | 双轨调度、分卷数学校验、Anti-404 |
+| **[故障排查与运维](https://github.com/OWNER/REPO/wiki/Troubleshooting-and-Maintenance)** | 账本字段、体检恢复、限流应对 |
 
 <br/>
 
