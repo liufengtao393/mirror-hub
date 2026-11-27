@@ -2429,6 +2429,11 @@
       "v4.17.4",
       "v4.17.5",
       "v4.17.6",
+      "v4.9.1",
+      "v4.9.1-fix",
+      "v4.9.1-fix2",
+      "v4.9.1-fix3",
+      "v4.9.1-perf",
       "v4.9.10",
       "v4.9.10-alpha",
       "v4.9.10-fix",
@@ -2440,7 +2445,17 @@
       "v4.9.13",
       "v4.9.14",
       "v4.9.14-fix",
+      "v4.9.2",
+      "v4.9.2-alpha",
+      "v4.9.3",
+      "v4.9.4",
+      "v4.9.4-alpha",
+      "v4.9.5",
+      "v4.9.5-alpha",
+      "v4.9.6",
+      "v4.9.6-alpha",
       "v4.9.7",
+      "v4.9.7-alpha",
       "v4.9.7-fix",
       "v4.9.7-fix2",
       "v4.9.8",
@@ -2449,7 +2464,7 @@
       "v4.9.9-alpha"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-27 01:48:59 UTC",
+    "last_sync_time": "2026-11-27 08:10:52 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:9a69de5ca23163c26a1896a4e131f7cdbfca47f6e55bad90accdf17c0ea26423",
@@ -2498,6 +2513,42 @@
       "v4.17.6": {
         "digest": "sha256:9a69de5ca23163c26a1896a4e131f7cdbfca47f6e55bad90accdf17c0ea26423",
         "sync_time": "2026-11-26 16:45:59 UTC"
+      },
+      "v3.9.4": {
+        "digest": "sha256:3904a108437840b8cb52f586d6ff5a94c20be59c397106aa28ed183efdf3c09a",
+        "sync_time": "2026-11-27 08:11:15 UTC"
+      },
+      "v4.2.1": {
+        "digest": "sha256:28ab9a4efb2c9eb49c8f85344b2a3ec493929072b9428a43a58d7546048c6bfb",
+        "sync_time": "2026-11-27 08:11:33 UTC"
+      },
+      "v4.2.2": {
+        "digest": "sha256:a7726c446f8af5ab231595ba8ae3ef0455591dbdf388d430e1be3a16ce18aa3d",
+        "sync_time": "2026-11-27 08:11:47 UTC"
+      },
+      "v4.4.1": {
+        "digest": "sha256:fe3597809bebee79741b46d7a595c7589915cfb56ce1bfa91245b13d27f5ff2e",
+        "sync_time": "2026-11-27 08:12:04 UTC"
+      },
+      "v4.4.2": {
+        "digest": "sha256:6506046af3663f8f175741b179aceffde339fd543724659f3ed422e51405a774",
+        "sync_time": "2026-11-27 08:12:22 UTC"
+      },
+      "v4.4.4": {
+        "digest": "sha256:b90db95e6a55e9e5836b62dc653bfebe64065e593e60af0342cca2af0d54c094",
+        "sync_time": "2026-11-27 08:12:37 UTC"
+      },
+      "v4.4.5": {
+        "digest": "sha256:0c7af0df72b4c68660c37b2ad1ff9711b4c9baadf4e2babaf97fdde4d9664e93",
+        "sync_time": "2026-11-27 08:12:52 UTC"
+      },
+      "v4.4.6": {
+        "digest": "sha256:8adbc8c001163e23811894b52f3afbbaaefd9ff2aef69860594618b7a6c67ccf",
+        "sync_time": "2026-11-27 08:13:09 UTC"
+      },
+      "v4.4.7": {
+        "digest": "sha256:c9e73490f59fe0756a25d23dada7d14413e3e53ac1a752e2b2c0b1ea275598a4",
+        "sync_time": "2026-11-27 08:13:25 UTC"
       }
     }
   },
