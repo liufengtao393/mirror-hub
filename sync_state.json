@@ -17019,5 +17019,107 @@
         "sync_time": "2026-11-27 05:16:03 UTC"
       }
     }
+  },
+  "qbittorrent": {
+    "gh_src": "linuxserver/docker-qbittorrent",
+    "docker_src": "lscr.io/linuxserver/qbittorrent",
+    "last_repo_push": "2026-11-24T16:46:23Z",
+    "baseline_time": "2026-11-27T05:16:07Z",
+    "synced_releases": [
+      "5.2.3_v2.0.13-ls466",
+      "5.2.3_v2.0.13-ls467",
+      "5.2.3_v2.0.13-ls468",
+      "5.2.3_v2.0.13-ls469",
+      "5.2.3_v2.0.13-ls470",
+      "5.2.3_v2.0.14-ls471",
+      "5.2.3_v2.0.14-ls472",
+      "5.2.3_v2.0.14-ls473",
+      "5.2.3_v2.0.14-ls474",
+      "5.2.3_v2.0.14-ls475",
+      "5.2.3_v2.0.14-ls476",
+      "5.2.3_v2.0.14-ls477",
+      "5.2.3_v2.0.15-ls478",
+      "5.2.4_v2.0.15-ls479",
+      "5.2.4_v2.0.15-ls480",
+      "5.2.4_v2.0.15-ls481",
+      "5.3.0_v2.0.15-ls482",
+      "5.3.0_v2.1.2-ls483",
+      "5.3.0_v2.1.2-ls484",
+      "5.3.0_v2.1.2-ls485",
+      "5.3.0_v2.1.2-ls486",
+      "5.3.0_v2.1.2-ls487",
+      "5.3.0_v2.1.2-ls488",
+      "5.3.0_v2.1.3-ls489",
+      "5.3.1_v2.1.3-ls490",
+      "libtorrentv1-5.2.3_v1.2.20-ls125",
+      "libtorrentv1-5.2.3_v1.2.20-ls126",
+      "libtorrentv1-5.2.3_v1.2.20-ls127",
+      "libtorrentv1-5.2.3_v1.2.20-ls128",
+      "libtorrentv1-5.2.3_v1.2.20-ls129",
+      "libtorrentv1-5.2.3_v1.2.20-ls130",
+      "libtorrentv1-5.2.3_v1.2.20-ls131",
+      "libtorrentv1-5.2.3_v1.2.20-ls132",
+      "libtorrentv1-5.2.3_v1.2.20-ls133",
+      "libtorrentv1-5.2.3_v1.2.20-ls134",
+      "libtorrentv1-5.2.4_v1.2.20-ls135",
+      "libtorrentv1-5.2.4_v1.2.20-ls136",
+      "libtorrentv1-5.2.4_v1.2.20-ls137",
+      "libtorrentv1-5.3.0_v1.2.20-ls138",
+      "libtorrentv1-5.3.0_v1.2.20-ls140",
+      "libtorrentv1-5.3.0_v1.2.20-ls141",
+      "libtorrentv1-5.3.0_v1.2.20-ls142",
+      "libtorrentv1-5.3.0_v1.2.20-ls143",
+      "libtorrentv1-5.3.0_v1.2.20-ls144",
+      "libtorrentv1-5.3.0_v2.0.15-ls139",
+      "libtorrentv1-5.3.1_v1.2.20-ls145"
+    ],
+    "failed_releases": [],
+    "last_sync_time": "2026-11-27 05:19:13 UTC",
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:1fa2f9692501f27ce51c4fffd771d63ec38f1163cb648941c324344b7c5a3915",
+        "sync_time": "2026-11-27 05:19:35 UTC"
+      },
+      "unstable--ls223": {
+        "digest": "sha256:36a7aefe831cd56cddccce6bbab81d8e914ec4d9dc54c6a8c740b2179e53a29f",
+        "sync_time": "2026-11-27 05:19:53 UTC"
+      },
+      "unstable-4.4.0202106140855-7320-2bd5aca3aubuntu20.04.1-ls214": {
+        "digest": "sha256:0503382d7fdbe084d48dbc1c970295e60e84cf535fbe8f7f194f034320780b16",
+        "sync_time": "2026-11-27 05:20:09 UTC"
+      },
+      "unstable-4.4.0202106140855-7320-2bd5aca3aubuntu20.04.1-ls215": {
+        "digest": "sha256:4a7265582ddccf653528a5fa6d509dcb12fc0f734a0e7c73079032e6f0a7202c",
+        "sync_time": "2026-11-27 05:20:25 UTC"
+      },
+      "unstable-4.4.0202106140855-7320-2bd5aca3aubuntu20.04.1-ls216": {
+        "digest": "sha256:f60db27ee3bb9ef9d5e3e22018b4c6800ea6c94200fe205959e60a27ace9455a",
+        "sync_time": "2026-11-27 05:20:40 UTC"
+      },
+      "unstable-4.4.0202106140855-7320-2bd5aca3aubuntu20.04.1-ls217": {
+        "digest": "sha256:aa4080ae36194f4f0be9fdcac2967a7bf2eb1af48e1834f8924961ff45600de3",
+        "sync_time": "2026-11-27 05:20:56 UTC"
+      },
+      "unstable-4.4.0202106140855-7320-2bd5aca3aubuntu20.04.1-ls218": {
+        "digest": "sha256:63194afd1da63fe172753496282c1f9e03bbe7785197caaee871b406d00c06cf",
+        "sync_time": "2026-11-27 05:21:12 UTC"
+      },
+      "unstable-4.4.0202106140855-7320-2bd5aca3aubuntu20.04.1-ls219": {
+        "digest": "sha256:af0569acc3dedeb538a459da86c8d214d465102ab205b0a50b84afa51a7e3b5d",
+        "sync_time": "2026-11-27 05:21:27 UTC"
+      },
+      "unstable-4.4.0202106140855-7320-2bd5aca3aubuntu20.04.1-ls220": {
+        "digest": "sha256:723dbd8009d74b833980ee5cdee055f48b5ee4df0049132d14bf60b03ad1262e",
+        "sync_time": "2026-11-27 05:21:42 UTC"
+      },
+      "unstable-4.4.0202106140855-7320-2bd5aca3aubuntu20.04.1-ls221": {
+        "digest": "sha256:83dbee8d6214ae1d0998d1bacaf56d33a407a9c9ad452d7973a86b9720f70636",
+        "sync_time": "2026-11-27 05:21:57 UTC"
+      },
+      "unstable-4.4.0202106140855-7320-2bd5aca3aubuntu20.04.1-ls222": {
+        "digest": "sha256:30401121da8aad8146834a580c10fbbe6246e319e8bbef8a9a697c2585f3dd54",
+        "sync_time": "2026-11-27 05:22:03 UTC"
+      }
+    }
   }
 }
