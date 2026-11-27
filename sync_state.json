@@ -5282,7 +5282,7 @@
   "baserow": {
     "gh_src": "baserow/baserow",
     "docker_src": "baserow/baserow",
-    "last_repo_push": "2026-11-26T17:49:57Z",
+    "last_repo_push": "2026-11-26T23:46:38Z",
     "baseline_time": "2026-11-26T15:41:34Z",
     "synced_releases": [],
     "failed_releases": [
@@ -5421,8 +5421,8 @@
         "sync_time": "2026-11-26 15:46:20 UTC"
       },
       "develop-latest": {
-        "digest": "sha256:8b28f1c8f95d613447f2ceb2730e1f1bf24de2be0ad0554551950b9fcfa4b14a",
-        "sync_time": "2026-11-26 18:20:42 UTC"
+        "digest": "sha256:08cccc10dfd1fb5a599344e4cb8157c33cb40a4d2bfc36d722a383fa6ad9d4cc",
+        "sync_time": "2026-11-27 03:08:20 UTC"
       },
       "latest": {
         "digest": "sha256:304bebe22bf4c66d96d11bb746727492fa91637bd6deb807b2ef464f071c215c",
