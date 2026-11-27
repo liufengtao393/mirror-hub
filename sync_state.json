@@ -19431,5 +19431,34 @@
       "V1.0.0"
     ],
     "history_completed": true
+  },
+  "zirconlegend": {
+    "gh_src": "livse000/zircon-legend-server-main",
+    "docker_src": "livse/zirconlegend",
+    "last_repo_push": "2026-01-11T08:14:39Z",
+    "baseline_time": "2026-11-27T06:10:44Z",
+    "synced_releases": [
+      "界面主题功能",
+      "1",
+      "地图管理",
+      "客户端同步",
+      "npc持久化保存",
+      "物品编辑",
+      "客户端",
+      "npcpoint",
+      "winser-npc",
+      "windowsserver"
+    ],
+    "history_completed": true,
+    "synced_images": {
+      "arm64": {
+        "digest": "sha256:5bae1f466c4342d3fbae5bf95d7ca4f68312fce14b675e69b3a80a531e8bf321",
+        "sync_time": "2026-11-27 06:10:46 UTC"
+      },
+      "latest": {
+        "digest": "sha256:2c0ad9f4308753a55230d89405d597ae1dd6e439386b5c3e4d18a73d306dbb63",
+        "sync_time": "2026-11-27 06:10:48 UTC"
+      }
+    }
   }
 }
