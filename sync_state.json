@@ -5231,12 +5231,27 @@
     "last_repo_push": "2026-09-06T11:26:21Z",
     "baseline_time": "2026-11-26T15:36:19Z",
     "synced_releases": [
+      "v1.0.0-beta",
+      "v1.0.0-beta.1",
+      "v1.1.0-beta",
       "v1.10.0-beta",
       "v1.10.0-beta.2",
       "v1.10.0-beta.3",
       "v1.13.0-beta",
       "v1.13.0-beta.1",
       "v1.14.0-beta",
+      "v1.2.0-beta",
+      "v1.3.0-beta",
+      "v1.3.0-beta.1",
+      "v1.3.0-beta.2",
+      "v1.3.0-beta.3",
+      "v1.4.0-beta",
+      "v1.4.0-beta.1",
+      "v1.4.0-beta.2",
+      "v1.4.0-beta.3",
+      "v1.5.0-beta",
+      "v1.5.0-beta.1",
+      "v1.5.0-beta.2",
       "v1.6.0-beta",
       "v1.6.0-beta.1",
       "v1.7.0-beta",
@@ -5248,66 +5263,6 @@
       "v1.9.0-beta.1"
     ],
     "failed_releases": [
-      {
-        "tag": "v1.5.0-beta.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.5.0-beta.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.5.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.4.0-beta.3",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.4.0-beta.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.4.0-beta.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.4.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.3.0-beta.3",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.3.0-beta.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.3.0-beta.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.3.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.2.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.1.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.0.0-beta.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.0.0-beta",
-        "pre": "false"
-      },
       {
         "tag": "v0.99.1-beta.1",
         "pre": "false"
@@ -5437,7 +5392,7 @@
         "pre": "false"
       }
     ],
-    "last_sync_time": "2026-11-26 15:37:04 UTC",
+    "last_sync_time": "2026-11-27 11:53:44 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:5f800c81870813399272278c7fece10f11e84c793e60e9f7d125f64ba5febd44",
