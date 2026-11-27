@@ -15161,5 +15161,18 @@
         "sync_time": "2026-11-27 04:13:41 UTC"
       }
     }
+  },
+  "lunatv": {
+    "gh_src": "vodtv/SzeMeng76-LunaTV",
+    "docker_src": "ghcr.io/szemeng76/lunatv",
+    "last_repo_push": "2026-11-11T14:39:07Z",
+    "baseline_time": "2026-11-27T04:13:45Z",
+    "synced_releases": [],
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:e7c9c8763777840443d53f2a7303e125b968aa9d4156c957879bf248eef50f71",
+        "sync_time": "2026-11-27 04:13:55 UTC"
+      }
+    }
   }
 }
