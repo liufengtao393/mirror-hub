@@ -17767,5 +17767,54 @@
     "last_repo_push": "2026-11-23T15:26:41Z",
     "baseline_time": "2026-11-27T05:33:10Z",
     "synced_releases": []
+  },
+  "immortalwrt": {
+    "gh_src": "immortalwrt/immortalwrt",
+    "docker_src": "immortalwrt/rootfs",
+    "last_repo_push": "2026-11-24T06:29:58Z",
+    "baseline_time": "2026-11-27T05:33:57Z",
+    "synced_releases": [],
+    "synced_images": {
+      "25.12-SNAPSHOT": {
+        "digest": "sha256:fb78f8d3708fd50366f49dd9cc1cf1da8d7cc6c5967db5829ac0d9520d977a60",
+        "sync_time": "2026-11-27 05:33:59 UTC"
+      },
+      "i386_pentium4-25.12-SNAPSHOT": {
+        "digest": "sha256:0650050c0a8ee457b1b28e0cb239db92bd276d0f1fa57779b44b638abe1ec85a",
+        "sync_time": "2026-11-27 05:34:01 UTC"
+      },
+      "i386_pentium4-openwrt-25.12": {
+        "digest": "sha256:0650050c0a8ee457b1b28e0cb239db92bd276d0f1fa57779b44b638abe1ec85a",
+        "sync_time": "2026-11-27 05:34:02 UTC"
+      },
+      "openwrt-25.12": {
+        "digest": "sha256:fb78f8d3708fd50366f49dd9cc1cf1da8d7cc6c5967db5829ac0d9520d977a60",
+        "sync_time": "2026-11-27 05:34:04 UTC"
+      },
+      "x86-64-25.12-SNAPSHOT": {
+        "digest": "sha256:fb78f8d3708fd50366f49dd9cc1cf1da8d7cc6c5967db5829ac0d9520d977a60",
+        "sync_time": "2026-11-27 05:34:05 UTC"
+      },
+      "x86-64-openwrt-25.12": {
+        "digest": "sha256:fb78f8d3708fd50366f49dd9cc1cf1da8d7cc6c5967db5829ac0d9520d977a60",
+        "sync_time": "2026-11-27 05:34:06 UTC"
+      },
+      "x86-generic-25.12-SNAPSHOT": {
+        "digest": "sha256:0650050c0a8ee457b1b28e0cb239db92bd276d0f1fa57779b44b638abe1ec85a",
+        "sync_time": "2026-11-27 05:34:08 UTC"
+      },
+      "x86-generic-openwrt-25.12": {
+        "digest": "sha256:0650050c0a8ee457b1b28e0cb239db92bd276d0f1fa57779b44b638abe1ec85a",
+        "sync_time": "2026-11-27 05:34:09 UTC"
+      },
+      "x86_64-25.12-SNAPSHOT": {
+        "digest": "sha256:fb78f8d3708fd50366f49dd9cc1cf1da8d7cc6c5967db5829ac0d9520d977a60",
+        "sync_time": "2026-11-27 05:34:10 UTC"
+      },
+      "x86_64-openwrt-25.12": {
+        "digest": "sha256:fb78f8d3708fd50366f49dd9cc1cf1da8d7cc6c5967db5829ac0d9520d977a60",
+        "sync_time": "2026-11-27 05:34:12 UTC"
+      }
+    }
   }
 }
