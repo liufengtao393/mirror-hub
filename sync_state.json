@@ -720,7 +720,7 @@
   "dify-api": {
     "gh_src": "langgenius/dify",
     "docker_src": "langgenius/dify-api",
-    "last_repo_push": "2026-11-26T15:15:47Z",
+    "last_repo_push": "2026-11-27T01:20:16Z",
     "baseline_time": "2026-11-26T03:18:05Z",
     "synced_releases": [
       "0.10.0",
