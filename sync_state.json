@@ -15021,6 +15021,21 @@
     "last_repo_push": "2026-11-27T02:48:37Z",
     "baseline_time": "2026-11-27T04:03:21Z",
     "synced_releases": [
+      "v0.45.1",
+      "v0.45.2",
+      "v0.45.3",
+      "v0.45.4",
+      "v0.45.5",
+      "v0.45.6",
+      "v0.46.0",
+      "v0.46.1",
+      "v0.46.2",
+      "v1.0.0",
+      "v1.0.1",
+      "v1.0.2",
+      "v1.1.0",
+      "v1.1.1",
+      "v1.2.0",
       "v1.3.0",
       "v1.3.1",
       "v1.3.2",
@@ -15084,7 +15099,7 @@
       "v3.5.0"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-27 04:08:22 UTC",
+    "last_sync_time": "2026-11-27 18:42:23 UTC",
     "synced_images": {
       "3.5.0": {
         "digest": "sha256:f5a38801f2dd551c26d0089ee3ea48d86a565e3adb414cb31e974bc9562cb48a",
@@ -15099,8 +15114,8 @@
         "sync_time": "2026-11-27 04:08:33 UTC"
       },
       "alpha": {
-        "digest": "sha256:b38f92eb8d34fc32f1427d71764b1f7c13844543ccec71e57f8c2efda5d1f72f",
-        "sync_time": "2026-11-27 04:08:51 UTC"
+        "digest": "sha256:7485c7eb31cd99bb093c8ba39136ec46865248415b80850f758be8117e6f2718",
+        "sync_time": "2026-11-27 18:42:37 UTC"
       },
       "latest": {
         "digest": "sha256:f5a38801f2dd551c26d0089ee3ea48d86a565e3adb414cb31e974bc9562cb48a",
