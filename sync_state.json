@@ -15072,5 +15072,23 @@
         "sync_time": "2026-11-27 04:09:43 UTC"
       }
     }
+  },
+  "convertx-zh": {
+    "gh_src": "Firfr/convertx-zh",
+    "docker_src": "swr.cn-north-4.myhuaweicloud.com/firfe/convertx-zh",
+    "last_repo_push": "2026-01-14T14:28:49Z",
+    "baseline_time": "2026-11-27T04:09:46Z",
+    "synced_releases": [
+      "0.17.0",
+      "0.15.1",
+      "0.14.1"
+    ],
+    "history_completed": true,
+    "synced_images": {
+      "0.17.0": {
+        "digest": "sha256:33138eda1d61879ff6b2bf320e9db8cb8450b4f915862a576455426c43c062a1",
+        "sync_time": "2026-11-27 04:09:58 UTC"
+      }
+    }
   }
 }
