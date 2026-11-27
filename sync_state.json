@@ -18501,5 +18501,15 @@
     ],
     "failed_releases": [],
     "last_sync_time": "2026-11-27 05:56:48 UTC"
+  },
+  "chinese-poetry": {
+    "gh_src": "chinese-poetry/chinese-poetry",
+    "docker_src": "none",
+    "last_repo_push": "2026-06-17T01:56:08Z",
+    "baseline_time": "2026-11-27T05:58:19Z",
+    "synced_releases": [
+      "v0.1"
+    ],
+    "history_completed": true
   }
 }
