@@ -19254,5 +19254,169 @@
         "pre": "false"
       }
     ]
+  },
+  "windows-defender-remover": {
+    "gh_src": "ionuttbara/windows-defender-remover",
+    "docker_src": "none",
+    "last_repo_push": "2026-11-11T16:28:20Z",
+    "baseline_time": "2026-11-27T06:10:14Z",
+    "synced_releases": [
+      "release13-rev1",
+      "release13",
+      "release_def_12_8_4",
+      "release_def_12_8_3",
+      "release_def_12_8_2",
+      "release_def_12_8_1",
+      "release_def_12_8",
+      "release_def_12_7_2",
+      "release_def_12_7",
+      "release_def_12_6_9",
+      "release_def_12_6_5",
+      "release_def_12_6_3",
+      "release_def_12_6_2",
+      "release_def_12_6_1",
+      "release_def_12_6_01",
+      "release_def_12_6_0rc",
+      "release_def_12_5_7",
+      "release_def_12_5_6_2",
+      "release_def_12_5_6",
+      "release_def_12_5_5",
+      "release_def_12_5_4",
+      "release_def_12_5_3",
+      "release_def_12_5_2",
+      "release_def_12_5_1",
+      "release_def_12_5_0",
+      "pre_def_12_5",
+      "release_def_12_4_6",
+      "release_def_12_4_2",
+      "release_def_12_4_1",
+      "release_def_12_4"
+    ],
+    "failed_releases": [
+      {
+        "tag": "release_def_12_3_1",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_12_3",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_12_2_3",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_12_2_2",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_12_2_1",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_12_2",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_12_1",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_12_0_0",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_12_0_0_0_1",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_11_1",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_11_0_2",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_10_5_1",
+        "pre": "false"
+      },
+      {
+        "tag": "untagged-b1f431c6959946024d47",
+        "pre": "true"
+      },
+      {
+        "tag": "pre_def_11",
+        "pre": "true"
+      },
+      {
+        "tag": "release_def_10_5",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_10_3",
+        "pre": "false"
+      },
+      {
+        "tag": "test",
+        "pre": "true"
+      },
+      {
+        "tag": "release_def_10_2",
+        "pre": "true"
+      },
+      {
+        "tag": "release_def_10_1",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_10_0",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_6.5",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_6",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_5",
+        "pre": "false"
+      },
+      {
+        "tag": "release_def_4.5",
+        "pre": "false"
+      },
+      {
+        "tag": "4",
+        "pre": "false"
+      },
+      {
+        "tag": "finaldefender_rev1",
+        "pre": "false"
+      },
+      {
+        "tag": "2.0release_general",
+        "pre": "false"
+      },
+      {
+        "tag": "finaldefender",
+        "pre": "false"
+      },
+      {
+        "tag": "release",
+        "pre": "false"
+      },
+      {
+        "tag": "final",
+        "pre": "false"
+      },
+      {
+        "tag": "first",
+        "pre": "false"
+      }
+    ]
   }
 }
