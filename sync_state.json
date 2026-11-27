@@ -13275,6 +13275,9 @@
     "last_repo_push": "2026-11-26T02:51:29Z",
     "baseline_time": "2026-11-26T16:47:07Z",
     "synced_releases": [
+      "2.10.12",
+      "v2.10.11",
+      "v2.10.13",
       "v2.10.14",
       "v2.10.17",
       "v2.11.1",
@@ -13337,21 +13340,8 @@
       "v3.8.8",
       "v3.8.9"
     ],
-    "failed_releases": [
-      {
-        "tag": "v2.10.13",
-        "pre": "false"
-      },
-      {
-        "tag": "2.10.12",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.10.11",
-        "pre": "false"
-      }
-    ],
-    "last_sync_time": "2026-11-27 03:40:57 UTC",
+    "failed_releases": [],
+    "last_sync_time": "2026-11-27 18:14:20 UTC",
     "synced_images": {
       "build-40950426073-1-verified": {
         "digest": "sha256:2a7e08cf9ca977b3e54eecc06a70232f1ae4f5cbf723b71501556508ba9e2ca7",
@@ -13393,7 +13383,8 @@
         "digest": "sha256:2a7e08cf9ca977b3e54eecc06a70232f1ae4f5cbf723b71501556508ba9e2ca7",
         "sync_time": "2026-11-26 16:56:38 UTC"
       }
-    }
+    },
+    "history_completed": true
   },
   "memos": {
     "gh_src": "usememos/memos",
