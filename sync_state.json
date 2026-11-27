@@ -18511,5 +18511,612 @@
       "v0.1"
     ],
     "history_completed": true
+  },
+  "countries-states-cities-database": {
+    "gh_src": "dr5hn/countries-states-cities-database",
+    "docker_src": "none",
+    "last_repo_push": "2026-11-25T08:33:49Z",
+    "baseline_time": "2026-11-27T06:03:27Z",
+    "synced_releases": [
+      "v6.2.0-export.1"
+    ],
+    "failed_releases": [
+      {
+        "tag": "v6.3.0-export.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v6.3.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v6.2.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v6.1.0-export.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v6.1.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v6.0.0-export.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v6.0.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v5.2.0-export.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v5.2.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v5.1.0-export.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v5.1.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v5.0.0-export.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v5.0.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.51",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.50",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.49",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.48",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.47",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.46",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.45",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.44",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.43",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.42",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.41",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.40",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.39",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.38",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.37",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.36",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.35",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.34",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.33",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.32",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.31",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.30",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.29",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.28",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.27",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.26",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.25",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.24",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.23",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.22",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.21",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.20",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v4.0-export.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.51",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.50",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.49",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.48",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.47",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.46",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.45",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.44",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.43",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.42",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.41",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.40",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.39",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.38",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.37",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.36",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.35",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.34",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.33",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.32",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.31",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.30",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.29",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.28",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.27",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.26",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.25",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.24",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.23",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.22",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.21",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.20",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.2-export.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.1-export.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.1-export.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.1-export.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.1-export.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v3.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v2.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1",
+        "pre": "true"
+      }
+    ]
   }
 }
