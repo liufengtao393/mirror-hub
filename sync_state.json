@@ -18256,7 +18256,9 @@
     "baseline_time": "2026-11-27T05:37:51Z",
     "synced_releases": [
       "dev-latest",
+      "v1.0.8",
       "v1.0.9",
+      "v1.1.0",
       "v1.1.1",
       "v1.1.2",
       "v1.1.3",
@@ -18386,7 +18388,7 @@
       "v3.9.0"
     ],
     "failed_releases": [],
-    "last_sync_time": "2026-11-27 05:38:57 UTC",
+    "last_sync_time": "2026-11-27 19:47:38 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:1628adbd9bed680d25d6f714bef4a20f132105f4612ea294952f6665dad32e5b",
@@ -18431,8 +18433,45 @@
       "v3.9.0": {
         "digest": "sha256:93a7a68e3d0a65be1b02d2bfc1f3ca02d0e800516a403e103cea2d7c7090855d",
         "sync_time": "2026-11-27 05:39:46 UTC"
+      },
+      "v1.4.6": {
+        "digest": "sha256:6aac65c25be6543c64dd2a13f63324e671a40fda0441cec27a2938cce0af1336",
+        "sync_time": "2026-11-27 19:47:41 UTC"
+      },
+      "v1.5.0": {
+        "digest": "sha256:418215b608573cbe8a85b1f2a7f17855e23d505496c7b9525ac47b6ebf279754",
+        "sync_time": "2026-11-27 19:47:43 UTC"
+      },
+      "v1.6.0": {
+        "digest": "sha256:8c14ca97cd5ef16e637fc7008d5bff3cc58f44b24739fb1482c1d36c5085604f",
+        "sync_time": "2026-11-27 19:47:45 UTC"
+      },
+      "v1.6.1": {
+        "digest": "sha256:03098abfad91f34552fe5aa6f062f2ded73d7d828d7d0c7b5299dcb24b41bbbe",
+        "sync_time": "2026-11-27 19:47:46 UTC"
+      },
+      "v1.7.0": {
+        "digest": "sha256:4b0220d9ce1a575b1a598135cc1a38fd5c23ec2f91689d830a78602531368797",
+        "sync_time": "2026-11-27 19:47:48 UTC"
+      },
+      "v1.7.2": {
+        "digest": "sha256:b861e5957939b521ad69de9b10a0ad0d866f44ccc8062b88fb41d21aa2692be4",
+        "sync_time": "2026-11-27 19:47:57 UTC"
+      },
+      "v1.7.5": {
+        "digest": "sha256:6c3ea7a0194e166d5efa446290444c19a0caf289e6cea22a514f84def2ed191f",
+        "sync_time": "2026-11-27 19:47:59 UTC"
+      },
+      "v1.7.6": {
+        "digest": "sha256:85d8cbf437bd07f1eb3c2e77ce1ca4259612f8f3dc2a181c1cb6a65b5b198b9d",
+        "sync_time": "2026-11-27 19:48:00 UTC"
+      },
+      "v1.7.7": {
+        "digest": "sha256:88ca49a7a87207858b39c8ea5a4bb8fe8bae01a4ec85cd850b0b9cce3a78c071",
+        "sync_time": "2026-11-27 19:48:02 UTC"
       }
-    }
+    },
+    "history_completed": true
   },
   "clash-verge-rev": {
     "gh_src": "clash-verge-rev/clash-verge-rev",
