@@ -15001,5 +15001,76 @@
         "sync_time": "2026-11-27 04:09:04 UTC"
       }
     }
+  },
+  "kkfileview": {
+    "gh_src": "kekingcn/kkFileView",
+    "docker_src": "keking/kkfileview",
+    "last_repo_push": "2026-10-08T07:58:17Z",
+    "baseline_time": "2026-11-27T04:09:28Z",
+    "synced_releases": [
+      "v5.0.3",
+      "v5.0.2",
+      "v5.0.1",
+      "v5.0.0",
+      "v4.4.0",
+      "v4.4.0-beta",
+      "v4.3.0",
+      "v4.2.1",
+      "v4.2.0",
+      "v4.1.0",
+      "v4.0.0",
+      "v3.6.0",
+      "v3.5.1",
+      "v3.5",
+      "v3.3.1",
+      "v3.3.0",
+      "v2.2.1",
+      "v2.2.0",
+      "v2.1.2",
+      "0.0.2"
+    ],
+    "history_completed": true,
+    "synced_images": {
+      "4.1.0": {
+        "digest": "sha256:88bdbfd7a8e3b76b784c4c40dd824afbd5f8f63b7e58f7a84c596089a6b48180",
+        "sync_time": "2026-11-27 04:09:30 UTC"
+      },
+      "4.1.0-SNAPSHOT": {
+        "digest": "sha256:f300ab35efbb20f03806f605c9e006d0ca81a43ca2de42166f1b7efb30b27549",
+        "sync_time": "2026-11-27 04:09:31 UTC"
+      },
+      "latest": {
+        "digest": "sha256:88bdbfd7a8e3b76b784c4c40dd824afbd5f8f63b7e58f7a84c596089a6b48180",
+        "sync_time": "2026-11-27 04:09:33 UTC"
+      },
+      "v2.2.2": {
+        "digest": "sha256:2c0d574192bf364ff636035a643eba1fd1a1158c330d42a18f60b79f24453489",
+        "sync_time": "2026-11-27 04:09:34 UTC"
+      },
+      "v2.2.2.1": {
+        "digest": "sha256:06177f71bc5d196af575ba9bece1b44bc4eddcce121efaa149224a29a41999d8",
+        "sync_time": "2026-11-27 04:09:36 UTC"
+      },
+      "v3.5": {
+        "digest": "sha256:250f93b493e0c8fdef4ea5543a8c1174c1a0199632cded4a93a3998433126b22",
+        "sync_time": "2026-11-27 04:09:37 UTC"
+      },
+      "v3.5.1": {
+        "digest": "sha256:a52336dc7f94333a53519ccfed8c84126456f8eeae79b382737d5d4185282aee",
+        "sync_time": "2026-11-27 04:09:39 UTC"
+      },
+      "v3.6.0": {
+        "digest": "sha256:751cb342a4c842b73b1d74ef677a6ff8098cc3d9802b487cc8f3c8510ea9d0e2",
+        "sync_time": "2026-11-27 04:09:40 UTC"
+      },
+      "v4.0.0": {
+        "digest": "sha256:b03d61e36f2eeeb142aa9d2861e43fb3c7ef18cc49c4209efa162f987d38d8d5",
+        "sync_time": "2026-11-27 04:09:42 UTC"
+      },
+      "v4.0.0-SNAPSHOT": {
+        "digest": "sha256:128f16e58a54926802a11b9fbce6df893654ecc24c39e601e56247058f71b5e2",
+        "sync_time": "2026-11-27 04:09:43 UTC"
+      }
+    }
   }
 }
