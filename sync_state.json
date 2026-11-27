@@ -13222,6 +13222,21 @@
     "last_repo_push": "2026-11-26T02:51:29Z",
     "baseline_time": "2026-11-26T16:47:07Z",
     "synced_releases": [
+      "v2.10.14",
+      "v2.10.17",
+      "v2.11.1",
+      "v3.1.19",
+      "v3.1.20",
+      "v3.1.21",
+      "v3.1.22",
+      "v3.1.23",
+      "v3.1.24",
+      "v3.1.25",
+      "v3.1.26",
+      "v3.1.27",
+      "v3.1.28",
+      "v3.1.29",
+      "v3.1.30",
       "v3.1.31",
       "v3.1.32",
       "v3.2.0",
@@ -13271,66 +13286,6 @@
     ],
     "failed_releases": [
       {
-        "tag": "v3.1.30",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.29",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.28",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.27",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.26",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.25",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.24",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.23",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.22",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.21",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.20",
-        "pre": "false"
-      },
-      {
-        "tag": "v3.1.19",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.11.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.10.17",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.10.14",
-        "pre": "false"
-      },
-      {
         "tag": "v2.10.13",
         "pre": "false"
       },
@@ -13343,7 +13298,7 @@
         "pre": "false"
       }
     ],
-    "last_sync_time": "2026-11-26 16:55:39 UTC",
+    "last_sync_time": "2026-11-27 03:40:57 UTC",
     "synced_images": {
       "build-40950426073-1-verified": {
         "digest": "sha256:2a7e08cf9ca977b3e54eecc06a70232f1ae4f5cbf723b71501556508ba9e2ca7",
