@@ -243,3 +243,8 @@ jq 'with_entries(.value |= (
 <div align="center">
   <sub>© 2025 OmniMirror Hub · Released under the MIT License · Powered by GitHub Actions</sub>
 </div>
+
+<!-- 底部动态波浪 Banner（与顶部首尾呼应） -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563eb,100:0f172a&height=110&section=footer&animation=twinkling" width="100%" />
+</div>
