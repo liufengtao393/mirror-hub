@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Hero banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:2563eb&height=200&section=header&text=OmniMirror%20Hub&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Fully%20automated%20%C2%B7%20fault-tolerant%20%C2%B7%20resumable%20open-source%20asset%20disaster%20recovery%20%26%20multi-source%20mirror%20engine&descAlignY=58&descSize=15&animation=twinkling" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:2563eb&height=200&section=header&text=OmniMirror%20Hub&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Fully%20automated%20%C2%B7%20fault-tolerant%20%C2%B7%20resumable%20open-source%20asset%20disaster%20recovery%20and%20multi-source%20mirror%20engine&descAlignY=58&descSize=15&animation=twinkling" width="100%" />
 
 <p align="center">
   <strong>Permanent disaster-recovery archiving for source code, wikis, full Release binaries and multi-arch container images of critical open-source infrastructure.</strong>
