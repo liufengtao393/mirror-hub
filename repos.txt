@@ -158,6 +158,18 @@ pocket-id/pocket-id | ghcr.io/pocket-id/pocket-id | pocket-id | 10
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
 Fanju6/ProxMonitor | none | proxmonitor | 10
 
+# 7. AI API 网关 - 新一代大模型接口管理、格式转换与二次分发系统（One API 增强版）
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+QuantumNous/new-api | calciumion/new-api | new-api | 10
+
+# 8. AI 模型代理网关 - 支持使用统一 OpenAI 格式调用上百种大模型接口并自带成本追踪与负载均衡
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+BerriAI/litellm | ghcr.io/berriai/litellm | litellm | 10
+
+# 9. 云原生 AI 网关 - 阿里开源基于 Istio 与 Envoy 的高性能下一代微服务及大模型统一网关
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+alibaba/higress | higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/all-in-one | higress-all-in-one | 10
+
 # ==============================================================================
 # 四、个人笔记、知识库与密码管理
 # ==============================================================================
