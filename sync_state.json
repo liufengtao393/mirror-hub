@@ -5448,7 +5448,8 @@
         "digest": "sha256:e21e4c7805b2a9ea13c0d9a21416b726aa71127af33633211b67ac2ec5501371",
         "sync_time": "2026-11-26 15:40:03 UTC"
       }
-    }
+    },
+    "history_completed": true
   },
   "baserow": {
     "gh_src": "baserow/baserow",
