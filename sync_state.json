@@ -26388,5 +26388,17 @@
         "sync_time": "2026-11-28 10:29:08 UTC"
       }
     }
+  },
+  "higress-all-in-one": {
+    "gh_src": "alibaba/higress",
+    "docker_src": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/all-in-one"
+  },
+  "locus": {
+    "gh_src": "ChrisMack32/Locus",
+    "docker_src": "none"
+  },
+  "sidestore": {
+    "gh_src": "SideStore/SideStore",
+    "docker_src": "none"
   }
 }
