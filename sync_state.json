@@ -7663,6 +7663,21 @@
     "baseline_time": "2026-11-26T16:07:46Z",
     "synced_releases": [
       "1.0.0",
+      "1.0.0-alpha.23",
+      "1.0.0-alpha.24",
+      "1.0.0-alpha.25",
+      "1.0.0-alpha.26",
+      "1.0.0-alpha.27",
+      "1.0.0-alpha.28",
+      "1.0.0-alpha.29",
+      "1.0.0-alpha.30",
+      "1.0.0-alpha.31",
+      "1.0.0-alpha.32",
+      "1.0.0-alpha.33",
+      "1.0.0-alpha.34",
+      "1.0.0-alpha.36",
+      "1.0.0-alpha.37",
+      "1.0.0-alpha.38",
       "1.0.0-alpha.39",
       "1.0.0-alpha.40",
       "1.0.0-alpha.41",
@@ -7757,66 +7772,6 @@
     ],
     "failed_releases": [
       {
-        "tag": "1.0.0-alpha.38",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.37",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.36",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.34",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.33",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.32",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.31",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.30",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.29",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.28",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.27",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.26",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.25",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.24",
-        "pre": "true"
-      },
-      {
-        "tag": "1.0.0-alpha.23",
-        "pre": "true"
-      },
-      {
         "tag": "1.0.0-alpha.22",
         "pre": "true"
       },
@@ -7905,7 +7860,7 @@
         "pre": "true"
       }
     ],
-    "last_sync_time": "2026-11-27 12:14:29 UTC",
+    "last_sync_time": "2026-11-28 04:46:21 UTC",
     "synced_images": {
       "1.0.5": {
         "digest": "sha256:b81d16a90ee25bd9511280127ca1471788c6e874cf0f0da759645f46b2dc1d74",
