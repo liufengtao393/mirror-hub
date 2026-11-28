@@ -8179,7 +8179,8 @@
         "digest": "sha256:4851e54a46b206517c574821bb5cc67f170d2156041e9fbc4c9193b45e84a75b",
         "sync_time": "2026-11-26 16:21:28 UTC"
       }
-    }
+    },
+    "history_completed": true
   },
   "nginx": {
     "gh_src": "nginx/nginx",
@@ -8331,77 +8332,32 @@
     "last_repo_push": "2026-11-26T22:38:29Z",
     "baseline_time": "2026-11-26T16:24:55Z",
     "synced_releases": [
+      "v2.1.0",
+      "v2.10.0",
+      "v2.11.0",
+      "v2.12.0",
+      "v2.13.0",
       "v2.14.0",
-      "v2.19.3",
-      "v2.19.2",
-      "v2.19.1",
-      "v2.19.0",
-      "v2.18.0",
-      "v2.17.0",
+      "v2.15.0",
       "v2.16.0",
-      "v2.15.0"
+      "v2.17.0",
+      "v2.18.0",
+      "v2.19.0",
+      "v2.19.1",
+      "v2.19.2",
+      "v2.19.3",
+      "v2.2.0",
+      "v2.3.0",
+      "v2.4.0",
+      "v2.5.0",
+      "v2.6.0",
+      "v2.6.1",
+      "v2.6.2",
+      "v2.7.0",
+      "v2.8.0",
+      "v2.9.0"
     ],
     "failed_releases": [
-      {
-        "tag": "v2.13.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.12.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.11.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.10.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.9.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.8.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.7.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.6.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.6.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.6.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.5.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.4.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.3.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.2.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.1.0",
-        "pre": "false"
-      },
       {
         "tag": "v2.0.2",
         "pre": "false"
@@ -8940,7 +8896,8 @@
         "digest": "sha256:1287412dc4ad5b44a5e0a0f6b43273fcabd7ad2da801bddeb7423078c7f8aa48",
         "sync_time": "2026-11-27 18:02:38 UTC"
       }
-    }
+    },
+    "last_sync_time": "2026-11-28 04:53:33 UTC"
   },
   "proxmonitor": {
     "gh_src": "Fanju6/ProxMonitor",
