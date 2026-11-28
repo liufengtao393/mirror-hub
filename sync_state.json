@@ -19926,5 +19926,6467 @@
         "sync_time": "2026-11-27 06:10:48 UTC"
       }
     }
+  },
+  "litellm": {
+    "gh_src": "BerriAI/litellm",
+    "docker_src": "ghcr.io/berriai/litellm",
+    "baseline_time": "2026-11-28T09:37:56Z",
+    "synced_releases": [],
+    "failed_releases": [
+      {
+        "tag": "v1.108.20",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.113.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.108.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.109.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.112.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.111.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.110.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.110.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.109.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.112.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.108.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.111.0-rc.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.110.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.109.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.112.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.111.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.110.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.109.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.111.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.110.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.111.0-dev.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.111.0-dev.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.110.0-rc.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.108.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.107.0-rc.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.111.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.108.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.111.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.110.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.109.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.110.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.109.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.110.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.110.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.108.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.108.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.107.0-rc.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.108.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.109.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.109.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.109.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.108.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.106.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.105.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.105.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.105.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.105.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.105.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.105.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.107.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.107.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.106.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.107.0-dev.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.107.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.106.0-rc.4",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.107.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.106.0-rc.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.106.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.105.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.105.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.0-dev.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.106.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.105.0-rc.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.104.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.102.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.101.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.106.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.105.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.104.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.102.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.101.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.100.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.105.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.104.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.105.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.103.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.101.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.105.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.104.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.103.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.102.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.101.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.100.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.103.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.100.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.99.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.98.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.104.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.102.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.101.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.101.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.100.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.99.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.102.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.103.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.103.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.102.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.102.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.101.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.102.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.100.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.102.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.101.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.101.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.100.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.101.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.101.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.99.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.99.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.97.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.100.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.99.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.100.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.100.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.99.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.98.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.99.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.99.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.98.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.97.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.98.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.96.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.95.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.91.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.97.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.96.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.94.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.94.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.93.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.92.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.90.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.89.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.88.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.97.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.97.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.96.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.95.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.96.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.95.0-rc.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.95.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.96.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.94.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.95.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.94.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.93.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.95.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.95.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.94.0-rc.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.94.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.93.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.92.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.91.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.90.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.94.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.94.0-dev.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.94.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.93.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.90.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.94.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.93.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.92.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.91.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.91.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.90.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.93.0-dev.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.93.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.93.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.92.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.91.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.92.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.91.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.92.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.90.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.89.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.90.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.92.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.90.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.89.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.91.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.90.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.91.0-dev.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.89.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.88.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.87.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.86.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.85.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.91.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.90.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.89.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.88.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.87.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.89.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.88.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.89.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.88.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.87.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.86.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.85.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.87.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.86.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.85.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.89.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.89.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.88.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.89.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.88.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.88.0-rc.3",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.88.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.87.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.86.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.86.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.85.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.85.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.88.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.87.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.88.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.87.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.86.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.85.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.86.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.87.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.85.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.87.0-dev.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.86.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.86.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.85.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.85.0-rc.2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.84.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.14-stable.patch.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.14-stable.patch.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.10-stable.patch.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.84.0-rc.1",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.83.14-stable.patch.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.84.0-dev.2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.84.0-dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.14.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.14-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.13-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.12-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.11-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.10-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.7-stable.patch.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.10-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.9-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.8-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.7.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3.dev.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3-stable.patch.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.3.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3.dev.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3.dev.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3-stable.patch.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.6.rc.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.83.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.6.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.6.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3-stable.patch.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3-stable.patch.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.6.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3.dev.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.6.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.6.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.5.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14.dev.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3.dev.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14.dev.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3.dev.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3.dev.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.dev.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.2-nightly.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.2-focus-export-2.dev",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.2-dynamoai.dev",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.2-silent.dev",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.patch5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1-nightly.1-re",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1-nightly.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1-nightly.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1-focus-dev",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1-silent-dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1-dev",
+        "pre": "false"
+      },
+      {
+        "tag": "1.82.1-dev-2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.patch4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.rc.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.dev",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.patch3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14-stable.gpt-5.4-patch7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14-stable.gpt-5.4-patch6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.1-azure-dev",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14-stable.gpt-5.4_patch2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14-stable.gpt-5.4-patch5",
+        "pre": "false"
+      },
+      {
+        "tag": "1.82.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.patch2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0.patch1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14.gemini-batches",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14-stable.gpt-5.4_patch",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14-redirect-alpha",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.12-stable_gpt-5.3.patch1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.6.rc.9",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm-trace-dev-v1.81.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.82.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.12-stable.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.6.rc.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_presidio-dev-v1.81.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.16.custm-auth.dev",
+        "pre": "false"
+      },
+      {
+        "tag": "1.81.16-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.15-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.12-stable_gpt-5.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.12-stable.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.6.rc.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.6.rc.4",
+        "pre": "false"
+      },
+      {
+        "tag": "litellmv1.81.15.presidio.dev",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_presidio-dev-v1.81.15",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm-v1.81.14.pre-call-hook-fix.dev",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm-pres-dev-v1.81.15",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm-precall-dev-v1.81.14",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm-CVE-v1.81.15",
+        "pre": "false"
+      },
+      {
+        "tag": "RCE-v1.81.15",
+        "pre": "false"
+      },
+      {
+        "tag": "CVEv1.81.5",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_idx-db-dev-v1.81.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.14-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.12-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.9-stable.patch.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.9-stable.gemini.3.1-pro.sonnet-4.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.9-stable.gemini.3.1-pro-patch",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_langfuse-dev-v1.81.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.13.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.9-stable.gemini.3.1-pro",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3.oauth.dev",
+        "pre": "false"
+      },
+      {
+        "tag": "1.81.3-stable.dev.oauth",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_pro-mgmnt-dev-v1.81.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.15-stable.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.11.gemini-metadata.dev",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_1.81.13-dev",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.13-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3-stable.sonnet-4-6",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_sso-dev-v1.81.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.12.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.12-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.10.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_dev-test-v0.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.11-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0-patch4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.10-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3-stable.opus-4-6",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_stable_build-test-v0.1",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_dev-test-v0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.9.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.9-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.9-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0-stable.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0-patch3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.8-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.6.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.0-stable.opus-4-6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.7.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.81.3.rc.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0-patch2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3.rc.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0-patch",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3.rc.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3.rc.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3.rc",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0.rc.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0.rc.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.81.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.17-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "1.80.15-stable.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.16.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.11-stable.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.16-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.15.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.15.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.15-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.15.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.15-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.13-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.12-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.8-stable.1-patch01",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.11.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.11-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.11-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.10.rc.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.10.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.10.rc.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.10.rc.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.8-stable.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.10.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.10.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.10-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.9.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.9.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.8-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.9.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.9-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.8.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.8.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.8-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.5-stable.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.7.dev.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.7.dev.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.7.dev.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.7.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.5.dev32",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.5.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.5.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.0-stable.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.5.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.5.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.5-stable-patch-1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.5.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.0.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.0.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.3-stable.gemini3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.3-stable-patch-2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.3-stable-patch-1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.0.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.0.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.80.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.3.dev7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1-stable-patch-1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.3.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.3.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.3.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "1.78.5-stable-patch-1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.5.rc.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.0.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.79.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.5.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.4.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.0.rc.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.0.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.0.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.78.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.gemma2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev-gemma",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.1.rc.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.1.rc.1-v2",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.77.5.rc.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.5.rc.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.5.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.6.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.5.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.3.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.3.dynamic_rates",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.2.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.2-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.2.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.1.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.1.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.2.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.1.rc.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.1.dev.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.1.dev.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.77.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.3.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.3.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.1.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.1-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.1.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.0.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.0.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "1.76.0.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.76.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.76.0-stable-draft",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.75.9-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.9.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.8-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.8-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_v1.75.5-dev_memory_fix_2",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_v1.73.0-dev_memory_fix_2",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_v1.73.0-dev_memory_fix_1",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_v1.73.0-dev_memory_fix",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.5.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_v1.75.5-dev_memory_fix_1",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_v1.75.5-dev_memory_fix",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.5.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.5-stable.rc-draft",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.75.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.15-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.0.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.75.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.15.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.9-stable.patch.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.15-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "1.74.15.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.14.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.14-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.12-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.9.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.9-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "litellm_v1.65.4-dev_fix",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.9.rc-draft",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.74.7-stable.patch.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.7-stable.patch.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.8-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3-stable.patch.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.2-stable.debug",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3-stable.patch.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3-stable.patch.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3-stable.patch.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.7.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.5.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3.rc.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.3-stable-draft",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.74.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.0.rc.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.6-stable.patch.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.4.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.0.rc",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.74.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.6.rc.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.6-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.7.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.0.debug_mem",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.6.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.6.rc-draft",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.73.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.2.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.0.rc.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.73.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.9-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.6-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.6.post1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.6.devSCIM",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.6.SCIM2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.6.rc",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.6.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "1.72.6.rc-draft",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.72.2.devMCP",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.5.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.2-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.2.rc",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.2.dev_image",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.1.dev8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.1.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.0.dev8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.0.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.0.rc1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.0.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.0.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.0.rc",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.72.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.3-rc",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.71.2.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.2.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.2.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.1-stable.patch1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.2.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.2.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.1-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.71.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.2.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.2.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.1.dev8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.1.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.1.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.1.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.1.dev11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.0-stable.patch2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.1-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.70.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.69.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.69.0.patch1-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.69.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.69.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.69.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.69.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.69.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.68.2.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.68.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.68.1.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.68.1.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.68.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.68.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.68.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.68.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.6.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.4-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.3.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.3.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.3.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.67.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.66.3.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.66.3.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.66.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.66.2.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.66.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.66.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.66.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.66.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.8-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.4.dev8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.4.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.4-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.3.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.3-nightly.post1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.2.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.0.rc",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.65.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.64.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.64.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "1.64.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.14-stable.patch1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.14-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.14.rc",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.14-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.12-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.11-stable.patch1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.11-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.11-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.8-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.6.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.3.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.2-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.0.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.63.0-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.62.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.62.1-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.20.rc.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.20-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.20.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.20.rc",
+        "pre": "true"
+      },
+      {
+        "tag": "v1.61.20-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.19.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.19-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.17.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.17-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.16-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.15-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.13-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.8-stable-patched",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.13.rc",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.13-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.11-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.9.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.9-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.8-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.7.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.7-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.6.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.6-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.5-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.4-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.3.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.3-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.2-nightly",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.1.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.1.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.61.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.4-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.5-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.2-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.0.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.0.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.60.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.8-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.8-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.3.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.59.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.58.4.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.58.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.58.2.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.58.2-dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.58.2-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.58.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.58.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.58.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.8-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.0-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.57.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.8-dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.8-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.6.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.56.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.8-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.1-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.0.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.55.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.54.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.54.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.7.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.7.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.3.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.3-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.53.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.15.staging1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.15-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.16.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.16.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.10.staging.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.10.staging.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.10-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.9.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.8.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.5.staging1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.6.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.2-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.52.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.51.3-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.51.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.51.1-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "custom-docker-image-test-dev",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.51.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.51.1-staging",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.51.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.51.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.51.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.51.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.4-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.2-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.1-stable.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.1.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.1-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.50.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.6-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.2-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.1.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.0.dev8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.49.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.19-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.19",
+        "pre": "false"
+      },
+      {
+        "tag": "1.48.18.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.17-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.16-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.14-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.11-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.9-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.8-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.5.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.4-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.2.dev8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.2.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.2.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.2.dev12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.2.dev10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.48.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.47.2.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.47.2.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.47.2.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.47.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.47.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.47.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.1.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.46.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.45.0.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.45.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.45.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.28",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.27.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.27",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.26",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.25",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.24",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.23-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.23",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.22-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.22",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.21-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.21",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.19-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.18-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.17-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.16-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.15-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.15-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.14-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.13-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.12-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.11-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.10-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.8-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.6-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.6",
+        "pre": "false"
+      },
+      {
+        "tag": "1.44.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.4.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.44.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.19.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.19.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.19-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.18-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.16-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.15-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.13.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.13-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.10-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.9.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.9.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.9.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.9.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.7.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.6.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.6-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.4.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.3-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.1-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.3.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.0.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.43.0",
+        "pre": "false"
+      },
+      {
+        "tag": "1.40.3.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.10-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.9.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.9-stable-fix",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.9-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.5-dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.5-dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.4-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.2-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.42.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.28",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.27",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.26.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.26",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.25",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.24.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.24",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.23",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.22.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.22",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.21",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.20",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.14.dev8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.14.dev10",
+        "pre": "false"
+      },
+      {
+        "tag": "1.41.14.dev15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.12",
+        "pre": "false"
+      },
+      {
+        "tag": "1.41.12.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.41.11.dev5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.11.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.8.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.8.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.5.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.4.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.3.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.3.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.3.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.2-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.41.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.31",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.29",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.28",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.27",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.26",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.25",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.24",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.22",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.21",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.20",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.14.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.13.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.14.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.9-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.9",
+        "pre": "false"
+      },
+      {
+        "tag": "1.40.8.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.8-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.7.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.2-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.1.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.1.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.40.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.39.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.39.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.39.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.39.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.39.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.39.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.8-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.4-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.0-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.38.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.20",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.19-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.13-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.12-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.9-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.7-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.5-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.3-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.36.4-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.36.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.0.dev_version_headers",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.37.0.dev2_completion_cost",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.36.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.36.2-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.36.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.36.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.36.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.38-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.38",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.37",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.36-dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.36",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.35",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.34",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.33.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.33",
+        "pre": "false"
+      },
+      {
+        "tag": "1.35.33.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.32.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.32",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.31",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.30",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.29",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.28.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.28",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.26.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.26",
+        "pre": "false"
+      },
+      {
+        "tag": "1.35.26.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.25",
+        "pre": "false"
+      },
+      {
+        "tag": "1.35.24.dev6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.24.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.24",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.23",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.21",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.20.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.20",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.19",
+        "pre": "false"
+      },
+      {
+        "tag": "1.35.19.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.15-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.13",
+        "pre": "false"
+      },
+      {
+        "tag": "1.35.13.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.8.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.5",
+        "pre": "false"
+      },
+      {
+        "tag": "1.35.5.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.2.dev4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.2.dev3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.2.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.2.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.1.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.1",
+        "pre": "false"
+      },
+      {
+        "tag": "1.35.1.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.35.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.42",
+        "pre": "false"
+      },
+      {
+        "tag": "1.34.40.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.41",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.40",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.39",
+        "pre": "false"
+      },
+      {
+        "tag": "1.34.39.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.38",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.37.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.37",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.36.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.36",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.35",
+        "pre": "false"
+      },
+      {
+        "tag": "1.34.35-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.34.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.34",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.33",
+        "pre": "false"
+      },
+      {
+        "tag": "1.34.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.29",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.28.dev12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.28",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.27",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.26",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.25",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.23-stable",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.22",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.21",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.20",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.8.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.4.dev2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.4.dev1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.34.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.33.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.33.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.33.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.33.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.33.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.33.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.33.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.33.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.32.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.32.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.32.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.32.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.32.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.31.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.30.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.30.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.30.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.30.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.30.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.30.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.30.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.30.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.29.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.29.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.29.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.29.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.29.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.28.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.27.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.27.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.27.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.27.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.27.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.27.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.27.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.27.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.27.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.26.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.25.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.25.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.25.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.24.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.24.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.24.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.24.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.23.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.22.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.22.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.22.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.22.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.22.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.22.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.22.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.21.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.21.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.21.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.21.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.21.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.21.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.20.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.20.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.20.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.20.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.20.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.20.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.20.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.20.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.20.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.19.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.19.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.19.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.19.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.19.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.18.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.15",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.14",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.13",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.10",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.9",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.8",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.7",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.17.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.21",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.20",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16-test2",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.19",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.18",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.17-test3",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.17-test",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.17",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.6",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.16",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.16.15",
+        "pre": "false"
+      },
+      {
+        "tag": "1.16.14",
+        "pre": "false"
+      },
+      {
+        "tag": "1.16.12",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.15.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.11.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.10.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.7.11",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.7.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v1.1.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.11.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.8.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.738",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.574",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.492",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.387",
+        "pre": "false"
+      }
+    ],
+    "synced_images": {
+      "latest": {
+        "digest": "sha256:ce00096d012719d58c52cecfa373f7c6256dd1b0ff08f6fa607e10e9628f1f46",
+        "sync_time": "2026-11-28 10:26:47 UTC"
+      },
+      "main": {
+        "digest": "sha256:bd4e99454c632f16e33d66c5c63f07bccb1ec3ca6202dfc3c37492aa1fe9a366",
+        "sync_time": "2026-11-28 10:27:01 UTC"
+      },
+      "main-": {
+        "digest": "sha256:703eba1c126ebb920146761b461bc3427aba090f025954c2969e80fc2ad7bfed",
+        "sync_time": "2026-11-28 10:27:22 UTC"
+      },
+      "main-latest": {
+        "digest": "sha256:f73a8b65b252dbdecc045ed5075f513c7cc04567325cfc7ce060a5cc1bff0f2d",
+        "sync_time": "2026-11-28 10:27:58 UTC"
+      },
+      "main-v1.10.0": {
+        "digest": "sha256:3c981907aa16fcd01b9385e10850527d4e74e0fb4077728674a789716a0a9570",
+        "sync_time": "2026-11-28 10:28:11 UTC"
+      },
+      "main-v1.10.1": {
+        "digest": "sha256:4424f8ddd1c64a75bd89f8266fe269504e4dffe3cb8f7c5670ea4f0451e8d515",
+        "sync_time": "2026-11-28 10:28:23 UTC"
+      },
+      "main-v1.10.3": {
+        "digest": "sha256:7858f7d8f0e0955f3bbe8dcbb123be4d15af7b79690f719c3067098cab474cb3",
+        "sync_time": "2026-11-28 10:28:34 UTC"
+      },
+      "main-v1.12.2": {
+        "digest": "sha256:46fad551ab678ecaf1418d828d5758c886bd669d71d10f1b4f5dfc4e552b0230",
+        "sync_time": "2026-11-28 10:28:47 UTC"
+      },
+      "main-v1.12.3": {
+        "digest": "sha256:5d965ce70fd1f71537d2833d669d62b2754028de210502f2b18773546d712119",
+        "sync_time": "2026-11-28 10:28:59 UTC"
+      },
+      "main-v1.15.3": {
+        "digest": "sha256:af35ccf7e769a5dd2e6a335a4bd81601bcb9e67b87b98c324b84ae2d7ac968fc",
+        "sync_time": "2026-11-28 10:29:08 UTC"
+      }
+    }
   }
 }
