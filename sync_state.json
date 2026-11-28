@@ -13225,7 +13225,88 @@
       "v0.9.0",
       "v0.9.1"
     ],
-    "failed_releases": [],
+    "failed_releases": [
+      {
+        "tag": "v0.7.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.6.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.6.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.5.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.4.5",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.4.4",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.4.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.4.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.4.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.4.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.3.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.3.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.2.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.2.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.2.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.3",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.2",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.1",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.1.0",
+        "pre": "false"
+      },
+      {
+        "tag": "v0.0.1",
+        "pre": "false"
+      }
+    ],
     "last_sync_time": "2026-11-27 18:16:44 UTC",
     "synced_images": {
       "26.10": {
@@ -13261,8 +13342,8 @@
         "sync_time": "2026-11-26 16:59:17 UTC"
       },
       "canary": {
-        "digest": "sha256:7aa439b6a5aa477bd9a904b14334c21af7e35020c746854fe708d963bea7ccc1",
-        "sync_time": "2026-11-27 18:16:56 UTC"
+        "digest": "sha256:d9bffe7bbb1e37a6e182ab5c7f8e4678b9589364e506f24ae52eb81420e1356e",
+        "sync_time": "2026-11-28 05:23:48 UTC"
       },
       "stable": {
         "digest": "sha256:3c7bd779510403350465ecabb7e6fbc0887206f9d55b8decf51a205613fa5616",
