@@ -8186,6 +8186,21 @@
     "last_repo_push": "2026-11-26T22:38:29Z",
     "baseline_time": "2026-11-26T16:24:55Z",
     "synced_releases": [
+      "v1.10.0",
+      "v1.11.0",
+      "v1.11.1",
+      "v1.11.2",
+      "v1.12.0",
+      "v1.13.0",
+      "v1.13.1",
+      "v1.14.0",
+      "v1.14.1",
+      "v1.14.2",
+      "v1.15.0",
+      "v1.16.0",
+      "v2.0.0",
+      "v2.0.1",
+      "v2.0.2",
       "v2.1.0",
       "v2.10.0",
       "v2.11.0",
@@ -8212,66 +8227,6 @@
       "v2.9.0"
     ],
     "failed_releases": [
-      {
-        "tag": "v2.0.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.0.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v2.0.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.16.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.15.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.14.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.14.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.14.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.13.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.13.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.12.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.11.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.11.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.11.0",
-        "pre": "false"
-      },
-      {
-        "tag": "v1.10.0",
-        "pre": "false"
-      },
       {
         "tag": "v1.9.1",
         "pre": "false"
@@ -8751,7 +8706,7 @@
         "sync_time": "2026-11-27 18:02:38 UTC"
       }
     },
-    "last_sync_time": "2026-11-28 04:53:33 UTC"
+    "last_sync_time": "2026-11-28 09:12:58 UTC"
   },
   "proxmonitor": {
     "gh_src": "Fanju6/ProxMonitor",
