@@ -5334,6 +5334,30 @@
       "v0.18.0-beta",
       "v0.18.0-rc",
       "v0.18.0-rc.1",
+      "v0.18.0-rc.2",
+      "v0.19.0-alpha",
+      "v0.19.0-beta",
+      "v0.19.0-rc",
+      "v0.20.0-alpha",
+      "v0.20.0-beta",
+      "v0.20.0-rc",
+      "v0.20.0-rc.1",
+      "v0.21.0-alpha",
+      "v0.21.0-beta",
+      "v0.21.0-rc",
+      "v0.21.0-rc.1",
+      "v0.22.0-alpha",
+      "v0.22.0-beta",
+      "v0.22.0-beta.1",
+      "v0.23.0-alpha",
+      "v0.23.0-beta.1",
+      "v0.23.0-beta.2",
+      "v0.24.0-alpha",
+      "v0.99.0-alpha",
+      "v0.99.0-beta",
+      "v0.99.0-beta.1",
+      "v0.99.1-beta",
+      "v0.99.1-beta.1",
       "v1.0.0-beta",
       "v1.0.0-beta.1",
       "v1.1.0-beta",
@@ -5365,105 +5389,8 @@
       "v1.8.0-beta.3",
       "v1.9.0-beta.1"
     ],
-    "failed_releases": [
-      {
-        "tag": "v0.99.1-beta.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.99.1-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.99.0-beta.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.99.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.99.0-alpha",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.24.0-alpha",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.23.0-beta.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.23.0-beta.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.23.0-alpha",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.22.0-beta.1",
-        "pre": "true"
-      },
-      {
-        "tag": "v0.22.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.22.0-alpha",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.21.0-rc.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.21.0-rc",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.21.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.21.0-alpha",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.20.0-rc.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.20.0-rc",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.20.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.20.0-alpha",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.19.0-rc",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.19.0-beta",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.19.0-alpha",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.18.0-rc.2",
-        "pre": "false"
-      }
-    ],
-    "last_sync_time": "2026-11-27 20:08:16 UTC",
+    "failed_releases": [],
+    "last_sync_time": "2026-11-28 06:02:41 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:5f800c81870813399272278c7fece10f11e84c793e60e9f7d125f64ba5febd44",
