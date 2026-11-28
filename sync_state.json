@@ -14238,20 +14238,20 @@
     "history_completed": true,
     "synced_images": {
       "beta": {
-        "digest": "sha256:622aef78d0c9ddd852b46cad92b3dbc6d89fbd545dfdc6ee71c3bc92ff0e6dea",
-        "sync_time": "2026-11-26 17:13:56 UTC"
+        "digest": "sha256:41f4f2824299f2fb83a9d3df2865f5297adf11c77a0c57c593333e8ca3edb434",
+        "sync_time": "2026-11-28 05:30:18 UTC"
       },
       "beta-aio": {
-        "digest": "sha256:e6584790b77577d09b449dd0058e1c8a812a2b8027266fbe234dd343509e68f5",
-        "sync_time": "2026-11-26 17:14:04 UTC"
+        "digest": "sha256:ce5219435fc26eec2e746789f4febb40971cc363d24bf16ef38ab4aa1d626553",
+        "sync_time": "2026-11-28 05:30:52 UTC"
       },
       "beta-aria2": {
-        "digest": "sha256:dce7bff6dba09e3f0b3a6fa7364bde7e9a3d3eef05edbbd64fc0661b3e3dc06f",
-        "sync_time": "2026-11-26 17:14:12 UTC"
+        "digest": "sha256:c1e3006531ae1ccf13c7b382e56bf13c1613e2607aa3142b67186778402f9500",
+        "sync_time": "2026-11-28 05:31:24 UTC"
       },
       "beta-ffmpeg": {
-        "digest": "sha256:1e3d5f792adba3c01a5bf021f4ab79295efd8380007d624fff8bae2849050c5b",
-        "sync_time": "2026-11-26 17:14:20 UTC"
+        "digest": "sha256:4cd116af08e24256b39f0f2cb85df090e293b2918191483874f7b0d4e0d63fde",
+        "sync_time": "2026-11-28 05:31:58 UTC"
       },
       "latest": {
         "digest": "sha256:a014c4d7c9ea4960a57eb22d0541c1753d141016846e8e0f67f3547d573d4547",
