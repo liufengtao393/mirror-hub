@@ -2121,6 +2121,21 @@
       "v0.13.1",
       "v0.13.1-patch.1",
       "v0.13.2",
+      "v0.9.12-patch.1",
+      "v0.9.13",
+      "v0.9.14",
+      "v0.9.14-patch.1",
+      "v0.9.15",
+      "v0.9.15-patch.1",
+      "v0.9.15-patch.2",
+      "v0.9.16",
+      "v0.9.16-patch.1",
+      "v0.9.17",
+      "v0.9.18",
+      "v0.9.19",
+      "v0.9.20",
+      "v0.9.20-patch.1",
+      "v0.9.20-patch.2",
       "v0.9.21",
       "v0.9.22",
       "v0.9.22-patch.1",
@@ -2200,66 +2215,6 @@
     ],
     "failed_releases": [
       {
-        "tag": "v0.9.20-patch.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.20-patch.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.20",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.19",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.18",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.17",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.16-patch.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.16",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.15-patch.2",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.15-patch.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.15",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.14-patch.1",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.14",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.13",
-        "pre": "false"
-      },
-      {
-        "tag": "v0.9.12-patch.1",
-        "pre": "false"
-      },
-      {
         "tag": "v0.9.12",
         "pre": "false"
       },
@@ -2276,7 +2231,7 @@
         "pre": "false"
       }
     ],
-    "last_sync_time": "2026-11-28 07:10:11 UTC",
+    "last_sync_time": "2026-11-28 09:21:18 UTC",
     "synced_images": {
       "latest": {
         "digest": "sha256:3015ce453f9a0cc1b4f332e145b5006a813f0b9a03e7c7573fde9a6ae528f015",
