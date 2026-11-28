@@ -413,3 +413,15 @@ RingoCaviar/DriveUNCConverter | none | driveuncconverter | 10
 # 4. 传奇游戏开源服务端 - 基于 C# 开发的经典传奇游戏开源模拟器与服务端框架
 # 源仓库 | 镜像地址 | 目标仓库 | 标签数量
 livse000/zircon-legend-server-main | livse/zirconlegend | zirconlegend | 10
+
+# ==============================================================================
+# 十一、iOS 侧载与移动端工具
+# ==============================================================================
+
+# 1. iOS 系统级虚拟定位工具 - 开源免费的免越狱 iPhone 全球定位修改、路线模拟与摇杆控制应用
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+ChrisMack32/Locus | none | locus | 10
+
+# 2. iOS 免电脑侧载应用商店 - 基于 AltStore 演进的无需连接电脑即可自签安装与后台自动续签 IPA 的工具
+# 源仓库 | 镜像地址 | 目标仓库 | 标签数量
+SideStore/SideStore | none | sidestore | 10
